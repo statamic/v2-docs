@@ -1,26 +1,21 @@
 ---
 title: Filesystems
-overview: "Being a file-based CMS, there's times that we need to access files. Well, pretty much all the time. There are a number of ways to set up your filesystem to play nice with different setups."
+overview: "A flat file CMS would be nothing without flexible control of files. Learn how to configure and leverage Statamic's filesystems."
 id: b03df2fb-db07-4c9b-9707-d90dd7311533
 ---
 ## Filesystems?
-You might be wondering why we're using the plural form of the word. That's because different parts of Statamic
-consider themselves to be their own self-contained filesystem.
+Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem][flysystem]. By breaking the application structure into siloed locactions, each with it's own filesystem, we gain the ability to physically put these files in more locations (Amazon S3 for example) than a single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
 
-There are a handful of filesystems in Statamic:
+Statamic has 5 core filesystems, each with it's own 'root':
 
-- The main filesystem
+- Server
 - Content
 - Storage
 - Users
-- Asset containers
+- Asset Containers
 
-Depending on what data we're trying to access, we'll call on the appropriate filesystem. Each filesystem will have its
-own 'root'. This allows you to have different parts of your Statamic installation in different locations, whether that's
-another folder on your server or even on a cloud-based service like Amazon S3.
-
-## What's in the box?
-Out of the box, Statamic makes some assumptions about your setup, which of course, you're able to change.
+## Smartish defaults
+We make some out of the box assumptions about your configuration, all of which can be changed.
 
 Here's a simplified version of what you see in a freshly unzipped Statamic installation:
 
@@ -36,40 +31,32 @@ Here's a simplified version of what you see in a freshly unzipped Statamic insta
 `-- index.php
 ```
 
-Now, keep in mind the structure above and the filesystems mentioned earlier:
-
 ### Content and Storage
-The content and storage filesystems' roots will be `site/content` and `site/storage`, respectively. We'll look in here
-any time we need to deal with content or storage.
+The content and storage filesystems' roots will be `site/content` and `site/storage`, respectively.
 
-A common use-case is to have a publicly accessible repo for just content, while keeping the rest of the site
-in a private repo. Since the content folder is treated as its own filesystem, you can change its location
-or even (eventually) keep it on a cloud service like Amazon S3 or Dropbox.
+A common use case for moving something outside of the default webroot is to have a publicly accessible repo for _just_ content, keeping the rest of the site private. In fact, these docs do that very thing.
 
 ### Users
 The users filesystem's root will be `site/users`.
 
-Since you may potentially have many users, you might want to keep then separate from your repo. Or, who knows what you
-want to do with it. If you have a good reason for moving them, you can!
+Since you may potentially have many users, or wish the keep your celebrity gossip blogger's identity secret, you might want to keep then separate from your repo.
 
 ### Asset containers
-Each asset container gets their own filesystem, which again means they may be located on your server or on a cloud
-service.
+Each asset container gets their own filesystem. Now you can put them on S3, for example.
 
 The sample asset container included with Statamic will have it's filesystem root set to `assets`.
 
-### Main filesystem
-The main filesystem is used for finding any files that aren't moveable. These files will always be on your server.
-We'll use this filesystem for accessing settings, Statamic core files, and really anything that wasn't mentioned above.
+### Server
+The server filesystem is used for finding any files that aren't moveable, those that need to always be on your server for the application to function. We'll use this filesystem for accessing settings, application files, and whatever else we didn't feel like typing out here because it doesn't and shouldn't matter to you.
 
-The main filesystem's root will _always_ be the folder above your `statamic` directory.
+The server filesystem's root will _always_ be the folder above your `statamic` directory.
 
 
-## Moving around
+## Moving things around
 
-Now that you know what the filesystems are, you'll want to know how to move them.
+Now that you know what the filesystems are and that you can move them around, you'll want to know _how_.
 
-The defaults mentioned above* are stored in your `site/settings/system.yaml` file like so:
+The defaults settings are stored in your `site/settings/system.yaml` file like so:
 
 ``` .language-yaml
 filesystems:
@@ -84,7 +71,7 @@ filesystems:
     root: site/users
 ```
 
-If you don't see this in your `system.yaml`, just copy this in, or hit save from within the CP.
+If you don't see this in your `system.yaml` just copy these settings in or use the Control Panel.
 
 To relocate a filesystem, simply change the `root` variable to one of the following:
 
