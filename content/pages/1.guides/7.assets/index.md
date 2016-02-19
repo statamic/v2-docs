@@ -113,11 +113,11 @@ An Asset Container's configurations are stored in a `container.yaml` file in the
 
 ``` .language-yaml
 title: "Public Assets"
-path: ../public/assets
+path: public/assets
 url: /assets
 ```
 
-`path` is the directory to the asset location, relative to the `statamic` folder.
+`path` is the directory to the asset location, relative to the [server filesystem root][filesystems].
 
 `url` is the base url of this location.
 
@@ -125,7 +125,7 @@ Then the other `container.yaml` might look like this:
 
 ``` .language-yaml
 title: "Private Assets"
-path: ../private
+path: private
 ```
 
 There is no URL because this container isn't publicly accessible.
@@ -143,16 +143,58 @@ assets:
     alt: They're just like Pop Tarts, but full of Large Mouth Bass.
 ```
 
+## Asset Drivers
+
+The examples above assume you are storing your assets in folders within your site. However, it's possible to store them
+in other locations on your server, or even in the cloud, like on Amazon S3.
+
+Note: Your _asset files_ will be located where you specify, _not the meta data_. The meta data will always be located
+in the storage folder.
+
+Within each container's `container.yaml`, you may specify the `driver` and its various options.
+
+### Local
+When a container doesn't have a `driver` specified, Statamic will assume it uses the `local` driver.
+
+``` .language-yaml
+title: Local Assets
+path: path/to/asset/folder
+url: /url/of/asset/folder
+```
+
+The `path` may be:
+
+  - A path relative to the main filesystem root. (eg. `path/to/assets`) This can be inside or outside your site's root folder.
+  - An absolute path. (eg. `/var/www/example.com/assets`)
+  - An absolute path with an [interpolated environment variable](/docs/recipes/settings). (eg. `"{env‌:BASE_PATH}/assets"`)
+
+As mentioned above, the `url` should be the location of the asset folder. If it's located outside of the webroot, it's
+inaccessible so you can just leave it blank.
+
+### Amazon S3
+To enable S3 assets in a container, you should set up your `container.yaml` like so:
+
+``` .language-yaml
+title: S3 Assets
+driver: s3
+key:     # Access Key ID
+secret:  # Secret Access Key
+bucket:  # The bucket name
+region:  # The region code (eg. us-west-1)
+path:    # A subfolder of the bucket, if you'd like
+```
+
+The region codes can be tough to remember. [Here's a list of them.](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
+
 And there you have it. Go have fun with Assets!
 
 ## In the works
 
 These features are in the oven but aren't quite fully baked yet. If you were to eat them now, you would get a bellyache and miss 2 days of school.
 
-- Assets will soon have access to fieldsets to customize their metadata. For the beta only _title_ and _alt_ text fields are supported.
 - Assets will eventually be be localizable.
-- Asset Container will be cloud-enabled. This means a container could be an Amazon S3 bucket or Dropbox share folder. Neat, huh?
 
 [asset-fieldtype]: /docs/fieldtypes/asset
 [assets-tag]: /docs/tags/assets
 [glide-tag]: /docs/tags/glide
+[filesystems]: /docs/recipes/filesystems
