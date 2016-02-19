@@ -1,0 +1,4 @@
+order: alphabetical
+template: docs/fieldtype
+fieldset: fieldtypes
+parse_content: false

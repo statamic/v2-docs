@@ -1,0 +1,4 @@
+order: alphabetical
+template: docs/tag
+parse_content: false
+fieldset: tags

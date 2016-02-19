@@ -1,0 +1,49 @@
+title: Fieldtypes
+assets:
+  e9be6d9e-7678-444d-ba27-85ebb0eed3aa:
+    file: toggle.gif
+  643aae7a-4123-449b-bbb1-33aff6ad26a2:
+    file: table.gif
+  ecadb886-1656-450c-898f-3297ab618bcd:
+    file: select.png
+  0dbd58ba-8177-4d64-a97d-b169c1812230:
+    file: grid.png
+  857b55a5-f87b-4d88-aafb-75f212f1ebd2:
+    file: radio.png
+  0c490534-470b-4255-a19a-29739fef10cf:
+    file: relate.png
+  3b27046f-88d3-4f9f-b03e-03a4347503e9:
+    file: array.png
+  c4a7829b-3fbc-457e-ac40-a92608aeb165:
+    file: text.png
+  77a7a701-5e1b-45b2-bba9-400fc2beefe8:
+    file: checkboxes.png
+  a462b8e7-86c1-49ce-9d96-0941dc922dd2:
+    file: date.png
+  6c775efe-a6a8-4aa0-b5cb-b7c5a47faf9b:
+    file: hidden.png
+  7e9b5ced-0f19-4303-8723-c9141001fa7f:
+    file: list.png
+  1d448bcc-dc44-4d0a-a9fc-9e771d36576e:
+    file: markdown.png
+  22318543-6610-45b9-b21b-d1bed3b2afe7:
+    file: redactor.png
+  83b593df-8be3-48f9-8b4f-8ea7280d5dbd:
+    file: replicator.png
+  ebed805a-cd75-49f8-b26f-99fd6cac88ad:
+    file: section.png
+  29859332-425c-4600-91a7-891c7c81710f:
+    file: textarea.png
+  1732af72-da76-4a23-81fb-69a41b860027:
+    file: users.png
+  d9da02ac-097d-46f7-b288-67d5c13852fc:
+    file: yaml.png
+    title: yaml
+  1ae0abcc-d9c7-412c-8647-fbeedaaa8444:
+    file: collection.png
+  e77d6351-1a1c-4f6b-85e0-ab447e0b3bb6:
+    file: assets.png
+  404c1000-b896-11e5-a837-0800200c9a66:
+    file: suggest.png
+  95eb6fa0-d0de-11e5-a837-0800200c9a66:
+    file: tags.png
