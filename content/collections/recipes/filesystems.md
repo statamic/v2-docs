@@ -26,7 +26,8 @@ Here's a simplified version of what you see in a freshly unzipped Statamic insta
 |-- site/
 |   |-- content/
 |   |-- storage/
-|   `-- users/
+|   |-- users/
+|   `-- themes/
 |-- statamic/
 `-- index.php
 ```
@@ -40,6 +41,12 @@ A common use case for moving something outside of the default webroot is to have
 The users filesystem's root will be `site/users`.
 
 Since you may potentially have many users, or wish the keep your celebrity gossip blogger's identity secret, you might want to keep then separate from your repo.
+
+### Themes
+The themes filesystem's root will be `site/themes`.
+
+The theme folder needs to be publicly accessible, so we've added a `url` value here too. This will let Statamic know
+how to access that folder from the browser. We'll use that for links to stylesheets, etc.
 
 ### Asset containers
 Each asset container gets their own filesystem. Now you can put them on S3, for example.
@@ -69,6 +76,10 @@ filesystems:
   users:
     driver: local
     root: site/users
+  themes:
+    driver: local
+    root: site/themes
+    url: /site/themes
 ```
 
 If you don't see this in your `system.yaml` just copy these settings in or use the Control Panel.
@@ -95,6 +106,7 @@ use Statamic\API\File;
 $home     = File::disk('content')->get('pages/index.md');
 $document = File::disk('storage')->get('documents/important.pdf');
 $admin    = File::disk('users')->get('admin.yaml');
+$css      = File::disk('themes')->get('redwood/css/style.css');
 $system   = File::get('site/settings/system.yaml');
 ```
 
