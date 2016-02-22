@@ -146,3 +146,31 @@ It's possible to use recursive tags for semi-automatically creating deeply-neste
 The `{{ *recursive children* }}` tag will repeat the contents of the entire `{{ nav }}` tag using child elements if they exist. This means that as long as there are children to display, and we’re still on either the current or parent page of those children, the nav tag will traverse deeper.
 
 It’s an admittedly weird concept, and might take some fiddling with to truly understand, but is very powerful when fully understood. Take the time. Learn to wield it. A powerful Jedi will you be.
+
+## Hidden Pages {#hidden-pages}
+
+A common use-case for navigation is to make some pages "hidden", which means to hide them from the nav, but keep them
+available when accessed directly.
+
+Note: In Statamic v1, you should set the status to hidden or prefix the filename with an underscore. In v2, this method
+has been removed in favor of the following workflow.
+
+1. Add a field to your page fieldset that'll be used to indicate a "hidden" page:
+
+   ``` .language-yaml
+   fields:
+      is_hidden:  # the field name can be whatever you want
+        type: toggle
+        display: Hide from navigation
+   ```
+
+2. In your `nav` tag, use the condition syntax to remove any hidden pages:
+
+   ```
+   {{ nav from="/" is_hidden:isnt_set="true" }}
+       ...
+   {{ /nav }}
+   ```
+
+   This is saying, only show pages where the `is_hidden` field _isn't set_. That will leave you with unhidden pages.
+   Remember, the field can be named whatever you want.
