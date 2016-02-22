@@ -164,7 +164,7 @@ has been removed in favor of the following workflow.
         display: Hide from navigation
    ```
 
-2. In your `nav` tag, use the condition syntax to remove any hidden pages:
+2. In your `nav` tag, use the [conditions syntax](/docs/conditions) to remove any hidden pages:
 
    ```
    {{ nav from="/" is_hidden:isnt_set="true" }}
