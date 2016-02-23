@@ -18,5 +18,5 @@ string: Please and thank you
 ```
 
 ```.language-output
-please-and-thank-you
+please_and_thank_you
 ```
