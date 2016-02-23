@@ -153,7 +153,7 @@ taxonomies:
 
 > You can create any URL structure you like but keep in mind that the `taxonomy="true"` parameter on the Collection tag will assume the last 2 segments in your URL are the Taxonomy and Term's `slug`, respectively.
 
-## Vanity URLs
+## Vanity URLs {#vanity-urls}
 
 Statamic allows you to quickly set up vanity URLs, which let you quickly forward one URL to another.
 
