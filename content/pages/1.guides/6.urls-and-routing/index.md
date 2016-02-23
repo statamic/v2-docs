@@ -173,3 +173,20 @@ This will forward `http://yoursite.com/party` to `http://yoursite.com/my-long/pa
 ### Best Practices
 
 While it’s possible to create permanent redirects with the vanity URLs feature, it’s best practice to do this via an `.htaccess` file or similar method. Vanity URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
+
+
+## Content Types {#content-types}
+
+By default, pages are served as `text/html` which shouldn't come as a surprise. However, you may want to serve other
+types, like an RSS feed or JSON. To do this, just add `content_type` to your front-matter or route definition with the
+appropriate MIME type, like so:
+
+``` .language-yaml
+  content_type: application/json
+```
+
+We've also added a few shorthands to make life a little easier:
+
+- `json` becomes: `application/json`
+- `xml` becomes: `text/xml`
+- `atom` becomes: `application/atom+xml` and also ensures the `charset` is `utf8`
