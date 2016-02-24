@@ -40,7 +40,7 @@ A common use case for moving something outside of the default webroot is to have
 ### Users
 The users filesystem's root will be `site/users`.
 
-Since you may potentially have many users, or wish the keep your celebrity gossip blogger's identity secret, you might want to keep then separate from your repo.
+Since you may potentially have many users, or wish the keep your celebrity gossip blogger's identity secret, you might want to keep them separate from your repo.
 
 ### Themes
 The themes filesystem's root will be `site/themes`.
