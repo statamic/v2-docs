@@ -39,7 +39,7 @@ This'll attempt to load the `Statamic\Addons\Bacon\BaconSuggestMode` class, so l
 
 use Statamic\Addons\Suggest\Modes\AbstractMode;
 
-class BaconMode extends AbstractMode
+class BaconSuggestMode extends AbstractMode
 {
     public function suggestions()
     {
