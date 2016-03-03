@@ -66,7 +66,7 @@ If all you need to set is a template, you can simplify the syntax and just pass 
 
 ### Wildcard Segments {#wildcard-segments}
 
-Wildcards let you capture multiple routes at once. It's like killing infinity birds with one stone. Wildcards are available anywhere in your route pattern and there aren't any limits to how many you can use.
+Wildcards let you capture multiple routes at once. It's like killing an infinity birds with one stone. Wildcards are available anywhere in your route pattern and there aren't any limits to how many you can use.
 
 ``` .language-yaml
 routes:
