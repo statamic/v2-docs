@@ -130,8 +130,8 @@ collections:
 
 Any time you're looping through the collection to render its data, each entry's `{{ url }}` will match to this format. For the `locations` collection, you could see URLs like the following:
 
-- `http://example.com/stores/saratoga-springs/new-york`
-- `http://example.com/stores/miami/florida`
+- `http://example.com/stores/new-york/saratoga-springs`
+- `http://example.com/stores/florida/miami`
 
 And in the blog you might see this:
 
