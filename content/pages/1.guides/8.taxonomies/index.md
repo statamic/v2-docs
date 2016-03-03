@@ -48,7 +48,7 @@ _Note: the ability to add taxonomy terms inline is on our to-do list!_
 
 ### Automatic Taxonomy Discovery
 
-If you're coming from v1 you're used to just typing in any old string and having those magically work as taxonomies. You can do this in v2 as well, except that the strings will be replaced with IDs that reference the Term. This lets you add more data to each and every Term if you desire, such as images as descriptions.
+If you're coming from v1 you're used to just typing in any old string and having those magically work as taxonomies. You can do this in v2 as well, except that the strings will be replaced with IDs that reference the Term. This lets you add more data to each and every Term if you desire, such as images and descriptions.
 
 To do this you will to map your taxonomy fields to which taxonomies will be held
 inside them:
