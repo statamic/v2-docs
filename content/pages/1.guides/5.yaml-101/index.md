@@ -73,10 +73,10 @@ You can preserve any line breaks in your string block, which is useful when writ
 
 ```language-yaml
 lyrics: |
-    Pierce I don't need you in my band
-    I don't need your heart or your hand
-    Oh I don't need you in my life
-    All you do is cause me such strife
+  Pierce I don't need you in my band
+  I don't need your heart or your hand
+  Oh I don't need you in my life
+  All you do is cause me such strife
 ```
 
 ### Collapsing newlines
@@ -85,14 +85,14 @@ Completely ignore those line breaks with a `>`, and indent the rest of the conte
 
 ```language-yaml
 test: >
-    These
-    lines will
-    be collapsed
-    into a single
-    paragraph.
+  These
+  lines will
+  be collapsed
+  into a single
+  paragraph.
 
-    And blank lines are
-    paragraph breaks.
+  And blank lines are
+  paragraph breaks.
 ```
 
 YAML doesn't stop at string values. Let's go deeper, and as we do it's important to note something important. In fact it's so important we noted its importance with notably incorrect grammar.
