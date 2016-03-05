@@ -13,4 +13,4 @@ If you're unclear about the documentation and need some clarification, or if the
 1. Respect the Oxford Coma.
 2. See number one.
 
-![Oxford Coma](http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/the-oxford-comma-eric-edelman.jpg)
+![Oxford Comma](http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/the-oxford-comma-eric-edelman.jpg)
