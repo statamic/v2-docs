@@ -64,3 +64,7 @@ routes:
     uses: getEdit    
     as: karma.edit
 ```
+
+Note: If you want a settings page, you do _not_ need to create a route. A `/cp/addons/addon-name/settings` route
+will be available to you automatically. To avoid conflicts you should not create a route named `settings`.
+[See how to create a settings page](/addons/anatomy/settings).
