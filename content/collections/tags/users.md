@@ -6,6 +6,14 @@ parameters:
     name: sort
     type: string *username*
     description: Sort entries by a field.
+  -
+    name: group
+    type: string
+    description: Specify the slug to filter users by a single group.
+  -
+    name: role
+    type: string
+    description: Specify the slug to filter users by a single role.
 id: c3e6df36-d705-4293-a5d8-40d27a06a18c
 ---
 This tag has the same functionality as the [collection](collection) tag, with some differences.
