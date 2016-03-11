@@ -43,6 +43,7 @@ site/
         |-- BisonWidget.php
         |-- bootstrap.php
         |-- composer.json
+        |-- default.yaml
         |-- routes.yaml
         |-- settings.yaml
         └── meta.yaml
