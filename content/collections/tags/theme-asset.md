@@ -12,6 +12,12 @@ parameters:
     description: >
       The path to the file, relative to the
       theme directory.
+  -
+    name: cache_bust
+    type: 'boolean *false*'
+    description: >
+      Setting this to `true` will add the timestamp of the asset to the end of
+      the URL in a `?v=` query param.
 id: de348605-5489-4282-9257-bd9ffd92438e
 ---
 ## Explicit mode {#explicit-mode}
