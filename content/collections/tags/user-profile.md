@@ -49,7 +49,7 @@ variables:
     description: >
       A boolean for checking if the user is in
       a given group. eg. `in_admins` or
-      `is_editors`.
+      `in_editors`.
 id: 3be76d15-dee7-4619-a4cb-4a343e93c677
 ---
 The `{{ user:profile }}` tag (or simply `{{ user }}`) will make all the fields in a user available.
