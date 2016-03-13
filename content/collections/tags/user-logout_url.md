@@ -7,8 +7,8 @@ parameters:
     type: string
     description: >
        Where the user should be redirected
-      after logging out. Defaults to the home
-      page.
+       after logging out. Defaults to the home
+       page.
 id: 232b878c-18da-4d01-80f3-a85fcdf65ed8
 ---
 ## Example {#example}
