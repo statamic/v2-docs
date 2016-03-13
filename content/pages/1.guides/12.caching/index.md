@@ -18,7 +18,7 @@ In most "traditional" applications (namely those involving a relational database
 1. [Blink and Flash](#blink-flash)
 1. [Template Fragments](#template-fragments)
 1. [Static Page Caching](#static-page)
-1. [Static Site Generation](#static-site-generator)
+1. [Static Site Generation](#static-generator)
 
 ## The Stache Datastore {#stache}
 
@@ -88,7 +88,7 @@ Aw man, we were hoping you wouldn't ask that. We'll have a smart or automatic me
 [laravel-cache]: http://laravel.com/docs/5.1/cache
 [cache-tag]: /docs/tags/cache
 
-## Static Caching {#static}
+## Static Caching {#static-page}
 
 Now we get to the **performance** part of the show. There is absolutely nothing faster on the web than static pages (except static pages without javascript and big giant header images, of course). And to that end, Statamic can cache static pages and pass off routing to Apache or Nginx through reverse proxying. It sounds much harder than is.
 
