@@ -41,7 +41,7 @@ version before, and the html version after.
 
 Since these are Statamic templates, you are able to use any tags, modifiers, and addons that you normally would anywhere else. _Note: you currently cannot use template front-matter in email templates._
 
-For example, if we wanted to override the password reset email, we could create a template file in `site/themes/theme-name/email/user-reset.html` that looks something like this:
+For example, if we wanted to override the password reset email, we could create a template file in `site/themes/theme-name/templates/email/user-reset.html` that looks something like this:
 
 ```
 Reset your password
