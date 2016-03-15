@@ -22,6 +22,16 @@ site/
         |-- Models/
         |   |-- Order.php
         |   └── Product.php
+        |-- resources/
+        |   |-- assets/
+        |   |   |-- js/
+        |   |   |-- css/
+        |   |   `-- img/
+        |   |-- lang/
+        |   |   `-- en/
+        |   |       `-- settings.php
+        |   `-- views/
+        |       `-- index.blade.php
         |-- BisonAPI.php
         |-- BisonController.php
         |-- BisonFieldtype.php
@@ -30,8 +40,12 @@ site/
         |-- BisonServiceProvider.php
         |-- BisonTags.php
         |-- BisonTasks.php
+        |-- BisonWidget.php
         |-- bootstrap.php
         |-- composer.json
+        |-- default.yaml
+        |-- routes.yaml
+        |-- settings.yaml
         └── meta.yaml
 ```
 

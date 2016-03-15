@@ -32,7 +32,7 @@ class KarmaController extends Controller
 }
 ```
 
-Each public method in the controller can have a route pointed toward it. We can route to the controller action above by editing the routes array in our addon's `meta.yaml` file.
+Each public method in the controller can have a route pointed toward it. We can route to the controller action above by editing the routes array in our addon's `routes.yaml` file.
 
 ``` .language-yaml
 routes:
@@ -64,3 +64,7 @@ routes:
     uses: getEdit    
     as: karma.edit
 ```
+
+Note: If you want a settings page, you do _not_ need to create a route. A `/cp/addons/addon-name/settings` route
+will be available to you automatically. To avoid conflicts you should not create a route named `settings`.
+[See how to create a settings page](/addons/anatomy/settings).
