@@ -21,7 +21,7 @@ options:
   -
     name: width
     type: int
-    description: The fields's width layout, in percentages (e.g. `100`, `50`)
+    description: The fields's width layout, in percentages (e.g., `100`, `75`, `66`, `50`, `33`, or `25`; other values are ignored. )
   -
     name: validate
     type: string
