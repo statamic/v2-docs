@@ -1,11 +1,8 @@
 ---
 title: Table
+description: Create and manage simple tables of limitless columns and rows.
 overview: >
-  Creating tables can be a nuisance in a
-  WYSIWYG editor, or even when handcrafting them
-  in HTML, _especially_ for less-code-savvy
-  clients. This fieldtype gives you a way
-  to create simple tabular data.
+  Creating tables can be a nuisance in a WYSIWYG editor, or even when handcrafting them in HTML, _especially_ for less-code-savvy clients. This fieldtype gives you a way to create simple tabular data.
 image: 643aae7a-4123-449b-bbb1-33aff6ad26a2
 id: 11e0ab78-7698-44c8-98f1-1194cb12ce28
 ---

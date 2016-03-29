@@ -1,5 +1,6 @@
 ---
 title: Grid
+description: Manage columns of dynamic rows of data that can contain any other fieldtypes.
 overview: >
   The grid fieldtype is a _meta_ fieldtype, a fieldtype that serves as a container for more fieldtypes. Think of Grid as a spreadsheet, where each column contains any fieldtype, _including another Grid_. We lovingly refer to these as Inception Grids.
 

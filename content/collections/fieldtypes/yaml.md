@@ -1,12 +1,10 @@
 ---
 title: YAML
 overview: >
-  Content files are comprised of YAML.
-  This field lets you simply type raw
-  YAML.
+  A Code textarea that will store data as raw YAML.
 image: d9da02ac-097d-46f7-b288-67d5c13852fc
 options:
-  - 
+  -
     name: rows
     type: integer
     description: >

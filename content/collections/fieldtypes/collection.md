@@ -1,11 +1,9 @@
 ---
 title: Collection
+description: Create relationships with other Collections and Entries.
 overview: >
-  Allows you attach other Entries to your
-  content. Related entries, read-next
-  lists, and other useful content
-  relationships can all be accomplished
-  here.
+  Allows you attach other Entries to your content. Related entries, read-next
+  lists, and other useful content relationships can all be accomplished here.
 image: 1ae0abcc-d9c7-412c-8647-fbeedaaa8444
 options:
   -

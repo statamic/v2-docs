@@ -1,8 +1,9 @@
 ---
 title: Tags
 image: 95eb6fa0-d0de-11e5-a837-0800200c9a66
+description: Enter "tag" style data, stored as an array.
 overview: >
-  This fieldtype lets your user input “taggable” values, which are formatted
+  Users can input “taggable” values, which are formatted
   automatically into a YAML list format, giving you a tag pair style data output.
 id: 821a636f-2ebd-4297-b459-47e702f899df
 ---
