@@ -2,7 +2,6 @@
 title: Modifiers
 mount: modifiers
 id: 199357e4-3eea-4939-9757-0e3f6f88083b
-section: modifiers
 template: modifiers
 overview: Modifers give you the ability to manipulate the data of your variables on the fly. They can manipulate strings, filter arrays and lists, help you compare things, do basic math, simplify your markup, and even help you debug.
 ---
