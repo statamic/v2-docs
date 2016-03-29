@@ -1,8 +1,8 @@
 ---
 title: "You Can Get Here From There"
+nav_title: Upgrading From v1
 id: 87bff107-cf81-472d-81a7-fd9eb90f0487
 cover: /assets/img/trail-guides/upgrading.jpg
-state: complete
 description: >
   Learn how to upgrade your v1 site to v2 and see what's new while you're at it.
 overview: >

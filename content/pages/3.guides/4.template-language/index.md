@@ -1,7 +1,7 @@
 ---
 title: The Statamic Template Language
+nav_title: Template Language
 cover: /assets/img/trail-guides/template-language.jpg
-state: complete
 description: Learn how to harness the power of Statamic with litte more than a few little tags in your HTML.
 id: 04670d99-27cd-46a8-acc7-d961794b154c
 overview: |

@@ -1,5 +1,6 @@
 ---
 title: Taxonomies Are Not Taxidermies
+nav_title: Taxonomies
 id: 1aea1b4b-cf9b-44a0-92a7-85eba4037283
 cover: /assets/img/trail-guides/taxonomies.jpg
 description: Classifying and connecting related data goes beyond mere tags with Taxonomies.
@@ -8,7 +9,6 @@ overview: |
 pre_reqs:
     - The guide on URLs
     - The guide on Collections and Entries or Content Types
-state: complete
 ---
 ## The Basics
 

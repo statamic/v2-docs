@@ -1,7 +1,7 @@
 ---
 title: Getting Cozy With Content Types
+nav_title: Content Types
 cover: /assets/img/trail-guides/content-types.jpg
-state: complete
 description: Statamic has six distinct content types. Explore their similarities and their differences.
 overview: Content Types are the pillars that hold, contain, and snuggle all of the editable aspects of your site. Each Content Type has its own special attributes that make it unique. In this guide, you get to learn about all six of Statamic's primary Content Types.
 id: 1c622c12-93fb-41f5-bd85-239262d1f43f

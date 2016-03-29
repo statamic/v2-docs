@@ -1,10 +1,10 @@
 ---
 title: YAML 101
+nav_title: YAML 101
 id: 162f97bf-16c2-4ac3-afc1-598fca12a3a3
 cover: /assets/img/trail-guides/yaml-101.jpg
 description: Learn how Statamic structures and models your data in a very human-readable-and-editable way.
 overview: YAML is, quite simply, a data storage format designed to be human readable and easily manipulated by hand. Statamic uses it extensively to store data, manage settings, and make the magic happen.
-state: complete
 ---
 **To the reader:** if you plan to use the Control Panel exclusively to manage content and settings (maybe you're a content manager or had a developer build you a site on Statamic) you probably don't need to know anything about YAML. But wait! You might find it interesting and may even geek out a bit with your newfound knowledge. Admittedly it's less exciting than the new Star Wars trailers, but more than picking out carpet samples for your new partially-finished basement. *Developers: you should read this end to end! **There and back again.***
 

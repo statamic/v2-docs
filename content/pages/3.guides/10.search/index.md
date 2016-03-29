@@ -1,11 +1,11 @@
 ---
 title: "Hello? Is It Me You're Looking For?"
+nav_title: Search
 cover: /assets/img/trail-guides/search.jpg
 description: >
   Learn how to set up a fast, effective, and highly customizable
   search with Statamic.
 overview: Whether you're searching for Bobby Fischer or finding Nemo, search is a common staple of the web experience. Who has time for clicking? Get searching!
-state: complete
 id: aa15860c-e5b8-445e-8482-79f3c39d4a18
 ---
 Statamic's search engine is preconfigured to Just Work™ right out of the box. All you need to do is kick off the first pass of the indexer. Which leads us to our logical first section...

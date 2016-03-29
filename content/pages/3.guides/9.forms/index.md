@@ -1,8 +1,8 @@
 ---
 title: May the Forms Be With You
+nav_title: Forms
 id: 067c3e30-423b-41bf-a224-09ebed2c3158
 cover: /assets/img/trail-guides/forms.jpg
-state: complete
 description: Create, validate, collect, analyze, and export data with Statamic forms.
 overview: |
   Forms are a natural part of the internet experience and a core component of most websites in some shape or form. From "Contact Us" to "Vote for Your Favorite Naked Mole Rat", Statamic can help manage your forms and make your life a little easier.

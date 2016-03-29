@@ -1,9 +1,9 @@
 ---
 title: Happy Little Assets
+sub_title: Assets
 cover: /assets/img/trail-guides/assets.jpg
 description: "We want happy assets. Here is freedom and absolutely no pressure, just like an angel's wing."
 overview: "If we're going to have assets around, we have to be concerned about them and take care of them. This is a happy place. Let's make friends with our assets. Everyone needs a friend."
-state: complete
 id: 11265994-38b8-4516-b89e-117ebc4e38af
 ---
 Assets are files, whether images, videos, documents, zip files, or anything else within reason you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.

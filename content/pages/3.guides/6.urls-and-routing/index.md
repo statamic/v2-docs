@@ -1,7 +1,7 @@
 ---
 title: URLs and Routing and You Can Too!
+nav_title: URLs & Routes
 cover: /assets/img/trail-guides/urls.jpg
-state: complete
 description: >
   URLs and pages can be created in a
   number of flexible ways. Learn them all!

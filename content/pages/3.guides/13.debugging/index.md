@@ -1,7 +1,7 @@
 ---
 title: "Pop the Hood. Let's Debug!"
+nav_title: Debugging
 cover: /assets/img/trail-guides/debug.jpg
-state: complete
 description: >
   Learn how to debug your data, errors, addons, and anything else we can think of.
 overview: >

@@ -1,8 +1,8 @@
 ---
 title: Getting Started With Statamic
+nav_title: Getting Started
 id: eecbeeee-3541-4593-9572-37a218f87c64
 cover: /assets/img/trail-guides/getting-started.jpg
-state: completed
 description: Everything you need to get Statamic up and running so you can start building your first site.
 overview: Everything you need to know (and a few things you don't) about getting Statamic up and running, followed by a grand tour of the folder structure.
 ---

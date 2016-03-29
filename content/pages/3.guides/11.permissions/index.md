@@ -1,13 +1,11 @@
 ---
-title: >
-  The Roles, Permissions, & Groups That
-  Bind Us
+title: "The Roles, Permissions, & Groups That Bind Us"
+nav_title: Roles & Permissions
 cover: /assets/img/trail-guides/permissions.jpg
 description: >
   Manage users, customize permissions, create roles, and organize them into happy little groups.
 overview: >
   Users are any members of your site that have an account. What they can _do_ with that account is up to you. You can give them access to login-only areas of the front-end, give them the ability to manage every aspect of the site in the Control Panel, and everything in between.
-state: complete
 
 id: cd28440d-46a8-4de7-b91a-c8eb40d14bfa
 ---

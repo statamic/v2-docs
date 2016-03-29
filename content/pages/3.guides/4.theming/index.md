@@ -1,9 +1,8 @@
 ---
 title: Building a Legendary Theme
-cover: >
-  /assets/img/trail-guides/theming.jpg
+nav_title: Building a Theme
+cover: /assets/img/trail-guides/theming.jpg
 description: Learn how to put together a theme that makes you want to be a better person.
-state: complete
 overview: |
   A theme is the perfectly fitting custom tailored suit or dress that your website wears. It can be one of a kind or shared with the masses. What you do with your theme is up to you.
 id: 9edf105b-5a6c-4bf0-a26a-ba1795a03981

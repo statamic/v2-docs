@@ -1,10 +1,10 @@
 ---
 title: "The Caching Parfait"
+nav_title: Caching
 cover: /assets/img/trail-guides/caching.jpg
 description: Statamic has several different caching systems and features. Learn to love them all.
 overview: >
   A flat-file CMS wouldn't be worth its salt without a few different caching mechanisms. In this guide we peel back the various layers like an onion and make at least one Shrek joke.
-state: complete
 id: 36775486-caae-4e71-9c48-ee748004f1c2
 ---
 ## An introduction to flat-file caching
