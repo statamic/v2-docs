@@ -1,4 +1,4 @@
-title: Class Reference
+title: Classes
 id: 0bf69591-dd53-4bde-9bd7-0683ce5623de
 template: docs/classes
 overview: |
