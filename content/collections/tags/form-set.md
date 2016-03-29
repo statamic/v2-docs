@@ -1,8 +1,7 @@
 ---
 title: Formset
 id: 0b9590a7-f8b3-4a11-92b5-60d6d43cf869
-overview: >
-  A shortcut tag to allow all child Form tags to inherit the formset.
+overview: Wrap a group of form tags to set them all to the same formset.
 parameters:
   -
     name: in|is|formset

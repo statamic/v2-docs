@@ -1,6 +1,6 @@
 ---
 title: Fieldtypes
-template: section
+template: docs/fieldtypes
 id: ef235bbf-9f7f-4ce0-9c81-bd2295dbe6a6
 mount: fieldtypes
 overview: >

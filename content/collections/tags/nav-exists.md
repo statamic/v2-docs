@@ -1,7 +1,5 @@
 ---
-overview: >
-  Lets you test whether a set of
-  parameters will result in a page tree.
+overview: Test whether a set of parameters will result in a page tree.
 title: Exists
 id: b0275e02-2a64-4233-a335-1da161f23216
 ---

@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Reference
 id: 4821acfc-5eca-41ca-b2fb-ca7b87876f10
 template: docs/index
 overview: |

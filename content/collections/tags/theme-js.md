@@ -1,9 +1,7 @@
 ---
 title: JS
 id: 7b0b7fd8-4b7a-42ae-921b-ddc7383e12f2
-overview: >
-  Gets the path to a javascript file in the
-  `js` directory of your theme.
+overview: Get the URL to a javascript file in your theme.
 parameters:
   -
     name: src

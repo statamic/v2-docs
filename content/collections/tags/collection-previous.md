@@ -1,8 +1,6 @@
 ---
 title: Previous
-overview: >
-  Iterate over the previous entries that
-  would show up in the listing.
+overview: Grab the previous entries relative to current entry in a Collection.
 id: 741cf972-c0bd-4e3c-81e2-8cc8bea60737
 ---
 This Tag functions the same way as the [`collection:next`](/docs/tags/collection-next) tag, but in the opposite direction.

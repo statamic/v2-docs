@@ -1,6 +1,6 @@
 ---
 title: Asset
-overview: Gets the URL to a file in your theme.
+overview: Get the URL to a file in your theme.
 parameters:
   -
     name: type

@@ -1,9 +1,7 @@
 ---
 title: Forgot Password Form
 overview: >
-  Create a form that will send a reset
-  password email. Follow up with a Reset
-  Password Form.
+  Generates necessary markup for a User "Forgot Password" form.
 parameters:
   -
     name: redirect

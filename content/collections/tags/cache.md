@@ -7,6 +7,7 @@ parameters:
     name: scope
     type: 'string *site*'
     description: 'Sets the cache scope. You have your choice of the default `site` or `page`.'
+description: Cache a template chunk for performance.
 id: 1d0d2d1f-734b-4360-af7a-6792bf670bc7
 ---
 ## Usage {#usage}

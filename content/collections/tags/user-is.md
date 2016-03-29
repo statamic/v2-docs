@@ -1,8 +1,6 @@
 ---
 title: Is (Role)
-overview: >
-  Section off your templates based on
-  whether a user has a particular role.
+overview: Check if a user has a specific role.
 parameters:
   -
     name: role|roles

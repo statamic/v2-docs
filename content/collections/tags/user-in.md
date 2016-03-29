@@ -1,8 +1,6 @@
 ---
 title: In (Group)
-overview: >
-  Section off your templates based on
-  whether a user is in a user group.
+overview: Check if a user is in a specific user group.
 parameters:
   -
     name: group|groups

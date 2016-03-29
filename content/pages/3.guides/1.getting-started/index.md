@@ -129,7 +129,7 @@ In order to have write access, the necessary permissions depend on which system 
 
 - If they are the same user, use `744`.
 - If they are the same group, use `774`.
-- If they are neither the same user nor in the same group, --or you're tired of messing with this, just use `777`.
+- If they are neither the same user nor in the same group, or if you're tired of messing with this, just use `777`.
 
 > Apply the permissions recursively so Statamic can write where it needs to.
 
@@ -283,7 +283,7 @@ It's all organized and namespaced into concise areas of responsibility, none of 
 
 As long as this folder has the [proper permissions](#permissions), you can simply leave it be.
 
-# Conclusion
+## Conclusion
 
 What are you waiting for? Go build something neat. Or keep learning - might we suggest [Getting Cozy With Content Types][content-types]?
 

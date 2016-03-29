@@ -1,8 +1,6 @@
 ---
 title: Next
-overview: >
-  Iterate over the next entries that would
-  show up in the listing.
+overview: Grab the next Pages relative to your current Page.
 parameters:
   -
     name: from|folder|url

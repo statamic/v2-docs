@@ -1,6 +1,6 @@
 ---
 title: Partial
-overview: "Display a partial from within the currently-selected theme's partials folder."
+overview: Render a partial template.
 parameters:
   -
     name: partial

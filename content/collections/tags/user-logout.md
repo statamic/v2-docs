@@ -1,8 +1,6 @@
 ---
 title: Logout
-overview: |
-  Logs a user out immediately, and
-  performs a redirect.
+overview: Log a user out immediately and redirect them elsewhere.
 parameters:
   -
     name: redirect

@@ -1,8 +1,6 @@
 ---
 title: Output
-overview: >
-  Output the contents of a file in your
-  theme.
+overview: Render the output of any file in your theme.
 parameters:
   -
     name: src

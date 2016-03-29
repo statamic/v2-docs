@@ -1,6 +1,6 @@
 ---
 title: Get Value
-overview: Get an associative array value and loop through it, optionally applying filters along the way.
+overview: Grab an associative array value so you can filter and loop through it.
 parameters:
   -
     name: field

@@ -2,7 +2,7 @@
 title: Entries
 id: 45e7802d-2399-4a60-9cf8-35441efa9aab
 is_parent_tag: true
-overview: Iterate over entries in a collection.
+overview: Iterate over entries in a Collection.
 parameters:
   -
     name: url

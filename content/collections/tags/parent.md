@@ -1,6 +1,6 @@
 ---
 title: Parent
-overview: "Retrieve page variables for the current page's parent page."
+overview: Grab the current page's parent's page data. You follow that?
 parameters:
   -
     name: field

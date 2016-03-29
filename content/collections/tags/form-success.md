@@ -1,7 +1,7 @@
 ---
 title: Success
 id: e7430255-6237-4cc8-96c2-e8338758851f
-overview: A boolean tag used to check if a form submission was successful.
+overview: Boolean if a form submission was successful.
 parameters:
   -
     name: formset|in

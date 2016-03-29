@@ -1,8 +1,6 @@
 ---
 title: Profile
-overview: >
-  Output user details. You may use `user`
-  or `user:profile`.
+overview: Grab and display User data.
 parameters:
   -
     name: id

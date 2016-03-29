@@ -3,6 +3,7 @@ id: 5b748a3f-be0e-41c1-8877-73f6b7ee1d0a
 title: Assets
 overview: >
     Used to retrieve Assets data from the [Asset Fieldtype](/docs/fieldtypes/assets). Your site's Assets are managed and stored independently of your pages and entries and have a joined relationship through their `id`. [Learn more about Assets](/guides/assets).
+description: Fetch image/file Assets from an Assets field.
 variables:
   -
     name: id

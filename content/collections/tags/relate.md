@@ -1,5 +1,6 @@
 ---
 title: Relate
+description: Grab data through relationships.
 overview: |
   Relate allows you to fetch content from a relationship using a very simple tag syntax. Relate tags can even be nested inside each other.
 

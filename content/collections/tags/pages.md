@@ -1,7 +1,7 @@
 ---
 title: Pages
 is_parent_tag: true
-overview: Iterate over child pages.
+overview: Grab and iterate over child pages.
 parameters:
   -
     name: url

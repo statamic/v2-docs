@@ -1,13 +1,11 @@
 ---
 title: Login Form
-overview: 'Generate a `<form>` tag to authenticate a user.'
+overview:	Generate necessary markup to create a User login form.
 parameters:
   -
     name: redirect
     type: string
-    description: >
-      Where the user should be taken after
-      successfully logging in.
+    description: Where the user should be taken after successfully logging in.
 variables:
   -
     name: errors

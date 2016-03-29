@@ -1,6 +1,6 @@
 ---
 title: Logout URL
-overview: Generates a link to log a user out.
+overview: Generates a user's logout URL.
 parameters:
   -
     name: redirect

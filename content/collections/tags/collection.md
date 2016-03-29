@@ -2,6 +2,7 @@
 title: Collection
 is_parent_tag: true
 overview: Entries are grouped into Collections and connected to this tag to provide you means to fetch, sort, filter, and arrange them in various ways. A Collection might contain blog posts, products, or even a pile of terrible knock-knock jokes. We don't judge, and neither does the Collection Tag.
+description: Grab and filter the entries in a specified Collection.
 parameters:
   -
     name: from|folder|use

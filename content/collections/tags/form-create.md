@@ -2,7 +2,7 @@
 title: Create
 id: aa96fcf1-510c-404b-9b63-cea8942e1bf8
 overview: >
-  This Tag will generate a `<form>` to allow your users to create submissions into a particular Form.
+  Generate necessary `<form>` markup to accept form submissions.
 parameters:
   -
     name: formset|in

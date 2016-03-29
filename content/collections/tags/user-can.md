@@ -1,8 +1,6 @@
 ---
 title: Can (Permission)
-overview: >
-  Section off your templates based on
-  whether a user has permission.
+overview: Check if a user has a specific permission.
 parameters:
   -
     name: permission|do

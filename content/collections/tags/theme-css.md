@@ -1,8 +1,6 @@
 ---
 title: CSS
-overview: >
-  Gets the path to a stylesheet in the
-  `css` directory of your theme.
+overview: Get the URL to a stylesheet file in your theme.
 parameters:
   -
     name: src

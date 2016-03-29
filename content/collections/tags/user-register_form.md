@@ -1,6 +1,6 @@
 ---
 title: Register Form
-overview: 'Generate a `<form>` tag to register a user.'
+overview: Generate necessary markup to create a User register form.
 parameters:
   -
     name: redirect

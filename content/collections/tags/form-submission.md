@@ -1,8 +1,7 @@
 ---
 title: Submission
 id: 8720d9ed-3a5f-4c60-af74-7b82933146a2
-overview: >
-  Allows you to output data from the form that was just successfully submitted.
+overview: Display data immediately following a successful submission.
 parameters:
   -
     name: formset|in

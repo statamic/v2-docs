@@ -1,5 +1,5 @@
 ---
-title: Addon Development
+title: Building Addons
 cover: /assets/img/trail-guides/addon.jpg
 description: >
   Learn how to build your very first

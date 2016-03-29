@@ -1,8 +1,6 @@
 ---
 title: Taxonomy
-overview: >
-  Shows a listing of taxonomy values that
-  have been used for the given parameters.
+overview: Fetch and filter Taxonomy terms.
 parameters:
   -
     name: group

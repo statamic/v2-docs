@@ -1,7 +1,7 @@
 ---
 title: Reset Password Form
 overview: >
-  Create a form that will reset a user's password.
+  Generate necessary `<form>` markup to reset a user's password.
 parameters:
   -
     name: redirect

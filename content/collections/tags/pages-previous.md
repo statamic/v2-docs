@@ -1,8 +1,6 @@
 ---
 title: Previous
-overview: >
-  Iterate over the previous pages that
-  would show up in the list.
+overview: Grab the previous Pages relative to your current Page.
 id: 1172608e-0e75-487a-8cd6-872746542550
 ---
 This Tag functions the same way as the [`pages:next`](/docs/tags/pages-next) tag, but in the opposite direction.

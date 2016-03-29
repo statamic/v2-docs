@@ -1,6 +1,6 @@
 ---
 title: Redirect
-overview: Redirects the page to another page.
+overview: Redirect to another page.
 parameters:
   -
     name: url

@@ -1,8 +1,6 @@
 ---
 title: Glide
-overview: >
-  Create on-the-fly image asset transforms
-  using the fantastic Glide package.
+overview: Manipulate Asset images on the fly.
 parameters:
   -
     name: src

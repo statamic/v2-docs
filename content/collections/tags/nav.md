@@ -1,14 +1,8 @@
 ---
-overview: >
-  The nav tags are designed to help your
-  users navigate through your hierarchy of
-  pages. They work together to allow you
-  to easily traverse your content upways
-  and downways, sideways, slantways,
-  longways, backways, squareways,
-  frontways, and any other ways that you
-  can think of.
 title: Nav
+overview: >
+  The nav tags are designed to help your users navigate through your hierarchy of pages. They work together to allow you to easily traverse your content upways and downways, sideways, slantways, longways, backways, squareways, frontways, and any other ways that you can think of.
+description: Create site navigation based off your Pages structure.
 id: ed746608-87f9-448f-bf57-051da132fef7
 is_parent_tag: true
 parameters:

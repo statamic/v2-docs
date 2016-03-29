@@ -1,8 +1,7 @@
 ---
 title: Submissions
 id: afa2740e-2cf7-4ada-a92e-4fc92e827351
-overview: >
-  Allows you to iterate over form submissions.
+overview: Iterate over and display data from form submissions.
 parameters:
   -
     name: formset|in

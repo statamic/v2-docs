@@ -1,5 +1,6 @@
 ---
 title: Form
+description: How to create a search form.
 id: 1ab4aca4-1add-4b41-b40c-4f3e8170fd98
 ---
 There's no special search form tag that you need to use. Simply create a form that performs a GET request to where your results will be listed.

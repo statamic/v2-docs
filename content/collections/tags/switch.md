@@ -1,14 +1,8 @@
 ---
 title: Switch
+description: Loop over a set of values repeatedly.
 overview: >
-  For each time that this tag is called, a
-  value from those listed in the between
-  parameter will be returned. The first
-  value will be returned the first time
-  this tag is called, the second value the
-  second time, etc. Once this tag runs out
-  of values to return, it starts over at
-  the first thing in its list.
+  For each time that this tag is called, a value from those listed in the between parameter will be returned. The first value will be returned the first time this tag is called, the second value the second time, etc. Once this tag runs out of values to return, it starts over at the first thing in its list.
 parameters:
   -
     name: between

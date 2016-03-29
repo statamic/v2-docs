@@ -1,6 +1,6 @@
 ---
 title: Users
-overview: Iterate over users.
+overview: Grab, filter, and iterate over Users and their profile data.
 parameters:
   -
     name: sort

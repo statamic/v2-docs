@@ -1,8 +1,6 @@
 ---
 title: Path
-overview: >
-  Contextualizes a path with the current
-  site root.
+overview: Prepend a URL/string with the current site root.
 parameters:
   -
     name: src

@@ -1,7 +1,7 @@
 ---
 title: Routes
 is_parent_tag: true
-overview: Loop through your Template Routes and access any inline data with this helper tag.
+overview: Loop through your Template Routes and access inline data.
 variables:
   -
     name: url

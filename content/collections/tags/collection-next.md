@@ -1,8 +1,6 @@
 ---
 title: Next
-overview: >
-  Iterate over the next entries that would
-  show up in the listing.
+overview:  Grab the next entries relative to current entry in a Collection.
 parameters:
   -
     name: in|collection

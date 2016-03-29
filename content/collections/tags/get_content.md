@@ -4,6 +4,7 @@ id: a33dd9d3-f2f0-4114-b19d-1126361c327e
 parse_content: false
 overview: |
   With nothing but a URI, or list of URIs, you can fetch all available data regardless of the content type. It is a friend to pages, entries, and taxonomies alike.
+description: Fetch data by one or more URLs regardless of content type.
 parameters:
   -
     name: from
