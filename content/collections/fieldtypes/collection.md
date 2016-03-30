@@ -1,5 +1,6 @@
 ---
 title: Collection
+extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 description: Create relationships with other Collections and Entries.
 overview: >
   Allows you attach other Entries to your content. Related entries, read-next

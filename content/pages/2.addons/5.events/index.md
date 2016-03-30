@@ -45,6 +45,11 @@ events:
     description: >
       Fired when a user is saved through the CP. The `User` class will be passed through.
   -
+    name: cp.nav.created
+    description: >
+      Fired after the navigation has been created. A `Statamic\CP\Navigation\Nav` object will be passed through.
+      Use this event to [add your own items to the navigation](/addons/anatomy/navigation).
+  -
     name: Form.submission.creating
     description: >
       Fired when a form is submitted, but before it is saved. Allows you to stop or modify the submission.

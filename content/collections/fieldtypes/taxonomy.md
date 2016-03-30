@@ -1,5 +1,6 @@
 ---
 title: Taxonomy
+extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 description: Attach Taxonomy Terms to your content.
 overview: >
   Allows you attach Taxonomy Terms to your content. Tagging, Categories, Colors, Flavors, you name it. Taxonomy all the things!
