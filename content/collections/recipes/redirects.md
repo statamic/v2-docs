@@ -58,4 +58,4 @@ to perform the redirect before Statamic even gets loaded.
 
 This is the preferred method for permanent redirects.
 
-[redirect_tag]: /docs/tags/redirect
+[redirect_tag]: /reference/tags/redirect

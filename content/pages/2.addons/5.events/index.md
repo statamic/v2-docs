@@ -74,7 +74,7 @@ events:
   -
     name: user.registered
     description: >
-      Fired after a user has registered with the [Register Form](/docs/tags/user-register_form). The `User` will be passed through.
+      Fired after a user has registered with the [Register Form](/reference/tags/user-register_form). The `User` will be passed through.
 ---
 
 # Event Classes

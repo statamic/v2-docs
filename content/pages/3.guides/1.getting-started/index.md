@@ -168,7 +168,7 @@ Technically there is no "install" process for Statamic, but we have a little too
 For extra security, it's not a bad idea to place your important system files below the webroot. This prevents system
 files from potentially being acccessed through a browser.
 
-[Read about how to secure your Statamic installation](/docs/recipes/secure-installation).
+[Read about how to secure your Statamic installation](/reference/recipes/secure-installation).
 
 ## Multilingual Sites
 

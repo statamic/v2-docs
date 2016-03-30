@@ -32,4 +32,4 @@ The values come from either a predefined array of `options`, or from a third-par
 The suggestions in this field will normally come from the `options` array, which is a predefined list of values.
 
 It is possible for an addon to provide suggestions to power this field. For example, an addon might create a suggest mode
-that fetches tweets from a Twitter user's account. [Learn how to make a Suggest Mode](/docs/recipes/suggest-modes).
+that fetches tweets from a Twitter user's account. [Learn how to make a Suggest Mode](/reference/recipes/suggest-modes).

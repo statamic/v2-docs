@@ -170,7 +170,7 @@ User data can be routed and displayed on the site much like Entires, allowing yo
 
 You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire [Guide on Users][guide-users].
 
-[nav-tag]: /docs/tags/nav
+[nav-tag]: /reference/tags/nav
 [taxonomies]: /guides/taxonomies
 [image-api]: #
 [taxonomy-fieldtype]: #

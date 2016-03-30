@@ -29,7 +29,7 @@ parameters:
   -
     name: collection params
     type: inheritance
-    description: 'All parameters available on the [collection tag](/docs/tags/collection) are also available here.'
+    description: 'All parameters available on the [collection tag](/reference/tags/collection) are also available here.'
 variables:
   -
     name: no_results

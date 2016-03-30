@@ -31,7 +31,7 @@ categories:
 
 ### Using the Control Panel
 
-The recommended way to taxonomize your content is to use the [Taxonomy field](/docs/fieldtypes/taxonomy) in the
+The recommended way to taxonomize your content is to use the [Taxonomy field](/reference/fieldtypes/taxonomy) in the
 Control Panel. This field will save an array of taxonomy term IDs to your content's front matter, like this:
 
 ``` .language-yaml
@@ -106,7 +106,7 @@ The template used to render `/products/category/{slug}` will come from a cascade
 
 ## Templating
 
-Iterate over taxonomies in a piece of content using the [Relate tag](/docs/tags/relate).
+Iterate over taxonomies in a piece of content using the [Relate tag](/reference/tags/relate).
 
 ```
 {{ relate:styles }}

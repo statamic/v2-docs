@@ -7,7 +7,7 @@ id: efa34b0d-b4c3-43fc-bb91-a6d331dc6026
 ---
 ## The Blade Templating Language
 
-You can find out how to use Blade, the templating language over on the [Laravel docs](https://laravel.com/docs/blade).  
+You can find out how to use Blade, the templating language over on the [Laravel docs](https://laravel.com/reference/blade).  
 Here we'll be explaining how to use it in the context of Statamic.
 
 ## Using in a theme
@@ -75,7 +75,7 @@ Your Blade template would have access to the variables in this file:
 
 ## Modifiers
 
-You can use [Modifiers](/docs/modifiers) in your Blade templates, but they will use a different syntax than
+You can use [Modifiers](/reference/modifiers) in your Blade templates, but they will use a different syntax than
 what you're used to with Antlers.
 
 First, wrap your variable in a `modify()` method, then feel free to chain modifiers as you wish. The value

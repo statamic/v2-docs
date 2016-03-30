@@ -5,7 +5,7 @@ overview: >
   somewhere on the internet, or your local grocer.
 id: dd9212d0-978c-4b86-a51f-745464ff0721
 ---
-The "[Relate](/docs/fieldtypes/relate)" fields – "[Users](/docs/fieldtypes/users)", "[Taxonomy](/docs/fieldtypes/taxonomy)", "[Collection](/docs/fieldtypes/collection)" – all leverage the "[Suggest](/docs/fieldtypes/suggest)" field behind the scenes.
+The "[Relate](/reference/fieldtypes/relate)" fields – "[Users](/reference/fieldtypes/users)", "[Taxonomy](/reference/fieldtypes/taxonomy)", "[Collection](/reference/fieldtypes/collection)" – all leverage the "[Suggest](/reference/fieldtypes/suggest)" field behind the scenes.
 
 While the Relate fields might not look like a Suggest field, they follow the same basic principle: they retrieve "suggestions" through an AJAX call.
 

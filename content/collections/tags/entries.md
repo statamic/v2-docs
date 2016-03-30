@@ -37,4 +37,4 @@ For example:
 
 In this tag, Statamic will check the `/company/news` page for any mounted entry collections. If it has a mounted collection (with `mount: articles`, for example) the tag will get the entries in the `articles` collection.
 
-[collection]: /docs/tags/collection
+[collection]: /reference/tags/collection

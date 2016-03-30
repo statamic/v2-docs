@@ -18,5 +18,5 @@ event_date: April 15 2016
 2016-04-15
 ```
 
-[carbon]: http://carbon.nesbot.com/docs/
+[carbon]: http://carbon.nesbot.com/reference/
 [datetime]: http://php.net/manual/en/function.date.php

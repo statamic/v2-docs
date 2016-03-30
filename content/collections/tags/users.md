@@ -32,4 +32,4 @@ Here we will loop over the users with gmail email addresses.
 </ul>
 ```
 
-[collection]: /docs/tags/collection
+[collection]: /reference/tags/collection

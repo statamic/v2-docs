@@ -80,4 +80,4 @@ This email is bundled with Statamic and will work for most people out of the box
 like to customize it, you can. [Find out how to write custom emails][custom-emails]. The template
 used is `user-reset` and should contain a `{{ reset_url }}` variable, which is the generated reset URL.
 
-[custom-emails]: /docs/recipes/emails#templates
+[custom-emails]: /reference/recipes/emails#templates

@@ -58,9 +58,9 @@ There are a few utility modifiers that let you debug data without the need for t
 - [to_json][to_json]
 - [debug][debug] (okay we fibbed, this one _does_ use the Debug Bar)
 
-[tags]: /docs/tags
+[tags]: /reference/tags
 [carbon]: http://carbon.nesbot.com/
-[dump]: /docs/modifiers#dump
-[console_log]: /docs/modifiers#console_log
-[debug]: /docs/modifiers#debug
-[to_json]: /docs/modifiers#to_json
+[dump]: /reference/modifiers#dump
+[console_log]: /reference/modifiers#console_log
+[debug]: /reference/modifiers#debug
+[to_json]: /reference/modifiers#to_json

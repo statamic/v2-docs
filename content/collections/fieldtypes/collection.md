@@ -16,7 +16,7 @@ id: 0e7eb069-dc0c-4dfd-9230-67ca5d215395
 ---
 ## Data Structure {#data-structure}
 
-The Collections fieldtype is a [Relate fieldtype](/docs/fieldtypes/relate), which means the Entries will be saved as IDs.
+The Collections fieldtype is a [Relate fieldtype](/reference/fieldtypes/relate), which means the Entries will be saved as IDs.
 
 ``` .language-yaml
 shows:
@@ -26,7 +26,7 @@ shows:
 
 ## Templating
 
-Use the [Relate tag](/docs/tags/relate) to loop through the IDs and fetch the content data.
+Use the [Relate tag](/reference/tags/relate) to loop through the IDs and fetch the content data.
 
 ```
 <ul>

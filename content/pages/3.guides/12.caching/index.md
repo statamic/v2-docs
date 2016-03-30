@@ -84,10 +84,6 @@ Nope, just don't use it if you don't want it.
 
 Aw man, we were hoping you wouldn't ask that. We'll have a smart or automatic method soon, but for now you could change the markup a little bit (which creates a new cache hash) or manually wipe the System cache.
 
-[ephemeral]: https://en.wiktionary.org/wiki/ephemeral
-[laravel-cache]: http://laravel.com/docs/5.1/cache
-[cache-tag]: /docs/tags/cache
-
 ## Static Caching {#static-page}
 
 Now we get to the **performance** part of the show. There is absolutely nothing faster on the web than static pages (except static pages without javascript and big giant header images, of course). And to that end, Statamic can cache static pages and pass off routing to Apache or Nginx through reverse proxying. It sounds much harder than is.
@@ -122,3 +118,8 @@ static_caching_type: file
 ## Static Site Generation {#static-generator}
 
 En route from Far Far Away Land. Stay tuned!
+
+
+[ephemeral]: https://en.wiktionary.org/wiki/ephemeral
+[laravel-cache]: http://laravel.com/docs/5.1/cache
+[cache-tag]: /reference/tags/cache

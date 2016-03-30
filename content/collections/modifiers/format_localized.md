@@ -21,5 +21,5 @@ Vendredi 15 avril 2016
 ```
 
 
-[carbon]: http://carbon.nesbot.com/docs/
+[carbon]: http://carbon.nesbot.com/reference/
 [strftime]: http://php.net/strftime

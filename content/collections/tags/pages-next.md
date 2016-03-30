@@ -30,7 +30,7 @@ parameters:
   -
     name: collection params
     type: inheritance
-    description: 'All parameters available on the [collection tag](/docs/tags/collection) are also available here.'
+    description: 'All parameters available on the [collection tag](/reference/tags/collection) are also available here.'
 variables:
   -
     name: no_results
@@ -60,4 +60,4 @@ This will show the next 2 pages sibling pages. It'll scope the loop into the `st
 {{ /pages:next }}
 ```
 
-Note: When using `as`, don't use `as="pages"` since it will assume you are trying to use the [Pages Tag](/docs/tags/pages).
+Note: When using `as`, don't use `as="pages"` since it will assume you are trying to use the [Pages Tag](/reference/tags/pages).

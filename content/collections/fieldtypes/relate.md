@@ -9,10 +9,10 @@ id: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 
 You can relate any of the base [Content Types](/guides/content-types), each of which with its own specific fieldtype. They all extend this core Relate fieldtype.
 
-- [Taxonomy](/docs/fieldtypes/taxonomy) - for Taxonomy Terms
-- [Collection](/docs/fieldtypes/collection) - for Entries
-- [Users](/docs/fieldtypes/users) - for Users
-- [Assets](/docs/fieldtypes/assets) - for Assets (it doesn't extend this Relate fieldtype)
+- [Taxonomy](/reference/fieldtypes/taxonomy) - for Taxonomy Terms
+- [Collection](/reference/fieldtypes/collection) - for Entries
+- [Users](/reference/fieldtypes/users) - for Users
+- [Assets](/reference/fieldtypes/assets) - for Assets (it doesn't extend this Relate fieldtype)
 
 ## Data Structure {#data-structure}
 
@@ -26,7 +26,7 @@ wildlife:
 
 ### Templating {#templating}
 
-Use the [Relate tag](/docs/tags/relate) to loop through the IDs and fetch the content data.
+Use the [Relate tag](/reference/tags/relate) to loop through the IDs and fetch the content data.
 
 ```
 <ul>

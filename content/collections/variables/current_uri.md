@@ -10,5 +10,5 @@ The current URI (URL without domain).
 ```
 
 ``` .language-output
-/docs/variables
+/reference/variables
 ```

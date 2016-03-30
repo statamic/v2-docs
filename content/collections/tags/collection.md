@@ -264,7 +264,7 @@ You can optionally put your entries loop in a scope, if you’d like to be more 
 
 You don’t have to wrap your entries loop in the `else` of your `if no_results` conditional. If there are no posts, the loop will simply output nothing.
 
-You can [read more about scope and the cascade here](/docs/recipes/cascade).
+You can [read more about scope and the cascade here](/reference/recipes/cascade).
 
 ## Pagination {#pagination}
 
@@ -385,5 +385,5 @@ Here's the `auto_links` output, recreated using the other tags, for you maverick
 
 See, just a couple of keystrokes.
 
-[conditions]: /docs/conditions
+[conditions]: /reference/conditions
 [custom_filters]: /addons/filters

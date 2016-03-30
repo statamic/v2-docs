@@ -107,7 +107,7 @@ Addons are structured pretty differently in v2. Chances are [porting one][addons
 
 ### Files and Assets
 
-- The File fieldtype is replaced by [Assets](/docs/fieldtypes/assets). As long as you don't move your files, your links won't break but you'll probably want to use because frankly, it's a lot better. Check out the [Assets guide][assets].
+- The File fieldtype is replaced by [Assets](/reference/fieldtypes/assets). As long as you don't move your files, your links won't break but you'll probably want to use because frankly, it's a lot better. Check out the [Assets guide][assets].
 
 ## Better Ways of Doing Things {#better-ways}
 
@@ -149,8 +149,8 @@ If you need help upgrading your v1 site, let us know! We're offering Upgrades as
 [leaflet]: http://leafletjs.com/
 [name-mangler]: https://manytricks.com/namemangler/
 [permissions]: /guides/permissions
-[relate-fieldtype]: /docs/fieldtypes/relate
-[relate-tag]: /docs/tags/relate
+[relate-fieldtype]: /reference/fieldtypes/relate
+[relate-tag]: /reference/tags/relate
 [routes]: /guides/urls-and-routing#routes
 [search-guide]: /guides/search
 [semver]: http://semver.org

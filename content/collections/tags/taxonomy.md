@@ -191,5 +191,5 @@ The filter will get the taxonomy collection instance, _not_ the content collecti
 
 
 
-[conditions]: /docs/conditions
+[conditions]: /reference/conditions
 [custom_filters]: /addons/filters

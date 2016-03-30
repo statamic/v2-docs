@@ -33,7 +33,7 @@ This data format makes it trivial when it comes time to render it templates.
 
 ## Templating
 
-This fieldtype comes with a handy [`table`](/docs/modifiers/table) modifier, which will turn your data into a simple HTML `<table>`.
+This fieldtype comes with a handy [`table`](/reference/modifiers/table) modifier, which will turn your data into a simple HTML `<table>`.
 
 ```
 {{ my_table | table }}

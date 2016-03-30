@@ -9,7 +9,7 @@ id: dd9513b4-4cbb-4481-bf72-eb076e053b04
 ---
 ## Parameters {#parameters}
 
-The parameters are inherited from the [collection](/docs/tags/collection) tag. Everything available there is available here.
+The parameters are inherited from the [collection](/reference/tags/collection) tag. Everything available there is available here.
 
 ## Example {#example}
 

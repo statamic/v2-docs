@@ -22,7 +22,7 @@ variables:
 
 ## Usage {#usage}
 
-This tag has the same functionality as the [collection](/docs/tags/collection) tag, with exception that the collection
+This tag has the same functionality as the [collection](/reference/tags/collection) tag, with exception that the collection
 is of form submissions rather than entries.
 
 ```

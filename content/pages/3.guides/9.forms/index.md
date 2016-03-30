@@ -154,7 +154,7 @@ Here we'll send two emails for every submission of this form. One will go to the
 The first one uses a Statamic template, the other gets an "automagic" email. The automagic email will be a simple
 list of all the fields and values in the submission.
 
-[Learn how to create your emails](/docs/recipes/emails)
+[Learn how to create your emails](/reference/recipes/emails)
 
 
 ## Roadmap
@@ -166,5 +166,5 @@ list of all the fields and values in the submission.
 _Note: Editing content (Pages, Entries, etc) is not in the scope of the Forms addon. It is different than Raven in that regard. That is a separate feature entirely._
 
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
-[tags]: /docs/tags/form
-[submissions]: /docs/tags/form-submissions
+[tags]: /reference/tags/form
+[submissions]: /reference/tags/form-submissions

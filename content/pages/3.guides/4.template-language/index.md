@@ -381,4 +381,4 @@ can I take your order?
 [guide-yaml]: /guides/yaml-101
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
 [logical]: http://php.net/manual/language.operators.logical.php
-[modifiers]: /docs/modifiers
+[modifiers]: /reference/modifiers

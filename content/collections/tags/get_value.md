@@ -23,7 +23,7 @@ id: b4d337c9-5012-48eb-8819-48b6d35571bc
 ## Usage {#usage}
 
 The first way to use this tag is to get an array value from another URL. This is essentially the single-tag version of
-wrapping some templating in a [get_content tag](/docs/tags/get_content).
+wrapping some templating in a [get_content tag](/reference/tags/get_content).
 
 ``` .language-yaml
 title: Drinks

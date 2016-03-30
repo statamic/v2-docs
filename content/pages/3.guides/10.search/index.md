@@ -40,7 +40,7 @@ To enable the Algolia driver (first make sure you have an account) head to the `
 In the Control Panel, the search bar at the top of the page will allow you to search for content and will take you directly to the page to edit it.
 
 ## Templating
-Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page](/docs/tags/search) for more details.
+Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page](/reference/tags/search) for more details.
 
 If you are using the Algolia driver we recommend using a Javascript implementation to communicate directly with them, as this will be incredibly fast, and avoids using Statamic as a middleman. You don't even need to worry about importing data. Statamic will handle that part when indexing.
 

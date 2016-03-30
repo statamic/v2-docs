@@ -30,12 +30,12 @@ site/
 ### css/ {.icon.icon-folder}
 
 This is where your theme’s CSS files go. Although this folder isn’t required to use Statamic, using it will let you use the
-[theme CSS tag](/docs/tags/theme-css).
+[theme CSS tag](/reference/tags/theme-css).
 
 ### js/ {.icon.icon-folder}
 
 Your theme’s JavaScript files go here. Like the css folder, this folder isn’t required, but files within it will become
-available through the [theme JS tag](/docs/tags/theme-js).
+available through the [theme JS tag](/reference/tags/theme-js).
 
 ### layouts/ {.icon.icon-folder}
 
@@ -45,7 +45,7 @@ only need one or two layouts at the most.
 ### partials/ {.icon.icon-folder}
 
 Partials are small, reusable chunks of code (think embeds or includes in other systems). All of those live here. You
-can access your theme’s partials through the [partial tag](/docs/tags/partial).
+can access your theme’s partials through the [partial tag](/reference/tags/partial).
 
 ### templates/ {.icon.icon-folder}
 
@@ -80,7 +80,7 @@ If that’s the case, you have two options:
 
 # Conventions {#conventions}
 
-[Theme tags](/docs/tags/theme) assume a few conventions that will beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
+[Theme tags](/reference/tags/theme) assume a few conventions that will beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
 
 ## CSS and JavaScript {#css-js-conventions}
 
@@ -241,7 +241,7 @@ Be careful not to name overlap names when using both Antlers and Blade templates
 
 Note that when using Blade, all templates will be located in the `templates` folder. This includes files used by the `@extends` and `@include` directives.
 
-[Read more about templating in Statamic using Laravel Blade](/docs/recipes/blade).
+[Read more about templating in Statamic using Laravel Blade](/reference/recipes/blade).
 
 # Best Practices {#best-practices}
 
@@ -256,7 +256,7 @@ Here are a few good ideas to consider when building a theme, some of them a summ
 - When sharing, distributing, or selling a theme, feel free to include a directory for `site/content` showing sample posts and pages that use your theme’s templates, etc.
 
 
-[blade]: http://laravel.com/docs/blade
+[blade]: http://laravel.com/reference/blade
 [assets]: /guides/assets
 [templating]: /guides/template-language
-[partials]: /docs/tags/partial
+[partials]: /reference/tags/partial

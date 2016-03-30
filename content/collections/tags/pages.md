@@ -70,6 +70,6 @@ Notice only the immediate child pages are output. If we wanted to get the next l
 ```
 
 Notice that (by default) the pages are being sorted by the order key, then alphabetically. They are also displayed in a
-single list, as siblings. If you'd like to output the hierarchy, you should use the [Nav Tag](/docs/tags/nav).
+single list, as siblings. If you'd like to output the hierarchy, you should use the [Nav Tag](/reference/tags/nav).
 
-[collection]: /docs/tags/collection
+[collection]: /reference/tags/collection
