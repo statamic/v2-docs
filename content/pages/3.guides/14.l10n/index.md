@@ -2,8 +2,9 @@
 title: Keep Calm and be Multilingual
 nav_title: Localization
 cover: /assets/img/trail-guides/l10n.png
-description: Learn how to localize your site for multiple languages.
-overview: "This is a nice overview!"
+description: Learn how to build and localize a multilingual site with Statamic 2.
+overview: >
+  By configuring additional locales, content becomes translatable with the flick of a switch. Each language can run on its own URL, so you can have `example.com` and `example.com/de` or `fr.example.com`, or `example.de`. Lots of control. Lots of options.
 id: 628221eb-af56-4105-ac16-1e83e2de6c9a
 ---
 ## URL Structure
