@@ -5,21 +5,21 @@ parameters:
   -
     name: id
     type: string
-    description: >
-      Specify the ID for a user to output
-      their data.
+    description: |
+      Specify the ID for a user to output their data.  
+      Leave blank to target the currently logged in user.
   -
     name: username
     type: string
-    description: >
-      Specify the username of a user to output
-      their data.
+    description: |
+      Specify the username of a user to output their data.  
+      Leave blank to target the currently logged in user.
   -
     name: email
     type: string
-    description: >
-      Specify the email of a user to output
-      their data.
+    description: |
+      Specify the email of a user to output their data.  
+      Leave blank to target the currently logged in user.
 variables:
   -
     name: user data
