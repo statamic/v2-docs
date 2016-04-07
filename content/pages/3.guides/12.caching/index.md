@@ -115,6 +115,14 @@ static_caching_type: file
 
 ![Very Performance! So Speed!](/assets/img/screenshots/performance.png)
 
+### Query strings
+
+By default, static caching will _ignore_ any query strings in the URL. For example, visiting `/about` and `/about?something`
+will result in the same page being shown. This is useful for preventing the cache being broken by someone appending
+`?whatever` to the URL. However, it will break any functionality that relies on query strings, like pagination.
+
+_Note that when using `static_caching_type: file`, query strings will **always** be ignored._
+
 ## Static Site Generation {#static-generator}
 
 En route from Far Far Away Land. Stay tuned!
