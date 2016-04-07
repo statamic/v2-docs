@@ -2,8 +2,26 @@
 id: 5b748a3f-be0e-41c1-8877-73f6b7ee1d0a
 title: Assets
 overview: >
-    Used to retrieve Assets data from the [Asset Fieldtype](/reference/fieldtypes/assets). Your site's Assets are managed and stored independently of your pages and entries and have a joined relationship through their `id`. [Learn more about Assets](/guides/assets).
-description: Fetch image/file Assets from an Assets field.
+    Used to retrieve Assets data from either an [Asset Fieldtype](/reference/fieldtypes/assets) or directly from an Container.
+    Your site's Assets are managed and stored independently of your pages and entries and have a joined relationship through their `id`. [Learn more about Assets](/guides/assets).
+description: Fetch image/file Assets from an Assets field or container.
+parameters:
+  -
+    name: field
+    type: tagpart
+    description: |
+      Not actually a parameter, but part of the tag. For example, `{{ assets:photos }}` where `photos` is the name
+      of the field containing an array of asset IDs.
+  -
+    name: id|container
+    type: string
+    description: |
+      When retrieving assets directly from a container (_not_ through a field), this is the ID of the container.
+  -
+    name: folder
+    type: string
+    description: |
+      When retrieving assets directly from a container, this will let you target a specific folder.
 variables:
   -
     name: id
@@ -139,4 +157,33 @@ hero_image: f9ruqp-pjo32n43ojn3-rijo3209
 
 ``` .language-output
 <img src="/assets/img/quailman.jpg" />
+```
+
+### Retrieving assets from a container or folder
+
+It may be desirable to loop over all the assets in a container or folder instead of needing to pick out assets manually using a field.
+
+In this case, you may omit the second tagpart, and use parameters to drive the tag.
+
+```
+{{ assets container="123-456-789" }}
+    <img src="{{ url }}" />
+{{ /assets }}
+```
+
+Knowing the ID of the container isn't always an option. It may be simpler to specify the path. (This corresponds to
+the `path` within a `container.yaml`).
+
+```
+{{ assets path="assets" }}
+    <img src="{{ url }}" />
+{{ /assets }}
+```
+
+Lastly, you may target a specific folder in a container, if you wish.
+
+```
+{{ assets path="assets" folder="img" }}
+    <img src="{{ url }}" />
+{{ /assets }}
 ```
