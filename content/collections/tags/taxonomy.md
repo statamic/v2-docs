@@ -29,6 +29,13 @@ parameters:
       specified page. You may pipe-separate
       multiple pages.
   -
+    name: show
+    type: string
+    description: >
+      Set this to `all` to show all taxonomy terms. This will prevent any filtering of the underlying
+      content collection. The filtering parameters (`show_unpublished`, `show_future`, etc) will
+      all be ignored.
+  -
     name: show_unpublished
     type: 'boolean *false*'
     description: >
