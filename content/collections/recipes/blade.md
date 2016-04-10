@@ -7,7 +7,7 @@ id: efa34b0d-b4c3-43fc-bb91-a6d331dc6026
 ---
 ## The Blade Templating Language
 
-You can find out how to use Blade, the templating language over on the [Laravel docs](https://laravel.com/reference/blade).  
+You can find out how to use Blade, the templating language over on the [Laravel docs](https://laravel.com/docs/5.2/blade).  
 Here we'll be explaining how to use it in the context of Statamic.
 
 ## Using in a theme
