@@ -32,7 +32,7 @@ The most common usage of a partial is to add a header or navigation into a layou
 </html>
 ```
 
-The `{{ partial:header }}` tag would output the contents of `site/themes/theme_name/partials/header.html`.
+The `{{ partial:header }}` tag would output the contents of `site/themes/theme_name/partials/header.html`. Note no space is allowed between the tag’s trailing colon your partial’s filename. I.e., `{{ partial:header }}` works, whereas `{{ partial: header }}` does not.
 
 Splitting your templates up into partials is a nice way to keep things clean and organized.
 
