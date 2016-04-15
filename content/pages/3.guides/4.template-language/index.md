@@ -338,7 +338,7 @@ You can use [modifiers][modifiers] inside your conditions if you wrap them them 
 RegExes aren't for the faint of heart, but if you're capable of [writing one](https://regex101.com/) (or let's face it, copying and pasting from Stack Overflow), you can use the `~` squiggle operator to get the job done.
 
 ```
-{{ unless content ~ /\bbest\b.+\bever/}}
+{{ unless content ~ '/\bbest\b.+\bever/'}}
   # The hyperbole here is at least tolerable. Continue!
   {{ content }}
 {{ /if }}
@@ -346,6 +346,7 @@ RegExes aren't for the faint of heart, but if you're capable of [writing one](ht
 
 **Tips:**
 
+- You need to escape your regex as a string
 - You need to use delimiters at the beginning and end of your regex
 - You can use flags at the end of your regex to modify its behavior
 
