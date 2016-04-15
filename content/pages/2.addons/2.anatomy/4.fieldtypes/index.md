@@ -20,7 +20,7 @@ The bare minimum fieldtype requires you to have an `AddonNameFieldtype.php` file
 
 ``` .language-files
 site/addons/MyAddon/
-|-- js/
+|-- /resources/assets/js/
 |   |-- fieldtype.js
 |-- MyAddonFieldtype.php
 ```
