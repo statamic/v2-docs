@@ -11,8 +11,8 @@ parameters:
 ---
 ## Usage {#usage}
 
-All the `Form` tags need to know the formset they are handling. Rather than specifying the formset parameter
-on each tag, we can use the `{{ form:set }}` tag to automatically apply them.
+Each `form` tag needs to know which formset it is handling. As a convenience, rather than re-specifying the same formset parameter
+over and over, we can use an enclosing `{{ form:set }}` tag pair to apply it automatically.
 
 ```
 {{ form:set is="contact" }}
