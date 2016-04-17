@@ -36,7 +36,7 @@ variables:
   -
     name: success
     type: boolean
-    description: This will be `true` the form was submitted successfully.
+    description: This will be `true` if the form was submitted successfully.
 ---
 ## Example {#example}
 
