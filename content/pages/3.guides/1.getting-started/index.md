@@ -163,14 +163,20 @@ Technically there is no "install" process for Statamic, but we have a little too
 
 **Once you're done, delete `installer.php`.**
 
-## _Optional: Move Statamic above webroot_ {#above-webroot}
+## Step 5: You're done.
 
-For extra security, it's not a bad idea to place your important system files below the webroot. This prevents system
-files from potentially being acccessed through a browser.
+Now for some extra detail...
 
-[Read about how to secure your Statamic installation](/reference/recipes/secure-installation).
+### About that License Key and Trial Mode
 
-## Multilingual Sites
+If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a *"Statamic Site Coming Soon!"* message.
+
+
+### Moving Statamic Above Webroot (optional) {#above-webroot}
+
+For extra security you can [move your system files](/reference/recipes/secure-installation) above webroot. This prevents system files from potentially being accessed through a browser.
+
+### Multilingual Sites
 
 If you'd like to support multiple languages, head over to the [Multilingual Guide][multilingual-guide] for a few additional steps.
 
