@@ -141,7 +141,13 @@ chmod -R 777 site local statamic assets
 
 ## Step 3: Configure URL rewrites {#rewrites}
 
-Statamic and the future of your search engine rankings rely on the ability to properly rewrite your URLs. Sure, you could leave an `index.php` in there by adding it to your `site_root` setting, but let's set higher standards for ourselves shall we?
+This is optional, but recommended, because you're a professional.
+
+Statamic ships with index.php visible in your URLs to make everything "just work". That's great and all, but SEO experts
+will tell you that leaving index.php in there is a no-no. Also, it's just kinda ugly.
+
+**To remove index.php from your URLs, open up `index.php` and change `$rewrite_urls` to `true`.** Then, depending on your
+server flavor, do one of these:
 
 ### Apache
 
