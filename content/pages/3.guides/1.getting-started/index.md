@@ -116,6 +116,14 @@ webroot/
 |-- sample.web.config
 ```
 
+### Running in a subdirectory
+
+First of all, are you wanting to run in a subdirectory for the right reasons? Using Statamic in a `blog` subdirectory
+in an existing site could be a valid reason. Not wanting to set up a virtual host is _not_ one. You should
+probably do that.
+
+Regardless, to run in a subdirectory, open up `index.php` and change `$site_root` from `"/"` to `"/subdirectory/"`.
+
 ## Step 2: Set permissions {#permissions}
 
 Statamic needs to be able to write to the 4 included folders, and their subfolders.
