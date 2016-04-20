@@ -173,7 +173,7 @@ If this doesn't work, you're most likely someone who doesn't follow defaults and
 
 ### Nginx
 
-Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further configuration server configuration is beyond the scope of this.
+Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further server configuration beyond the scope of this guide.
 
 ### IIS
 
