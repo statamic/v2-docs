@@ -10,10 +10,20 @@ Statamic is a self-hosted PHP application and requires a web server. You can run
 
 This guide will serve to walk you through setting up your first Statamic site,  getting familiar with the folder structure, and a few initial configurations.
 
+- [Licensing](#licensing)
 - [Requirements](#requirements)
 - [Installing](#installing)
 - [Updating](#updating)
 - [Folder Tour](#folder-tour)
+
+# Licensing {#licensing}
+
+Statamic is commercial software, so you'll need to a good human being and abide by the license agreement.
+
+In a nutshell, you can use Statamic _locally_ without a license key, but as soon as you are using it on a _public_
+domain, you'll need a key.
+
+[Find out more about how the licensing works in a technical sense](/reference/recipes/licensing)
 
 # Requirements {#requirements}
 
