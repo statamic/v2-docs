@@ -45,8 +45,8 @@ parameters:
     name: sort
     type: string
     description: >
-      Sort entries by field name. You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.
-      For example, `sort="title"` or `sort="date:asc|title:desc"` to search by date then by title. Also supports `sort="random"`.
+      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.  
+      For example, `sort="title"` or `sort="date:asc|title:desc"` to search by date then by title.
   -
     name: limit
     type: integer
