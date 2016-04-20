@@ -128,11 +128,9 @@ webroot/
 
 ### Running in a subdirectory
 
-First of all, are you wanting to run in a subdirectory for the right reasons? Using Statamic in a `blog` subdirectory
-in an existing site could be a valid reason. Not wanting to set up a virtual host is _not_ one. You should
-probably do that.
+Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
-Regardless, to run in a subdirectory, open up `index.php` and change `$site_root` from `"/"` to `"/subdirectory/"`.
+Professional advice given, open up `index.php` and change `$site_root` from `"/"` to `"/name_of_your_subdirectory/"`. Good to go.
 
 ## Step 2: Set permissions {#permissions}
 
