@@ -159,7 +159,7 @@ We don't use Windows ourselves, but we've been told the included `sample.web.con
 
 ## Step 4: Run the Trailhead Installer {#installer}
 
-Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer` and let it take care of the rest for you.
+Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
 
 **Once you're done, delete `installer.php`.**
 
