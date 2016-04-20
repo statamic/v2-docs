@@ -159,27 +159,27 @@ chmod -R 777 site local statamic assets
 
 ## Step 3: Configure URL rewrites {#rewrites}
 
-This is optional, but recommended, because you're a professional.
+Like most (if not all) PHP applications, all page requests are run through a single `index.php` file called a "front controller". This allows the page to be dynamically displayed from the CMS.
 
-Statamic ships with index.php visible in your URLs to make everything "just work". That's great and all, but SEO experts
-will tell you that leaving index.php in there is a no-no. Also, it's just kinda ugly.
+This step is technically optional, but professionally recommended. If you do nothing, all of your URLs will have that front controller present in them. It's not great for SEO and it looks silly, so you should remove it. Please remove it.
 
-**To remove index.php from your URLs, open up `index.php` and change `$rewrite_urls` to `true`.** Then, depending on your
-server flavor, do one of these:
+Here's how:
+
+**Open `index.php` and set `$rewrite_urls` to `true`.** Then, depending on which type of server you're using, do the following:
 
 ### Apache
 
-Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, ensuring that it's in the same directory as your `index.php` file. That should take care of probably 95% of the server configuration.
+Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, taking special care to ensure that it's in the same directory as your `index.php` file. They're best friends, don't separate them.
 
-If you're someone who likes to tinker with server defaults and/or have a nice, luscious neckbeard, you can probably Google way your way to victory on what needs to change.
+If this doesn't work, you're most likely someone who doesn't follow defaults and runs your own flavor of configuration. Google is your friend. If you're _really_ stuck, we'll do our best to [help you](https://statamic.com/support).
 
 ### Nginx
 
-Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "grab and go" than Apache, and server configuration is beyond the scope of this guide and our capacity to support.
+Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further configuration server configuration is beyond the scope of this.
 
 ### IIS
 
-We don't use Windows ourselves, but we've been told the included `sample.web.config` works pretty well. Do what you do with that.
+We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
 
 ## Step 4: Run the Trailhead Installer {#installer}
 
