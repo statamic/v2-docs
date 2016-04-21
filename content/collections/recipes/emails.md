@@ -30,7 +30,7 @@ However, you are able to override any email with your own templates. This will a
 customize the design and language.
 
 Throughout the documentation, wherever emails are sent, you will be told the name of the email template
-that'll be used. To override the default, you should create a template of the same name in an `emails`
+that'll be used. To override the default, you should create a template of the same name in an `email`
 subfolder.
 
 ### HTML and Text versions {#html-and-text-versions}
