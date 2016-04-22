@@ -166,7 +166,7 @@ On top of all that, image assets can be manipulated and resized on the fly with 
 
 Lastly we come to Users. A non-traditional Content Type to be sure, but one nevertheless. Users, while certainly capable of storing authentication information used to access the  Control Panel, they can also be so much more (and less).
 
-User data can be routed and displayed on the site much like Entires, allowing you to use them as a single location for all data pertaining to a specific person.
+User data can be routed and displayed on the site much like Entries, allowing you to use them as a single location for all data pertaining to a specific person.
 
 You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire [Guide on Users][guide-users].
 
