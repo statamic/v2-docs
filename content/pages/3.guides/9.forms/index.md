@@ -168,8 +168,12 @@ For example:
 ```
 {{ form:create }}
     ...
-    <input type="hidden" name="honeypot" />
+    <input type="text" name="honeypot" class="honeypot" />
 {{ /form:create }}
+```
+
+``` .language-css
+.honeypot { display: none; }
 ```
 
 If you're worried about smarter spam bots realizing that the honeypot field is named `honeypot`, you may customize the
