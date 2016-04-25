@@ -52,6 +52,10 @@ parameters:
     type: integer
     description: Limit the total results.
   -
+    name: offset
+    type: integer
+    description: The result set will be offset by this many entries.
+  -
     name: taxonomy
     type: 'boolean *false*'
     description: >
