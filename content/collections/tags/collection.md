@@ -310,8 +310,6 @@ The `paginate` variable will become available to you. This is an array containin
 | `total_items` |	The total number of entries.
 | `total_pages` |	The number of paginated pages.
 | `current_page` |	The current paginated page. (ie. the x in the ?page=x param)
-| `previous_page` |	The URL to the previous page.
-| `next_page` |	The URL to the next page.
 | `auto_links` |	Outputs a Twitter Bootstrap ready list of links.
 | `links` |	Contains data for you to construct a custom list of links.
 | `links:all` |	An array of all the pages. You can loop over this and output {{ url }} and {{ page }}.
