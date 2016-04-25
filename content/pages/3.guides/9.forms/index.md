@@ -156,6 +156,30 @@ list of all the fields and values in the submission.
 
 [Learn how to create your emails](/reference/recipes/emails)
 
+## Honeypot {#honeypot}
+
+Simple and effective spam prevention.
+
+The honeypot technique is simple. Add a field to your forms, that when filled in will cause the submission to fail.
+Hide this field a method of your choosing (ie. CSS), so your users won't see it but spam bots will just think it’s another field.
+
+For example:
+
+```
+{{ form:create }}
+    ...
+    <input type="hidden" name="honeypot" />
+{{ /form:create }}
+```
+
+If you're worried about smarter spam bots realizing that the honeypot field is named `honeypot`, you may customize the
+name of the field by adding `honeypot: something` to your formset.
+
+_Note: We say the submission will "fail", but that's not exactly true. On the front end, it will appear that the form was
+submitted successfully. However, nothing will get saved, no emails will be sent, etc. This is the key to
+tricking bots into believing everything went smoothly._
+
+
 
 ## Roadmap
 
