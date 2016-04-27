@@ -288,7 +288,7 @@ To enable pagination mode, add the `paginate="true"` parameter, along with the `
     {{ /posts }}
 
     {{ paginate }}
-        <a href="{{ previous_page }}">⬅ Previous</a>
+        <a href="{{ prev_page }}">⬅ Previous</a>
 
         {{ current_page }} of {{ total_pages }} pages
         (There are {{ total_items }} posts)
