@@ -198,6 +198,11 @@ Now for some extra detail...
 
 If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a *"Statamic Site Coming Soon!"* message.
 
+### Site URL and Permalinks
+
+Out of the box, Statamic will only use relative URLs as a way to get things going smoothly. However if you want to use permalinks (full URLs that
+include your domain) you'll need to adjust it in `site/settings/system.yaml` in the `locales` array. Change the `url` from a relative
+to a full URL like `http://mysite.com/`. If you ran the [installer](#installer), you might have already done this.
 
 ### Moving Statamic Above Webroot (optional) {#above-webroot}
 
