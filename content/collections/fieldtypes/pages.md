@@ -16,7 +16,7 @@ id: db75755f-f1b8-4281-8995-2723dd92d967
 ---
 ## Data Structure {#data-structure}
 
-The Pages fieldtype is a [Relate fieldtype](/docs/fieldtypes/relate), which means the Pages will be saved as IDs.
+The Pages fieldtype is a [Relate fieldtype](/reference/fieldtypes/relate), which means the Pages will be saved as IDs.
 
 ``` .language-yaml
 pages:
@@ -26,7 +26,7 @@ pages:
 
 ## Templating
 
-Use the [Relate tag](/docs/tags/relate) to loop through the IDs and fetch the content data.
+Use the [Relate tag](/reference/tags/relate) to loop through the IDs and fetch the content data.
 
 ```
 <ul>
