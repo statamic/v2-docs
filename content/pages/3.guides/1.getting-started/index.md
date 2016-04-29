@@ -168,7 +168,10 @@ This step is technically optional, but professionally recommended. If you do not
 
 Here's how:
 
-**Open `index.php` and set `$rewrite_urls` to `true`.** Then, depending on which type of server you're using, do the following:
+- Open `index.php` and set `$rewrite_urls` to `true`.
+- Open `site/settings/system.yaml`, and remove `index.php` from the `url` in the `locales` array.
+
+Then, depending on which type of server you're using, do the following:
 
 ### Apache
 
