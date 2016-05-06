@@ -16,12 +16,15 @@ This guide will serve to walk you through setting up your first Statamic site,  
 - [Updating](#updating)
 - [Folder Tour](#folder-tour)
 
+# The Screencast Version {#screencast}
+
+<iframe src="https://player.vimeo.com/video/165632057?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 # Licensing {#licensing}
 
 Statamic is commercial software, so you'll need to a good human being and abide by the license agreement.
 
-In a nutshell, you can use Statamic _locally_ without a license key, but as soon as you are using it on a _public_
-domain, you'll need a key.
+In a nutshell, you can use Statamic _locally_ without a license key, but as soon as you are using it on a _public_ domain, you'll need a key.
 
 [Find out more about how the licensing works in a technical sense](/reference/recipes/licensing)
 
@@ -107,7 +110,7 @@ Note that some users are reporting issues with both of these options.
 
 Grab the latest version of [statamic.com](http://statamic.com) and let's get to it.
 
-## Step 1: Unzip those files {#unzipping}
+## Step 1: Drop the files {#step-1-files}
 
 Unzip your Statamic package into your web root. You'll see the following folders and files:
 
@@ -126,7 +129,7 @@ webroot/
 |-- sample.web.config
 ```
 
-### Running in a subdirectory
+### Running in a subdirectory {#subdir}
 
 Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
