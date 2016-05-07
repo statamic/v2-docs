@@ -25,7 +25,7 @@ parameters:
 ---
 ## Example {#example}
 ```
-{{ theme:js src="style" }}
+{{ theme:js src="scripts" }}
 ```
 ``` .language-output
 /site/themes/redwood/js/scripts.js
