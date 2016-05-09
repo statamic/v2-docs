@@ -34,7 +34,9 @@ Each of these things may require a little bit of work. We've estimated that the 
 
 ### Entries move into Collections
 
-- Move entries into their own [Collection][collection], mount them to their corresponding pages, and configure their [route][routes].
+- Move entries into their own [Collection][collection] and configure their [route][routes].
+- Mount them to their corresponding pages by adding `mount: collection_name` to `index.md`
+- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`
 
 ### Renamed/removed variables
 
@@ -58,7 +60,9 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 
 [Search][search-guide] is Bloodhound's cooler cousin. Search automatically indexes for performance. Search is more easily configured. Search is included in core. What more can you ask for? (Besides keyword weighting. Search doesn't do keyword weighting.)
 
-### Removed Location fieldtype and tags
+### Removed and changed fieldtypes
+
+The former `templates` fieldtype is now named `template`, singular.
 
 The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We feel it's important to eliminate reliance on third-party APIs for all core features. The maps HTML from v1 came from [Leaflet.js][leaflet] and was really just a wrapper for their default implementation. Check it out, it's pretty straightforward.
 
