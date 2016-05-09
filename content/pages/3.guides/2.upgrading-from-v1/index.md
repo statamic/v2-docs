@@ -58,7 +58,9 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 
 [Search][search-guide] is Bloodhound's cooler cousin. Search automatically indexes for performance. Search is more easily configured. Search is included in core. What more can you ask for? (Besides keyword weighting. Search doesn't do keyword weighting.)
 
-### Removed Location fieldtype and tags
+### Removed and changed fieldtypes
+
+The former `templates` fieldtype is now named `template`, singular.
 
 The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We feel it's important to eliminate reliance on third-party APIs for all core features. The maps HTML from v1 came from [Leaflet.js][leaflet] and was really just a wrapper for their default implementation. Check it out, it's pretty straightforward.
 
