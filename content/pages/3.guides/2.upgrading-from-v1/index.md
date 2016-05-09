@@ -63,7 +63,7 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 ### Removed and changed fieldtypes
 
 - `templates` fieldtype is now named `template`.
-- `checkbox` fieldtype is now `checkboxes`, and needs to define `options`.
+- `checkbox` fieldtype is obsolete. Use `type: checkboxes` and define `options` with `1: Checkbox Label` for backwards-compatibility
 - `partial` is the new fieldtype that mimics `include`, and `field_order` is therefore obsolete.
 - `instructions` can only have on single value, `above` and `below` are obsolete
 
