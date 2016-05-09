@@ -5,6 +5,8 @@ id: cbe048ab-93c3-44aa-9aa8-ee13a04d78eb
 ---
 This does not cover any legalities of the license, just the technical features.
 
+You can provide your *license key* in the _Settings_ section of the _Control Panel_, or in `site/settings/system.yaml` as `license_key`.
+
 ## The Statamic Outpost
 
 Statamic will 'radio in' to our web service, which is affectionately named _The Outpost_. We'll send
@@ -24,7 +26,7 @@ The domain will be treated as a wildcard, however, so that you may use subdomain
 
 This also means that you can only use the control panel from the URL of your _default_ locale.
 
-If you use attempt to use the site from another domain, you'll get an angry message from within your
+If you attempt to use the site from another domain, you'll get an angry message from within your
 Control Panel. You may change the domain through your account/licenses page at any time.
 
 ## Trial
