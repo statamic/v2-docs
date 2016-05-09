@@ -34,7 +34,9 @@ Each of these things may require a little bit of work. We've estimated that the 
 
 ### Entries move into Collections
 
-- Move entries into their own [Collection][collection], mount them to their corresponding pages, and configure their [route][routes].
+- Move entries into their own [Collection][collection] and configure their [route][routes].
+- Mount them to their corresponding pages by adding `mount: collection_name` to `index.md`
+- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`
 
 ### Renamed/removed variables
 
