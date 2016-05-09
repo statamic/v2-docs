@@ -65,7 +65,7 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 - `templates` fieldtype is now named `template`.
 - `checkbox` fieldtype is obsolete. Use `type: checkboxes` and define `options` with `1: Checkbox Label` for backwards-compatibility
 - `partial` is the new fieldtype that mimics `include`, and `field_order` is therefore obsolete.
-- `instructions` can only have on single value, `above` and `below` are obsolete
+- `instructions` can only have one single value, `above` and `below` are obsolete
 
 The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We feel it's important to eliminate reliance on third-party APIs for all core features. The maps HTML from v1 came from [Leaflet.js][leaflet] and was really just a wrapper for their default implementation. Check it out, it's pretty straightforward.
 
