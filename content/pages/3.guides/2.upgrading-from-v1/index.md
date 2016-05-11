@@ -36,7 +36,8 @@ Each of these things may require a little bit of work. We've estimated that the 
 
 - Move entries into their own [Collection][collection] and configure their [route][routes].
 - Mount them to their corresponding pages by adding `mount: collection_name` to `index.md`
-- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`
+- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`.
+- Change the `type` key to `order`, this sets whether to sort by number or date.
 
 ### Renamed/removed variables
 
