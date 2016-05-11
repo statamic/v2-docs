@@ -20,7 +20,7 @@ For example:
 - `http://example.com/de/` for German
 - and so on...
 
-In this guide, we will assume we're using this subfolder approach in any examples. If you decide to go a different method, make sure any relative paths are updated for your situation.
+In this guide, we will assume we're using this subfolder approach in any examples. If you decide to go a different method, make sure any relative paths are updated for your situation. [See below for the subdomain version](#subdomains).
 
 ## Creating the locale roots
 
@@ -212,3 +212,18 @@ There are 3 things to notice:
 1. The URL for the French site would use the localized slug
 2. We'll assume the `image` field didn't have `localized: true` in the fieldset.   That means it wouldn't have appeared in the publish form for the French locale. Also, since it's not defined in the French file, it falls back to the default locale's value.
 3. Assuming `{{ color }}` simply was left blank, or it had the same value as the default locale, it will fall back to the default locale's value.
+
+## Subdomains {#subdomains}
+
+The examples in this guide are for a typical subdirectory-based installation. As mentioned above, the steps outlined will
+be the same for any setup, but with any paths adjusted for your needs. Another common solution is to use subdomains.
+For example, `mysite.com`, `fr.mysite.com`, etc.
+
+Here's a brief rundown of how to setup subdomain locales, assuming you have the same folder structure as mentioned above.
+
+- Instead of simply visiting `mysite.com/fr/`, you'd point your subdomain to the folder.
+- The `$statamic` path wouldn't need to change in this example, but if your `fr` folder is located elsewhere it will need to.
+- The `$site_root` should be `"/"` since there's no subdirectory in the URL.
+- Links to your theme assets won't work because they will be relative, and the files don't actually exist there.  
+  You can symlink `site/themes/` to inside your `fr` folder. That'll do the trick.
+- You can consider symlinking your public asset container folders in the same fashion.

@@ -194,7 +194,7 @@ These features are in the oven but aren't quite fully baked yet. If you were to 
 
 - Assets will eventually be be localizable.
 
-[asset-fieldtype]: /reference/fieldtypes/asset
+[asset-fieldtype]: /reference/fieldtypes/assets
 [assets-tag]: /reference/tags/assets
 [glide-tag]: /reference/tags/glide
 [filesystems]: /reference/recipes/filesystems

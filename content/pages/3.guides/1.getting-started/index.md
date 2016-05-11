@@ -10,10 +10,23 @@ Statamic is a self-hosted PHP application and requires a web server. You can run
 
 This guide will serve to walk you through setting up your first Statamic site,  getting familiar with the folder structure, and a few initial configurations.
 
+- [Licensing](#licensing)
 - [Requirements](#requirements)
 - [Installing](#installing)
 - [Updating](#updating)
 - [Folder Tour](#folder-tour)
+
+# The Screencast Version {#screencast}
+
+<iframe src="https://player.vimeo.com/video/165632057?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+# Licensing {#licensing}
+
+Statamic is commercial software, so you'll need to a good human being and abide by the license agreement.
+
+In a nutshell, you can use Statamic _locally_ without a license key, but as soon as you are using it on a _public_ domain, you'll need a key.
+
+[Find out more about how the licensing works in a technical sense](/reference/recipes/licensing)
 
 # Requirements {#requirements}
 
@@ -97,7 +110,7 @@ Note that some users are reporting issues with both of these options.
 
 Grab the latest version of [statamic.com](http://statamic.com) and let's get to it.
 
-## Step 1: Unzip those files {#unzipping}
+## Step 1: Drop the files {#step-1-files}
 
 Unzip your Statamic package into your web root. You'll see the following folders and files:
 
@@ -115,6 +128,12 @@ webroot/
 |-- sample.htaccess
 |-- sample.web.config
 ```
+
+### Running in a subdirectory {#subdir}
+
+Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
+
+Professional advice given, open up `index.php` and change `$site_root` from `"/"` to `"/name_of_your_subdirectory/"`. Good to go.
 
 ## Step 2: Set permissions {#permissions}
 
@@ -141,36 +160,48 @@ chmod -R 777 site local statamic assets
 
 ## Step 3: Configure URL rewrites {#rewrites}
 
-Statamic and the future of your search engine rankings rely on the ability to properly rewrite your URLs. Sure, you could leave an `index.php` in there by adding it to your `site_root` setting, but let's set higher standards for ourselves shall we?
+Like most (if not all) PHP applications, all page requests are run through a single `index.php` file called a "front controller". This allows the page to be dynamically displayed from the CMS.
+
+This step is technically optional, but professionally recommended. If you do nothing, all of your URLs will have that front controller present in them. It's not great for SEO and it looks silly, so you should remove it. Please remove it.
+
+Here's how:
+
+**Open `index.php` and set `$rewrite_urls` to `true`.** Then, depending on which type of server you're using, do the following:
 
 ### Apache
 
-Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, ensuring that it's in the same directory as your `index.php` file. That should take care of probably 95% of the server configuration.
+Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, taking special care to ensure that it's in the same directory as your `index.php` file. They're best friends, don't separate them.
 
-If you're someone who likes to tinker with server defaults and/or have a nice, luscious neckbeard, you can probably Google way your way to victory on what needs to change.
+If this doesn't work, you're most likely someone who doesn't follow defaults and runs your own flavor of configuration. Google is your friend. If you're _really_ stuck, we'll do our best to [help you](https://statamic.com/support).
 
 ### Nginx
 
-Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "grab and go" than Apache, and server configuration is beyond the scope of this guide and our capacity to support.
+Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further server configuration beyond the scope of this guide.
 
 ### IIS
 
-We don't use Windows ourselves, but we've been told the included `sample.web.config` works pretty well. Do what you do with that.
+We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
 
 ## Step 4: Run the Trailhead Installer {#installer}
 
-Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer` and let it take care of the rest for you.
+Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
 
 **Once you're done, delete `installer.php`.**
 
-## _Optional: Move Statamic above webroot_ {#above-webroot}
+## Step 5: You're done.
 
-For extra security, it's not a bad idea to place your important system files below the webroot. This prevents system
-files from potentially being acccessed through a browser.
+Now for some extra detail...
 
-[Read about how to secure your Statamic installation](/reference/recipes/secure-installation).
+### About that License Key and Trial Mode
 
-## Multilingual Sites
+If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a *"Statamic Site Coming Soon!"* message.
+
+
+### Moving Statamic Above Webroot (optional) {#above-webroot}
+
+For extra security you can [move your system files](/reference/recipes/secure-installation) above webroot. This prevents system files from potentially being accessed through a browser.
+
+### Multilingual Sites
 
 If you'd like to support multiple languages, head over to the [Multilingual Guide][multilingual-guide] for a few additional steps.
 

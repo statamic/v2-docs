@@ -45,12 +45,16 @@ parameters:
     name: sort
     type: string
     description: >
-      Sort entries by a field. You may denote the sort order of each field using a colon, and you may pipe-separate multiple fields.  
-      For example, `sort="title"` to just sort by title, or `sort="date:asc|title:desc"` to search by date then by title.
+      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.  
+      For example, `sort="title"` or `sort="date:asc|title:desc"` to search by date then by title.
   -
     name: limit
     type: integer
     description: Limit the total results.
+  -
+    name: offset
+    type: integer
+    description: The result set will be offset by this many entries.
   -
     name: taxonomy
     type: 'boolean *false*'
@@ -284,7 +288,7 @@ To enable pagination mode, add the `paginate="true"` parameter, along with the `
     {{ /posts }}
 
     {{ paginate }}
-        <a href="{{ previous_page }}">⬅ Previous</a>
+        <a href="{{ prev_page }}">⬅ Previous</a>
 
         {{ current_page }} of {{ total_pages }} pages
         (There are {{ total_items }} posts)
@@ -306,8 +310,6 @@ The `paginate` variable will become available to you. This is an array containin
 | `total_items` |	The total number of entries.
 | `total_pages` |	The number of paginated pages.
 | `current_page` |	The current paginated page. (ie. the x in the ?page=x param)
-| `previous_page` |	The URL to the previous page.
-| `next_page` |	The URL to the next page.
 | `auto_links` |	Outputs a Twitter Bootstrap ready list of links.
 | `links` |	Contains data for you to construct a custom list of links.
 | `links:all` |	An array of all the pages. You can loop over this and output {{ url }} and {{ page }}.
