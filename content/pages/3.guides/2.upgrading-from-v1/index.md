@@ -43,6 +43,7 @@ Each of these things may require a little bit of work. We've estimated that the 
 
 - `{{ layout_content }}` is now `{{ template_content }}` because it's the actual contents of the template. Doesn't that feel better?
 - `{{ _xml_header }}` is no longer necessary to render XML headers. Instead, use the `.xml` extension on your URL.
+- `{{ homepage }}` is now `{{ site_url }}`
 
 ### Setting and variable naming conventions
 
