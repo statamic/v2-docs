@@ -174,14 +174,11 @@ chmod -R 777 site local statamic assets
 
 Like most (if not all) PHP applications, all page requests are run through a single `index.php` file called a "front controller". This allows the page to be dynamically displayed from the CMS.
 
-This step is technically optional, but professionally recommended. If you do nothing, all of your URLs will have that front controller present in them. It's not great for SEO and it looks silly, so you should remove it. Please remove it.
+Technically this means all your URLs are actually `/index.php/about` but they will get rewritten to `/about`. It's better for SEO, and the `index.php` just looks silly, so you should remove it.
 
-Here's how:
+_Note: Out of the box, Statamic will assume you will be using URL rewrites. If you notice only your home page working, it's usually because URL rewrites aren't configured. Either set them up, or read how to disable them at the end of this section._
 
-- Open `index.php` and set `$rewrite_urls` to `true`.
-- Open `site/settings/system.yaml`, and remove `index.php` from the `url` in the `locales` array.
-
-Then, depending on which type of server you're using, do the following:
+Most decent servers will support URL rewriting in some way. Choose your method below:
 
 ### Apache
 
@@ -196,6 +193,13 @@ Grab the settings from `sample.nginx.conf` and customize them as necessary. Ngin
 ### IIS
 
 We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
+
+### Disabling URL Rewrites
+
+If for whatever reason you can't or don't want to use URL rewriting, you can configure Statamic to leave `index.php` in your URLs.
+
+- Open `index.php` and change `$rewrite_urls` to `false`.
+- Open `site/settings/system.yaml`, and add `index.php` to the `url` in the `locales` array.
 
 ## Step 4: Run the Trailhead Installer {#installer}
 
