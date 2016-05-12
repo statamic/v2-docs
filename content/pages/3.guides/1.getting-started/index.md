@@ -133,7 +133,12 @@ webroot/
 
 Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
-Professional advice given, open up `index.php` and change `$site_root` from `"/"` to `"/name_of_your_subdirectory/"`. Good to go.
+Professional advice given, you'll need to do this:
+
+- Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
+- Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
+
+Good to go.
 
 ## Step 2: Set permissions {#permissions}
 
@@ -166,7 +171,10 @@ This step is technically optional, but professionally recommended. If you do not
 
 Here's how:
 
-**Open `index.php` and set `$rewrite_urls` to `true`.** Then, depending on which type of server you're using, do the following:
+- Open `index.php` and set `$rewrite_urls` to `true`.
+- Open `site/settings/system.yaml`, and remove `index.php` from the `url` in the `locales` array.
+
+Then, depending on which type of server you're using, do the following:
 
 ### Apache
 
@@ -196,6 +204,11 @@ Now for some extra detail...
 
 If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a *"Statamic Site Coming Soon!"* message.
 
+### Site URL and Permalinks
+
+Out of the box, Statamic will only use relative URLs as a way to get things going smoothly. However if you want to use permalinks (full URLs that
+include your domain) you'll need to adjust it in `site/settings/system.yaml` in the `locales` array. Change the `url` from a relative
+to a full URL like `http://mysite.com/`. If you ran the [installer](#installer), you might have already done this.
 
 ### Moving Statamic Above Webroot (optional) {#above-webroot}
 
