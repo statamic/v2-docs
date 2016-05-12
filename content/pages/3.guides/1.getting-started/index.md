@@ -60,11 +60,16 @@ You can (and probably should) run Statamic _locally_ while you develop your site
 
 The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PHP 5.5.9 and all the modules you need. Download, install, and go.
 
+### Mac: Laravel Valet
+
+[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
+You can even share your sites publicly using local tunnels. We use it, it's brilliant.
+
 ### Windows: WAMP
 
 If you happen to be of the Microsoft persuasion, [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. So we hear.
 
-### Homestead
+### Laravel Homestead
 
 Prefer a virtual environment? You’re in luck, [Laravel Homestead][homestead] is a pre-packaged Vagrant "box" that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, or any other server software on your local machine. No more worrying about messing up your operating system! If something goes wrong, you can destroy and re-create the box in minutes.
 
@@ -336,7 +341,8 @@ What are you waiting for? Go build something neat. Or keep learning - might we s
 [forge]: http://forge.laravel.com
 [do]: https://www.digitalocean.com/?refcode=6469827e2269
 [mamp]: https://www.mamp.info/en/
-[homestead]: http://laravel.com/docs/5.1/homestead
+[valet]: http://laravel.com/docs/valet
+[homestead]: http://laravel.com/docs/homestead
 [multilingual-guide]: /guides/l10n
 [v1-upgrade]: /guides/upgrading-from-v1
 [addon-guide]: /guides/addons
