@@ -58,13 +58,13 @@ Vue.component('password_toggle-fieldtype', {
         }
     }, 
 
-    template: '
-      <div>
-        <input :type="inputType" v-model="data" />
-        <input type="checkbox" :id="name" v-model="show" />
-        <label :for="name">Show password</label>
-      </div>
-    '
+    template: '' +
+      '<div>' +
+        '<input :type="inputType" v-model="data" />' +
+        '<input type="checkbox" :id="name" v-model="show" />' +
+        '<label :for="name">Show password</label>' +
+      '</div>' +
+    ''
 
 });
 ```
