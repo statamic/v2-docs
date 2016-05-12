@@ -65,6 +65,8 @@ The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PH
 [Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
 You can even share your sites publicly using local tunnels. We use it, it's brilliant.
 
+_Note: Valet supports an out-of-the-box Statamic installation. Subdirectory installs don't work at the moment._
+
 ### Windows: WAMP
 
 If you happen to be of the Microsoft persuasion, [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. So we hear.
