@@ -152,7 +152,8 @@ Now comes the really fun part. Let's imagine you have a kit of carrier pigeons i
 
 ```language-yaml
 pigeons:
-  - name: Chester
+  -
+    name: Chester
     breed: Oriental Roller
     missions: 8
   -
