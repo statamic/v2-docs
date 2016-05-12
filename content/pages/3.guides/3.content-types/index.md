@@ -173,5 +173,5 @@ You can create listings and single view URLs, like with Entries, and group them 
 [nav-tag]: /reference/tags/nav
 [taxonomies]: /guides/taxonomies
 [image-api]: #
-[taxonomy-fieldtype]: #
+[taxonomy-fieldtype]: /reference/fieldtypes/taxonomy
 [guide-users]: #
