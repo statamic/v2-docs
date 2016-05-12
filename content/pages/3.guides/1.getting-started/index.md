@@ -247,6 +247,8 @@ If you need to update your install by hand, download the latest version from [st
 
 If you have any addons, you should run `php please addons:refresh` to make sure any addons know an update has been run. If you don't have command line access, you can go to `Configure » Addons » Refresh` and run it there.
 
+Lastly, run `php please clear:cache` to – you guessed it – clear your cache.
+
 _If you're looking for how to upgrade from v1, check out the [Upgrading From v1 guide][v1-upgrade]._
 
 # Folder Tour {#folder-tour}
