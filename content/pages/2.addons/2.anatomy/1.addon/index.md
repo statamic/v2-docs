@@ -20,7 +20,7 @@ There is a whole section dedicated to the [helper methods][helpers] available th
 
 An addon will automatically look for a `bootstrap.php` file in your directory. You can use this file to add any configuration you might need available in every aspect of your addon.
 
-For example, if you need to load a custom library, you might want to to that here.
+For example, if you need to load a custom library, you might want to do that here.
 
 ```.language-php
 <?php
