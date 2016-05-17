@@ -1,11 +1,13 @@
 ---
-title: Logging
-overview: "Things go wrong. It's a part of life. Fortunately, we can see what went south using logs. There are a number of different logging methods in Statamic."
+title: How to configure and use logging
+alias:
+  - How do I log errors to Slack?
+  - What are my logging options?
 id: b518fa3d-b41f-4238-b1de-02ada96e2713
 ---
+Things go wrong. It's a part of life. Fortunately, we can see what went south using logs. There are a number of different logging methods available to you in Statamic.
 
-Statamic comes pre-configured with error logging provided by Laravel and the powerful Monolog logging library.
-This allows you to use a number of logging handlers, should you wish to integrate with something more advanced.
+Statamic comes pre-configured with error logging provided by Laravel and the powerful Monolog logging library. This allows you to use a number of logging handlers, should you wish to integrate with something more advanced.
 
 ## Configuring Handlers
 

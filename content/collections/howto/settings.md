@@ -1,8 +1,7 @@
 ---
-title: Settings
+title: Managing settings and environments
 overview: >
-  A run-down of the different types of
-  settings in Statamic.
+  A run-down of the different types of settings in Statamic.
 id: 163ca938-1950-4d9b-b06a-8a7f3f6f4aef
 ---
 ## Settings

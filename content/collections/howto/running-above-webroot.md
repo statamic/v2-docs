@@ -1,10 +1,9 @@
 ---
-title: Securing your Statamic installation
+title: Installing and running above webroot
 id: 3ae9a8ef-c2e4-40c5-a9bd-c1203bab9203
 overview: Placing your system files out of reach adds another layer of security.
 ---
-Statamic comes bundled with everything in the root folder, intended to be placed directly in your webroot. This makes
-it easier to just drop your site into a server and be on your way.
+Statamic comes bundled with everything in the root folder, intended to be placed directly in your webroot. This makes it easier to just drop your site into a server and be on your way.
 
 While things like `.htaccess` and `nginx.conf` files can ensure important files aren't accessible, it's always possible
 that those things are forgotten or misconfigured. Taking the extra step to place the folders out of reach entirely
@@ -27,7 +26,7 @@ please
 .gitignore
 ```
 
-The webroot will be wherever `index.php` is.  
+The webroot will be wherever `index.php` is.
 You should ensure that the folders are located one level above, like this:
 
 ``` .language-files
@@ -89,7 +88,7 @@ You'll also want to update your asset container `path` and `url` values, which c
 
 ## Summary {#summary}
 
-1. Move system folders above webroot.  
+1. Move system folders above webroot.
 2. Ensure web accessible files are left in the webroot. (`assets`, `site/themes`, `index.php`, etc.)
 3. Adjust the `$statamic` path variable in `index.php` (and `please`).
 4. Adjust [filesystem references][filesystems].

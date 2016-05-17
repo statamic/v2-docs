@@ -1,5 +1,5 @@
 ---
-title: Emails
+title: How to configure and send email
 id: cb453729-0d2f-4924-ba88-b7b1f95747af
 overview: >
   Emails are used throughout Statamic, from within the Control Panel to inside tags and addons.
@@ -63,7 +63,7 @@ email_separator: '<!-- HTML -->'
 
 
 ## Sending your own emails {#sending-your-own}
-If you are creating an addon that needs to send an email, you can use the handy `Email` class.  
+If you are creating an addon that needs to send an email, you can use the handy `Email` class.
 
 ``` .language-php
 $email = \Statamic\API\Email::create();

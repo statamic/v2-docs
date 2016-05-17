@@ -1,5 +1,5 @@
 ---
-title: Filesystems
+title: How do Filesystems work?
 overview: "A flat file CMS would be nothing without flexible control of files. Learn how to configure and leverage Statamic's filesystems."
 id: b03df2fb-db07-4c9b-9707-d90dd7311533
 ---

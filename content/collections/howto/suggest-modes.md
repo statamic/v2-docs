@@ -1,8 +1,7 @@
 ---
-title: Suggest Modes
+title: How to use Suggest Modes in your addon
 overview: >
-  The Suggest field allows you to define a list of suggestions. You can get those from wherever you want: your own list,
-  somewhere on the internet, or your local grocer.
+  The Suggest field allows you to define a list of suggestions. You can get those from wherever you want: your own list, somewhere on the internet, or your local grocer.
 id: dd9212d0-978c-4b86-a51f-745464ff0721
 ---
 The "[Relate](/reference/fieldtypes/relate)" fields – "[Users](/reference/fieldtypes/users)", "[Taxonomy](/reference/fieldtypes/taxonomy)", "[Collection](/reference/fieldtypes/collection)" – all leverage the "[Suggest](/reference/fieldtypes/suggest)" field behind the scenes.
