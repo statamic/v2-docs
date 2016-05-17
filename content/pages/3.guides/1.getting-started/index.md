@@ -213,7 +213,7 @@ Now for some extra detail...
 
 ### About that License Key and Trial Mode
 
-If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a big Statamic logo.
+If you don't have a license key, that's okay! You can use Statamic in developer mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise you won't be able to access your control panel.
 
 ### Site URL and Permalinks
 
