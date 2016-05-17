@@ -113,6 +113,24 @@ Checks if a given `$key` exists in the cache.
 
 ---
 
+## Cookie
+
+Cookies are saved to the browser and can be cleared by a user at any point.
+
+### cookie->get($key, $default = null)
+Returns a cookie's data saved under `$key`, or `$default` if it doesn't exist.
+
+### cookie->put($key, $value, $mins = null)
+Saves a `$value` to the cookie named `$key` for a specified number of minutes. If no time is specified, it'll be saved for 5 years.
+
+### cookie->forget($key)
+Delete a cookie named `$key`.
+
+### cookie->exists($key)
+Checks if a cookie named `$key` exists.
+
+---
+
 ## Storage
 
 Storage will save files under `site/storage`. Using these helpers, data will automatically be saved into your addon's subfolder, eg. `site/storage/addons/MyAddon/$key`.
