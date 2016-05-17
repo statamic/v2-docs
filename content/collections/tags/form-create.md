@@ -17,6 +17,11 @@ parameters:
       The location your user will be taken after a successful form submission. If left blank, the user will stay
       on the same page.
   -
+    name: error_redirect
+    type: string
+    description: >
+      The same as `redirect`, but for failed submissions.
+  -
     name: attr
     type: string
     description: >
