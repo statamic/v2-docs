@@ -93,6 +93,9 @@ Increments the value saved in `$key` by `$increment`. Assumes the value is numer
 ### blink->clear()
 Clears the entire blink cache.
 
+### blink->all()
+Gets all the blink values.
+
 ---
 
 ## Cache
