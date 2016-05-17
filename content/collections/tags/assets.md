@@ -22,6 +22,20 @@ parameters:
     type: string
     description: |
       When retrieving assets directly from a container, this will let you target a specific folder.
+  -
+    name: limit
+    type: integer
+    description: Limit the total results.
+  -
+    name: offset
+    type: integer
+    description: The result set will be offset by this many assets
+  -
+    name: sort
+    type: string
+    description: >
+      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.  
+      For example, `sort="size"` or `sort="size:asc|title:desc"` to sort by size then by title.  
 variables:
   -
     name: id
@@ -99,6 +113,14 @@ variables:
     name: last_modified_instance
     type: string
     description: "The time the file was last modified, as a `Carbon` instance."
+  -
+    name: width
+    type: integer
+    description: The width in pixels, if it's an image.
+  -
+    name: height
+    type: integer
+    description: The height in pixels, if it's an image.
 ---
 ## Usage {#usage}
 
