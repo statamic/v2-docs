@@ -1,6 +1,8 @@
 ---
 title: How to customize error pages
 id: cf0640c7-6ca0-4e57-8929-b8815a149084
+kb_categories:
+  - 41f8eb46-342c-4a52-91a3-809d971a5165
 ---
 Out of the box, Statamic will show its own error pages. For example, if a user were to go snooping where they shouldn't, they may come across a 403 "Access Denied" page.
 
