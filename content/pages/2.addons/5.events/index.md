@@ -21,6 +21,10 @@ events:
     description: >
       Fired when the cache is cleared. This refers to the persistent cache, _not_ the "Stache".
   -
+    name: content.saved
+    description: >
+      Fired when any Page, Entry, Taxonomy Term, or Global is saved. The respective class will be passed through.
+  -
     name: cp.published
     description: >
       Fired when any Page, Entry, Taxonomy Term, Global, or User is saved through the CP. The respective class will be passed through.
