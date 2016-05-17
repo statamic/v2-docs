@@ -46,6 +46,13 @@ be created before you try to associate them with your content.
 
 _Note: the ability to add taxonomy terms inline is on our to-do list!_
 
+If you are trying to associate those terms with your content, you should make sure the field name is the same
+as the name of the taxonomy. This will allow the `taxonomy="true"` parameter on the [Collection Tag][collection-tag]
+to work as you'd expect.
+
+The reason this rule exists is because you may have another field that is simply relating taxonomy terms. For example,
+you may have another field that lists `similar_styles`.
+
 ### Automatic Taxonomy Discovery
 
 If you're coming from v1 you're used to just typing in any old string and having those magically work as taxonomies. You can do this in v2 as well, except that the strings will be replaced with IDs that reference the Term. This lets you add more data to each and every Term if you desire, such as images and descriptions.
@@ -121,3 +128,4 @@ Iterate over taxonomies in a piece of content using the [Relate tag](/reference/
 ```
 
 [content-types]: /guides/content-types
+[collection-tag]: /reference/tags/collection

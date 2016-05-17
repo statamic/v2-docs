@@ -60,11 +60,18 @@ You can (and probably should) run Statamic _locally_ while you develop your site
 
 The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PHP 5.5.9 and all the modules you need. Download, install, and go.
 
+### Mac: Laravel Valet
+
+[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
+You can even share your sites publicly using local tunnels. We use it, it's brilliant.
+
+_Note: Valet supports an out-of-the-box Statamic installation. Subdirectory installs don't work at the moment._
+
 ### Windows: WAMP
 
 If you happen to be of the Microsoft persuasion, [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. So we hear.
 
-### Homestead
+### Laravel Homestead
 
 Prefer a virtual environment? You’re in luck, [Laravel Homestead][homestead] is a pre-packaged Vagrant "box" that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, or any other server software on your local machine. No more worrying about messing up your operating system! If something goes wrong, you can destroy and re-create the box in minutes.
 
@@ -133,7 +140,12 @@ webroot/
 
 Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
-Professional advice given, open up `index.php` and change `$site_root` from `"/"` to `"/name_of_your_subdirectory/"`. Good to go.
+Professional advice given, you'll need to do this:
+
+- Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
+- Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
+
+Good to go.
 
 ## Step 2: Set permissions {#permissions}
 
@@ -162,11 +174,11 @@ chmod -R 777 site local statamic assets
 
 Like most (if not all) PHP applications, all page requests are run through a single `index.php` file called a "front controller". This allows the page to be dynamically displayed from the CMS.
 
-This step is technically optional, but professionally recommended. If you do nothing, all of your URLs will have that front controller present in them. It's not great for SEO and it looks silly, so you should remove it. Please remove it.
+Technically this means all your URLs are actually `/index.php/about` but they will get rewritten to `/about`. It's better for SEO, and the `index.php` just looks silly, so you should remove it.
 
-Here's how:
+_Note: Out of the box, Statamic will assume you will be using URL rewrites. If you notice only your home page working, it's usually because URL rewrites aren't configured. Either set them up, or read how to disable them at the end of this section._
 
-**Open `index.php` and set `$rewrite_urls` to `true`.** Then, depending on which type of server you're using, do the following:
+Most decent servers will support URL rewriting in some way. Choose your method below:
 
 ### Apache
 
@@ -182,6 +194,13 @@ Grab the settings from `sample.nginx.conf` and customize them as necessary. Ngin
 
 We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
 
+### Disabling URL Rewrites
+
+If for whatever reason you can't or don't want to use URL rewriting, you can configure Statamic to leave `index.php` in your URLs.
+
+- Open `index.php` and change `$rewrite_urls` to `false`.
+- Open `site/settings/system.yaml`, and add `index.php` to the `url` in the `locales` array.
+
 ## Step 4: Run the Trailhead Installer {#installer}
 
 Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
@@ -194,8 +213,13 @@ Now for some extra detail...
 
 ### About that License Key and Trial Mode
 
-If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a *"Statamic Site Coming Soon!"* message.
+If you don't have a license key, that's okay! You can use Statamic in trial mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise your users will simply see a big Statamic logo.
 
+### Site URL and Permalinks
+
+Out of the box, Statamic will only use relative URLs as a way to get things going smoothly. However if you want to use permalinks (full URLs that
+include your domain) you'll need to adjust it in `site/settings/system.yaml` in the `locales` array. Change the `url` from a relative
+to a full URL like `http://mysite.com/`. If you ran the [installer](#installer), you might have already done this.
 
 ### Moving Statamic Above Webroot (optional) {#above-webroot}
 
@@ -222,6 +246,8 @@ You can get to this section at any time by going to `Tools » Updater`. It's pos
 If you need to update your install by hand, download the latest version from [statamic.com](http://statamic.com) and replace your `statamic/` folder with the newest one.
 
 If you have any addons, you should run `php please addons:refresh` to make sure any addons know an update has been run. If you don't have command line access, you can go to `Configure » Addons » Refresh` and run it there.
+
+Lastly, run `php please clear:cache` to – you guessed it – clear your cache.
 
 _If you're looking for how to upgrade from v1, check out the [Upgrading From v1 guide][v1-upgrade]._
 
@@ -323,7 +349,8 @@ What are you waiting for? Go build something neat. Or keep learning - might we s
 [forge]: http://forge.laravel.com
 [do]: https://www.digitalocean.com/?refcode=6469827e2269
 [mamp]: https://www.mamp.info/en/
-[homestead]: http://laravel.com/docs/5.1/homestead
+[valet]: http://laravel.com/docs/valet
+[homestead]: http://laravel.com/docs/homestead
 [multilingual-guide]: /guides/l10n
 [v1-upgrade]: /guides/upgrading-from-v1
 [addon-guide]: /guides/addons

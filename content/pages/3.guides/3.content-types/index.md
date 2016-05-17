@@ -160,7 +160,7 @@ Asset Containers can use fieldsets to store additional data along with each asse
 - Videos can have transcripts, descriptions, and credits.
 - Zip files can have descriptions and MD5sums.
 
-On top of all that, image assets can be manipulated and resized on the fly with our [Image Manipulation API][image-api].
+On top of all that, image assets can be manipulated and resized on the fly using the [Glide Tag][glide-tag].
 
 ## Users {#users}
 
@@ -172,6 +172,6 @@ You can create listings and single view URLs, like with Entries, and group them 
 
 [nav-tag]: /reference/tags/nav
 [taxonomies]: /guides/taxonomies
-[image-api]: #
-[taxonomy-fieldtype]: #
+[glide-tag]: /reference/tags/glide
+[taxonomy-fieldtype]: /reference/fieldtypes/taxonomy
 [guide-users]: #

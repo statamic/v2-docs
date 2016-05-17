@@ -11,29 +11,19 @@ id: cd28440d-46a8-4de7-b91a-c8eb40d14bfa
 ---
 A User by itself has no permission to access or change any aspect of Statamic except a [front-end login][front_end_login]. Beyond that, it takes an explicit set of Permissions for that User to accomplish anything.
 
-Access to Statamic's Control Panel and the ability to access, create, edit, and delete content and settings is broken out across more than 60 different Permissions. Let's cover some lingo before we move on further.
+Access to Statamic's Control Panel and the ability to access, create, edit, and delete content and settings is broken out across many different Permissions. Let's cover some lingo before we move on further.
 
-# Permission Aspects
+# Super Users
 
-## Admin
+You may have heard the term _super user_, _super admin_, or _root user_ thrown around the internet. This is a way of saying someone that has unlimited permissions.
 
-The **admin** permission gives a user full and complete access to everything protected by Permissions. It is not a permission to be taken lightly, and is often only held by the developers of the site.
+Whenever Statamic needs to ask the question "Can this user do this thing?", if the user has _super permissions_ the answer will always be "Yes".
 
-## Access
+It is not a permission to be taken lightly, and is often only held by the developers of the site.
 
-**Access** gives a user the ability to simply get to and see the contents of an aspect of the site. The permission `cp.access` grants a user access to the Control Panel.
+A user can be considered _super_ if they belong to a role or user group with a `super` permission, or if they have `super: true` directly on their account.
 
-## Manage
-
-The ability to **manage** an aspect of the Control Panel means that a user will be able to access, create, edit, and publish or save that type of content, or setting. For example, a user with the Permission to **manage** the Blog collection will be able to create new blog entries as well as edit and publish changes to existing blog entries.
-
-## Delete
-
-The permission to **delete** an aspect of the Control Panel is separate from **manage** as it has greater implications to the site as a whole. Deleting pages can reorganize navigation, create `404` errors with any hard-coded links, and so on. For these reasons, the **delete** permission is separate.
-
-## Implicit Permissions
-
-It's important to understand the difference between implicit and explicit permissions. When viewing the list of available permissions, you may see that you can restrict control at the Content Type level and also at the individual item level. In other words, a user can have the ability to manage Collections, or an isolated ability to manage a single collection, such as a Blog. The permission to manage Blog is an explicit one, in that it was directly assigned. The permission to manage Collections, on the other hand, is implicit, as it grants the ability to manage all Collections, existing _and_ future.
+Super users are the only ones that are able to _configure_ the site through the Control Panel. They can create and delete content collections (entry collections, taxonomies, global sets, asset containers, etc); manage fieldsets, edit system settings, and more.
 
 # Roles
 
