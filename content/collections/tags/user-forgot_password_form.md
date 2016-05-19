@@ -12,6 +12,10 @@ parameters:
       this blank will keep the user on the
       same page.
   -
+    name: allow_request_redirect
+    type: boolean
+    description: When set to true, the `redirect` parameter will get overridden by a `redirect` query parameter in the URL.
+  -
     name: reset_url
     type: string
     description: >

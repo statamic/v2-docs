@@ -8,6 +8,10 @@ parameters:
     description: >
       Where the user should be taken after
       successfully registering.
+  -
+    name: allow_request_redirect
+    type: boolean
+    description: When set to true, the `redirect` parameter will get overridden by a `redirect` query parameter in the URL.
 variables:
   -
     name: errors
