@@ -15,7 +15,7 @@ parameters:
     name: min_count
     type: 'integer *0*'
     description: >
-      The minimum number of terms a taxonomy
+      The minimum number of entries a taxonomy term
       must have to show up in the list.
   -
     name: collection
