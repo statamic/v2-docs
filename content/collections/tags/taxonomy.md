@@ -3,20 +3,25 @@ title: Taxonomy
 overview: Fetch and filter Taxonomy terms.
 parameters:
   -
-    name: group
+    name: taxonomy
     type: tag part
-    description: 'The taxonomy group to use. This is not actually a parameter, but part of the tag itself. For example, `{{ taxonomy:categories }}`'
+    description: 'The taxonomy to use. This is not actually a parameter, but part of the tag itself. For example, `{{ taxonomy:categories }}`'
+  -
+    name: taxonomy|is|use|from|folder
+    type: string
+    description: >
+      When using the verbose syntax, this is how you specify which taxonomy to use.
   -
     name: min_count
     type: 'integer *0*'
     description: >
-      The minimum number of entries a taxonomy
+      The minimum number of terms a taxonomy
       must have to show up in the list.
   -
     name: collection
     type: string
     description: >
-      Filter the listing by taxonomies that
+      Filter the listing by terms that
       only appear in the specified collection.
       You may pipe-separate multiple
       collections.
@@ -24,7 +29,7 @@ parameters:
     name: page
     type: string
     description: >
-      Filter the listing by taxonomies that
+      Filter the listing by terms that
       only appear in entries mounted to the
       specified page. You may pipe-separate
       multiple pages.
@@ -127,6 +132,8 @@ id: ba832b71-a567-491c-b1a3-3b3fae214703
 ---
 ## Example {#example}
 
+### Shorthand Syntax
+
 A simple listing of taxonomies in the `categories` group.
 
 ```
@@ -135,6 +142,19 @@ A simple listing of taxonomies in the `categories` group.
   {{ taxonomy:categories }}
     <li><a href="{{ url }}">{{ title }}</a></li>
   {{ /taxonomy:categories }}
+</ul>
+```
+
+### Verbose syntax
+
+The verbose syntax is useful if you need to pass the taxonomy as a parameter.
+
+```
+<h2>Categories</h2>
+<ul>
+  {{ taxonomy use="categories" }}
+    <li><a href="{{ url }}">{{ title }}</a></li>
+  {{ /taxonomy }}
 </ul>
 ```
 
