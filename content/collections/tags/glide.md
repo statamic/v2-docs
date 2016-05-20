@@ -9,7 +9,7 @@ parameters:
   -
     name: path
     type: string
-    description: The path to an image, if you don't want to use assets. This should be relative to your root, eg. `/assets/photo.jpg`
+    description: The path to an image, if you don't want to use assets. This should be relative to your webroot, eg. `/assets/photo.jpg`
   -
     name: field
     type: tag part
