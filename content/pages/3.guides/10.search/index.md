@@ -14,9 +14,7 @@ Statamic's search engine is preconfigured to Just Work™ right out of the box. 
 
 Statamic builds indexes of your content to provide lickity-split search results. If you don't know what indexes are it doesn't matter.
 
-To kick off the indexer you can run `php please search:update` in your terminal or visit `/cp/search/update`. In the Control Panel you will find settings to enable automatic indexing of content. Every time a change to content is detected a re-index occurs. If you're a nervous-saver you will probably find this setting be annoying as you sit around for a few seconds every refresh.
-
-This is beta, this is all you get. We'll make indexing controls more robust for final 2.0 release.
+To kick off the indexer you can run `php please search:update` in your terminal, visit `/cp/search/update`, or simply perform a search _in the control panel_. Also, in the Control Panel you will find settings to enable automatic indexing of content. Every time a change to content is detected a re-index occurs. If you're a nervous-saver you will probably find this setting be annoying as you sit around for a few seconds every refresh.
 
 ## Drivers
 
