@@ -1,5 +1,6 @@
 ---
 types:
+  - markup
   - string
   - utility
 id: 4444ed5b-b543-424b-b7cf-a1eeff0213f9
