@@ -156,6 +156,45 @@ list of all the fields and values in the submission.
 
 [Learn how to create your emails](/reference/recipes/emails)
 
+## File Uploads {#file-uploads}
+
+Sometimes your fans want to show you things they've created. No problem! Just add some file fields to your form.
+You can add file fields or asset fields, like so:
+
+``` .language-yaml
+fields:
+  attachment:
+    type: file
+    destination: uploads/
+  another_attachment:
+    type: asset
+    container: uploads
+    folder: fan-art
+```
+
+```
+<input type="file" name="attachment" />
+<input type="file" name="another_attachment" />
+```
+
+Notice the differences here: A `type: file` in your formset will just dump their upload in the destination folder you
+specify. But specifying `type: asset` will create an actual Asset in the corresponding container.
+
+### Multiple files
+
+You can either add a separate field for every file you want to allow, or you can just specify one and allow
+multiples for that. To allow multiple files on a single field, use the plural `type`. For instance, instead
+of `type: file`, use `type: files`. Likewise, instead of `type: asset`, use `type: assets`.
+
+Then in your form, add a set of square brackets to the `name` attribute.
+
+```
+<input type="file" name="attachment[]" />
+```
+
+_Note: If you use the square bracket `name` syntax, but use the singular `type` in your formset, only the first selected
+file will be uploaded. So don't forget to do both._
+
 ## Honeypot {#honeypot}
 
 Simple and effective spam prevention.
