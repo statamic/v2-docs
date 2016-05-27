@@ -158,42 +158,49 @@ list of all the fields and values in the submission.
 
 ## File Uploads {#file-uploads}
 
-Sometimes your fans want to show you things they've created. No problem! Just add some file fields to your form.
-You can add file fields or asset fields, like so:
+Sometimes your fans want to show you things they've created, like scissor-cut love letters and innocent selfies with cats. No problem! File input types to the rescue. All you need to do is inform Statamic where you'd like the uploads to go, and whether you'd like them to simply be placed in a directory somewhere, or become reusuable Assets.
+
+```
+<input type="file" name="simple" />
+<input type="file" name="fancy" />
+```
 
 ``` .language-yaml
 fields:
-  attachment:
+  simple:
     type: file
     destination: uploads/
-  another_attachment:
+  fancy:
     type: asset
     container: uploads
     folder: fan-art
 ```
 
-```
-<input type="file" name="attachment" />
-<input type="file" name="another_attachment" />
-```
+**Simple Uploads**: Set `type: file` and a `destination` (path from webroot). That's it.
 
-Notice the differences here: A `type: file` in your formset will just dump their upload in the destination folder you
-specify. But specifying `type: asset` will create an actual Asset in the corresponding container.
+**Asset Uploads**: Set `type: asset`, specify the asset `container` via handle or ID, and which folder inside said container.
 
 ### Multiple files
 
-You can either add a separate field for every file you want to allow, or you can just specify one and allow
-multiples for that. To allow multiple files on a single field, use the plural `type`. For instance, instead
-of `type: file`, use `type: files`. Likewise, instead of `type: asset`, use `type: assets`.
+You have two methods available to you:
 
-Then in your form, add a set of square brackets to the `name` attribute.
+First, You can create separate fields for each upload. This is useful if each has a separate purpose, like Resume, Cover Letter, and Headshot. You'll need to explicitly create each and every one in your formset.
+
+Or, you can enable multiple files on one field, by setting type with the plural form of the type option, `files` or `assets`, and indicating an array in your input by adding a set of square brackets to the `name` attribute.
 
 ```
-<input type="file" name="attachment[]" />
+<input type="file" name="many[]" />
+```
+
+``` .language-yaml
+fields:
+  manye:
+    type: files
+    destination: uploads/
 ```
 
 _Note: If you use the square bracket `name` syntax, but use the singular `type` in your formset, only the first selected
-file will be uploaded. So don't forget to do both._
+file will be uploaded. So don't forget to set both._
 
 ## Honeypot {#honeypot}
 
