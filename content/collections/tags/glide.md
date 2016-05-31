@@ -127,6 +127,31 @@ image: "380dc8d9-481c-4d18-9162-ecd5688f98a8"
 /img/id/380dc8d9-481c-4d18-9162-ecd5688f98a8?w=300&h=200&fit=crop&filt=sepia&s=3982hf983f2mf90r23
 ```
 
+### Referencing a list of assets
+
+If you have a list of asset IDs, you may want to loop over them and generate images for each one.
+You can do this using the [Assets](/reference/tags/assets) tag:
+
+```
+images:
+  - a09b7fa0-2749-11e6-bdf4-0800200c9a66
+  - a26a9a50-2749-11e6-bdf4-0800200c9a66
+```
+
+Make sure to reference `id` on the Glide tag, since when inside the `assets` loop, that would output
+the ID of the asset:
+
+```
+{{ assets:images }}
+  {{ glide:id width="300" height="200" }}
+{{ /assets:images }}
+```
+
+```
+/img/id/a09b7fa0-2749-11e6-bdf4-0800200c9a66?w=300&h=200&s=3982hf983f2mf90r23
+/img/id/a26a9a50-2749-11e6-bdf4-0800200c9a66?w=300&h=200&s=3982hf983f2mf90r23
+```
+
 ### Referencing a path
 
 If you don't want to use assets and would just like to point to an image, you can do that too.
