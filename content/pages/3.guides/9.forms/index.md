@@ -233,9 +233,8 @@ tricking bots into believing everything went smoothly._
 
 ## Roadmap
 
-- Various Event Triggers
-- File upload support
-- Additional metrics (e.g. Tally)
+- More Event Triggers
+- More metrics (e.g. Tally)
 
 _Note: Editing content (Pages, Entries, etc) is not in the scope of the Forms addon. It is different than Raven in that regard. That is a separate feature entirely._
 
