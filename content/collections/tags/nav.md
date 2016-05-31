@@ -12,7 +12,7 @@ parameters:
     description: "The starting point for your navigation. If unspecified, it'll use the current URI."
   -
     name: max_depth
-    type: 'integer *1*'
+    type: 'integer 2*'
     description: >
       The maximum number of subdirectory
       levels to traverse, letting you build a
