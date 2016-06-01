@@ -158,7 +158,17 @@ list of all the fields and values in the submission.
 
 ## File Uploads {#file-uploads}
 
-Sometimes your fans want to show you things they've created, like scissor-cut love letters and innocent selfies with cats. No problem! File input types to the rescue. All you need to do is inform Statamic where you'd like the uploads to go, and whether you'd like them to simply be placed in a directory somewhere, or become reusuable Assets.
+Sometimes your fans want to show you things they've created, like scissor-cut love letters and innocent selfies with cats. No problem! File input types to the rescue. All you need to do is inform Statamic that you intend to collect files, specify where you'd like the uploads to go, and whether you'd like them to simply be placed in a directory somewhere, or become reusuable Assets.
+
+First up, add `files="true"` to  your form tag. (This will add `enctype="multipart/form-data"` to the generated `<form>` tag. That's always so difficult to remember.)
+
+```
+{{ form:create formset="contact" files="true" }}
+...
+{{ /form:create }}
+```
+
+Then the fields:
 
 ```
 <input type="file" name="simple" />
