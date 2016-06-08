@@ -1,5 +1,5 @@
 ---
-title: I see an infinitely spinning loading graphic.
+title: I see an infinitely spinning loading graphic
 kb_categories:
   - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
 id: 3b9561bf-cf36-42b5-aeb9-34dd2cacc430

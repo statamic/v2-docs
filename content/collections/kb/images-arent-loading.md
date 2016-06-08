@@ -1,5 +1,5 @@
 ---
-title: "Images aren't loading."
+title: "Images aren't loading"
 kb_categories:
   - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
 id: a2160bcb-f860-4ee7-b88e-e6bf3bb3faab

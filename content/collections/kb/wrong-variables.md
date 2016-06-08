@@ -1,5 +1,5 @@
 ---
-title: The wrong variables are being shown.
+title: The wrong variables are being shown
 kb_categories:
   - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
 overview: Looping over some data and the wrong variables are being displayed? Perhaps ones from the current page?

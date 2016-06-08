@@ -1,5 +1,5 @@
 ---
-title: "There's duplicate content on my site."
+title: "There's duplicate content on my site"
 kb_categories:
   - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
 id: 4d1c5fe8-1b58-4384-931f-aaee97677c05
