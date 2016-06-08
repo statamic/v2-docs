@@ -4,7 +4,7 @@ id: 4bd7f0a0-b339-4052-8e9c-d231fc339452
 kb_categories:
   - 41f8eb46-342c-4a52-91a3-809d971a5165
 ---
-Statamic's unqiye data structure gives you the ability to set and override data, variables and settings alike, as you traverse deeper into your file structure.
+Statamic's unique data structure gives you the ability to set and override data, variables and settings alike, as you traverse deeper into your file structure.
 
 To best illustrate the Cascade, we'll use the example of a blog post that contains a list of related posts.
 
