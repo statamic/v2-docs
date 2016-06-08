@@ -13,3 +13,5 @@ php please clear:cache
 If that's not working for some reason, and you are using the File cache driver (if you don't know what that means, then
 you are), you can manually delete the contents of `local/storage/framework/cache`. This is where Laravel stores any cached
 items. Clear this folder out, and the cache is gone.
+
+You can also clear the cache from the Control Panel by going to any settings area and hitting save.
