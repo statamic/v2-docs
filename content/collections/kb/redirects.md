@@ -1,8 +1,8 @@
 ---
-title: Redirects
-overview: >
-  Statamic allows you to perform redirects in a number of ways.
+title: Performing redirects
 id: e98074ca-de64-4800-9494-aaaae55a92a9
+kb_categories:
+  - 41f8eb46-342c-4a52-91a3-809d971a5165
 ---
 ## Front-matter
 

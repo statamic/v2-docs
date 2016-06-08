@@ -1,7 +1,9 @@
 ---
-title: Filesystems
+title: How do Filesystems work?
 overview: "A flat file CMS would be nothing without flexible control of files. Learn how to configure and leverage Statamic's filesystems."
 id: b03df2fb-db07-4c9b-9707-d90dd7311533
+kb_categories:
+  - 41f8eb46-342c-4a52-91a3-809d971a5165
 ---
 ## Filesystems?
 Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem][flysystem]. By breaking the application structure into siloed locactions, each with it's own filesystem, we gain the ability to physically put these files in more locations (Amazon S3 for example) than a single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
