@@ -90,7 +90,7 @@ To relocate a filesystem, simply change the `root` variable to one of the follow
 
   - A path relative to the main filesystem root. (eg. `site/content`)
   - An absolute path. (eg. `/var/www/example.com/content`)
-  - An absolute path with an [interpolated environment variable](/reference/recipes/settings). (eg. `"{env‌:BASE_PATH}/content"`)
+  - An absolute path with an [interpolated environment variable](/knowledge-base/settings). (eg. `"{env‌:BASE_PATH}/content"`)
 
 \* Asset containers can be modified in their respective `container.yaml` file or CP pages.
 

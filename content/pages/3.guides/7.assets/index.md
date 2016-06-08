@@ -166,7 +166,7 @@ The `path` may be:
 
   - A path relative to the main filesystem root. (eg. `path/to/assets`) This can be inside or outside your site's root folder.
   - An absolute path. (eg. `/var/www/example.com/assets`)
-  - An absolute path with an [interpolated environment variable](/reference/recipes/settings). (eg. `"{env‌:BASE_PATH}/assets"`)
+  - An absolute path with an [interpolated environment variable](/knowledge-base/settings). (eg. `"{env‌:BASE_PATH}/assets"`)
 
 As mentioned above, the `url` should be the location of the asset folder. If it's located outside of the webroot, it's
 inaccessible so you can just leave it blank.
@@ -197,4 +197,4 @@ These features are in the oven but aren't quite fully baked yet. If you were to 
 [asset-fieldtype]: /reference/fieldtypes/assets
 [assets-tag]: /reference/tags/assets
 [glide-tag]: /reference/tags/glide
-[filesystems]: /reference/recipes/filesystems
+[filesystems]: /knowledge-base/filesystems

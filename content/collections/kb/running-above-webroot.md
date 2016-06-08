@@ -96,4 +96,4 @@ You'll also want to update your asset container `path` and `url` values, which c
 4. Adjust [filesystem references][filesystems].
 5. Adjust the asset container's path in `container.yaml`.
 
-[filesystems]: /reference/recipes/filesystems
+[filesystems]: /knowledge-base/filesystems

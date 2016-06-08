@@ -241,7 +241,7 @@ Be careful not to name overlap names when using both Antlers and Blade templates
 
 Note that when using Blade, all templates will be located in the `templates` folder. This includes files used by the `@extends` and `@include` directives.
 
-[Read more about templating in Statamic using Laravel Blade](/reference/recipes/blade).
+[Read more about templating in Statamic using Laravel Blade](/knowledge-base/blade).
 
 # Best Practices {#best-practices}
 

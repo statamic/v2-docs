@@ -26,7 +26,7 @@ Statamic is commercial software, so you'll need to a good human being and abide 
 
 In a nutshell, you can use Statamic _locally_ without a license key, but as soon as you are using it on a _public_ domain, you'll need a key.
 
-[Find out more about how the licensing works in a technical sense](/reference/recipes/licensing)
+[Find out more about how the licensing works in a technical sense](/knowledge-base/licensing)
 
 # Requirements {#requirements}
 
@@ -223,7 +223,7 @@ to a full URL like `http://mysite.com/`. If you ran the [installer](#installer),
 
 ### Moving Statamic Above Webroot (optional) {#above-webroot}
 
-For extra security you can [move your system files](/reference/recipes/secure-installation) above webroot. This prevents system files from potentially being accessed through a browser.
+For extra security you can [move your system files](/knowledge-base/secure-installation) above webroot. This prevents system files from potentially being accessed through a browser.
 
 ### Multilingual Sites
 

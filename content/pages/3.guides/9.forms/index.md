@@ -154,7 +154,7 @@ Here we'll send two emails for every submission of this form. One will go to the
 The first one uses a Statamic template, the other gets an "automagic" email. The automagic email will be a simple
 list of all the fields and values in the submission.
 
-[Learn how to create your emails](/reference/recipes/emails)
+[Learn how to create your emails](/knowledge-base/emails)
 
 ## File Uploads {#file-uploads}
 
