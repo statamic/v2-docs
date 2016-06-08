@@ -2,3 +2,5 @@ title: Knowledge Base
 order: alphabetical
 template: kb/article
 parse_content: false
+layout: full
+section: kaybee
