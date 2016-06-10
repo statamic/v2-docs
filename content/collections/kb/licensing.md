@@ -36,12 +36,19 @@ Developer Mode gives you access to all features of Statamic as long as you are o
 
 When Statamic calls home, we'll determine if the domain you're using is considered public.
 
-If any of the following checks pass, the domain is considered _not_ public:
+If any of the following checks pass, the domain is considered **not public**:
 
 - Is it a single segment? eg. `localhost`
 - Is it an IP address?
-- Does it use a port which is something besides `80` or `443`?
-- Does it have a dev-esque subdomain? eg. `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
-- Does it use a dev-esque TLD? eg. `.dev`, `.local`, or `.app`
+- Does it use a port other than `80` or `443`?
+- Does it have a dev-sounding subdomain? eg. `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
+- Does it use a dev-sounding TLD? eg. `.dev`, `.local`, or `.app`
+
+### But we're special
+
+We understand that sometimes you may not be able to set up your domains to coincide with our rules.
+
+For example, is your staging environment actually on a different domain, like mysite.com and mystagingsite.com?
+No problem, just comma delimit domains in your licenses page - `mysite.com, mystagingsite.com`.
 
 [dev_mode]: /knowledge-base/developer-mode
