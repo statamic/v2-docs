@@ -7,6 +7,11 @@ parameters:
     type: tag part
     description: "The name of the partial file, relative to the `partials` folder. This is part of the tag, not actually a parameter. For example, you'd use `partial:list` to load the `list` partial."
   -
+    name: src
+    type: string
+    description: |
+      The name of the partial. This is just a more verbose syntax, but can allow you to use a variable for the partial name. eg. `{{ partial src="{my_partial}" }}`
+  -
     name: variables
     type: multiple params
     description: >
