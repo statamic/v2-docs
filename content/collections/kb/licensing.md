@@ -25,9 +25,11 @@ This also means that you can only use the control panel from the URL of your _de
 
 If you attempt to use the site from another domain, you'll get an angry message from within your Control Panel. You may change the domain through your account/licenses page at any time.
 
-## Trial
+## Developer Mode
 
-The trial gives you access to all features of Statamic as long as you are on a non-public domain.
+Developer Mode gives you access to all features of Statamic as long as you are on a non-public domain.
+
+[Read more about Developer Mode][dev_mode]
 
 
 ## What is a public domain?
@@ -41,3 +43,5 @@ If any of the following checks pass, the domain is considered _not_ public:
 - Does it use a port which is something besides `80` or `443`?
 - Does it have a dev-esque subdomain? eg. `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
 - Does it use a dev-esque TLD? eg. `.dev`, `.local`, or `.app`
+
+[dev_mode]: /knowledge-base/developer-mode
