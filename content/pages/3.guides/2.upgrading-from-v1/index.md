@@ -29,6 +29,7 @@ Each of these things may require a little bit of work. We've estimated that the 
 ### File and folder naming conventions
 
 - Filename order keys are **always** delimited with a period before the slug. For example: `2015-12-25.christmas.md` and `2.about/index.md`. You can use a tool like [Name Mangler][name-mangler] to batch all these at once _and_ confirm that the output is right before you do it.
+- Remove any leading zeros in folder names, for example if you used [statamic-pageorder](https://github.com/jannisg/statamic-pagereorder) before
 - Rename `page.md` files to `index.md`.
 - Convert any pages that aren't in the `folder/index.md` format (e.g. `/about/team.md` becomes `/about/team/index.md`).
 
