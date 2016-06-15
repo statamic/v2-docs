@@ -63,6 +63,8 @@ Lastly, the locale. This should correspond with the locale you will be adding to
 $locale = 'fr';
 ```
 
+Hint: The local PHP development server `statamic/server.php` will not work in those subdirectories.
+
 ### Apache
 
 For Apache you'll extend your Rewrite Rule to optionally allow the locales you'd like to serve. You'll find it at the very end of the `.htaccess` file:
