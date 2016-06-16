@@ -60,7 +60,7 @@ parameters:
     name: taxonomy
     type: 'boolean *false*'
     description: >
-      If enabled, the current URL will be used
+      If enabled, the current URL will be used to 
       filter the listing by the appropriate
       taxonomy.
   -
