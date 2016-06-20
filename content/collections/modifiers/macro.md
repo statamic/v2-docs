@@ -10,12 +10,11 @@ Macro is a very special modifier. It performs no modifications of its own, but r
 
 
 ```.language-yaml
-# /site/theme/<your_theme>/settings/macro.yaml
-macros:
-  headline:
-    title: true
-    widont: true
-    remove_right: .
+# /site/theme/<your_theme>/settings/macros.yaml
+headline:
+  title: true
+  widont: true
+  remove_right: .
 
 # Page content
 title: Actually i don't know what we're talking about.
