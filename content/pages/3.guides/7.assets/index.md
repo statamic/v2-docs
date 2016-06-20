@@ -56,13 +56,13 @@ In addition to template-level flexibility, image Assets can also be manipulated 
 
 ```
 {{ assets:bacon_images }}
-  <img src="{{ url }}?w=300&h=250&fit=crop" />
+  <img src="/img/id/{{ id }}?w=300&h=250&fit=crop" />
 {{ /assets:bacon_images }}
 ```
 
 You can resize, make adjustments, crop, and add effects, all on the fly in your templates.
 
-Of course, if you can do this so can your users. To prevent a malicious visitor or -- let's face it -- a bored teenager, from overloading your server with an excessive amount of image processing, you should use the [Glide Tag][glide-tag] and Secure Mode. We've even enabled that by default.
+Of course, if you can do this so can your users. To prevent a malicious visitor or -- let's face it -- a bored teenager, from overloading your server with an excessive amount of image processing, you should use the [Glide Tag][glide-tag] and Secure Mode. We've even enabled that by default (which actually means the above example won't work out the box).
 
 This requires a unique key to be added to image URLs which is used to validate a match on the server and client side, resulting in the desired transformation. The Glide Tag does this for you automatically. Feel free to disable all of this in dev mode, it's frankly just more fun to play with the URL directly.
 
