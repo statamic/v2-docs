@@ -33,14 +33,14 @@ parameters:
       in the past.
   -
     name: since
-    type: string
-    description: "Limits the date the earliest point in time from which date-based entries should be fetched. Use a plain English string here, as PHP's `strtotime` method will know what you mean. eg. `last sunday`, `january 15th, 2013`, `yesterday`."
+    type: string/var
+    description: "Limits the date the earliest point in time from which date-based entries should be fetched. You can use plain English (PHP's `strtotime` method will interprit. eg. `last sunday`, `january 15th, 2013`, `yesterday`) or the name any date variable."
   -
     name: until
-    type: string
+    type: string/var
     description: >
-      Similar to `since`, but sets the latest
-      point in time.
+      The inverse of `since`, but sets the _max_
+      date.
   -
     name: sort
     type: string
