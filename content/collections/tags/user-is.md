@@ -27,3 +27,7 @@ A shorthand syntax is also available, however this only allows checking against 
     <img src="delicious-bacon.jpg" />
 {{ /is:bacon_enthusiast }}
 ```
+
+### Isn't
+
+We also support the inverse using `{{ user:isnt }}` tags.
