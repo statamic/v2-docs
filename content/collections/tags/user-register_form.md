@@ -52,3 +52,13 @@ A basic registration form, with validation errors.
 
 {{ /user:register_form }}
 ```
+
+
+### Additional Fields
+
+You are allowed to add any additional fields to your registration form, and they will be added to the user's account
+provided that they exist in the `user.yaml` fieldset.
+
+Any submitted data that does _not_ exist in the fieldset will be completely ignored.
+
+Additional fields will be validated as per your fieldset `validate` rules.
