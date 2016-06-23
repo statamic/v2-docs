@@ -60,7 +60,7 @@ parameters:
     name: taxonomy
     type: 'boolean *false*'
     description: >
-      If enabled, the current URL will be used to 
+      If enabled, the current URL will be used to
       filter the listing by the appropriate
       taxonomy.
   -
@@ -389,4 +389,4 @@ Here's the `auto_links` output, recreated using the other tags, for you maverick
 See, just a couple of keystrokes.
 
 [conditions]: /reference/conditions
-[custom_filters]: /addons/filters
+[custom_filters]: /addons/anatomy/filters
