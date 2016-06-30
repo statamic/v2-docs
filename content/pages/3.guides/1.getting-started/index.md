@@ -223,7 +223,7 @@ to a full URL like `http://mysite.com/`. If you ran the [installer](#installer),
 
 ### Moving Statamic Above Webroot (optional) {#above-webroot}
 
-For extra security you can [move your system files](/knowledge-base/secure-installation) above webroot. This prevents system files from potentially being accessed through a browser.
+For extra security you can [move your system files](/knowledge-base/running-above-webroot) above webroot. This prevents system files from potentially being accessed through a browser.
 
 ### Multilingual Sites
 
