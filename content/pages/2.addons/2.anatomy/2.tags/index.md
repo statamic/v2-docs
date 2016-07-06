@@ -70,8 +70,9 @@ Outputting your tag data is a little different depending on whether you intend t
 
 ### Single tags
 
-A single tag stands alone by itself and doesn’t require a closing tag. Your tag method must return a string. Within a
-template, your tag will be replaced with that returned string.
+A single tag stands alone by itself and doesn’t require a closing tag. Your tag method should return a string if you plan to display something. Within a template, your tag will be replaced with that returned string.
+
+You may also return a boolean. This would be useful if you are intending your tag to be placed inside a conditional statement.
 
 Naturally, if you don't return anything, your tag won't output anything. This can be useful if your tag is meant to perform
 some sort of non-output task. For example, the `redirect` tag doesn't output anything, it just performs a redirect.
