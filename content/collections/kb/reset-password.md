@@ -6,7 +6,7 @@ kb_categories:
 ---
 Forgot your admin user's password? No problem.
 
-Open `site/users/<your_user>.yaml` and replace `password_hash` with a new password like so:
+Open `site/users/<your_user>.yaml`, remove `password_hash`, and set a new password like so:
 
 ```
 password: supersecretpassword!
