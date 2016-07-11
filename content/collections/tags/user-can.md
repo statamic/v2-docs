@@ -30,3 +30,7 @@ A shorthand syntax is also available, however this only allows checking against 
     <a href="/cp">Control Panel</a>
 {{ /can:cp:access }}
 ```
+
+### Can’t
+
+We also support the inverse using {{ user:cant }} tags.
