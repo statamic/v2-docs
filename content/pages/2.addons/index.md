@@ -25,7 +25,7 @@ An addon can contain a number of aspects. It can be made up of one of them, or u
 - [Tags][tags] create tags for use within templates.
 - [Modifiers][modifiers] are used in your templates to manipulate variables.
 - [Fieldtypes][fieldtypes] create new ways to enter data into the Control Panel.
-- [Event listeners][event-listeners] can perform functionality when specific events are excecuted throughout the application.
+- [Event listeners][event-listeners] can perform functionality when specific events are executed throughout the application.
 - [Commands][commands] are used for executing functionality through the terminal.
 - [Tasks][tasks] allow you to schedule automated functionality at a predefined schedule.
 - [Service Providers][service-providers] let you bootstrap functionality into the application.
