@@ -1,5 +1,6 @@
 ---
-title: Helpers
+title: Helper Methods
+nav_title: Helper Methods
 id: cea88298-9c37-425b-9bfb-58e5d9a8e7ef
 overview: |
   From within any addon aspect, the following methods will be available to you.
