@@ -1,7 +1,8 @@
 ---
 id: d786f54b-12b7-43a8-8180-4fcd124aff0d
 template: docs/events
-title: Events
+title: Event Reference
+nav_title: Event Reference
 overview: >
   Throughout the lifecycle of a Statamic request, there are a number of events that are fired. These events allow
   a developer to add or modify functionality in various places.
