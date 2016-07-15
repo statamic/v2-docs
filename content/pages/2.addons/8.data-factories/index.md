@@ -38,6 +38,12 @@ if ($draft) {
 $entry = $factory->get();
 ```
 
+Once you have your object (an `Entry`, in this case) - remember that it doesn't exist as a file until you save it. That's simple though:
+
+```
+$entry->save();
+```
+
 Each factory starts off a little different. Entries use `Entry::create($slug)`, Pages use `Page::create($uri)`. Check out the docs for the factory you're using.
 
 - [ContentFactory](/addons/classes/contentfactory)
