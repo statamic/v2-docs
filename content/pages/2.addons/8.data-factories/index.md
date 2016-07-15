@@ -21,7 +21,7 @@ Entry::create('my-post')
     ->date('2016-05-10')
     ->get();
 
-// Returns a Statamic\Data\Pages\Page
+// Returns a Statamic\Data\Entries\Entry
 ```
 
 Of course, you don't have to chain everything in one go:
