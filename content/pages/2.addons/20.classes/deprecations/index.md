@@ -46,6 +46,7 @@ It was made to be more Laravel/Eloquent-ish. The majority of the changes come fr
 | `Content::pageFolder()` | `PageFolder::whereHandle()` |
 | `Page::getByUuid($uuid)` | `Page::find($id)` |
 | `Page::getByUrl($url)` | `Page::whereUri($uri)` |
-| `Entries::getFromColletion()` | `Entry::whereCollection()` |
+| `Entries::getFromCollection()` | `Entry::whereCollection()` |
 | `Entries::createCollection()` | `Collection::create()` |
-| `TaxonomyTerms::getFromTaxonomy()` | `Entry::whereTaxonomy()` |
+| `TaxonomyTerm::getFromTaxonomy()` | `Term::whereSlug()` |
+| `TaxonomyTerms::getFromTaxonomy()` | `Term::whereTaxonomy()` |
