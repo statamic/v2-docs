@@ -27,7 +27,7 @@ Entry::find($id); // Returns Entry
 Entry::whereSlug($slug, $collection); // Returns Entry
 ```
 
-## Get an entry by URI
+## Get an entry by URI.
 
 ``` php
 Entry::whereUri($uri); // Returns Entry
