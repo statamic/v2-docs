@@ -33,12 +33,6 @@ Asset::find($id); // Returns Asset
 Asset::wherePath($path); // Returns Asset
 ```
 
-## Check if an asset exists.
-
-``` php
-Asset::exists($id); // Returns a boolean
-```
-
 ## Create an asset.
 
 This returns an instance of a `AssetFactory` to allow you to chain and build your asset.
