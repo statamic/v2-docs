@@ -24,7 +24,7 @@ UserGroup::exists($id); // Returns a boolean
 ## Get a group by handle.
 
 ``` php
-UserGroup::whereHandle($handle); // Returns Role
+UserGroup::whereHandle($handle); // Returns UserGroup
 ```
 
 ## Get a user's groups.
