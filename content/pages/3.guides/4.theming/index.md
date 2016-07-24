@@ -80,7 +80,7 @@ If that’s the case, you have two options:
 
 # Conventions {#conventions}
 
-[Theme tags](/reference/tags/theme) assume a few conventions that will beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
+[Theme tags](/reference/tags/theme) assume a few conventions that will be beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
 
 ## CSS and JavaScript {#css-js-conventions}
 
