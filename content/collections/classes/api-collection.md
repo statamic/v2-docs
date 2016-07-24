@@ -22,7 +22,7 @@ Collection::handles(); // Returns an array of strings
 ## Get a collection by handle.
 
 ``` php
-Collection::whereHandle($handle); // Returns CollectionFolder
+Collection::whereHandle($handle); // Returns Collection
 ```
 
 ## Check if a collection exists.
@@ -34,5 +34,5 @@ Collection::handleExists($handle); // Returns a boolean
 ## Create a collection.
 
 ``` php
-Collection::create($handle); // Returns CollectionFolder
+Collection::create($handle); // Returns Collection
 ```
