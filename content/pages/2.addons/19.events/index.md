@@ -51,29 +51,6 @@ public $events = ['cp.add_to_head' => 'handle'];
 public function handle();
 ```
 
-### stache.updated
-
-Fired when the Stache is updated (ie. when content, assets, or users are created/modified) this will be fired.
-
-The `Statamic\Events\StacheUpdated` class will be passed through.
-
-```
-use Statamic\Events\StacheUpdated;
-
-public $events = ['stache.updated' => 'handle'];
-
-public function handle(StacheUpdated $event)
-{
-    // Booleans for whether the respected caches were updated.
-    $event->content;
-    $event->assets;
-    $event->users;
-
-    // The Stache object
-    $event->stache; // Statamic\Contracts\Stache\Cache
-}
-```
-
 ### cache.cleared
 
 Fired when the cache is cleared. This refers to the persistent cache, _not_ the "Stache".
@@ -246,4 +223,25 @@ Fired after a user has registered with the [Register Form](/reference/tags/user-
 public $events = ['user.registered' => 'handle'];
 
 public function handle(User $user);
+```
+
+
+### Statamic\Events\StacheUpdated
+
+Fired when the Stache is updated (ie. when content, assets, or users are created/modified) this will be fired.
+
+The `Statamic\Events\StacheUpdated` class will be passed through.
+
+```
+use Statamic\Events\StacheUpdated;
+
+public $events = [StacheUpdated::class => 'handle'];
+
+public function handle(StacheUpdated $event)
+{
+    $event->stache; // Statamic\Contracts\Stache\Cache
+    $event->updates; // \Illuminate\Support\Collection of repos that were updated
+    $event->updated($repo); // Check if a given repo was updated
+    $event->updatedAny($repos); // Check if any given repos were updated
+}
 ```
