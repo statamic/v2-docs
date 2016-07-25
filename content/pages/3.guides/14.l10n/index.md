@@ -227,3 +227,8 @@ Here's a brief rundown of how to setup subdomain locales, assuming you have the 
 - Links to your theme assets won't work because they will be relative, and the files don't actually exist there.  
   You can symlink `site/themes/` to inside your `fr` folder. That'll do the trick.
 - You can consider symlinking your public asset container folders in the same fashion.
+
+## Troubleshooting {#troubleshooting}
+
+### I added a localized file but I get an error telling me the ID already exists.
+This will happen if you haven't added your additional locale to your `system.yaml` file.
