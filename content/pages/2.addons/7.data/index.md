@@ -113,7 +113,9 @@ However you may have that page localized in Spanish as `/es/zanahoria`. The URI 
 
 **When retrieving data in Statamic using URIs, you should always use the default locale.**
 
-[link to how to get the default uri]
+```
+$uri = \Statamic\API\URL::getDefaultUri('es', '/zanahoria'); // returns /carrot
+```
 
 ## URL
 
