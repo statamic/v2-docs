@@ -41,8 +41,15 @@ the front-end of the site, or through the control panel.
 A common use case for addons is to be able to have a form, which would need to be handled somehow. You could submit
 that form to the method a controller would handle.
 
-Whenever a request is made to `/!/foo/bar`, it will be routed into a corresponding controller method.
-In this case, assuming there is an addon named `Foo`, it's `FooController.php`'s `bar` method will be called.
+Whenever a request is made to `/!/foo/bar`, it will be routed into a corresponding controller method, prefixed with the
+HTTP verb used. The method will be converted to camel case.
+
+For example, assuming there's an addon named `Foo`:
+
+- GET request to `/!/Foo/barBaz` or `/!/Foo/bar_baz` will call `FooController@getBarBaz`.
+- POST request to `/!/Foo/barBaz` or `/!/Foo/bar_baz` will call `FooController@postBarBaz`, etc.
+
+If you're familiar with Laravel, this can be thought of as similar to `Route::controller()`.
 
 Note that the `/!/` in the URL is customizable, so when outputting form actions, you can use the [$this->actionUrl()](/addons/helpers#actionUrl) helper.
 
