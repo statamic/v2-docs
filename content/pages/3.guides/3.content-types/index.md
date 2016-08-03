@@ -95,7 +95,7 @@ Here are a few examples of things that could be their own Collection:
 
 You can create as many collections as you'd like, each with its own default fieldset. Each Collection can contain any number of Entries with a date or numerical `order_key` and a slug for a filename: `2015-12-24.christmas-eve.md`.
 
-By their very nature, Collections don't determine their own URLs. To do so would limit their flexibility. Instead, you can `mount` a collection onto any page (or pages) and then write a route to determine their URL structure. This opens many, many, many possibilities. That's three (3) manies, for anyone who didn't count them but simply skimmed the last sentence.
+By their very nature, Collections don't determine their own URLs. To do so would limit their flexibility. Instead, you can `mount` a collection onto any page (or pages) and then write a route to determine their URL structure. This opens many, many, many possibilities. That's three (3) many's, for anyone who didn't count them but simply skimmed the last sentence.
 
 Collections are kept in `site/content/collections`, each in their own subfolder, and contain a flat list of Entries in a YAML Front-Loaded format (there's that term again).
 
