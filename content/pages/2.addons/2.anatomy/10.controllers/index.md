@@ -1,8 +1,7 @@
 ---
 overview: >
-  Controllers let you create pages in the
-  control panel. They let you organize
-  request logic into a single class.
+  Controllers allow you to handle requests either through the front-end or the control panel.
+  They let you organize request logic into a single class.
 title: Controllers
 id: 01b6596e-19c1-41e7-a3e1-e92144abc211
 ---
@@ -12,7 +11,7 @@ To create a controller, you will need a class file named `[AddonName]Controller.
 
 You can also use `php please make:controller AddonName` to have one generated for you.
 
-Here's a basic controller:
+Here's a basic controller. Each public method in the class can receive a route.
 
 ``` .language-php
 <?php
@@ -32,7 +31,24 @@ class KarmaController extends Controller
 }
 ```
 
-Each public method in the controller can have a route pointed toward it. We can route to the controller action above by editing the routes array in our addon's `routes.yaml` file.
+## Usage
+
+There are two ways routes can be directed into a controller. They differ depending on whether they are going through
+the front-end of the site, or through the control panel.
+
+### Front-end
+
+A common use case for addons is to be able to have a form, which would need to be handled somehow. You could submit
+that form to the method a controller would handle.
+
+Whenever a request is made to `/!/foo/bar`, it will be routed into a corresponding controller method.
+In this case, assuming there is an addon named `Foo`, it's `FooController.php`'s `bar` method will be called.
+
+Note that the `/!/` in the URL is customizable, so when outputting form actions, you can use the [$this->actionUrl()](/addons/helpers#actionUrl) helper.
+
+### Control Panel
+
+We can route to the controller action above by editing the routes array in our addon's `routes.yaml` file.
 
 ``` .language-yaml
 routes:
@@ -44,7 +60,7 @@ The key is the route itself, and the value is the controller method.
 All of an addon's routes are prefixed by the addon route. So the `foo` route above would actually be `/cp/addons/karma/foo`.
 
 
-## Routing schema
+#### CP Routing schema
 
 Your routing array can handle more than basic GET requests.
 
