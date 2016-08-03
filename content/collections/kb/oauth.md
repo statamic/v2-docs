@@ -103,6 +103,11 @@ public static $oauth_route = 'foo/bar';
 
 This will change the routes to `/foo/bar/*`.
 
+### Redirect
+
+By default, once you log in with OAuth, you will be redirected to the homepage. You may override this behavior
+by adding a `redirect` query parameter. This can be added with a parameter on the [oauth][oauth_tag] tag.
+
 
 ## Usage
 
@@ -112,12 +117,13 @@ Send your users to the provider's login URL to begin the OAuth workflow. You may
 <a href="{{ oauth:login_url provider='github' }}">Log in with Github</a>
 ```
 
-or the shorthand
+or the shorthand:
 
 ```
 <a href="{{ oauth:github }}">Log in with Github</a>
 ```
 
+Read more about the [OAuth Tag][oauth_tag].
 
 ## Customization
 
@@ -257,3 +263,4 @@ protected $oauth_providers = [
 ```
 
 [socialite_providers]: https://socialiteproviders.github.io/
+[oauth_tag]: /reference/tags/oauth
