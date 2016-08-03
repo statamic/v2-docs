@@ -40,9 +40,12 @@ Emits an event, namespaced by your addon.
 For example, `$this->emitEvent('hello')` would emit `MyAddon.hello`.
 
 ### eventUrl($url)
-Returns an event URL with the $url appended to it.
+Exactly the same as `actionUrl`. Kept around for backwards compatibility.
 
-For example, `$this->eventUrl('foo/bar')` would return `/!/MyAddon/foo/bar`.
+### actionUrl($url) {#actionUrl}
+Returns an action URL with the $url appended to it.
+
+For example, `$this->actionUrl('foo/bar')` would return `/!/MyAddon/foo/bar`.
 
 ---
 
