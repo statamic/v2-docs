@@ -152,6 +152,20 @@ In both Collections and Taxonomies, the localized entries/terms are all stored i
 
 For pages, entries, and taxonomy terms: slugs may be localized by adding a `slug` field to the front-matter. The filenames shouldn't change. They should also all have `id` fields that match their default counterparts.
 
+### Routing
+
+It's possible to assign a different collection and/or taxonomy routes for each locale. For example, you may want `/news/my-post` for English, but `/noticias/mi-publicacion` in Spanish.
+
+Instead of a string for the route, you can simply specify an array with each locale, like so:
+
+``` .language-yaml
+collections:
+  news:
+    en: /news/{slug}
+    es: /noticias/{slug}
+```
+
+
 ## Displaying your content
 
 When browsing your site, the locale of content that will be displayed will be determined by the URLs defined in your system settings.
