@@ -1,6 +1,6 @@
 ---
 title: Data Retrieval and Manipulation
-nav_title: Mananging Data
+nav_title: Managing Data
 id: bbe3864c-ad6d-4922-84cf-b48586f12bf8
 overview: >
   One of the most crucial aspects of extending a Content Management System is being able to retrieve the data and manipulate it. The Statamic API and it's related classed provides you with ways to handle these sort of situations.
