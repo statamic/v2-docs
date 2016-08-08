@@ -204,7 +204,7 @@ Or, you can enable multiple files on one field, by setting type with the plural 
 
 ``` .language-yaml
 fields:
-  manye:
+  many:
     type: files
     destination: uploads/
 ```
