@@ -121,8 +121,8 @@ $uri = \Statamic\API\URL::getDefaultUri('es', '/zanahoria'); // returns /carrot
 
 Similar to a URI, a URL is the location from the domain root.
 
-Using the example above, the URLs would be `/carrot` and `/fr/zanahoria`, for English and Spanish, respectively.
+Using the example above, the URLs would be `/carrot` and `/es/zanahoria`, for English and Spanish, respectively.
 
-Absolute URLs (or permalinks) include the domain. They would be `http://yoursite.com/carrot` and `http://yoursite.com/fr/zanahoria`.
+Absolute URLs (or permalinks) include the domain. They would be `http://yoursite.com/carrot` and `http://yoursite.com/es/zanahoria`.
 
 [factories]: /addons/data-factories
