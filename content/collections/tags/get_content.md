@@ -9,7 +9,7 @@ parameters:
   -
     name: from
     type: any local URI
-    description: Pass a local URI as a literal string, variable, or pipe delimited list, and all retrieved data will be available inside the tag pair.
+    description: Pass a local URI as a literal string, variable, or pipe delimited list, and all retrieved data will be available inside the tag pair, in the currently active language. The slug doesn't need to be the localized one.
   -
     name: limit
     type: integer

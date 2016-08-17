@@ -26,7 +26,7 @@ In this guide, we will assume we're using this subfolder approach in any example
 
 Following from our subfolder example, we'll need to create those folders.
 
-For each locale, you should copy the `index.php` and `.htaccess` into their respective folders.
+For each locale, you should copy the `index.php` into their respective folders.
 
 ``` .language-files
 / /
@@ -36,10 +36,8 @@ For each locale, you should copy the `index.php` and `.htaccess` into their resp
 |-- statamic/
 |-- fr/
 |   |-- index.php
-|   `-- .htaccess
 |-- de/
 |   |-- index.php
-|   `-- .htaccess
 |-- index.php
 |-- .htaccess
 |-- ...etc...
@@ -64,6 +62,18 @@ Lastly, the locale. This should correspond with the locale you will be adding to
 ``` .language-php
 $locale = 'fr';
 ```
+
+Hint: The local PHP development server `statamic/server.php` will not work in those subdirectories.
+
+### Apache
+
+For Apache you'll extend your Rewrite Rule to optionally allow the locales you'd like to serve. You'll find it at the very end of the `.htaccess` file:
+
+``` .language-htaccess
+RewriteRule ^(fr/|de/)? $1index.php [L]
+```
+
+If the request starts with `fr/`, the `fr/index.php` will be used, if no locale is given that gives `index.php`, just like before.
 
 ### Nginx
 

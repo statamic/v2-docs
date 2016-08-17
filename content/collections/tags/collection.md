@@ -77,6 +77,11 @@ parameters:
       class or using a special syntax, both of
       which are outlined in more detail below.
   -
+    name: locale
+    type: string
+    description: >
+      Filter the listing by locales. F.e. `locale="only {locale}"` will only list entries that are translated  to the current locale.
+  -
     name: as
     type: string
     description: >

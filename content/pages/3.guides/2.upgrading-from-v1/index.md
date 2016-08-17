@@ -29,6 +29,7 @@ Each of these things may require a little bit of work. We've estimated that the 
 ### File and folder naming conventions
 
 - Filename order keys are **always** delimited with a period before the slug. For example: `2015-12-25.christmas.md` and `2.about/index.md`. You can use a tool like [Name Mangler][name-mangler] to batch all these at once _and_ confirm that the output is right before you do it.
+- Remove any leading zeros in folder names, for example if you used [statamic-pageorder](https://github.com/jannisg/statamic-pagereorder) before
 - Rename `page.md` files to `index.md`.
 - Convert any pages that aren't in the `folder/index.md` format (e.g. `/about/team.md` becomes `/about/team/index.md`).
 
@@ -36,7 +37,8 @@ Each of these things may require a little bit of work. We've estimated that the 
 
 - Move entries into their own [Collection][collection] and configure their [route][routes].
 - Mount them to their corresponding pages by adding `mount: collection_name` to `index.md`
-- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`
+- Move `fields.yaml` from the page's to the collection's folder, and name it `folder.yaml`.
+- Change the `type` key to `order`, this sets whether to sort by number or date.
 
 ### Renamed/removed variables
 
@@ -62,7 +64,10 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 
 ### Removed and changed fieldtypes
 
-The former `templates` fieldtype is now named `template`, singular.
+- `templates` fieldtype is now named `template`.
+- `checkbox` fieldtype is now named `toggle`.
+- `partial` is the new fieldtype that mimics `include`, and `field_order` is therefore obsolete.
+- `instructions` can only have one single value, `above` and `below` are obsolete
 
 The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We feel it's important to eliminate reliance on third-party APIs for all core features. The maps HTML from v1 came from [Leaflet.js][leaflet] and was really just a wrapper for their default implementation. Check it out, it's pretty straightforward.
 
