@@ -7,11 +7,11 @@ conditions:
   -
     name: is|equals
     type: mixed
-    description: Checks if a field is equal to a value.
+    description: Checks if a field is equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:is_strict="bar"`
   -
     name: not|isnt|aint
     type: mixed
-    description: Checks if a field is not equal to a value.
+    description: Checks if a field is not equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:isnt_strict="bar"`
   -
     name: exists|isset
     type: bool
