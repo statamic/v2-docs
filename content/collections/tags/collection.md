@@ -397,7 +397,7 @@ You can also move the scope down into your [alias](#alias) loop. Yep, we thought
 
 ```
 {{ collection:blog as="posts" }}
-  {{ posts as="post" }}
+  {{ posts scope="post" }}
     <div class="block">
       <img src="{{ post:featured_image }}">
     </div>
