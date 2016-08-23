@@ -15,6 +15,14 @@ Entry::all(); // Returns EntryCollection
 Entry::whereCollection($collection); // Returns EntryCollection
 ```
 
+## Get the number of entries in a collection
+
+``` php
+Entry::countWhereCollection($collection); // Returns an integer
+```
+
+This is significantly more performant than using `Entry::whereCollection($collection)->count();`.
+
 ## Get an entry by ID.
 
 ``` php
