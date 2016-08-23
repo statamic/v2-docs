@@ -88,7 +88,7 @@ Aw man, we were hoping you wouldn't ask that. We'll have a smart or automatic me
 
 Now we get to the **performance** part of the show. There is absolutely nothing faster on the web than static pages (except static pages without javascript and big giant header images, of course). And to that end, Statamic can cache static pages and pass off routing to Apache or Nginx through reverse proxying. It sounds much harder than is.
 
-Certain features, like forms with server-side validation, don't work with static page caching and invalidating it is a manual process for now. As long as you understand that, you can leverage this feature for literally the fastest sites possible. Let's take a look!
+Certain features, like forms with server-side validation, don't work with static page caching. As long as you understand that, you can leverage this feature for literally the fastest sites possible. Let's take a look!
 
 There are 2 stages of Static caching. Half Measure, and Full Measure.
 
@@ -122,6 +122,41 @@ will result in the same page being shown. This is useful for preventing the cach
 `?whatever` to the URL. However, it will break any functionality that relies on query strings, like pagination.
 
 _Note that when using `static_caching_type: file`, query strings will **always** be ignored._
+
+### Excluding pages
+
+You may add a list of URLs you wish to exclude from being cached. You may want to exclude pages that need to always be dynamic, such
+as forms and listings with `sort="random"`.
+
+``` .language-yaml
+static_caching_exclude:
+  - /contact
+```
+
+### Invalidation
+
+When using half-measure, you're able to set the number of minutes before the cached pages automatically expire.
+
+``` .language-yaml
+static_caching_default_cache_length: 5
+```
+
+For full-measure, since the generated html files will be served before PHP ever gets hit, the cache length option is _not_ available.
+
+You may also set specific rules for invalidating pages when entries in collections have been saved. For example:
+
+``` .language-yaml
+static_caching_invalidation:
+  collections:
+    blog:
+      urls:
+        - /blog
+        - /blog/category/*
+        - /
+```
+
+This says "when an entry in the `blog` collection is saved, we should invalidate the `/blog` page, any pages beginning with `/blog/category/`, and the home page."
+Of course, you may add as many collections as you need.
 
 ## Static Site Generation {#static-generator}
 
