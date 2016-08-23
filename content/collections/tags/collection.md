@@ -45,30 +45,27 @@ parameters:
     name: sort
     type: string
     description: >
-      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.  
-      For example, `sort="title"` or `sort="date:asc|title:desc"` to search by date then by title.  
+      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.
+      For example, `sort="title"` or `sort="date:asc|title:desc"` to search by date then by title.
       To sort numerically, use `sort="order"`. (Make sure to include `order: number` in your collection's folder.yaml file).
   -
     name: limit
     type: integer
-    description: Limit the total results.
+    description: Limit the total results returned.
   -
     name: offset
     type: integer
-    description: The result set will be offset by this many entries.
+    description: The number of entries the results should by offset by.
   -
     name: taxonomy
     type: 'boolean *false*'
     description: >
-      If enabled, the current URL will be used to
-      filter the listing by the appropriate
-      taxonomy.
+      If enabled, the current URL will be used to filter the listing by the appropriate taxonomy.
   -
     name: group_by_date
     type: string
     description: >
-      Allows you to group the entries by date.
-      More info below.
+      Group entries by date, given a specified format.
   -
     name: filter
     type: wizardry
@@ -77,50 +74,48 @@ parameters:
       class or using a special syntax, both of
       which are outlined in more detail below.
   -
-    name: as
-    type: string
-    description: >
-      The scope your entries can be nested
-      within. More detail below.
-  -
     name: paginate
     type: 'boolean *false*'
     description: >
-      Specify whether your entries should be
-      paginated. More detail below.
+      Specify whether your entries should be paginated.
+  -
+    name: as
+    type: string
+    description: >
+      Alias your entries into a new variable loop.
+  -
+    name: scope
+    type: string
+    description: >
+      Scope your entries with a variable prefix.
 variables:
   -
     name: first
     type: boolean
-    description: If this is the first item in the loop.
+    description: Is this the first item in the loop?
   -
     name: last
     type: boolean
-    description: If this is the last item in the loop.
+    description: Is this the last item in the loop?
   -
-    name: count|index
+    name: index
     type: integer
     description: >
-      The number of current iteration in the
-      loop.
+      The number/index of current iteration in the loop, starting from 1
   -
     name: zero_index
     type: integer
     description: >
-      The zero-based count of the current
-      iteration in the loop.
+      The number/index of current iteration in the loop, starting from 0
   -
     name: total_results
     type: integer
-    description: The number of results in the loop.
+    description: The total number of results in the loop.
   -
     name: page data
     type: mixed
     description: >
-      Each page being iterated has access to
-      all the variables inside that page. This
-      includes things like `title`, `content`,
-      etc.
+      Each page being iterated has access to all the variables inside that page. This includes things like `title`, `content`, etc.
 id: 045a6e54-c792-483a-a109-f07251a79e47
 ---
 ## Example {#example}
@@ -250,27 +245,6 @@ class UsersFavoriteFilter extends Filter
 
 [Read more about custom filters][custom_filters].
 
-
-## Scope {#scope}
-
-You can optionally put your entries loop in a scope, if you’d like to be more explicit.
-
-```
-{{ collection:blog as="posts" }}
-  {{ if no_results }}
-    <p>No posts</p>
-  {{ /if }}
-
-  {{ posts }}
-    <a href="/blog/{{ slug }}">{{ title }}</a>
-  {{ /posts }}
-{{ /collection:blog }}
-```
-
-You don’t have to wrap your entries loop in the `else` of your `if no_results` conditional. If there are no posts, the loop will simply output nothing.
-
-You can [read more about scope and the cascade here](/knowledge-base/cascade).
-
 ## Pagination {#pagination}
 
 To enable pagination mode, add the `paginate="true"` parameter, along with the `limit` parameter to specify the number of entries in each page.
@@ -386,7 +360,51 @@ Here's the `auto_links` output, recreated using the other tags, for you maverick
 {{ /paginate }}
 ```
 
-See, just a couple of keystrokes.
+## Aliasing {#alias}
+
+Often times you'd like to have some extra markup around your list of entries, but only if there are results. Like a `<ul>` element, for example. You can do this by aliasing, or _scoping_ the results into a new variable tag pair. It goes  like this:
+
+```
+{{ collection:blog as="posts" }}
+  <ul>
+  {{ posts }}
+    <li><a href="{{ url }}">{{ title }}</a></li>
+  {{ /posts }}
+  </ul>
+{{ /collection:blog }}
+```
+
+## Scoping {#scope}
+
+Sometimes not all of your entries have the same set of variables. And sometimes the page that you're on (while listing entries from a Collection) may have those very same variables on the page scope. Statamic assumes you'd like to fallback to the previous scope's data to plug any holes. This logic has pros and cons, and you can [read more about scoping and the Cascade here](/knowledge-base/cascade).
+
+You can assign a _scope_ prefix to your entries so you can be sure to get just the data you want. Define it and then prefix all of your variables with it.
+
+```{.language-yaml}
+# Page data
+featured_image: /img/totes-adorbs-kitteh.jpg
+```
+
+```
+{{ collection:blog scope="post" }}
+  <div class="block">
+    <img src="{{ post:featured_image }}">
+  </div>
+{{ /collection:blog }}
+```
+
+You can also move the scope down into your [alias](#alias) loop. Yep, we thought of that too.
+
+```
+{{ collection:blog as="posts" }}
+  {{ posts as="post" }}
+    <div class="block">
+      <img src="{{ post:featured_image }}">
+    </div>
+  {{ /posts }}
+{{ /collection:blog }}
+```
+
 
 [conditions]: /reference/conditions
 [custom_filters]: /addons/anatomy/filters
