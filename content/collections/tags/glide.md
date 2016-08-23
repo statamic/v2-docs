@@ -1,6 +1,6 @@
 ---
 title: Glide
-overview: Manipulate Asset images on the fly.
+overview: Manipulate Asset images on the fly using the wonderful [Glide](http://glide.thephpleague.com/) library.
 parameters:
   -
     name: src|id
