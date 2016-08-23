@@ -220,3 +220,27 @@ Specifying `filename="bacon.jpg"` would change the URL to `/img/cbffccd0-ae6f-11
 The additional segment is purely cosmetic in terms of Statamic functionality (hence 'vanity'). However now if you were to right click and save the image, it would name it `bacon.jpg`. It would also be more recognizable to search engines as a photo of bacon rather than a photo of a `cbffccd0-ae6f-11e5-a837-0800200c9a66`.
 
 The vanity filename option is only available when referencing assets. When using paths, the filename will already be the filename.
+
+
+## Serving Cached Images Directly {#serving-cached-images}
+
+Glide brings you some pretty nifty on-the-fly URL manipulations. The default behaviour of the Glide tag is to simply output a URL. When that URL is
+visited, Glide analyses the URL and manipulates an image. However, if you have a lot of assets in your site and a lot of them on a page, time for each
+request can soon start to add up.
+
+It is possible to "reverse" this behavior and to simply generate static images. Your server will load the images directly instead of handing the work
+over to Glide each time. If you are familiar with Statamic v1, this can be thought of similar to the "Transform" tag.
+
+In `Configure > Settings > Assets`, or `site/settings/assets.yaml`:
+
+``` .language-yaml
+# Enable or disable the feature
+image_manipulation_cached: true
+
+# The folder containing the manipulated images.
+# If you're running above webroot, this might be something like public/img
+image_manipulation_cached_path: img
+
+# The URL to the folder
+image_manipulation_route: img
+```
