@@ -55,6 +55,7 @@ You know all those things that start with an underscore? `_site_root`, `_layout`
 - `parse_content`
 - `first`
 - `last`
+- `redirect`
 
 ### Bloodhound is now integrated Search
 
