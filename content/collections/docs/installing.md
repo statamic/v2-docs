@@ -1,5 +1,6 @@
 ---
 title: Installing
+overview: We're pretty sure Statamic might be one of the simplest CMS's to get running, but there are so many different ways to run PHP apps that we need to cover a lot of bases here. Feel free to skip right to your particular dev environment. It's unlikely that _everything_ in this article will apply to you.
 id: a7668389-57ab-47aa-b26f-6d2299b5b534
 ---
 
@@ -18,6 +19,7 @@ Statamic has a few system requirements. Not all servers are created equal and no
 
 - A web server: Apache, Nginx, or IIS
 - PHP >= 5.5.9
+- URL Rewriting enabled (mod_rewrite, try_files, etc)
 
 ### Required PHP Extensions {#required-php-extensions}
 
@@ -29,7 +31,7 @@ These should all be compiled in PHP 5.5.9+ by default but we find it's best to b
 - [JSON](https://secure.php.net/manual/en/book.json.php)
 - [PCRE](http://php.net/manual/en/book.pcre.php)
 
-### Optional {#optional}
+### Optional (But Recommended) {#optional}
 
 - [GD](http://php.net/manual/en/book.image.php) or [ImageMagick](http://php.net/manual/en/book.imagick.php)
 - [Composer](https://getcomposer.org/)
@@ -37,7 +39,9 @@ These should all be compiled in PHP 5.5.9+ by default but we find it's best to b
 
 ## Suggested Development Environments {#dev-environments}
 
-You can (and probably should) run Statamic _locally_ while you develop your site. There are a number of solutions that give you all the tools you need without having to compile anything by hand. But if you're into that, all the better. You can probably skip over the rest of this section.
+You can (and probably should) run Statamic _locally_ while you develop your site. There are a number of solutions that give you all the tools you need without having to compile anything by hand.
+
+If you're into that though, all the better. You can probably skip over the rest of this section.
 
 ### Mac: MAMP/MAMP Pro
 
@@ -48,7 +52,7 @@ The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PH
 [Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
 You can even share your sites publicly using local tunnels. We use it, it's brilliant.
 
-_Note: Valet supports an out-of-the-box Statamic installation. Subdirectory installs don't work at the moment._
+_Note: Valet supports the out-of-the-box Statamic directory structure. Subdirectory installs don't work._
 
 ### Windows: WAMP
 
@@ -73,18 +77,8 @@ folders:
 
 ### CLI Server
 
-_This method isn't recommended for any long-term development._
-
-To get started very quickly, you can use Laravel's built-in server using our `please` command.
-
-``` .language-bash
-$ php please serve
-
-Laravel development server started on http://localhost:8000/
-```
-
-Alternatively, you can use the plain PHP version (which the `please` command uses behind the scenes). You must
-specify the `statamic/server.php` to use as a router.
+Statamic doesn't support Laravel's native `serve` command, but you _can_ use PHP's CLI Server (for which the `serve` command is just a wrapper for). You must
+specify `statamic/server.php` to use as a router file.
 
 ``` .language-bash
 $ php -S localhost:3000 statamic/server.php
@@ -93,14 +87,11 @@ PHP 5.6.10 Development Server started at Thu Jan 21 10:30:00 2016
 Listening on http://localhost:3000
 ```
 
-Note that some users are reporting issues with both of these options.
-
-
 ## Installing {#installing}
 
-Grab the latest version of [statamic.com](http://statamic.com) and let's get to it.
+Grab the latest version of [statamic](https://account.statamic.com/try) and let's do this.
 
-### Step 1: Drop the files {#step-1-files}
+### Step 1: Unzip files into your webroot {#step-1-files}
 
 Unzip your Statamic package into your web root. You'll see the following folders and files:
 
@@ -121,25 +112,24 @@ webroot/
 
 #### Running in a subdirectory {#subdir}
 
-Gut check time. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
+Let's pause for just a moment. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
-Professional advice given, you'll need to do this:
+Professional advice given, where's what to do:
 
 - Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
 - Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
 
-Good to go.
+Done.
 
 ### Step 2: Set permissions {#permissions}
 
-Statamic needs to be able to write to the 4 included folders, and their subfolders.
+Every Statamic instance needs full write access to the following 3 directories recursively (e.g. all their subfolders and files).
 
 - `site`
 - `local`
 - `statamic`
-- `assets`
 
-In order to have write access, the necessary permissions depend on which system user PHP is running as and which user owns the files and folders. Here are some recommendations. When in doubt, bump it up:
+In order to have write access, the necessary permissions depend on which system user PHP is running as and which user owns the files and folders. Here are some recommendations. When in doubt, just use `777`:
 
 - If they are the same user, use `744`.
 - If they are the same group, use `774`.
@@ -147,7 +137,7 @@ In order to have write access, the necessary permissions depend on which system 
 
 > Apply the permissions recursively so Statamic can write where it needs to.
 
-The simplest way to apply the permissions is to use the following command. (You may need to prefix with `sudo`)
+The simplest way to apply the permissions is to use the following command. (You may need to use `sudo`)
 
 ``` .language-bash
 chmod -R 777 site local statamic assets
@@ -186,23 +176,29 @@ If for whatever reason you can't or don't want to use URL rewriting, you can con
 
 ### Step 4: Run the Trailhead Installer {#installer}
 
-Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
+Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, locales, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
 
 **Once you're done, delete `installer.php`.**
 
-### Step 5: You're done.
+If you don't want to (or can't for some reason) use the GUI installer, here's what to do yourself:
 
-Now for some extra detail...
+- [Create an admin user][create-user]
+- Log into the Control Panel at `yoursite.dev/cp`
+- Visit your System settings (/cp/settings/system) and set/confirm your basic site settings
 
-#### About that License Key and Trial Mode
+### There is no step 5.
 
-If you don't have a license key, that's okay! You can use Statamic in developer mode for as long as you'd like in your local development environment. Just be sure to [purchase](https://trading-post.statamic.com) and add the key to your system config before you launch, otherwise you won't be able to access your control panel.
+You're probably done. Now for some things to note, and a few additional steps for running above webroot and multilingual sites.
+
+#### About that License Key and Dev Mode
+
+If you don't have a license key, that's okay! You can use Statamic in developer mode for as long as you'd like in your local environment. Just be sure to [purchase](https://store.statamic.com) and add the key to your system config before you launch, otherwise you won't be able to access your control panel.
 
 #### Site URL and Permalinks
 
 Out of the box, Statamic will only use relative URLs as a way to get things going smoothly. However if you want to use permalinks (full URLs that
 include your domain) you'll need to adjust it in `site/settings/system.yaml` in the `locales` array. Change the `url` from a relative
-to a full URL like `http://mysite.com/`. If you ran the [installer](#installer), you might have already done this.
+to a full URL like `http://mysite.com/`. If you ran the [installer](#installer), you've probably already done this.
 
 #### Moving Statamic Above Webroot (optional) {#above-webroot}
 
@@ -211,3 +207,13 @@ For extra security you can [move your system files](/knowledge-base/running-abov
 #### Multilingual Sites
 
 If you'd like to support multiple languages, head over to [Localization](/localization) for a few additional steps.
+
+[laravel]: http://laravel.com
+[forge]: http://forge.laravel.com
+[do]: https://www.digitalocean.com/?refcode=6469827e2269
+[mamp]: https://www.mamp.info/en/
+[valet]: http://laravel.com/docs/valet
+[homestead]: http://laravel.com/docs/homestead
+[multilingual-guide]: /guides/l10n
+[v1-upgrade]: /guides/upgrading-from-v1
+[cp]: /control-panel
