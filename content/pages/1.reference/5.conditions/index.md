@@ -108,7 +108,7 @@ That would filter down to this:
 - Rye Whiskey
 ```
 
-We can't forget about Scotch, but since its spelled `whiskey`, our condition filters it out.
+We can't forget about Scotch, but since its spelled `whisky`, our condition filters it out.
 
 Let's use a regular expression to make that `e` optional.
 
