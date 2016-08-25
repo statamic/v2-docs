@@ -1,36 +1,10 @@
 ---
-title: Template Language
+title: Antlers - Template Language
 id: 88472f52-93db-413c-a266-65014390c3f6
 overview: >
   Statamic has its very own template language designed to make complex things simple. It does most of the hard work when it comes to fetching, formatting, and displaying your content, data, and assets. It even does other things, too. If you know  even a little HTML, you’ll probably catch on quickly.
 ---
 
-<!--
-- [Overview](#overview)
-- [Tag Syntax](#tag-syntax)
-  - [Braces stick together](#braces-stick-together)
-  - [Tags are case sensitive](#tags-are-case-sensitive)
-  - [Be consistent](#be-consistent)
-- [Variables](#variables)
-  - [Single Variables](#single-variables)
-  - [Multidimensional Arrays](#multidimensional-arrays)
-  - [Lists](#lists)
-  - Variable Modifiers
-     - Chaining modifiers
-     - Syntax options
-         - String/Filter style
-         - Array/Parameter style
-- Conditional Logic
-  - Truthiness and existence
-  - Matching
-  - Comparing
-  - Variable fallbacks
-  - Combining Modifiers
-  - Regular expressions
-- Code Comments
-- No Parse
--->
-  
 ## Overview {#overview}
 
 [Let’s start at the very beginning. It’s a very good place to start.](https://www.youtube.com/watch?v=1RW3nDRmu6k) The most basic aspect of the Statamic Template Language is the tag, with a lowercase “t.” It can be and do many things, just like you if you try hard enough and don't listen to people discouraging you.
@@ -99,8 +73,8 @@ sincerity_level: Love
 ```
 
 ```
-Hi {{ recipient }}! Today we are in {{ location }}.  
-It’s roughly {{ temperature }} degrees.  
+Hi {{ recipient }}! Today we are in {{ location }}.
+It’s roughly {{ temperature }} degrees.
 We are having a good time.
 
 {{ sincerity_level }},
@@ -108,8 +82,8 @@ Benedict
 ```
 
 ```language-output
-Hi ! Today we are in The Sahara Desert.  
-It’s roughly 110 degrees.  
+Hi ! Today we are in The Sahara Desert.
+It’s roughly 110 degrees.
 We are having a good time.
 
 Love,
@@ -193,7 +167,7 @@ pigeons:
 ```
 
 ```
-{{ pigeons limit="2"  }}
+{{ pigeons limit="2" }}
   {{ name }} is an experienced {{ breed }}.
 {{ /pigeons }}
 ```
@@ -212,7 +186,7 @@ With over [130 modifiers][modifiers] the number of possibilities are too hard to
 Let's elaborate on the pigeon example and sort the list by experience before limiting it.
 
 ```
-{{ pigeons sort="missions" limit="2"  }}
+{{ pigeons sort="missions" limit="2" }}
   {{ name }} has {{ missions }} successful carries.
 {{ /pigeons }}
 ```
@@ -246,20 +220,18 @@ Modifiers on array variables are formatted like "parameters". You can't use them
 {{ /array_variable }}
 ```
 
-#### Full disclosure {#full-disclosure}
+#### Full Disclosure... {#full-disclosure}
 
-You can actually use Array style on strings, but String Style on arrays is really annoying because you have to re-apply the modifiers on the closing tag and ain't nobody got time for that.
+You can actually use Array style on strings, but String Style on arrays is really annoying because you have to re-apply the modifiers on the closing tag and ain't nobody got time for that. Best to keep the approaches separate as much as you can, for standards.
 
 ```
-// This is ugly and stupid.
-{{ variable|limit:2 }}
-  // Stuff probably happening here too
-{{ /variable|limit:2 }}
+// This is ugly and annoying.
+{{ variable|limit:2 }} {{ /variable|limit:2 }}
 ```
 
 ## Conditional Logic {#conditional-logic}
 
-If this, then that. Do this unless something. Statamic has a full set of conditional operators to let you build as much logic as you need into your templates.
+If this, then that. Do this unless something else. _If chicken wings then party_. Statamic has a full set of conditional operators to let you build as much logic as you need into your templates.
 
 Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They serve the same purpose but are logical mirrors of each other. Where `if` only renders when a condition matches, `unless` renders _unless_ it matches. Use whichever makes your templates easiest to read.
 
@@ -267,7 +239,7 @@ Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They se
 {{ if }} {{ /if }}
 {{ if }} {{ endif }} # your choice of closing tags (be consistent!)
 
-{{ if }} {{ else }} {{ /if }}
+{{ if }} {{ elseif }} {{ else }} {{ /if }}
 
 {{ unless }} {{ /unless }}
 {{ unless }} {{ unlesselse }} {{ /unless }}
@@ -278,7 +250,7 @@ Conditions are converted to, and therefore behave just like, PHP expressions. Yo
 
 ### Truthiness and existence {#truthiness-and-existence}
 
-Truthy = variable exists, is not `null`, and is not `false`.
+A condition is considered "truthy" when variable exists, is not `null`, and is not `false`.
 
 ```
 {{ if header }}
@@ -296,9 +268,9 @@ Truthy = variable exists, is not `null`, and is not `false`.
 {{ /if }}
 ```
 
-You can also check if variables _don't_ exist or are falsy.
+You can also check if variables don't exist, aka "falsy".
 
-Falsy = variable doesn't exist or is `null` or `false`.
+A condition is considered "falsy" when variable doesn't exist, is `null`, or is `false`.
 
 ```
 {{ if ! soup }}
@@ -405,6 +377,13 @@ home of the @{{ fast_food_chain_specialty_item }},
 can I take your order?
 ```
 
+## Variables Inside Parameters {#vars-in-params}
+
+Whenever you need to use variables _inside_ of a Tag's parameters, you should use **single** tag braces.
+
+```
+{{ nav from="{segment_1}" }}
+```
 
 [guide-yaml]: /guides/yaml-101
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
