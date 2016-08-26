@@ -4,7 +4,7 @@ id: 4076fea7-63c9-4b1c-b16d-7eb565040d81
 overview: >
   Content Types are the pillars that hold, contain, and snuggle all of the editable aspects of your site. Each Content Type has its own special attributes that make it unique. In this guide, you get to learn about all six of Statamic's primary Content Types.
 ---
-  
+
 ## Overview {#overview}
 
 All of your site's content, everything that is managed, edited, uploaded, published and ultimately shown to the world, lives in one of Statamic's six Content Types:
@@ -37,7 +37,7 @@ Universally unique IDs are generated for each item in each type, allowing you to
 - Include a list of Assets on a page to create a photo gallery complete with pre-established and reusable titles and  captions.
 - Add Taxonomy Terms to an Entry to create tags, letting you sort and filter your entries.
 
-## The Differences {#differences}
+## The Types {#list}
 
 Now let's explore the differences between Content Types. Each has a distinct purpose and ability that makes them a hero in the world of content management.
 

@@ -2,7 +2,7 @@
 title: YAML
 id: e31e44d1-a82d-438d-9a8d-5a22fe4b76e3
 overview: >
-  YAML is, quite simply, a data storage format designed to be human readable and easily manipulated by hand. Statamic uses it extensively to store data, manage settings, and make the magic happen.
+  YAML is a data storage format designed to be human readable and easily manipulated by hand. In fact, it's 100% intercompatible with JSON, just easier to write. We use it extensively to store data, content, and manage settings. YAML all the things.
 ---
 
 ## To the reader... {#to-the-reader}
@@ -13,7 +13,7 @@ If you plan to use the Control Panel exclusively to manage content and settings 
 
 YAML stands for "YAML Ain't Markup Language". A classic example of the [recursive acronym][recursive-acronym]. Originally it stood for "Yet Another Markup Language" but semantically-oriented people quickly shut that down, denoting the fact that nothing was being marked up, but rather data was being structured. So on that fateful day (which was a Wednesday), YAML became self-referential. `</tangent>`.
 
-YAML complies with the JSON spec, making it easy to interchange it with nearly any native data format. It consists of key and value pairs delimited by a colon+space. Did you get that? Always a colon followed by a space.
+YAML complies with the JSON spec, making it easy to interchange it with nearly any native data format. It consists of key and value pairs delimited by a colon+space. Always a colon followed by a space. Did you get that?
 
 ```language-yaml
 variable_name: value
