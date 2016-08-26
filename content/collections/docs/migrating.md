@@ -2,7 +2,7 @@
 title: Migrating From Statamic v1
 id: 94dd66f9-d0cd-40c8-b723-d2e2c90c9af5
 overview: >
-  We made a number of breaking changes, every one of them on purpose. We will now justify those decisions, get you to believe in them, and then show you how to bring your v1 site up to v2.
+  We made a number of breaking changes, every one of them on purpose. We will now justify those decisions, get you to believe in them, and then show you how to bring your v1 site up to Statamic 2.
 ---
 
 ## Improvement Requires Change {#change}
@@ -126,6 +126,8 @@ The [Control Panel](control-panel) is now accessible at `/cp` instead of `admin.
 
 Settings are now broken out by area of responsibility, and can be found in `site/settings`. You can explore them all in the Control Panel with descriptions, help text, and a nice interface. Of course, you can do it all in files still too, just like v1.
 
+Learn more about [Settings](/settings).
+
 ## Better Ways of Doing Things {#better-ways}
 
 There are ways of doing things in v2 that are streets ahead of v1. You aren't by any means required to change your logic, but if you choose to do so, you'll be glad you did. Don't let yourself get streets behind. Here's a summary of those things.
@@ -157,23 +159,20 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 
 ### Search {#search}
 
-[Search][search-guide] is Bloodhound's cooler cousin. Search automatically indexes for performance. Search is more easily configured. Search connects to [Algolia](https://algolia.com) in a matter of seconds. Search is included in core. What more can you ask for? (Besides keyword weighting. Search doesn't do keyword weighting.)
+[Search](/search) is Bloodhound's cooler cousin. Search automatically indexes for performance. Search is more easily configured. Search connects to [Algolia](https://algolia.com) in a matter of seconds. Search is included in core. What more can you ask for? (Besides keyword weighting. Search doesn't do keyword weighting.)
 
 
 [addons]: /guides/addons
-[assets]: /guides/assets
-[collection]: /guides/content-types#collections
-[content-types-guide]: /guides/content-types
+[assets]: /assets
+[collection]: /content-types#collections
+[content-types-guide]: /content-types
 [email]: mailto:gentlemen@statamic.com
 [leaflet]: http://leafletjs.com/
 [name-mangler]: https://manytricks.com/namemangler/
-[permissions]: /guides/permissions
+[permissions]: /permissions
 [relate-fieldtype]: /reference/fieldtypes/relate
 [relate-tag]: /reference/tags/relate
-[routes]: /guides/urls-and-routing#routes
-[search-guide]: /guides/search
+[routes]: /urls-and-routing#routes
 [semver]: http://semver.org
-[template-language-guide]: /guides/template-language
-[trading-post]: https://trading-post.statamic.com
-[users]: /
+[template-language-guide]: /template-language
 [exporter]: http://github.com/statamic/exporter
