@@ -1,6 +1,6 @@
 ---
 title: Replicator
-description: Build your content by create sets of fields you can mix and match on the fly.
+description: Build your content by creating sets of fields you can mix and match on the fly.
 overview: |
   The Replicator is a meta fieldtype giving you the ability to define _sets_ of fields that you can dynamically piece together in whatever order and arrangement you imagine. You can build long-form articles like [Medium.com](http://medium.com) and take advantage of the extra markup control.
 
