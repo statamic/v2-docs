@@ -103,6 +103,11 @@ variables:
       being viewed. Also useful for outputting
       active states.
   -
+    name: listing variables
+    type: mixed
+    description: >
+      As `nav` is another type of listing, you can use the same [Variables for Collections](/reference/tags/collection#variables), like `first` or `index`.
+  -
     name: page data
     type: mixed
     description: >
