@@ -108,9 +108,13 @@ variables:
     description: >
       The number/index of current iteration in the loop, starting from 0
   -
+    name: no_results
+    type: boolean
+    description: Returns true if there are no results.
+  -
     name: total_results
     type: integer
-    description: The total number of results in the loop.
+    description: The total number of results in the loop when there are results. You should use `no_results` to check if any results exist.
   -
     name: page data
     type: mixed
