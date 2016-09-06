@@ -18,30 +18,30 @@ Once enabled, the Debug Bar will present itself to you on the front-end of your 
 
 ![Debug Bar](/assets/img/screenshots/debug-bar.png)
 
-#### Messages Tab
+### Messages Tab
 
 A generic catch-all for anything might dump data into the Debug Bar like a pile of garbage. The [dump modifier][dump], for example.
-#### Timeline Tab
+### Timeline Tab
 
 Shows you various server side processes and how long each took to render the page. Template parsing, tag rendering, and routing, for example.
 
-#### Exceptions Tab
+### Exceptions Tab
 
 Displays any caught and suppressed Exceptions.
 
-#### Events Tab
+### Events Tab
 
 Events are any system Events that were triggered during the loading of any given page request. Each Event can have listeners attached (in an Addon, for example) and corresponding actions run. It's just nice to know what's firing when.
 
-#### Variables Tab
+### Variables Tab
 
 Shows you all the data readily available to the page without needing to use [Tags][tags]. Page data, global variables, system settings, and more are all available in their pre-rendered data types allowing you to see [Carbon][carbon] objects, datestamps, scopes, and other interesting things.
 
-#### Sessions Tab
+### Sessions Tab
 
 Any session variables, flash data, and previous URL visited is shown here.
 
-#### Request Tab
+### Request Tab
 
 Information about the given page request is here, from `content_type` and `status_code` to any `POST` data and session attributes. Very handy.
 

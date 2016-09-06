@@ -2,42 +2,12 @@
 title: Routing
 id: 96fc1a83-6fe6-48b5-a8ba-7d66ab0ab2ff
 overview: |
-  A website is nothing if not a collection of URLs that each display some sort of content. Luckily, Statamic is nothing if not a tool to create and manage URLs. With that small victory established, there are two primary methods of creating and managing your site's URLs.
+  Routes are rules that map URL patterns to your templates, content, other URLs, or other parts of the application.
 ---
 
-## Pages {#pages}
+All of Statamic's routes are defined in `site/settings/routes.yaml` (also accessible in the Control Panel `Settings » Routes` area). We support Five different types of routes.
 
-Pages are a wonderfully literal representation of your site's URL structures. Each Page lives in hierarchy among other Pages. Together they form a logical tree structure made of parents, children, and siblings. If you wanted to be semantic and overly detailed with the analogy you would be forced to acknowledge the grandparents, cousins, aunts, uncles, nephews, and probably that weird next-door neighbor who invites himself to all of your parties and calls himself **<FEED.XML>**. Really? All caps?
-
-![Hark! Pages!](/assets/img/screenshots/cp-page-tree.png)
-
-Each page has its own `slug`, and those slugs team up based on hierarchy to create URLs. Let's walk through an example and then we'll have a visual. Let's assume we have a restaurant that isn't failing, doesn't need Gordon Ramsey or Robert Irvine to save it, and is booked solid 7 nights a week with people desperate to eat your delicious yum yums.
-
-Naturally, we decide to create a **Menu** page on the website and give it the slug: `menu`. Next we create two new sub-pages called **Specials** with the slug `specials` and **Wine List** with the slug `wine-list`. Mission accomplished.
-
-Because of that parent/child relationship, the following URLs are now available on the site, each with its own unique content:
-
-- `http://example.com/menu`
-- `http://example.com/menu/specials`
-- `http://example.com/menu/wine-list`
-
-### Slugs {#slugs}
-
-As you may have guessed from context, a slug is the bit of the URL unique to a particular piece of content. You've just seen how the `specials` and `wine-list` slugs combined with their parent page's slug, `menu`, to create full and unique URLs.
-
-> Slugs are primarily used to make URLs more user-friendly and help your users know what to expect before clicking a link. Search engines rank pages higher if the search word is in the URL. It's a scientific fact.
-
-Slugs should always be lowercase, never contain spaces, and almost always use hyphens to separate words. Follow those rules blindly and you'll be just fine.
-
-Pages, Entries, and Taxonomy Terms all have slugs. That sentence sounds gross out of context. Feel free to learn more about all of [Statamic's Content Types](/guides/content-types) - including those with and those without slugs.
-
-## Routes {#routes}
-
-Routes are a common pattern in the world of web applications, but not one found often in content management. Traditionally a route is nothing more than a URL pattern mapped to a handler - something built to tell the application what to show or render, like a controller, static page, or something of that nature. Naturally, we decided to take it a step further. Let's get routing.
-
-First of all, routes are managed in `site/settings/routes.yaml` or in the Control Panel settings area. Inside you'll find the ability to create three different types of routes.
-
-### Template Routes {#template-routes}
+## Template Routes {#template-routes}
 
 Template routes allow you to create individual URLs or patterns that map to specific templates. This is very different than using a Page to create a URL because there is no inherent content manageable in the Control Panel or content files. Instead, you can code anything you need to into the template itself, use [Tags](/reference/tags) and [Globals](/guides/content-types/#globals) to display content, or pass data in through the route itself.
 
@@ -60,7 +30,7 @@ If all you need to set is a template, you can simplify the syntax and just pass 
 /search: search-results
 ```
 
-#### Wildcard Segments {#wildcard-segments}
+### Wildcard Segments {#wildcard-segments}
 
 Wildcards let you capture multiple routes at once. It's like killing infinity birds with one stone. Wildcards are available anywhere in your route pattern and there aren't any limits to how many you can use.
 
@@ -84,7 +54,7 @@ These wildcard variables can contain upper and lowercase letters, numbers, and u
 
 > You can use wildcards and wildcard variables in your routes file, but you can't use both of them in the same route pattern.
 
-#### Ignoring Segments {#ignoring-segments}
+### Ignoring Segments {#ignoring-segments}
 
 You can also add a list of segments that should be completely and utterly ignored if found in your URL, like that poor nerdy kid at prom. This comes in handy if you have a form and want to redirect a user to `/success` but still use the same template, and other similar things we can't think of.
 
@@ -106,7 +76,7 @@ Here's an example on how you might use this in the context of a form submission 
 {{ /if }}
 ```
 
-### Collection Routes {#collection-routes}
+## Collection Routes {#collection-routes}
 
 By their very nature Collections don't determine their own URLs. To do so would limit their flexibility. This is where you get to decide just how their URLs are structured and where they go.
 
@@ -134,7 +104,7 @@ And in the blog you might see this:
 - `/blog/2015/12/christmas-already-what-the-heck`
 - `/blog/2016/01/where-did-the-year-go`
 
-### Taxonomy Routes {#taxonomy-routes}
+## Taxonomy Routes {#taxonomy-routes}
 
 Taxonomy Terms are handled almost exactly like Entries and you can define the routes used when rendering a Taxonomy listing or index for each Taxonomy.
 
@@ -149,15 +119,19 @@ taxonomies:
 
 > You can create any URL structure you like but keep in mind that the `taxonomy="true"` parameter on the Collection tag will assume the last 2 segments in your URL are the Taxonomy and Term's `slug`, respectively.
 
-### Vanity URLs {#vanity-urls}
+## Redirects {#redirects}
 
-Statamic allows you to quickly set up vanity URLs, which let you quickly forward one URL to another.
+_document these_
 
-As an example of when these might be used: perhaps your site is running a promotion but you want to use a short, catchy URL on your marketing campaign. Rather than having to tell someone something like `/events/2013-log-cutting-championships-afterparty`, you could create a `/party` vanity URL which will forward to your event detail page.
+### Best Practices
 
-#### Defining Vanity URLs
+While it’s possible to create permanent redirects with the vanity URLs feature, it’s best practice to do this via an `.htaccess` file or similar method. Vanity URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
 
-Simply add key/values of the redirects.
+## Vanity URLs {#vanity-urls}
+
+A Vanity URL is a dummy, easy to remember URL that redirects you to a perminant URL. A perfect use case would be to create a `example.com/promo` URL that redirects you to `example.com/blog/2016/09-this-months-promo`. You can change this redirect to any URL, any time, and never have to update your marketing material, ad buy, ad so on.
+
+
 
 ```
 vanity:
@@ -166,10 +140,9 @@ vanity:
 
 This will forward `http://yoursite.com/party` to `http://yoursite.com/my-long/page-name`. Simple.
 
-#### Best Practices
+### Best Practices
 
-While it’s possible to create permanent redirects with the vanity URLs feature, it’s best practice to do this via an `.htaccess` file or similar method. Vanity URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
-
+Vanity routes are _not_ perminant redirects, but rather temporary or utility 302s. The 
 
 ## Content Types {#content-types}
 
