@@ -1,5 +1,5 @@
 ---
-title: Creating URLs
+title: How URLs Work
 overview: "A website is nothing if not a collection of URLs that each display some sort of content. Luckily, Statamic is nothing if not a tool to create and manage URLs. With that small victory established, there are two primary methods of creating and managing your site's URLs."
 id: 439b2338-4dba-498f-bbd9-7cb6435807fe
 ---
@@ -36,4 +36,4 @@ Routes are a common pattern in the world of web applications, but not one found 
 
 Routes are, on the most basic level, a list of rules that map URL patterns to your content, templates, or other parts of the application. They might be explicit, like an exact URL pointing at an exact template, or they might contain variables that let URL patterns do things more dynamically.
 
-Learn all about writing [routes in Statamic](/routings)!
+Learn all about writing [routes in Statamic](/routing)!

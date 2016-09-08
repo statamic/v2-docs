@@ -1,5 +1,5 @@
 ---
-title: Antlers - Template Language
+title: Antlers Templates
 id: 88472f52-93db-413c-a266-65014390c3f6
 overview: >
   Statamic has its very own template language designed to make complex things simple. It does most of the hard work when it comes to fetching, formatting, and displaying your content, data, and assets. It even does other things, too. If you know  even a little HTML, you’ll probably catch on quickly.
