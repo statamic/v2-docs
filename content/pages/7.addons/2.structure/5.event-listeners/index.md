@@ -1,17 +1,24 @@
 ---
-overview: >
-  At certain times, Statamic will fire off
-  events. Anyone that is listening for
-  those events will be able to perform
-  some sort of functionality.
 title: Event Listeners
+overview: >
+  Certain, specific actions in Statamic and other addons will fire events that can be listening for, allowing for other actions to be scripted reactively That's just a fancy way of saying "When that happens, do this."
 id: a5a4089e-4555-47e1-800a-e8e324cef143
 ---
-You can see all the events available to you on the [Event Reference][event-reference] page.
+## How Event Listeners Work
 
-## An example
+Listeners should define a list of events mapped to the class methods. When matching events are fired, the appropriate methods are executed. That list lives in the class array variable `$events`.
 
-For example, maybe you want to tweet after an entry has been created in the control panel. You could create a tweet plugin that would listen for the `publish.create` event.
+## Generating an Event Listener Class {#generating}
+
+You can generate a an event listener class file with a console command.
+
+``` .language-console
+php please make:listener AddonName
+```
+
+## Example Listener
+
+Perhaps you'd like to send a tweet after an entry has been published in the Control Panel. You could create a tweet addon that would listen for the `publish.create` event and do the deed.
 
 ``` .language-php
 <?php
@@ -33,9 +40,7 @@ class TweeterListener extends Listener
 }
 ```
 
-The main thing here to notice is the `$events` property. This is where you define what events you want to listen to, and which methods will be called when the event is fired.
-
-You may listen to multiple events, and even run multiple methods for a single event. To run multiple methods for one event, simply use another array, like this:
+You may also listen to multiple events and even run multiple methods for a single event. To run multiple methods for one event, simply pass an array.
 
 ``` .language-php
 public $events = [
@@ -43,13 +48,11 @@ public $events = [
 ];
 ```
 
-## Returning data
+## Returning Data
 
-Some events will be expecting you to send back some data.
+Some events will be expecting you to send back data.
 
-For example, the control panel will send the entry along with its `publish.create` method. Anyone listening to the event will be able to modify it, but they'll also need to send the entry back so the CP can continue where it left off.
-
-Returning data is as easy as you'd expect. Simply `return` it. For example:
+For example, the control panel will send an Entry object with its `publish.create` method. Any addon listening to the event will be able to modify it, and then return it back up the chain so the Control Panel can continue its task. Be a good citizen. Return your data.
 
 ``` .language-php
 public function makeEntryAwesome($entry)
@@ -60,4 +63,8 @@ public function makeEntryAwesome($entry)
 }
 ```
 
-[event-reference]: /addons/events
+## Native Events {#events}
+
+See all the [native events fired by Statamic][events].
+
+[events]: /addons/events
