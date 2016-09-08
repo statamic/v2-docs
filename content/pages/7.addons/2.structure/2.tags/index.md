@@ -27,7 +27,7 @@ Tags can also come in pairs, much like beer comes in pints. For example:
 Anything in-between your tag pair is available as `$this->content`. Sometimes you'll want to use it as input, other times manipulate it, and yet another time leave it be. It's up to you.
 
 
-## Example Tags Class
+## Example Tags Class {#example-class}
 
 ```{.language-php}
 <?php
@@ -45,7 +45,7 @@ class ExampleAddonTags extends Tags
 }
 ```
 
-## Class Rules & Standards
+## Class Rules & Standards {#rules}
 
 - Returning a string will render said string in your template.
 - Each `public` method in your Tags class is exposed as a template Tag.
@@ -53,7 +53,7 @@ class ExampleAddonTags extends Tags
 - Your class name must be in the following format: `[AddonName]Tags.php`.
 - Tags are `snake_case` in your templates and `camelCase` in your class.
 
-## Generating a Tags Class
+## Generating a Tags Class {#generating}
 
 You can generate a Tags class with a console command.
 
