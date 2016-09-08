@@ -24,7 +24,9 @@ An addon can have _one_ modifier. This is because the modifier will take on the 
 
 For example, have a `Bacon` addon? If you were to include a modifier, you'd now have access to `{{ var | bacon }}` in your templates. Please do that. The world needs more bacon.
 
-## Example Modifier Class
+## Example Class {#example-class}
+
+The class file must be named `AddonNameModifier.php`.
 
 ``` .language-php
 <?php
@@ -42,7 +44,7 @@ class EchoModifier extends Modifier
 }
 ```
 
-## Generating a Modifier Class {#generating}
+## Generating {#generating}
 
 You can generate a modifier class file with a console command.
 

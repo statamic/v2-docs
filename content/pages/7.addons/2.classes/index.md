@@ -1,9 +1,12 @@
 ---
-title: Addon Structure
+title: Addon Classes
 overview: >
-  You Addon can contain one or many different classes that serve various purposes. Each will inherit functionality, and therefore will `Extend` the core `Statamic\API\Addon` class, either directly, or abstractly. 
+  # @TODO: BRING BACK INDEX HERE AND MOVE CONTENT TO "BASE"
+  
+  Your Addon can contain one or many different classes that serve various purposes. Each will inherit functionality, and therefore will `Extend` the core `Statamic\API\Addon` class, either directly, or abstractly. 
 id: 395dc432-0273-4874-873e-6ed0b772cc27
 ---
+
 ## The Addon Class {#addon}
 
 This core class provides will automatically provide your Addon with contextual information, settings, context, and helper methods, all as part of `$this->`.

@@ -27,7 +27,9 @@ Tags can also come in pairs, much like beer comes in pints. For example:
 Anything in-between your tag pair is available as `$this->content`. Sometimes you'll want to use it as input, other times manipulate it, and yet another time leave it be. It's up to you.
 
 
-## Example Tags Class {#example-class}
+## Example Class {#example-class}
+
+The class file must be named `AddonNameTags.php`.
 
 ```{.language-php}
 <?php
@@ -45,14 +47,6 @@ class ExampleAddonTags extends Tags
 }
 ```
 
-## Class Rules & Standards {#rules}
-
-- Returning a string will render said string in your template.
-- Each `public` method in your Tags class is exposed as a template Tag.
-- The `index()` method maps to the single part Tag, such as `{{ addon_name }}`.
-- Your class name must be in the following format: `[AddonName]Tags.php`.
-- Tags are `snake_case` in your templates and `camelCase` in your class.
-
 ## Generating a Tags Class {#generating}
 
 You can generate a Tags class with a console command.
@@ -60,6 +54,14 @@ You can generate a Tags class with a console command.
 ``` {.language-console}
 php please make:tags AddonName
 ```
+
+## Class Rules & Standards {#rules}
+
+- Returning a string will render said string in your template.
+- Each `public` method in your Tags class is exposed as a template Tag.
+- The `index()` method maps to the single part Tag, such as `{{ addon_name }}`.
+- Your class name must be in the following format: `[AddonName]Tags.php`.
+- Tags are `snake_case` in your templates and `camelCase` in your class.
 
 ## Working with Input {#input}
 

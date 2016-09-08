@@ -1,9 +1,8 @@
 ---
+title: Extending the Control Panel
 overview: >
   Creating pages in the control panel using a [Controller](/addons/anatomy/controllers) is all well and good, but wouldn't
-  it be nice if there was an easy way to access them? The Control Panel's navigation bar isn't just for core items. You
-  are able to add your own items in there, too.
-title: Navigation
+  it be nice if there was an easy way to access them? The Control Panel's navigation bar isn't just for core items. You are able to add your own items in there, too.
 id: a5e391e7-31ac-40a2-8f13-1746b660197b
 ---
 ## Overview

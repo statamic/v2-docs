@@ -1,13 +1,11 @@
 ---
 id: d786f54b-12b7-43a8-8180-4fcd124aff0d
-title: Event Reference
-nav_title: Event Reference
+title: Events Reference
 overview: >
-  Throughout the lifecycle of a Statamic request, there are a number of events that are fired. These events allow
-  a developer to add or modify functionality in various places.
+  Events serve as a great way to decouple various aspects of your addon, or even modify behavior or output of core functionality. A single event can have multiple listeners that do not depend on each other.
 ---
 
-## Usage
+## Overview
 
 Simpler events are provided as a string with an argument passed through as a payload. For example, the `cp.page.published` event is dispatched as a string, and passes along the `Page` that was published.
 

@@ -1,7 +1,7 @@
 ---
 title: Event Listeners
 overview: >
-  Certain, specific actions in Statamic and other addons will fire events that can be listening for, allowing for other actions to be scripted reactively That's just a fancy way of saying "When that happens, do this."
+  Certain, specific actions in Statamic and other addons will fire events that can be listening for, allowing for other actions to be scripted reactively. Basically, it's just a fancy way of saying "When that happens, do this."
 id: a5a4089e-4555-47e1-800a-e8e324cef143
 ---
 ## How Event Listeners Work
