@@ -46,7 +46,7 @@ class EchoModifier extends Modifier
 
 You can generate a modifier class file with a console command.
 
-``` {.language-console}
+``` .language-console
 php please make:modifier
 ```
 

@@ -1,22 +1,19 @@
 ---
 title: Fieldtypes
 overview: >
-  Fieldtypes create new ways for you to
-  enter content into the control panel.
+  Fieldtypes are specialized form inputs designed to help manage content and data in the control panel. They are flexible and reusuable in all Content Types.
 id: a6bd62fe-fa1e-4b34-aba8-c2d74b6d8dc7
 ---
-## What's in a fieldtype?
+## Overview
 
-A fieldtype in Statamic v2 is primarily made up of Javascript. Specifically, [Vue.js][vue].  
-All fieldtypes are Vue components with a little PHP to help out behind the scenes with things like data processing.
+Fieldtypes are [Vue.js][vue] components that have a corresponding PHP classes to facilitate any pre/post processing of data.
 
-Having a good understanding of Vue.js will allow you to build more complex fieldtypes more easily. Their documentation is very helpful - it's worth a read.
+Having a good understanding of Vue.js will allow you to build more elaborate fieldtypes more readily. Their documentation is very helpful - it's worth a read. We've fallen in love with Vue.js and think you should too.
 
 
-## Creating a fieldtype
+## Anatomy of a Fieldtype {#anatomy}
 
-The bare minimum fieldtype requires you to have an `AddonNameFieldtype.php` file, and a `js/fieldtype.js` file.
-
+At its most basic level, a fieldtype requires an `AddonNameFieldtype.php` class and a corresponding `js/fieldtype.js` Vue component.
 
 ``` .language-files
 site/addons/MyAddon/
@@ -25,21 +22,23 @@ site/addons/MyAddon/
 |-- MyAddonFieldtype.php
 ```
 
+## Generating a Fieldtype {#generating}
+
 The `please make:addon` or `please make:fieldtype` commands will create these for you - with some boilerplate code to get you going.
 
 The code within the `fieldtype.js` file will be loaded automatically within the Control Panel.
 
-## The Javascript side
+## The Javascript side {#javascript}
 
-Vue.js lets us do some great things which wouldn't be possible without the powerful included two-way data-binding features.
+Vue.js lets us do work some magic with the power of two-way data-binding, like knowing and having access to the current state of all data in a Publish screen at all times.
 
-Everything is more easily understood with an example, so let's dive into one.
+Let's dive into an example to make things clearer. Have you ever seen one of those password fields with a checkbox that toggles whether the text is visible? Let's build one of those.
 
-Everyone's seen one of those password fields with a checkbox that toggles whether the text is visible.
+<div class="screenshot padded" markdown=1>
+  ![Secret Password? Nahhhh...](/assets/examples/password-fieldtype.gif)
+</div>
 
-![](/assets/examples/password-fieldtype.gif)
-
-We'll be creating one of those. 
+Let's start with the Vue component.
 
 ``` .language-javascript
 Vue.component('password_toggle-fieldtype', {
@@ -69,25 +68,23 @@ Vue.component('password_toggle-fieldtype', {
 });
 ```
 
-### So, what's going on here?
-
-#### Props
+### Props
 
 The three `props` are passed into your fieldtype behind the scenes. You have to include that array just like you see above. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
 
-#### Data 
+### Data 
 
 `data` should be a function that returns an object containing any variables you want available in your component.
 
 In the example, we're defining `show` to keep track of whether the value should be shown or not.
 
-#### Computed
+### Computed
 
 The `computed` property is an object containing any values that should be dynamically evaluated.
 
 In the example, we're letting `inputType` be the value for the input's `type` attribute - making it either a text or password field.
 
-#### Template
+### Template
 
 `template` is the html that'll be rendered where you'd expect to see your fieldtype.
 
@@ -107,17 +104,17 @@ The colons will evaluate the value and turn it into the attribute. So, `:type="i
 
 The `v-model` attributes will bind the values to the form input. If you type into the text box, `data` will get updated. If you check the checkbox, `show` will get updated.
 
-#### Methods, events, ready...
+### Methods, Events, Ready...
 
 Vue has more features you can use in your fieldtypes. Remember, a fieldtype is just a Vue component. You aren't limited to the items used in the example.
 
 Refer to the [Vue component docs][vue-component] for more information.
 
-## The PHP side
+## The PHP Side
 
-The PHP side of your fieldtype is responsible for manipulating values.
+The PHP side of your fieldtype is responsible for manipulating data before  the data is loaded or after it's submitted. This will let you enforce data types, set relationships, fire events, or any other number of things.
 
-Take this boilerplate code:
+## Example Fieldtype Class
 
 ``` .language-php
 <?php
@@ -145,13 +142,13 @@ class MyAddonFieldtype extends Fieldtype
 }
 ```
 
-These are the default method values for a fieldtype. As it stands, they don't do anything and could really be removed. However, if you want to modify the default functionality, you can edit these.
+These are the default method values for a fieldtype. As you can see, we're just passing the data along untouched, but you could do anything you'd like here.
 
-#### Blank value
+### Blank value
 
 The value returned by the `blank` method will be used as the "default" value for fields using your fieldtype. For example, maybe your field should be dealing with arrays by default. In that case, you should return `[]`.
 
-#### Processing
+### Processing
 
 The `preProcess` and `process` methods handle any manipulation of data coming to and from the field.
 
