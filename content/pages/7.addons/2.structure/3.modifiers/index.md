@@ -47,7 +47,7 @@ class EchoModifier extends Modifier
 You can generate a modifier class file with a console command.
 
 ``` .language-console
-php please make:modifier
+php please make:modifier AddonName
 ```
 
 ## Class Rules & Standards {#rules}
