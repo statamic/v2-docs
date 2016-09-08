@@ -30,4 +30,4 @@ options:
 ---
 ## Default Settings {#default-settings}
 
-Most fieldtypes share a common set of default settings, like validation, display text, instructions, and so on. You'll see them referenced throughout the docs, so we've detailed them here for you.
+Most fieldtypes share a common set of default settings, like validation, display text, instructions, and so on. You'll see this list referenced throughout the docs.

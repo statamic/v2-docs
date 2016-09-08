@@ -237,16 +237,6 @@ _Note: We say the submission will "fail", but that's not exactly true. On the fr
 submitted successfully. However, nothing will get saved, no emails will be sent, etc. This is the key to
 tricking bots into believing everything went smoothly._
 
-
-
-## Roadmap
-
-- More Event Triggers
-- More metrics (e.g. Tally)
-
-_Note: Editing content (Pages, Entries, etc) is not in the scope of the Forms addon. It is different than Raven in that regard. That is a separate feature entirely._
-
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
 [tags]: /reference/tags/form
 [submissions]: /reference/tags/form-submissions
-
