@@ -8,7 +8,7 @@ overview: The Statamic Control Panel enables you to publish content, manage user
 
 To login to Statamic one must simply visit `example.com/cp`.
 
-![Control Panel](/assets/img/screenshots/cp-login.png)
+![Control Panel](/assets/img/screenshots/cp-login.jpg)
 
 ## Disabling the Control Panel
 
