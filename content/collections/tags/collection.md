@@ -362,7 +362,7 @@ Here's the `auto_links` output, recreated using the other tags, for you maverick
 
 ## Aliasing {#alias}
 
-Often times you'd like to have some extra markup around your list of entries, but only if there are results. Like a `<ul>` element, for example. You can do this by aliasing, or _scoping_ the results into a new variable tag pair. It goes  like this:
+Often times you'd like to have some extra markup around your list of entries, but only if there are results. Like a `<ul>` element, for example. You can do this by _aliasing_ the results into a new variable tag pair. This actually creates a copy of your data as a new variable. It goes like this:
 
 ```
 {{ collection:blog as="posts" }}
@@ -376,9 +376,9 @@ Often times you'd like to have some extra markup around your list of entries, bu
 
 ## Scoping {#scope}
 
-Sometimes not all of your entries have the same set of variables. And sometimes the page that you're on (while listing entries from a Collection) may have those very same variables on the page scope. Statamic assumes you'd like to fallback to the previous scope's data to plug any holes. This logic has pros and cons, and you can [read more about scoping and the Cascade here](/knowledge-base/cascade).
+Sometimes not all of your entries have the same set of variables. And sometimes the page that you're on (while listing entries in a Collection, for example) may have those very same variables on the page-level scope. Statamic assumes you'd like to fallback to the parent scope's data to plug any holes. This logic has pros and cons, and you can [read more about scoping and the Cascade here](/knowledge-base/cascade).
 
-You can assign a _scope_ prefix to your entries so you can be sure to get just the data you want. Define it and then prefix all of your variables with it.
+You can assign a _scope_ prefix to your entries so you can be sure to get the data you want. Define your scope and then prefix all of your variables with it.
 
 ```{.language-yaml}
 # Page data
@@ -393,7 +393,7 @@ featured_image: /img/totes-adorbs-kitteh.jpg
 {{ /collection:blog }}
 ```
 
-You can also move the scope down into your [alias](#alias) loop. Yep, we thought of that too.
+You can also add your scope down into your [alias](#alias) loop. Yep, we thought of that too.
 
 ```
 {{ collection:blog as="posts" }}
@@ -405,6 +405,7 @@ You can also move the scope down into your [alias](#alias) loop. Yep, we thought
 {{ /collection:blog }}
 ```
 
+Combinging both an Alias and a Scope on a Collection Tag doesn't make a whole lot of sense. You shouldn't do that.
 
 [conditions]: /reference/conditions
 [custom_filters]: /addons/anatomy/filters
