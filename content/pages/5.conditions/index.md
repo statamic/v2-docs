@@ -2,7 +2,52 @@
 title: Conditions
 id: 9751908a-a10c-4c36-abd3-2251e83fbc65
 parse_content: false
-overview: Conditions allow you filter listings by using simple English phrasing.
+overview: Conditions allow you filter the results of your content tags (e.g. Collections, Taxonomies) with the data inside them, much like WHERE clauses do with SQL.
+details:
+  -
+    name: is|equals
+    type: mixed
+    description: Checks if a field is equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:is_strict="bar"`
+  -
+    name: not|isnt|aint
+    type: mixed
+    description: Checks if a field is not equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:isnt_strict="bar"`
+  -
+    name: exists|isset
+    type: bool
+    description: Checks if a field exists (or is not `null`)
+  -
+    name: doesnt_exist|not_set|isnt_set|null
+    type: bool
+    description: Checks if a field doesn't exist (or is `null`)    
+  -
+    name: contains
+    type: string|array
+    description: Check if a field contains a given string or if a value is within an array.
+  -
+    name: doesnt_contain
+    type: string|array
+    description: The inverse of `contains`.
+  -
+    name: starts_with|begins_with
+    type: string
+    description: Checks if a field starts with a given string.
+  -
+    name: doesnt_start_with|doesnt_begin_with
+    type: string
+    description: Checks if a field doesn't start with a given string.
+  -
+    name: ends_with
+    type: string
+    description: Checks if a field ends with a given string.
+  -
+    name: doesnt_end_with
+    type: string
+    description: Checks if a field doesn't end with a given string.
+  -
+    name: matches|match|regex
+    type: regex
+    description: Checks if a field matches a given regular expression.
 ---
 ## Usage {#usage}
 
@@ -83,60 +128,4 @@ If you want narrow your results further you can repeat conditions as many times 
 {{ /collection:drinks }}
 ```
 
-## Available Conditions
-
-
-### is|equals
-type: mixed
-
-Checks if a field is equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:is_strict="bar"`
-
-### not|isnt|aint
-type: mixed
-
-Checks if a field is not equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:isnt_strict="bar"`
-
-### exists|isset
-type: bool
-
-Checks if a field exists (or is not `null`)
-
-### doesnt_exist|not_set|isnt_set|null
-type: bool
-
-Checks if a field doesn't exist (or is `null`)    
-
-### contains
-type: string
-
-If the field is a string, it'll check that field contains a given string. If the field is an array, it'll check that the value is within the array.
-
-### doesnt_contain
-type: string
-
-The opposite of `contains`.
-
-### starts_with|begins_with
-type: string
-
-Checks if a field starts with a given string.
-
-### doesnt_start_with|doesnt_begin_with
-type: string
-
-Checks if a field doesn't start with a given string.
-
-### ends_with
-type: string
-
-Checks if a field ends with a given string.
-
-### doesnt_end_with
-type: string
-
-Checks if a field doesn't end with a given string.
-
-### matches|match|regex
-type: regex
-
-Checks if a field matches a given regular expression.
+## Conditions List {#conditions}
