@@ -1,4 +1,4 @@
 order: alphabetical
-template: docs/fieldtype
+template: fieldtype
 fieldset: fieldtypes
 parse_content: false
