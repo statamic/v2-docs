@@ -52,4 +52,4 @@ image: "380dc8d9-481c-4d18-9162-ecd5688f98a8"
 /img/id/380dc8d9-481c-4d18-9162-ecd5688f98a8?w=300&h=200&fit=crop&filt=sepia&s=3982hf983f2mf90r23
 ```
 
-[glide_tag]: /reference/tags/glide
+[glide_tag]: /tags/glide

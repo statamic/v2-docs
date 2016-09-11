@@ -51,7 +51,7 @@ parameters:
     name: filter
     type: wizardry
     description: >
-      Filter the tree by using a special conditions syntax, the same as the [Collections tag](/reference/tags/collection). View the [available conditions](/reference/conditions).
+      Filter the tree by using a special conditions syntax, the same as the [Collections tag](/tags/collection). View the [available conditions](/conditions).
 variables:
   -
     name: is_published
@@ -158,7 +158,7 @@ has been removed in favor of the following workflow.
         display: Hide from navigation
    ```
 
-2. In your `nav` tag, use the [conditions syntax](/reference/conditions) to remove any hidden pages:
+2. In your `nav` tag, use the [conditions syntax](/conditions) to remove any hidden pages:
 
    ```
    {{ nav from="/" is_hidden:isnt_set="true" }}

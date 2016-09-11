@@ -262,4 +262,4 @@ protected $oauth_providers = [
 ```
 
 [socialite_providers]: https://socialiteproviders.github.io/
-[oauth_tag]: /reference/tags/oauth
+[oauth_tag]: /tags/oauth

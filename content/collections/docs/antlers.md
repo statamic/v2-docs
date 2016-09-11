@@ -388,4 +388,4 @@ Whenever you need to use variables _inside_ of a Tag's parameters, you should us
 [guide-yaml]: /guides/yaml-101
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
 [logical]: http://php.net/manual/language.operators.logical.php
-[modifiers]: /reference/modifiers
+[modifiers]: /modifiers

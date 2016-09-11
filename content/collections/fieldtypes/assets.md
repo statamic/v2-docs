@@ -32,7 +32,7 @@ bacon_images:
 
 ## Templating {#templating}
 
-Use the [Assets tag](/reference/tags/assets) to loop through the IDs and fetch the available data.
+Use the [Assets tag](/tags/assets) to loop through the IDs and fetch the available data.
 
 ```
 {{ assets:bacon_images }}

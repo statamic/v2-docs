@@ -22,4 +22,4 @@ id: 3604bfe9-89be-42af-8163-4b378279026a
 
 This will immediately log a user out and redirect to `/somewhere` if the condition is met.
 
-If you'd like to just output a link, use the [`user:logout_url`](/reference/tags/user-logout_url) tag.
+If you'd like to just output a link, use the [`user:logout_url`](/tags/user-logout_url) tag.

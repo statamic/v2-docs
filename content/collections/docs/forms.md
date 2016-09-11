@@ -238,5 +238,5 @@ submitted successfully. However, nothing will get saved, no emails will be sent,
 tricking bots into believing everything went smoothly._
 
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
-[tags]: /reference/tags/form
-[submissions]: /reference/tags/form-submissions
+[tags]: /tags/form
+[submissions]: /tags/form-submissions

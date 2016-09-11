@@ -27,12 +27,12 @@ site/
 #### css/ {.icon.icon-folder}
 
 This is where your theme’s CSS files go. Although this folder isn’t required to use Statamic, using it will let you use the
-[theme CSS tag](/reference/tags/theme-css).
+[theme CSS tag](/tags/theme-css).
 
 #### js/ {.icon.icon-folder}
 
 Your theme’s JavaScript files go here. Like the css folder, this folder isn’t required, but files within it will become
-available through the [theme JS tag](/reference/tags/theme-js).
+available through the [theme JS tag](/tags/theme-js).
 
 #### layouts/ {.icon.icon-folder}
 
@@ -42,7 +42,7 @@ only need one or two layouts at the most.
 #### partials/ {.icon.icon-folder}
 
 Partials are small, reusable chunks of code (think embeds or includes in other systems). All of those live here. You
-can access your theme’s partials through the [partial tag](/reference/tags/partial).
+can access your theme’s partials through the [partial tag](/tags/partial).
 
 #### templates/ {.icon.icon-folder}
 
@@ -77,7 +77,7 @@ If that’s the case, you have two options:
 
 ## Conventions {#conventions}
 
-[Theme tags](/reference/tags/theme) assume a few conventions that will be beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
+[Theme tags](/tags/theme) assume a few conventions that will be beneficial for you to follow. If you don't care about them or have a specific reason you simply must ignore them, you're free to do your own thing. Just remember that conventions are there to help, not to hinder. Unlike asthma. Conventions are basically the philosophical opposite of asthma.
 
 ### CSS and JavaScript {#css-js-conventions}
 
@@ -256,4 +256,4 @@ Here are a few good ideas to consider when building a theme, some of them a summ
 [blade]: http://laravel.com/reference/blade
 [assets]: /guides/assets
 [templating]: /guides/template-language
-[partials]: /reference/tags/partial
+[partials]: /tags/partial

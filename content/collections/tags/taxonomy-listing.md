@@ -9,4 +9,4 @@ overview: An alias of the `taxonomy` tag.
 {{ /taxonomy:listing }}
 ```
 
-See the [Taxonomy Tag](/reference/tags/taxonomy).
+See the [Taxonomy Tag](/tags/taxonomy).

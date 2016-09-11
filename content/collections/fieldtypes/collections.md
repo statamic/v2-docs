@@ -7,7 +7,7 @@ id: 44c3da60-ef47-408e-afc4-a33026c86f5d
 ---
 ## Data Structure {#data-structure}
 
-The Collections fieldtype is a [Relate fieldtype](/reference/fieldtypes/relate), and will save the collections as their handles (the folder name).
+The Collections fieldtype is a [Relate fieldtype](/fieldtypes/relate), and will save the collections as their handles (the folder name).
 
 ``` .language-yaml
 listings:

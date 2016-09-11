@@ -9,7 +9,7 @@ All of Statamic's routes are defined in `site/settings/routes.yaml` (also access
 
 ## Template Routes {#template-routes}
 
-Template routes allow you to create individual URLs or patterns that map to specific templates. This is very different than using a Page to create a URL because there is no inherent content manageable in the Control Panel or content files. Instead, you can code anything you need to into the template itself, use [Tags](/reference/tags) and [Globals](/guides/content-types/#globals) to display content, or pass data in through the route itself.
+Template routes allow you to create individual URLs or patterns that map to specific templates. This is very different than using a Page to create a URL because there is no inherent content manageable in the Control Panel or content files. Instead, you can code anything you need to into the template itself, use [Tags](/tags) and [Globals](/guides/content-types/#globals) to display content, or pass data in through the route itself.
 
 This is a useful technique for creating pages that aren't editable in the Control Panel, or where an empty page might be more confusing than helpful. RSS feeds, site maps, search results, and other utility pages are a few such examples.
 

@@ -18,4 +18,4 @@ control panel? There are a couple of reasons this might be happening.
   these are incorrect, the image resizing won't happen. Perhaps you aren't passing in the correct ID, or there is
   a typo in the image path.
 
-[glide]: /reference/tags/glide
+[glide]: /tags/glide

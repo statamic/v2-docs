@@ -13,4 +13,4 @@ options:
       field.
 id: 25155800-8fd7-46c7-aad0-5daaf07543da
 ---
-This field is essentially a [Textarea fieldtype](/reference/fieldtypes/textarea) that gets saved as YAML instead of a string.
+This field is essentially a [Textarea fieldtype](/fieldtypes/textarea) that gets saved as YAML instead of a string.

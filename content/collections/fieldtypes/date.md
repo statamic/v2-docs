@@ -1,7 +1,7 @@
 title: Date
 description: A datepicker that includes an optional timepicker.
 overview: >
-  Select a date and optional time. Data is stored as a timestamp and can be formatted with any of the date [modifiers](/reference/modifiers) or used in Tag conditions to filter results.
+  Select a date and optional time. Data is stored as a timestamp and can be formatted with any of the date [modifiers](/modifiers) or used in Tag conditions to filter results.
 image: a462b8e7-86c1-49ce-9d96-0941dc922dd2
 options:
   -

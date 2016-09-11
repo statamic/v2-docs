@@ -1,7 +1,7 @@
 ---
 title: Filters
 overview: >
-  Filters allow you to – you guessed it – filter your collections with your own custom logic if the built in [conditions syntax](/reference/conditions) isn't quite cutting it for you.
+  Filters allow you to – you guessed it – filter your collections with your own custom logic if the built in [conditions syntax](/conditions) isn't quite cutting it for you.
 id: a0de327a-991a-4d22-b478-fd6ff9ae4c5f
 ---
 
@@ -81,7 +81,7 @@ class WordFilter extends Filter
 Now we're getting the value of the `word` parameter, and if it doesn't exist we default back to `bacon`. Delicious, dependable bacon.
 
 
-[collection_tag]: /reference/tags/collection
-[taxonomy_tag]: /reference/tags/taxonomy
+[collection_tag]: /tags/collection
+[taxonomy_tag]: /tags/taxonomy
 [collection_methods]: https://laravel.com/docs/5.1/collections#available-methods
 [tags]: /addons/anatomy/tags

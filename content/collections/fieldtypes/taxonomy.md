@@ -16,7 +16,7 @@ id: 31adcc00-4fbb-4fe9-9b48-401061273096
 ---
 ## Data Structure
 
-The Taxonomy fieldtype is a [Relate fieldtype](/reference/fieldtypes/relate), which means the taxonomies will be saved as IDs.
+The Taxonomy fieldtype is a [Relate fieldtype](/fieldtypes/relate), which means the taxonomies will be saved as IDs.
 
 ``` .language-yaml
 wildlife:
@@ -26,7 +26,7 @@ wildlife:
 
 ## Templating
 
-Use the [Relate tag](/reference/tags/relate) to loop through the IDs and fetch the content data.
+Use the [Relate tag](/tags/relate) to loop through the IDs and fetch the content data.
 
 ```
 <ul>

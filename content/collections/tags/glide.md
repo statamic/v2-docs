@@ -130,7 +130,7 @@ image: "380dc8d9-481c-4d18-9162-ecd5688f98a8"
 ### Referencing a list of assets
 
 If you have a list of asset IDs, you may want to loop over them and generate images for each one.
-You can do this using the [Assets](/reference/tags/assets) tag:
+You can do this using the [Assets](/tags/assets) tag:
 
 ``` .language-yaml
 images:

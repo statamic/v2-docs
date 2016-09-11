@@ -411,5 +411,5 @@ You can also add your scope down into your [alias](#alias) loop. Yep, we thought
 
 Combinging both an Alias and a Scope on a Collection Tag doesn't make a whole lot of sense. You shouldn't do that.
 
-[conditions]: /reference/conditions
+[conditions]: /conditions
 [custom_filters]: /addons/anatomy/filters

@@ -19,4 +19,4 @@ Your tags will get saved as a simple YAML list, like this:
 ```
 
 Note: This fieldtype uses "Tags" in general terms. If you're looking for a way to tag/taxonomize your content, you
-may be interested in checking out [taxonomies](/guides/taxonomies) and the [Taxonomy fieldtype](/reference/fieldtypes/taxonomy).
+may be interested in checking out [taxonomies](/guides/taxonomies) and the [Taxonomy fieldtype](/fieldtypes/taxonomy).

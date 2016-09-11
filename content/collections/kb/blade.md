@@ -74,7 +74,7 @@ Your Blade template would have access to the variables in this file:
 
 ## Modifiers
 
-You can use [Modifiers](/reference/modifiers) in your Blade templates, but they will use a different syntax than what you're used to with Antlers.
+You can use [Modifiers](/modifiers) in your Blade templates, but they will use a different syntax than what you're used to with Antlers.
 
 First, wrap your variable in a `modify()` method, then feel free to chain modifiers as you wish. The value will get passed along like normal. Any parameters should be specified like regular PHP parameters.
 

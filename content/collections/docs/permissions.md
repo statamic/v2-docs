@@ -48,4 +48,4 @@ Groups are created and managed in `Configure » Users`, again assuming you have 
 
 To explain this any further would likely be futile. Log into the Control Panel, head to the `Configure` area, and start clicking. We're pretty sure you can take it from here.
 
-[front_end_login]: /reference/tags/user-login_form
+[front_end_login]: /tags/user-login_form

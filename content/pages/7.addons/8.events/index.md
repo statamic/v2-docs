@@ -215,7 +215,7 @@ public function handle(Submission $submission);
 
 ### user.registered
 
-Fired after a user has registered with the [Register Form](/reference/tags/user-register_form). The `User` will be passed through.
+Fired after a user has registered with the [Register Form](/tags/user-register_form). The `User` will be passed through.
 
 ```
 public $events = ['user.registered' => 'handle'];

@@ -87,7 +87,7 @@ $collection->all();
 
 ### Conditions
 
-Filter the collection using [the conditions syntax](/reference/conditions).
+Filter the collection using [the conditions syntax](/conditions).
 
 ```
 // Remember, in reality these would be Data objects.

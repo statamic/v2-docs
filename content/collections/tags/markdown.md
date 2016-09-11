@@ -3,7 +3,7 @@ title: Markdown
 id: 3f0e8d63-f6ca-4a8e-86dd-8361aa328807
 overview: Convert content between the tags into markdown.
 ---
-This is a tag-pair version of the [markdown modifier](/reference/modifiers/markdown).
+This is a tag-pair version of the [markdown modifier](/modifiers/markdown).
 
 ## Example {#example}
 

@@ -72,7 +72,7 @@ The former `templates` fieldtype is now named `template`, singular.
 
 The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We feel it's important to eliminate reliance on third-party APIs for all core features. The maps HTML from v1 came from [Leaflet.js][leaflet] and was really just a wrapper for their default implementation. Check it out, it's pretty straightforward.
 
-The File fieldtype is replaced by [Assets](/reference/fieldtypes/assets). As long as you don't move your files, your links won't break, but you will lose your Control Panel connection to them. Check out the [Assets guide][assets] to learn about the new and improved ways.
+The File fieldtype is replaced by [Assets](/fieldtypes/assets). As long as you don't move your files, your links won't break, but you will lose your Control Panel connection to them. Check out the [Assets guide][assets] to learn about the new and improved ways.
 
 Status is gone. We now have the notion of "published" and "unpublished". Unpublished content is represented by files beginning with an _underscore.
 
@@ -171,8 +171,8 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 [leaflet]: http://leafletjs.com/
 [name-mangler]: https://manytricks.com/namemangler/
 [permissions]: /permissions
-[relate-fieldtype]: /reference/fieldtypes/relate
-[relate-tag]: /reference/tags/relate
+[relate-fieldtype]: /fieldtypes/relate
+[relate-tag]: /tags/relate
 [routes]: /urls-and-routing#routes
 [semver]: http://semver.org
 [template-language-guide]: /template-language

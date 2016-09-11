@@ -28,7 +28,7 @@ options:
     name: mode
     type: string *table*
     description: >
-      The Grid is displayed as a table by default. If you have a large number of columns it can get pretty crowded. Choose `stacked` mode to group rows similar to [Replicator](/reference/fieldtypes/replicator). When [Sneak Peek]() is enabled, Grids automatically toggle into stacked mode.
+      The Grid is displayed as a table by default. If you have a large number of columns it can get pretty crowded. Choose `stacked` mode to group rows similar to [Replicator](/fieldtypes/replicator). When [Sneak Peek]() is enabled, Grids automatically toggle into stacked mode.
   -
     name: add_row
     type: string
