@@ -1,7 +1,6 @@
 ---
 title: Filters
-overview: >
-  Filters allow you to – you guessed it – filter your collections with your own custom logic if the built in [conditions syntax](/conditions) isn't quite cutting it for you.
+overview: Filters allow you to filter your collections with your methods and desires.
 id: a0de327a-991a-4d22-b478-fd6ff9ae4c5f
 ---
 
@@ -84,4 +83,4 @@ Now we're getting the value of the `word` parameter, and if it doesn't exist we 
 [collection_tag]: /tags/collection
 [taxonomy_tag]: /tags/taxonomy
 [collection_methods]: https://laravel.com/docs/5.1/collections#available-methods
-[tags]: /addons/anatomy/tags
+[tags]: /addons/classes/tags

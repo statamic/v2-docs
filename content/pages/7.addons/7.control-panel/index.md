@@ -1,7 +1,7 @@
 ---
 title: Extending the Control Panel
 overview: >
-  Creating pages in the control panel using a [Controller](/addons/anatomy/controllers) is all well and good, but wouldn't
+  Creating pages in the control panel using a [Controller](/addons/classes/controllers) is all well and good, but wouldn't
   it be nice if there was an easy way to access them? The Control Panel's navigation bar isn't just for core items. You are able to add your own items in there, too.
 id: a5e391e7-31ac-40a2-8f13-1746b660197b
 ---
@@ -11,7 +11,7 @@ Statamic emits a `cp.nav.created` just after the Control Panel's navigation gets
 the `Statamic\CP\Navigation\Nav` singleton. Any items added to this class will be reflected in the navigation bar.
 
 ## Adding Items
-Adding a navigation item should be done in your [Listener](/addons/anatomy/listeners) file.
+Adding a navigation item should be done in your [Listener](/addons/classes/listeners) file.
 
 Let's assume we're creating a Store addon, which has products and orders. We'll want to create a navigation item
 like this:
