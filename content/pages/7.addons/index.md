@@ -36,16 +36,16 @@ Not to mention, Statamic is built upon [Laravel][laravel], so you can use any of
 So, what to tackle first? Let's [get started][getting-started]..
 
 [getting-started]: /addons/getting-started
-[addon]: /addons/structure/addon
-[tags]: /addons/structure/tags
-[modifiers]: /addons/structure/modifiers
-[fieldtypes]: /addons/structure/fieldtypes
-[event-listeners]: /addons/structure/event-listeners
-[commands]: /addons/structure/commands
-[tasks]: /addons/structure/tasks
-[service-providers]: /addons/structure/service-providers
-[api]: /addons/structure/api
-[controllers]: /addons/structure/controllers
+[addon]: /addons/classes/addon
+[tags]: /addons/classes/tags
+[modifiers]: /addons/classes/modifiers
+[fieldtypes]: /addons/classes/fieldtypes
+[event-listeners]: /addons/classes/event-listeners
+[commands]: /addons/classes/commands
+[tasks]: /addons/classes/tasks
+[service-providers]: /addons/classes/service-providers
+[api]: /addons/classes/api
+[controllers]: /addons/classes/controllers
 [laravel]: http://laravel.com
 [laravels-features]: http://laravel.com/docs
 [oop]: http://php.net/manual/en/language.oop5.php

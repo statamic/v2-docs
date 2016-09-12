@@ -70,4 +70,4 @@ class MyAddonTags extends \Statamic\Extend\Tags
 An alternative to the `init()` method is to use a [Service Provider][service-provider] to bind classes into Laravel’s Service Container.
 
 [helpers]: /addons/helpers
-[service-provider]: /addons/structure/service-providers
+[service-provider]: /addons/classes/service-providers
