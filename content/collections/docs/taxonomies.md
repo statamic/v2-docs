@@ -2,9 +2,9 @@
 title: Taxonomies
 id: 30955bc8-9c14-4523-858f-01c308b50d63
 overview: |
-    A "taxonomy" is a system of classifying data around a set of unique characteristics such as category, color, or the way smart scientists have grouped all living creatures into Kingdoms, Species and so on. On the other hand, "taxidermies" is the rarely used plural of stuffed dead animals.
+    A "taxonomy" is a system of classifying data around a set of unique characteristics such as category, color, or the way smart scientists have grouped all living creatures into Kingdoms, Species and so on.
 ---
-## The Basics
+## Overview {#overview}
 
 Taxonomies are one of Statamic's 6 core [Content Types][content-types]. As a Content Type it is similar in many ways to Entries and Pages in that each item can have its own fields, unique slugs, and be routed with any supported URL pattern.
 
@@ -21,7 +21,7 @@ categories:
   - red
 ```
 
-## Assigning taxonomies to content
+## Assigning Taxonomies to Content {#assigning-taxonomies}
 
 ### Using the Control Panel
 
@@ -47,7 +47,7 @@ to work as you'd expect.
 The reason this rule exists is because you may have another field that is simply relating taxonomy terms. For example,
 you may have another field that lists `similar_styles`.
 
-### Automatic Taxonomy Discovery
+### Automatic Taxonomy Discovery {#automatic-discovery}
 
 If you're coming from v1 you're used to just typing in any old string and having those magically work as taxonomies. You can do this in v2 as well, except that the strings will be replaced with IDs that reference the Term. This lets you add more data to each and every Term if you desire, such as images and descriptions.
 
@@ -79,7 +79,7 @@ styles:
   - The string itself will be used as the `title` field.
   - Of course, the newly created term ID will be replaced.
 
-## Routing Taxonomies
+## Routing Taxonomies {#routing}
 
 Define the URL format to be used for Taxonomy Terms when editing a Taxonomy. You can use any variable from the Term's data in the route. Most people use `{slug}`, in case you were wondering.
 
@@ -105,7 +105,7 @@ The template used to render `/products/category/{slug}` will come from a cascade
 5. The default page template as defined by `default_page_template` in theming settings.  
    By default, this is `default.html`.
 
-## Templating
+## Templating {#templating}
 
 Iterate over taxonomies in a piece of content using the [Relate tag](/tags/relate).
 
@@ -121,5 +121,5 @@ Iterate over taxonomies in a piece of content using the [Relate tag](/tags/relat
 <li>Bacon Merch</li>
 ```
 
-[content-types]: /guides/content-types
+[content-types]: /content-types
 [collection-tag]: /tags/collection
