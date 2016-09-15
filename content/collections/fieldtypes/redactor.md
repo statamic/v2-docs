@@ -44,7 +44,7 @@ course you are free to modify those and add more.
 
 Each item has a name, which is what you will see when configuring your fieldtype, and the settings themselves.
 
-You can find these Redactor settings in `Configure > Settings > System` or within `site/settings/system.yaml`.
+You can find these Redactor settings in `Configure > Settings > System` or within `statamic/settings/defaults/system.yaml`.
 
 The `settings` value should be a YAML representation of the options object that will get passed into the Redactor jQuery
 plugin. You are able to customize all of the Redactor options. You can [view the full list of settings in the Redactor documentation][redactor-docs].
