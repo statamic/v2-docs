@@ -171,7 +171,7 @@ The `path` may be:
 As mentioned above, the `url` should be the location of the asset folder. If it's located outside of the webroot, it's
 inaccessible so you can just leave it blank.
 
-### Amazon S3 {#amazon-s3}
+### Amazon S3 {#amazon-s}
 To enable S3 assets in a container, you should set up your `container.yaml` like so:
 
 ``` .language-yaml
