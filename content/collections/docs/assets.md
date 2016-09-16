@@ -4,7 +4,7 @@ id: 28bf911b-8f47-489b-8040-37607733b270
 overview: >
   If we're going to have assets around, we have to be concerned about them and take care of them. This is a happy place. Let's make friends with our assets. Everyone needs a friend.
 ---
-## Overview
+## Overview {#overview}
 
 Assets are files, whether images, videos, documents, zip files, or anything else within reason you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.
 
@@ -16,7 +16,7 @@ Each Asset Container can contain many folders and subfolders, as well as a **tit
 
 ![Assets in the Control Panel](/assets/img/other/cp-assets.png)
 
-## Creating and using Assets
+## Creating and using Assets {#creating-and-using-assets}
 
 Each Asset gets it own unique ID so it can be referenced and related by other content. This allows an Asset's location, filename, or any bit of metadata to change without breaking that relationship and, ultimately, the URL it's accessed at.
 
@@ -32,7 +32,7 @@ bacon_images:
   - 2n329ofna-90fjqp49j9fr-e98rjaa82
 ```
 
-## Assets all up in your templates
+## Assets all up in your templates {#assets-all-up-in-your-templates}
 
 Now you have these ugly IDs instead of pretty filenames. Before you puff your checks and pull out your sad trombone, look at what you can now do. This is the payoff, right here.
 
@@ -50,7 +50,7 @@ Pass the name of your variable holding Asset ids to the [Assets tag][assets-tag]
 <img src="/assets/canadian-bacon.jpg" alt="Canadian" /> Size: 125kb
 ```
 
-## Image transformations
+## Image transformations {#image-transformations}
 
 In addition to template-level flexibility, image Assets can also be manipulated with our URL based transformation API.
 
@@ -66,7 +66,7 @@ Of course, if you can do this so can your users. To prevent a malicious visitor 
 
 This requires a unique key to be added to image URLs which is used to validate a match on the server and client side, resulting in the desired transformation. The Glide Tag does this for you automatically. Feel free to disable all of this in dev mode, it's frankly just more fun to play with the URL directly.
 
-## Storage Structure
+## Storage Structure {#storage-structure}
 
 Let's take a look at how this is structured on the file system level. Once configured, you will rarely have to worry about this, but it's good know how it all works.
 
@@ -107,7 +107,7 @@ Let's assume we're running Statamic in an outside-webroot configuration.
 
 `site/storage/assets/` is where all metadata for our assets will be stored. Each asset container will get their own folder here, named by the unique ID assigned to them.
 
-## Container Configuration
+## Container Configuration {#container-configuration}
 
 An Asset Container's configurations are stored in a `container.yaml` file in the root of that directory. For example, `site/storage/assets/90ua-f200-3af/container.yaml` might look something like this:
 
@@ -143,7 +143,7 @@ assets:
     alt: They're just like Pop Tarts, but full of Large Mouth Bass.
 ```
 
-## Asset Drivers
+## Asset Drivers {#asset-drivers}
 
 The examples above assume you are storing your assets in folders within your site. However, it's possible to store them
 in other locations on your server, or even in the cloud, like on Amazon S3.
@@ -153,7 +153,7 @@ in the storage folder.
 
 Within each container's `container.yaml`, you may specify the `driver` and its various options.
 
-### Local
+### Local {#local}
 When a container doesn't have a `driver` specified, Statamic will assume it uses the `local` driver.
 
 ``` .language-yaml
@@ -171,7 +171,7 @@ The `path` may be:
 As mentioned above, the `url` should be the location of the asset folder. If it's located outside of the webroot, it's
 inaccessible so you can just leave it blank.
 
-### Amazon S3
+### Amazon S3 {#amazon-s3}
 To enable S3 assets in a container, you should set up your `container.yaml` like so:
 
 ``` .language-yaml
@@ -188,7 +188,7 @@ The region codes can be tough to remember. [Here's a list of them.](http://docs.
 
 And there you have it. Go have fun with Assets!
 
-## In the works
+## In the works {#in-the-works}
 
 These features are in the oven but aren't quite fully baked yet. If you were to eat them now, you would get a bellyache and miss 2 days of school.
 
