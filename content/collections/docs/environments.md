@@ -2,7 +2,7 @@
 title: Environments
 id: 0b47d058-a8cc-41ec-9938-b9ef68c03d8d
 overview: >
-  Sometimes is beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production.
+  Sometimes it's beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production.
 ---
 
 ## The .env file
