@@ -32,7 +32,7 @@ bacon_images:
   - 2n329ofna-90fjqp49j9fr-e98rjaa82
 ```
 
-## Assets all up in your templates {#assets-all-up-in-your-templates}
+## Assets all up in your templates {#assets-in-your-templates}
 
 Now you have these ugly IDs instead of pretty filenames. Before you puff your checks and pull out your sad trombone, look at what you can now do. This is the payoff, right here.
 
