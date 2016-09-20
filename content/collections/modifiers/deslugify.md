@@ -10,7 +10,7 @@ title: Just-Because-I-Can
 ```
 
 ```
-{{ title | dashify }}
+{{ title | deslugify }}
 ```
 
 ```.language-output
