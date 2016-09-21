@@ -136,6 +136,9 @@ Now can put the `{{ template_content }}` tag anywhere in your Layout and Statami
 </html>
 ```
 
+Aside from the complete output of your template using `template_content`, it's also possible to inject or 
+["yield" additional sections](#yielding-sections) from your template into your layout.
+
 ### Choosing a Layout {#choosing-layouts}
 
 #### Per Page
@@ -239,6 +242,51 @@ Be careful not to name overlap names when using both Antlers and Blade templates
 Note that when using Blade, all templates will be located in the `templates` folder. This includes files used by the `@extends` and `@include` directives.
 
 [Read more about templating in Statamic using Laravel Blade](/knowledge-base/blade).
+
+## Yielding Additional Sections in Layouts {#yielding-sections}
+
+As mentioned above, the contents of your template will be injected into your layout with the `template_content` variable.
+
+However, if you'd like to output additional sections, you may use a combination of the [Section](/tags/section) and 
+[Yield](/tags/yield) Tags. If you've used Laravel's Blade language, this should feel very familiar to you.
+
+Anything placed between a `section:[name]` tag pair will be excluded from the template, and available in the
+corresponding `yield:[name]` tag.
+
+A common scenario for using this feature is to add page-specific Javascript. Here's an example of a contact page that
+has a JS-driven form on it. `contact.js` holds the code for the form, but we aren't interested in it being loaded
+everywhere - just on the contact page.
+
+```
+<h1>{{ title }}</h1>
+{{ content }}
+
+<div class="contact-form">
+    ...
+</div>
+
+<!-- everything between these tags will disappear from your template... -->
+{{ section:page_scripts }}
+    <script src="contact.js"></script>
+{{ /section:page_scripts }}
+```
+
+```
+<html>
+<body>
+    <header>...</header>
+    
+    <section>
+        {{ template_content }}
+    </section>
+    
+    <script src="main.js"></script>
+    
+    <!-- ...and be output over here! -->
+    {{ yield:page_scripts }}
+</body>
+</html>
+```
 
 ## Best Practices {#best-practices}
 
