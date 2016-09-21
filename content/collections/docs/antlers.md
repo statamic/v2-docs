@@ -377,7 +377,18 @@ home of the @{{ fast_food_chain_specialty_item }},
 can I take your order?
 ```
 
-## Variables Inside Parameters {#vars-in-params}
+## Tags {#tags}
+
+Tags (as a proper noun) are tags that _do stuff_. Depending on the Tag, that can mean different things. Here's a few examples:
+
+- The [Collection Tag](/tags/collection) gets entries from a collection and makes their variables available for you to loop through.
+- The [Env Tag](/tags/env) outputs values from your `.env` file.
+- The [Redirect Tag](/tags/redirect) doesn't even output anything! It performs a redirect.
+
+Tags can potentially look exactly like [variables](#variables), or at least very similar. Because of this, we've written
+an article explaining [the difference between them][tags-vs-vars] in more detail.
+
+### Variables Inside Parameters {#vars-in-params}
 
 Whenever you need to use variables _inside_ of a Tag's parameters, you should use **single** tag braces.
 
@@ -389,3 +400,4 @@ Whenever you need to use variables _inside_ of a Tag's parameters, you should us
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
 [logical]: http://php.net/manual/language.operators.logical.php
 [modifiers]: /modifiers
+[tags-vs-vars]: /knowledge-base/tags-vs-variables
