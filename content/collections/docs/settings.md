@@ -24,3 +24,19 @@ Sometimes is beneficial to have different settings depending on where you are ru
 You can do this by overriding settings based on the environment you are serving the site.
 
 [Read about environments](/environments)
+
+
+## Maintenance Mode {#maintenance-mode}
+
+When your site is in maintenance mode, a _Be Right Back_ message will be displayed for all requests. This could be 
+useful to "disable" your site while you perform updates.
+
+To enable it run the `down` command, and to disable it run the `up` command:
+
+``` .language-bash
+php please down   # enable maintenance mode. take your site "down"
+php please up     # disable. bring your site back "up"
+```
+
+This feature is the same as [Laravel's](https://laravel.com/docs/5.1/installation#maintenance-mode). You may customize
+the view by adding a `503.html` error template to your theme.
