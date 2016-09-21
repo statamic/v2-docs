@@ -1,6 +1,8 @@
 ---
 title: Tags vs. Variables
 id: 616b0ff4-43a7-4652-a868-85b71f8f6176
+kb_categories:
+  - 41f8eb46-342c-4a52-91a3-809d971a5165
 ---
 In [Antlers templates][templates] there are two types of generic "tags". Simple variables, and Tags (a proper noun). They can both render things in your templates, so what's the difference, exactly?
 
