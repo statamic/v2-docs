@@ -15,7 +15,7 @@ To enable task scheduling, add the following Cron entry to your server:
 * * * * * php /path/to/please schedule:run >> /dev/null 2>&1
 ```
 
-This Cron will call the Statamic/Laravel command scheduler every minute and run any tasks that you have scheduled and runs them if they're do, automatically. This single Chron entry is all it takes.
+This Cron will call the Statamic/Laravel command scheduler every minute and run any tasks that you have scheduled and runs them if they're due, automatically. This single Chron entry is all it takes.
 
 
 ## Generating {#generating}
