@@ -146,6 +146,8 @@ static_caching_invalidation:
 This says "when an entry in the `blog` collection is saved, we should invalidate the `/blog` page, any pages beginning with `/blog/category/`, and the home page."
 Of course, you may add as many collections as you need.
 
+To clear the static file cache you can run `php please clear:static` or delete the `static/` folder in the web root.
+
 ## Static Site Generation {#static-generator}
 
 En route from Far Far Away Land. Stay tuned!
