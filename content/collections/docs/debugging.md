@@ -120,6 +120,16 @@ loggers:
     token:
 ```
 
+#### Syslog {#log-syslog}
+
+Sends logs to your system log.
+
+```
+loggers:
+  syslog:
+    identity: Statamic
+```
+
 ### Triggering Logs {#log-trigger}
 
 Within code, you may trigger a log to be written (or sent, etc) by using Laravel's `Log` facade.
