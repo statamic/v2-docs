@@ -7,14 +7,23 @@ parameters:
     name: url
     type: string
     description: >
-      The URL of the page from where to find
-      the pages. If this parameter isn’t
-      specified, Statamic will look at the
-      current URL.
+      The URL of the parent page from where to find its subpages. If this parameter isn’t specified, 
+      Statamic will look at the current URL.
+  -
+    name: id
+    type: string
+    description: >
+      Just like `url`, but for when you know the ID.
   -
     name: from
     type: string
-    description: Alias of `url`
+    description: >
+      Just like `url`, but it accepts either a URL or ID.
+  -
+    name: from_id
+    type: string
+    description: >
+      Just like `id`. Maybe you prefer how this reads in your templates.
   -
     name: folder
     type: string
