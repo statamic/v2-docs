@@ -18,6 +18,8 @@ Things go wrong. It's a part of life. Fortunately, we can see what went south us
 
 Statamic comes pre-configured with error logging provided by Laravel and the powerful Monolog logging library. This allows you to use a number of logging handlers, should you wish to integrate with something more advanced.
 
+### Configuring Handlers {#log-handlers}
+
 Your logging configuration can be edited in the Debug settings section of the CP, or by editing the `loggers` key in `debug.yaml`.
 
 You may configure multiple handlers at the same time by adding each one with their separate key.
@@ -31,7 +33,7 @@ loggers:
 
 All handlers accept a `level` key, where you can specify the minimum severity level that should be logged for that handler. Here they are, from least to most severe: `debug`, `info`, `notice`, `warning`, `error`, `critical`, `alert`, `emergency`.
 
-### File {#log-file}
+#### File {#log-file}
 
 Out of the box, Statamic uses the `file` log handler. This will write to `local/storage/logs/statamic.log`.
 
@@ -52,7 +54,7 @@ loggers:
     daily: true
 ```
 
-### Browser {#log-brower}
+#### Browser {#log-brower}
 
 Logs directly to your browser's console.
 
@@ -61,7 +63,7 @@ loggers:
   browser: true
 ```
 
-### Email {#log-email}
+#### Email {#log-email}
 
 Sends an email using PHP's mail() function.
 
@@ -73,7 +75,7 @@ loggers:
     subject: An error has occurred
 ```
 
-### Hipchat {#log-hipchat}
+#### Hipchat {#log-hipchat}
 
 Sends logs to a [Hipchat](https://www.hipchat.com/) room.
 
@@ -85,7 +87,7 @@ loggers:
     name:
 ```
 
-### Slack {#log-slack}
+#### Slack {#log-slack}
 
 Sends logs to a [Slack](https://slack.com/) channel.
 
@@ -98,7 +100,7 @@ loggers:
     icon_emoji:
 ```
 
-### Fleep {#log-fleep}
+#### Fleep {#log-fleep}
 
 Sends logs to [Fleep.io](https://fleep.io/)
 
@@ -108,7 +110,7 @@ loggers:
     token:
 ```
 
-### Flowdock {#log-flowdock}
+#### Flowdock {#log-flowdock}
 
 Sends logs to [Flowdock](https://www.flowdock.com/).
 
