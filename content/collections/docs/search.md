@@ -20,7 +20,9 @@ To kick off the indexer you can run `php please search:update` in your terminal,
 Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page](/tags/search) for more details, but it works like this:
 
 ```
-
+{{ search:results }}
+	<a href="{{ url }}">{{ title }}</a>
+{{ /search:results }}
 ```
 
 ## Drivers {#drivers}

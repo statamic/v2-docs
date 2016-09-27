@@ -65,4 +65,34 @@ variables:
 ---
 ## Overview
 
-An overview on how to configure search and indexing can be found in the [Search Docs](/search).
+An overview on how to _configure_ search, indexing, and the query form can be found in the [Search Docs](/search).
+
+
+## Example
+
+On a search result page, you can loop through the results of the search like they were entries or pages. Because they are. You'll have access to all the data of all the content returned so you can format your results however you'd like.
+
+```
+{{ search:results }}
+
+	{{ if no_results }}
+		<h2>No results.</h2>
+  {{ else }}
+  
+		<a href="{{ url }}" class="result">
+      <h2>{{ title }}</h2>
+  		<p>{{ content strip_tags="img|a|p" safe_truncate="180|..." }}</p>
+    </a>
+    
+  {{ /if }}
+
+{{ /search:results }}
+```
+
+## Distinguising Content Types
+
+You can use the following helper variables to check and display (or not display) results by content type:
+
+- `is_page` 
+- `is_entry`
+- `is_term`
