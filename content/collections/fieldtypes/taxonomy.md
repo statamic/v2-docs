@@ -9,9 +9,16 @@ options:
   -
     name: taxonomy
     type: string
+    description: > The handle of the Taxonomy from which to fetch Terms.
+  -
+    name: mode
+    type: string *tags*
+    description: "Available UI modes are `panes` and `tags`."
+  -
+    name: label
+    type: string
     description: >
-      The name of the Taxonomy from which to
-      fetch Terms.
+      You can choose to display the terms using custom field data. Example:   `label: "{{ slug }} ({{ description }})"`
 id: 31adcc00-4fbb-4fe9-9b48-401061273096
 ---
 ## Data Structure
