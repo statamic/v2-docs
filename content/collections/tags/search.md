@@ -70,7 +70,7 @@ An overview on how to _configure_ search, indexing, and the query form can be fo
 
 ## Example
 
-On a search result page, you can loop through the results of the search like they were entries or pages. Because they are. You'll have access to all the data of all the content returned so you can format your results however you'd like.
+On a search result page, you can loop through the results of the search like they were entries or pages. Because they are. You'll have access to all the data of all the content returned so you can format your results however you'd like. In this example, we're displaying a truncated vresion of the `content` field.
 
 ```
 {{ search:results }}
@@ -78,10 +78,10 @@ On a search result page, you can loop through the results of the search like the
 	{{ if no_results }}
 		<h2>No results.</h2>
   {{ else }}
-  
-		<a href="{{ url }}" class="result">
+
+    <a href="{{ url }}" class="result">
       <h2>{{ title }}</h2>
-  		<p>{{ content strip_tags="img|a|p" safe_truncate="180|..." }}</p>
+      <p>{{ content strip_tags="img|a|p" safe_truncate="180|..." }}</p>
     </a>
     
   {{ /if }}
