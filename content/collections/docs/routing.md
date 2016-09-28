@@ -142,7 +142,7 @@ This will forward `http://yoursite.com/party` to `http://yoursite.com/my-long/pa
 
 ### Best Practices
 
-Vanity routes are _not_ perminant redirects, but rather temporary or utility 302s. The 
+Vanity routes are _not_ perminant redirects, but rather temporary or utility 302s.
 
 ## Content Types {#content-types}
 
