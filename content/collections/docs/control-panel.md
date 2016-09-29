@@ -12,4 +12,4 @@ To login to Statamic one must simply visit `example.com/cp`.
 
 ## Disabling the Control Panel
 
-If you'd like to manage your site with files only, you can disable the Control Panel entirely by setting `$cp = false;` in your `index.php` file.
+If you'd like to manage your site with files only, you can disable the Control Panel entirely by setting `$control_panel = false;` in your `index.php` file.
