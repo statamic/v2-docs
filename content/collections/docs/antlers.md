@@ -396,7 +396,7 @@ Whenever you need to use variables _inside_ of a Tag's parameters, you should us
 {{ nav from="{segment_1}" }}
 ```
 
-[guide-yaml]: /guides/yaml-101
+[guide-yaml]: /yaml
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
 [logical]: http://php.net/manual/language.operators.logical.php
 [modifiers]: /modifiers

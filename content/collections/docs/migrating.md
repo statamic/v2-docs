@@ -25,7 +25,7 @@ The v2 Importer can be found in the Control Panel, in the `Tools` section.
 
 ## Breaking Changes {#breaking-changes}
 
-Each of these changes may require a little bit of work. You'll want to check out the [folder tour](/guides/getting-started#folder-tour) to get acclimated, and then dive into the following changes.
+Each of these changes may require a little bit of work.
 
 ### File and Folder Naming Conventions {#file-and-folder}
 
@@ -163,7 +163,7 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 [Search](/search) is Bloodhound's cooler cousin. Search automatically indexes for performance. Search is more easily configured. Search connects to [Algolia](https://algolia.com) in a matter of seconds. Search is included in core. What more can you ask for? (Besides keyword weighting. Search doesn't do keyword weighting.)
 
 
-[addons]: /guides/addons
+[addons]: /addons
 [assets]: /assets
 [collection]: /content-types#collections
 [content-types-guide]: /content-types
@@ -173,7 +173,7 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 [permissions]: /permissions
 [relate-fieldtype]: /fieldtypes/relate
 [relate-tag]: /tags/relate
-[routes]: /urls-and-routing#routes
+[routes]: /routing#collection-routes
 [semver]: http://semver.org
-[template-language-guide]: /template-language
+[template-language-guide]: /antlers
 [exporter]: http://github.com/statamic/exporter

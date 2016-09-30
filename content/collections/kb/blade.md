@@ -11,7 +11,7 @@ Here we'll be explaining how to use it in the context of Statamic.
 
 ## Using in a theme
 
-Firstly, you'll want to check out how to create a theme in our [Theming Guide](/guides/theming).
+Firstly, you'll want to check out how to create a theme in our [Theming Guide](/theming).
 
 To use Blade in a theme, you'll need to add `.blade.php` templates instead of `.html` templates. You can mix and
 match between Antlers and Blade template files, just be careful not to overlap the template names.
