@@ -302,6 +302,6 @@ Here are a few good ideas to consider when building a theme, some of them a summ
 
 
 [blade]: http://laravel.com/reference/blade
-[assets]: /guides/assets
-[templating]: /guides/template-language
+[assets]: /assets
+[templating]: /antlers
 [partials]: /tags/partial

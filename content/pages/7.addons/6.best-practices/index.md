@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 overview: >
-  Sometimes its very possible that your addon may perform the same function from
+  Sometimes it's very possible that your addon may perform the same function from
   multiple points. For example, you might want to do something inside a tag, and
   from the API, and from your fieldtype, etc.
 id: 7aeb656d-bf60-4509-8817-570797b02279

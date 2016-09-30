@@ -206,7 +206,7 @@ For extra security you can [move your system files](/knowledge-base/running-abov
 
 #### Multilingual Sites
 
-If you'd like to support multiple languages, head over to [Localization](/localization) for a few additional steps.
+If you'd like to support multiple languages, head over to [Localization][localization] for a few additional steps.
 
 [laravel]: http://laravel.com
 [forge]: http://forge.laravel.com
@@ -214,6 +214,6 @@ If you'd like to support multiple languages, head over to [Localization](/locali
 [mamp]: https://www.mamp.info/en/
 [valet]: http://laravel.com/docs/valet
 [homestead]: http://laravel.com/docs/homestead
-[multilingual-guide]: /guides/l10n
-[v1-upgrade]: /guides/upgrading-from-v1
+[localization]: /localization
+[v1-upgrade]: /migrating
 [cp]: /control-panel

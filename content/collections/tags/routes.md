@@ -21,7 +21,7 @@ variables:
     description: Any other inline variables
 id: ad1b968e-9069-4977-a8ba-b12fe7885ebe
 ---
-This tag can save you from having to hardcode links to your [Template Routes](/guides/urls-and-routing#template-routes) and gives you access to any inline data you added in your route rules too. It's a simple thing. Don't overthink it.
+This tag can save you from having to hardcode links to your [Template Routes](/routing#template-routes) and gives you access to any inline data you added in your route rules too. It's a simple thing. Don't overthink it.
 
 ## Example {#example}
 

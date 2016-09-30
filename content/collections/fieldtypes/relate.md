@@ -24,7 +24,7 @@ options:
 ---
 ## Relationship Types
 
-You can relate any of the base [Content Types](/guides/content-types), each of which with its own specific fieldtype. They all extend this core Relate fieldtype.
+You can relate any of the base [Content Types](/content-types), each of which with its own specific fieldtype. They all extend this core Relate fieldtype.
 
 - [Taxonomy](/fieldtypes/taxonomy) - for Taxonomy Terms
 - [Collection](/fieldtypes/collection) - for Entries

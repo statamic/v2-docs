@@ -235,4 +235,4 @@ So there you have it. YAML in its many shapes and forms. To learn how to render 
 Happy YAMLing!
 
 [recursive-acronym]: https://en.wikipedia.org/wiki/Recursive_acronym
-[template-language]: /guides/template-language
+[template-language]: /antlers

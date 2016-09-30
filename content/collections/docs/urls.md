@@ -28,7 +28,7 @@ As you may have guessed from context, a slug is the bit of the URL unique to a p
 ### Best Practices {#best-practices}
 Slugs should always be lowercase, never contain spaces, and almost always use hyphens to separate words. Follow those rules blindly and you'll be just fine.
 
-Pages, Entries, and Taxonomy Terms all have slugs. That sentence sounds gross out of context. Feel free to learn more about all of [Statamic's Content Types](/guides/content-types) - including those with and those without slugs.
+Pages, Entries, and Taxonomy Terms all have slugs. That sentence sounds gross out of context. Feel free to learn more about all of [Statamic's Content Types](/content-types) - including those with and those without slugs.
 
 ## Routes {#routes}
 
