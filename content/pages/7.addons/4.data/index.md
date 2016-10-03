@@ -23,7 +23,7 @@ Data
 `-- User
 ```
 
-## Retrieving Data
+## Retrieving Data {#retrieving-data}
 
 You should retrieve data using our API methods. If you've used Laravel, it should feel similar to Eloquent. If it helps, try thinking of each Data type mentioned above as a Model. We have an API class for each of those.
 
@@ -38,7 +38,7 @@ Like Laravel, if you're expecting a collection of models, you will receive a col
 
 If you're expecting a single model (like `Page::find(1)` above), you'll get the corresponding class.
 
-## Manipulating Data
+## Manipulating Data {#manipulating-data}
 
 Once you have a data instance, you can go to town on it.
 
@@ -56,7 +56,7 @@ $page->save();
 
 Now it'll be written to file. Nice.
 
-## Creating Data
+## Creating Data {#creating-data}
 
 Of course, the data had to get there somehow. You can also create data using the corresponding API classes.
 
@@ -78,7 +78,7 @@ That `get()` at the end is how you get your newly built object  from the factory
 
 [Read more about Data Factories][factories]
 
-## Localizing Data
+## Localizing Data {#localizing-data}
 
 To add localized data to an object, first target it "`in`" the locale.
 
@@ -99,11 +99,11 @@ For example, `$page->save()` would write both `index.md` and `fr.index.md` for y
 **Note:** It's worth noting that even though the `Data` class can hold data in multiple locales, some data types are not (yet) capable of being localized.
 
 
-# Content
+# Content {#content}
 
 Content is an extension of Data. Content is generally data that will be accessible on the front end. Pages, Entries, Taxonomy Terms, and Globals are all Content.
 
-## URI
+## URI {#uri}
 
 When we talk about URIs in Statamic, we are referring to the identifying part of the URL that comes _after_ the root.
 
@@ -117,7 +117,7 @@ However you may have that page localized in Spanish as `/es/zanahoria`. The URI 
 $uri = \Statamic\API\URL::getDefaultUri('es', '/zanahoria'); // returns /carrot
 ```
 
-## URL
+## URL {#url}
 
 Similar to a URI, a URL is the location from the domain root.
 
