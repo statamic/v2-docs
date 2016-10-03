@@ -5,7 +5,7 @@ overview: >
   Events serve as a great way to decouple various aspects of your addon, or even modify behavior or output of core functionality. A single event can have multiple listeners that do not depend on each other.
 ---
 
-## Overview
+## Overview {#overview}
 
 Simpler events are provided as a string with an argument passed through as a payload. For example, the `cp.page.published` event is dispatched as a string, and passes along the `Page` that was published.
 
@@ -37,9 +37,9 @@ public function doSomething(PageDeleted $event)
 }
 ```
 
-## Events
+## Events {#events}
 
-### cp.add_to_head
+### cp.add_to_head {#cpaddtohead}
 
 Fired on every CP request. Any strings returned will be added to the Control Panel’s `<head>` element. Useful for adding early-loaded Javascript.
 
@@ -49,7 +49,7 @@ public $events = ['cp.add_to_head' => 'handle'];
 public function handle();
 ```
 
-### cache.cleared
+### cache.cleared {#cachecleared}
 
 Fired when the cache is cleared. This refers to the persistent cache, _not_ the "Stache".
 
@@ -59,7 +59,7 @@ public $events = ['cache.cleared' => 'handle'];
 public function handle();
 ```
 
-### content.saved
+### content.saved {#contentsaved}
 
 Fired when any Page, Entry, Taxonomy Term, or Global is saved. The respective class will be passed through.
 
@@ -69,7 +69,7 @@ public $events = ['content.saved' => 'handle'];
 public function handle(Content $content);
 ```
 
-### cp.published
+### cp.published {#cppublished}
 
 Fired when any Page, Entry, Taxonomy Term, Global, or User is saved through the CP. The respective class will be passed through.
 
@@ -79,7 +79,7 @@ public $events = ['cp.published' => 'handle'];
 public function handle(Data $data);
 ```
 
-### cp.page.published
+### cp.page.published {#cppagepublished}
 
 Fired when a page is saved through the CP. The `Page` class will be passed through.
 
@@ -89,7 +89,7 @@ public $events = ['cp.page.published' => 'handle'];
 public function handle(Page $page);
 ```
 
-### cp.entry.published
+### cp.entry.published {#cpentrypublished}
 
 Fired when an entry is saved through the CP. The `Entry` class will be passed through.
 
@@ -99,7 +99,7 @@ public $events = ['cp.entry.published' => 'handle'];
 public function handle(Entry $entry);
 ```
 
-### cp.term.published
+### cp.term.published {#cptermpublished}
 
 Fired when a taxonomy term is saved through the CP. The `Term` class will be passed through.
 
@@ -109,7 +109,7 @@ public $events = ['cp.term.published' => 'handle'];
 public function handle(Term $term);
 ```
 
-### cp.globals.published
+### cp.globals.published {#cpglobalspublished}
 
 Fired when a global set is saved through the CP. The `GlobalSet` class will be passed through.
 
@@ -119,7 +119,7 @@ public $events = ['cp.globals.published' => 'handle'];
 public function handle(GlobalSet $global);
 ```
 
-### cp.user.published
+### cp.user.published {#cpuserpublished}
 
 Fired when a user is saved through the CP. The `User` class will be passed through.
 
@@ -129,7 +129,7 @@ public $events = ['cp.user.published' => 'handle'];
 public function handle(User $user);
 ```
 
-### cp.nav.created
+### cp.nav.created {#cpnavcreated}
 
 Fired after the navigation has been created. A `Statamic\CP\Navigation\Nav` object will be passed through.
 
@@ -141,7 +141,7 @@ public $events = ['cp.nav.created' => 'handle'];
 public function handle(Nav $nav);
 ```
 
-### Form.submission.creating
+### Form.submission.creating {#formsubmissioncreating}
 
 Fired when a form is submitted, but before it is saved. Allows you to stop or modify the submission.
 
@@ -165,7 +165,7 @@ public function handle(Submission $submission)
 }
 ```
 
-### Form.submission.created
+### Form.submission.created {#formsubmissioncreated}
 
 Fired when the submission is successfully saved. The `Submission` object is passed through.
 
@@ -177,7 +177,7 @@ public $events = ['Form.submission.created' => 'handle'];
 public function handle(Submission $submission);
 ```
 
-### glide.generated
+### glide.generated {#glidegenerated}
 
 Fired after Glide has generated an image. The parameters will be `$path` - which will be the full path to the cached image, and `$params` - an array of query parameters used to generate the image.
 
@@ -187,7 +187,7 @@ public $events = ['glide.generated' => 'handle'];
 public function handle($path, $params);
 ```
 
-### response.created
+### response.created {#responsecreated}
 
 Fired just after the response has been created for front-end requests, and just before it gets sent.
 
@@ -203,7 +203,7 @@ public $events = ['response.created' => 'handle'];
 public function handle(Response $response);
 ```
 
-### system.updated
+### system.updated {#systemupdated}
 
 Fired when the Updater has completed.
 
@@ -213,7 +213,7 @@ public $events = ['system.updated' => 'handle'];
 public function handle(Submission $submission);
 ```
 
-### user.registered
+### user.registered {#userregistered}
 
 Fired after a user has registered with the [Register Form](/tags/user-register_form). The `User` will be passed through.
 
@@ -224,7 +224,7 @@ public function handle(User $user);
 ```
 
 
-### Statamic\Events\StacheUpdated
+### Statamic\Events\StacheUpdated {#statamiceventsstacheupdated}
 
 Fired when the Stache is updated (ie. when content, assets, or users are created/modified) this will be fired.
 
