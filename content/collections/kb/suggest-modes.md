@@ -15,7 +15,7 @@ Here's the workflow - we'll use the "Users" fieldtype as an example:
 1. The Users fieldtype Vue component[^1] is loaded. It's basically a wrapper around the Relate fieldtype, but passes a `type` of `user`.
 2. The Relate fieldtype Vue component[^2] is loaded.
 3. The Relate fieldtype performs an AJAX call to `/cp/addons/suggest/suggestions`, POSTing the field config.
-4. That URL corresponds to the Suggest bundle's Controller[^3] where it calls `->suggetions()` on the appropriate `Mode` class.
+4. That URL corresponds to the Suggest bundle's Controller[^3] where it calls `->suggestions()` on the appropriate `Mode` class.
 5. In this case, the `UsersMode` class[^4] is loaded, and gathers the suggestions.
 
 ## Creating your own Suggest Modes
