@@ -114,7 +114,7 @@ webroot/
 
 Let's pause for just a moment. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
 
-Professional advice given, where's what to do:
+Professional advice given, here's what to do:
 
 - Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
 - Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
