@@ -1,6 +1,10 @@
 ---
 title: Glide
 overview: Manipulate Asset images on the fly using the wonderful [Glide](http://glide.thephpleague.com/) library.
+parameters_content: |
+  You may pass anything from the [Glide API](http://glide.thephpleague.com/1.0/api/quick-reference/) as a parameter.  
+  For example, `{{ glide or="90" }}` will use the [orientation](http://glide.thephpleague.com/1.0/api/orientation/#orientation-or)
+  API paramter.
 parameters:
   -
     name: src|id
@@ -22,88 +26,70 @@ parameters:
   -
     name: width
     type: integer
-    description: Width in pixels
+    description: >
+      Alias of the [w](http://glide.thephpleague.com/1.0/api/size/#width-w) Glide API parameter.
   -
     name: height
     type: integer
-    description: Height in pixels
+    description: >
+      Alias of the [h](http://glide.thephpleague.com/1.0/api/size/#height-h) Glide API parameter.
   -
     name: square
     type: integer
     description: >
-      A shortcut for setting `width` and
-      `height` to the same value.
+      A shortcut for setting `width` (`w`) and `height` (`h`) to the same value.
   -
     name: fit
     type: string
     description: >
-      How the image should fit into the target
-      dimensions. Options are `contain`,
-      `max`, `fill`, `stretch`, `crop`, `crop-x-y`,
-      and `crop_focal`. See the [_Focal Crop_](#focal-crop) section
-      for more details.
+      Alias of the [fit](http://glide.thephpleague.com/1.0/api/size/#fit-fit) Glide API parameter. In addition to the
+      Glide fit options, Statamic also accepts `crop_focal` to automatically fit/crop to a predefined focal point.
+      See the [_Focal Crop_](#focal-crop) section for more details.
   -
     name: crop
     type: string
-    description: 'Crops the image to specific dimensions prior to any other resize operations. Required format: `width,height,x,y`'
+    description: >
+      Alias of the [crop](http://glide.thephpleague.com/1.0/api/crop/#crop-crop) Glide API parameter.
   -
     name: orient
     type: mixed
     description: >
-      Rotates the image. Accepts `auto`, `0`,
-      `90`, `180` or `270`. Default is `auto`.
-      The `auto` option uses Exif data to
-      automatically orient images correctly.
+      Alias of the [or](http://glide.thephpleague.com/1.0/api/orientation/#orientation-or) Glide API parameter.
   -
     name: brightness
     type: integer
     description: >
-      Adjusts the image brightness. Use values
-      between `-100` and `+100`, where `0`
-      represents no change.
+      Alias of the [bri](http://glide.thephpleague.com/1.0/api/adjustments/#brightness-bri) Glide API parameter. 
   -
     name: contrast
     type: integer
     description: >
-      Adjusts the image contrast. Use values
-      between `-100` and `+100`, where `0`
-      represents no change.
+      Alias of the [con](http://glide.thephpleague.com/1.0/api/adjustments/#contrast-con) Glide API parameter. 
   -
     name: gamma
     type: integer
     description: >
-      Adjusts the image gamma. Use values
-      between `0.1` and `9.99`.
+      Alias of the [gam](http://glide.thephpleague.com/1.0/api/adjustments/#gamma-gam) Glide API parameter.
   -
     name: sharpen
     type: integer
     description: >
-      Sharpen the image. Use values between
-      `0` and `100`.
-  -
-    name: blur
-    type: integer
-    description: >
-      Adds a blur effect to the image. Use
-      values between `0` and `100`.
+      Alias of the [sharp](http://glide.thephpleague.com/1.0/api/adjustments/#sharpen-sharp) Glide API parameter.
   -
     name: pixelate
     type: integer
     description: >
-      Applies a pixelation effect to the
-      image. Use values between `0` and
-      `1000`.
+      Alias of the [pixel](http://glide.thephpleague.com/1.0/api/effects/#pixelate-pixel) Glide API parameter.
   -
     name: filter
     type: string
     description: >
-      Applies a filter effect to the image.
-      Accepts `greyscale` or `sepia`.
+      Alias of the [filt](http://glide.thephpleague.com/1.0/api/effects/#filter-filt) Glide API parameter.
   -
     name: quality
     type: integer *90*
     description: >
-      Adjusts the quality of the image. Use values between `0` and `100`.
+      Alias of the [q](http://glide.thephpleague.com/1.0/api/encode/#quality-q) Glide API parameter.
 id: b70a3d9a-6605-446e-b278-de99ba561fe0
 ---
 ## Example {#example}
