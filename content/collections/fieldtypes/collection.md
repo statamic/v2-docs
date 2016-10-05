@@ -9,10 +9,10 @@ image: 1ae0abcc-d9c7-412c-8647-fbeedaaa8444
 options:
   -
     name: collection
-    type: string
+    type: string or arrary
     description: >
       The name of the collection to Fetch
-      entries from.
+      entries from. You can select multiple collections by passing an array 
 id: 0e7eb069-dc0c-4dfd-9230-67ca5d215395
 ---
 ## Data Structure {#data-structure}
