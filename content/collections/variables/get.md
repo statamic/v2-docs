@@ -9,23 +9,25 @@ An array of sanitized `GET` variables that come from any query strings present i
 Example URL: `/about?show=pants&hide=jeggings`
 
 ```
+{{ get:show }}
+
 {{ get }}
   {{ show }}
   {{ hide }}
 {{ /get }}
 
-{{ get:show }}
 ```
 
 ``` .language-output
 pants
-jeggings
 
 pants
+jeggings
 ```
 
 Be sure to escape these values with the `sanitize` modifier if you plan to use them in output in production.
 
 ```
-{{ get:user_input | sanitize }}
+<!-- Because let's face it. You really *should* sanitize your jeggings. -->
+{{ get:jeggings | sanitize }}
 ```
