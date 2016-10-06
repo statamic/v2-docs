@@ -23,3 +23,9 @@ jeggings
 
 pants
 ```
+
+Be sure to escape these values with the `sanitize` modifier if you plan to use them in output in production.
+
+```
+{{ get:user_input | sanitize }}
+```
