@@ -37,6 +37,7 @@ class StoreListener extends Listener
     public function addNavItems($nav)
     {
         // Create the first level navigation item
+        // Note: by using route('store'), it assumes you've set up a route named 'store'.
         $store = Nav::item('Store')->route('store')->icon('shopping-cart');
 
         // Add second level navigation items to it
