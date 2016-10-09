@@ -67,7 +67,7 @@ php please make:tags AddonName
 
 Tags, like all parts of an Addon, have access to the addon's configuration with the `$this->getConfig()` methods. Configuration files are a great place to store default values, especially for values that a user may want to change site-wide.
 
-Tgs also have parameters which are used for configuration on the _tag-level_. For example, in the native `{{ nav }}` Tag, you'll generally supply a `folder` parameter to tell Statamic where to start fetching Pages from. Your Tag can access these parameter values with the `$this->getParam()` methods.
+Tags also have parameters which are used for configuration on the _tag-level_. For example, in the native `{{ nav }}` Tag, you'll generally supply a `folder` parameter to tell Statamic where to start fetching Pages from. Your Tag can access these parameter values with the `$this->getParam()` methods.
 
 - `$this->getParam('folder')` to get a string.
 - `$this->getParamBool('show_hidden')` to get a boolean.
