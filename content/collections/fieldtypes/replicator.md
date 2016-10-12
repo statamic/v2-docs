@@ -64,4 +64,26 @@ Use the tag pair syntax with an `if` `else` conditions to style accordingly each
   {{ /if }}
 
 {{ /my_replicator_field }}
+
+```
+An alternative, and often cleaner, approach is to have multiple 'set' partials and do:
+
+```
+{{ my_replicator_field }}
+  {{ partial src="sets/{type}" }}
+{{ /my_replicator_field }}
+```
+Then inside your partials directory you could have:
+
+`sets/image_set.html`
+`sets/quote_set.html`
+
+and the set partial may look something like:
+
+```
+{{# this is image_set.html #}}
+
+{{ assets:image }}
+  <img src="{{ glide:id }} alt="" >
+{{ /assets:image }}
 ```
