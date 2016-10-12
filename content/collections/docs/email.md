@@ -29,7 +29,7 @@ customize the design and language.
 
 Throughout the documentation, wherever emails are sent, you will be told the name of the email template
 that'll be used. To override the default, you should create a template of the same name in an `email`
-subfolder.
+subfolder of your `site/themes/theme-name/templates/` folder.
 
 ### HTML and Text versions {#html-and-text-versions}
 
