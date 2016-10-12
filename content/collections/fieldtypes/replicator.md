@@ -66,7 +66,7 @@ Use the tag pair syntax with an `if` `else` conditions to style accordingly each
 {{ /my_replicator_field }}
 
 ```
-The alternative (and a much cleaner approach) - is to have multiple 'set' partials and do:
+An alternative, and often cleaner, approach is to have multiple 'set' partials and do:
 
 ```
 {{ my_replicator_field }}
