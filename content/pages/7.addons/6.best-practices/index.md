@@ -101,4 +101,4 @@ class ScoreKeeper extends Addon
 
 As you can see, both addon aspects simply pass the work onto a common class.
 
-Note that you can user any of your classes by the `Addon` class if you want to be able to use addon helpers like cache, etc.
+Note that you can use any of your classes by the `Addon` class if you want to be able to use addon helpers like cache, etc.
