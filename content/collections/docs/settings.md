@@ -4,7 +4,7 @@ id: 00b392fc-1fdc-4699-8e73-438da24fc4fc
 ---
 ## General settings {#general}
 
-Statamic stores its settings into groups located in `site/setttings/[group].yaml`. These various files map to pages in
+Statamic stores its settings into groups located in `site/settings/[group].yaml`. These various files map to pages in
 the CP under `System > Settings`.
 
 The settings files are organized based on their general functions. For example, `assets.yaml` configures assets and image manipulation, `caching.yaml` for cache settings, `system.yaml` for general system settings, and so on.
