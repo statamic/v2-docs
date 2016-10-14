@@ -154,13 +154,13 @@ list of all the fields and values in the submission.
 
 ### Setting the "Reply To"
 
-If you want to set the `reply_to` to be the user submitting the form, you can configure that quite simply. Assuming you have a form input with `name="email"`
+If you want to set the `reply_to` to be the user submitting the form, you can configure that quite simply. Assuming you have a form input with `name="email"`:
 
 ``` .language-yaml
 email:
   -
     reply_to: "{{ email }}"
-    ... other settings here
+    # other settings here
 ```
 
 [Learn how to create your emails](/knowledge-base/emails)
