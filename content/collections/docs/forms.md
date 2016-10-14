@@ -127,7 +127,7 @@ You can display any or all of the submissions of your forms on the front-end of 
 
 Exporting your data is as easy as click the **Export** button when viewing your form in the Control Panel. You have the choice between CSV and JSON. Choose wisely.
 
-## Emails
+## Emails {#emails}
 
 Allowing your fans to send their comments is all well and good, but at this point you will only know about it when you
 head back into the Control Panel to view the submissions. Wouldn't it be better to get notified? It's simple to send
@@ -151,6 +151,17 @@ email:
 Here we'll send two emails for every submission of this form. One will go to the celebrity, and one to the agent.
 The first one uses a Statamic template, the other gets an "automagic" email. The automagic email will be a simple
 list of all the fields and values in the submission.
+
+### Setting the "Reply To"
+
+If you want to set the `reply_to` to be the user submitting the form, you can configure that quite simply. Assuming you have a form input with `name="email"`
+
+``` .language-yaml
+email:
+  -
+    reply_to: "{{ email }}"
+    ... other settings here
+```
 
 [Learn how to create your emails](/knowledge-base/emails)
 
