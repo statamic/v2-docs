@@ -9,7 +9,7 @@ id: 395dc432-0273-4874-873e-6ed0b772cc27
 
 ## The Addon Class {#addon}
 
-This core class provides will automatically provide your Addon with contextual information, settings, context, and helper methods, all as part of `$this->`.
+This core class will automatically provide your Addon with contextual information, settings, context, and helper methods, all as part of `$this->`.
 
 ## Helpers {#helpers}
 
