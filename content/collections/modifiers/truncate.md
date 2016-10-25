@@ -5,7 +5,7 @@ id: cc80cc58-f73a-47fd-8f4d-e1cfc23c5d56
 ---
 Truncates the string to a given length (paramter 1). You can append a string with parameter 2, and if truncating occurs the string is further truncated so that it may be appended without exceeding the desired length.
 
-This differs from [safe-truncate][safe-truncate] in that it _may_ truncate in the middle of a word.
+This differs from [safe-truncate][????????] in that it _may_ truncate in the middle of a word.
 
 ```.language-yaml
 advice: >
