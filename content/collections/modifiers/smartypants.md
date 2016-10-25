@@ -9,3 +9,5 @@ Translate plain ASCII punctuation characters into “smart” typographic punctu
 - Backticks-style quotes (``like this'') into “curly” quote HTML entities
 - Dashes (“--” and “---”) into en- and em-dash entities -
 - Three consecutive dots (“...”) into an ellipsis entity
+
+[EXAMPLE GOES HERE????]
