@@ -409,7 +409,7 @@ You can also add your scope down into your [alias](#alias) loop. Yep, we thought
 {{ /collection:blog }}
 ```
 
-Combinging both an Alias and a Scope on a Collection Tag doesn't make a whole lot of sense. You shouldn't do that.
+Combining both an Alias and a Scope on a Collection Tag doesn't make a whole lot of sense. You shouldn't do that.
 
 [conditions]: /conditions
 [custom_filters]: /addons/classes/filters
