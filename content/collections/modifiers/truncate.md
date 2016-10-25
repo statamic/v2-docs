@@ -14,7 +14,7 @@ advice: >
 ```
 
 ```
-{{ advice | safe_truncate:90:... }}
+{{ advice | truncate:90:... }}
 ```
 
 ```.language-output
