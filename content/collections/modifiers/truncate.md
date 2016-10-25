@@ -22,4 +22,4 @@ So, here’s some advice I wish I woulda got when I was your age:
 Live every week like i...
 ```
 
-[safe-truncate]: #safe-truncate
+[safe-truncate]: #string:safe_truncate
