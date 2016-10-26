@@ -244,7 +244,7 @@ public function handle(StacheUpdated $event)
 }
 ```
 
-### Statamic\Events\SeachQueryPerformed {#statamiceventssearchqueryperformed}
+### Statamic\Events\SearchQueryPerformed {#statamiceventssearchqueryperformed}
 
 Fired when a search is performed.
 
