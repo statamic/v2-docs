@@ -8,8 +8,8 @@ description: Fetch data by one or more URLs regardless of content type.
 parameters:
   -
     name: from
-    type: any local URI
-    description: Pass a local URI as a literal string, variable, or pipe delimited list, and all retrieved data will be available inside the tag pair.
+    type: string
+    description: Pass a local URI or ID as a literal string, variable, or pipe delimited list, and all retrieved data will be available inside the tag pair.
   -
     name: limit
     type: integer
@@ -49,3 +49,19 @@ In addition to the `get_content` tag, we'll be using the [shuffle](#) and [limit
   </blockquote>
 {{ /get_content }}
 ```
+
+### Shorthand syntax
+
+You may also use a shorthand syntax, where the second tag part refers to a variable. This variable should hold the URL or
+ID of the content you're fetching.
+
+``` .language-yaml
+page: /about
+```
+
+```
+{{ get_content:page }}
+   ...
+{{ /get_content:page }}
+```
+
