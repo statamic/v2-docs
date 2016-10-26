@@ -43,8 +43,10 @@ like field weighting, typo tolerance, etc – we recommend using the Algolia dri
 
 To enable the Algolia driver (first make sure you have an account) head to the `Settings > Search` page, select `algolia`, and enter your API credentials. That's it.
 
-## Searching in the Control Panel
+## Searching in the Control Panel {#searching-in-the-cp}
 In the Control Panel, the search bar at the top of the page will allow you to search for content and will take you directly to the page to edit it.
+
+## Algolia {#algolia}
 
 If you are using the Algolia driver we recommend using a Javascript implementation to communicate directly with them, as this will be incredibly fast, and avoids using Statamic as a middleman. You don't even need to worry about importing data. Statamic will handle that part when indexing.
 
@@ -52,3 +54,14 @@ Here's a couple of links to get you started:
 
 - [Algolia JavaScript docs](https://www.algolia.com/doc/javascript)
 - [Algolia demos](https://www.algolia.com/demos)
+
+### Searchable Attributes {#algolia-searchable-attributes}
+
+If you'd like to restrict which fields/attributes Algolia makes searchable, you may specify "Searchable Attributes"
+from your Algolia index settings. You may do this from the Algolia website, or through the Control Panel's `Settings > Search`
+page.
+
+Please note that if you set up searchable attributes, you may _only_ use those fields in your [Search Tag](/docs/tags/search)'s
+`fields` parameter. Specifying any additional fields in the tag parameter will cause your tag to yield no results.
+
+Similarly, only searchable attributes will be used when searching through the Control Panel.
