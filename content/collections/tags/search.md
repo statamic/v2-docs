@@ -6,10 +6,11 @@ parameters:
   -
     name: fields
     type: array
-    description: >
-      Specify the fields the search should
-      look through. You can pipe-separate
-      multiple fields, eg. `title|content`
+    description: |
+      Specify the fields the search should look through. You can pipe-separate multiple fields, eg. `title|content`.
+      
+      Note: If you're using Algolia and have set up searchable attributes, you may only specify fields exist in there.
+      Any additional fields will cause you the search tag to yield no results.
   -
     name: param
     type: 'string *q*'
