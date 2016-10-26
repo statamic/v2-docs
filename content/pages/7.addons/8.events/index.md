@@ -243,3 +243,21 @@ public function handle(StacheUpdated $event)
     $event->updatedAny($repos); // Check if any given repos were updated
 }
 ```
+
+### Statamic\Events\SeachQueryPerformed {#statamiceventssearchqueryperformed}
+
+Fired when a search is performed.
+
+The `Statamic\Events\SeachQueryPerformed` will be passed through.
+
+```
+use Statamic\Events\SearchQueryPerformed;
+
+public $events = [SearchQueryPerformed::class => 'handle'];
+
+public function handle(SearchQueryPerformed $event)
+{
+    $event->query; // the string that was searched for
+}
+```
+
