@@ -94,25 +94,11 @@ Sends logs to a [Slack](https://slack.com/) channel.
 ```
 loggers:
   slack:
-    token:
-    channel:
-    username:
-    icon_emoji:
+    username: The user that will post the logs (might want a new one)
+    channel: This should be surround by quotes and include the hash, i.e. `"#myloggingchannel"`
+    token: Go to https://api.slack.com/docs/oauth-test-tokens (making sure you are logged in) and create one for your logging user
+    icon_emoji: This is optional
 ```
-
-In order to log to a [Slack](https://slack.com/) channel you need to:
-
-- If you don't have one already, create a Slack team (a good start) this is used by Slack to refer to __myteam__.slack.com - you can do this [here](https://slack.com/create#email).
-
-- Create a user within that team, this will be used to write the logs to your channel, i.e. `mylogginguser`.
-
-- Create a channel within your team, i.e. `#myloggingchannel`.
-
-- You now need a token, go [here](https://api.slack.com/docs/oauth-test-tokens) and create one.
-
-- Now fill in those details into the logged key in your `debug.yaml` file.  The username is the user you created, and created a token for. Note that the channel should be surround by quotes and include the hash, i.e. `"#myloggingchannel"`. In fact, go wild and put quotes around everything - you only live once! The `icon_emoji` can be left blank.
-
-
 
 #### Fleep {#log-fleep}
 
