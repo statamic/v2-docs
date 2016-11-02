@@ -23,11 +23,11 @@ Two important things to note here: the `super`, and the `password`.
 
 ### The Password
 
-Creating a user by hand will involve a plain text password. Have no fear, however! As soon as you log in, it will be encrypted and hashed and as secure as any DB driven auth system you've ever seen.
+Creating a user by hand will involve a plain text password. Have no fear, however! As soon as you log in, it will be encrypted and hashed and as secure as any DB driven auth system you've ever seen (you can log in by visiting `/cp`).
 
 ## Permissions
 
-Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Panel.
+Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Patanel.
 
 You can bypass all that by setting `super: true`. You'll have access to everything. And as the developer of a new Statamic site, that's probably what you want.
 
