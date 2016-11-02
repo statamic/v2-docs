@@ -1,8 +1,6 @@
 ---
 title: Addon Classes
-overview: >
-  # @TODO: BRING BACK INDEX HERE AND MOVE CONTENT TO "BASE"
-  
+overview: >  
   Your Addon can contain one or many different classes that serve various purposes. Each will inherit functionality, and therefore will `Extend` the core `Statamic\API\Addon` class, either directly, or abstractly. 
 id: 395dc432-0273-4874-873e-6ed0b772cc27
 ---
