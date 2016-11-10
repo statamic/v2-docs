@@ -24,13 +24,15 @@ site/addons/MyAddon/
 
 ## Generating a Fieldtype {#generating}
 
-The `please make:addon` or `please make:fieldtype` commands will create these for you - with some boilerplate code to get you going.
+The `php please make:addon` or `php please make:fieldtype` commands will create these for you - with some boilerplate code to get you going.
 
 The code within the `fieldtype.js` file will be loaded automatically within the Control Panel.
 
 ## The Javascript side {#javascript}
 
 Vue.js lets us do work some magic with the power of two-way data-binding, like knowing and having access to the current state of all data in a Publish screen at all times.
+
+Statamic calls the defined Vue.js component using the props `data`, `config` and `name`.
 
 Let's dive into an example to make things clearer. Have you ever seen one of those password fields with a checkbox that toggles whether the text is visible? Let's build one of those.
 
@@ -70,7 +72,7 @@ Vue.component('password_toggle-fieldtype', {
 
 ### Props
 
-The three `props` are passed into your fieldtype behind the scenes. You have to include that array just like you see above. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
+The three `props` are passed into your fieldtype by a parent fieldtype builder component. You have to include that array just like you see above. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
 
 ### Data 
 
