@@ -90,7 +90,7 @@ On a search result page, you can loop through the results of the search like the
 {{ /search:results }}
 ```
 
-## Distinguising Content Types
+## Distinguishing Content Types
 
 You can use the following helper variables to check and display (or not display) results by content type:
 
