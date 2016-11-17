@@ -112,5 +112,5 @@ $css      = File::disk('themes')->get('redwood/css/style.css');
 $system   = File::get('site/settings/system.yaml');
 ```
 
-You can learn more about manipulating [files](/addons/classes/api/file) and [folders](/addons/classes/api/folder)
+You can learn more about manipulating [files](/addons/api/api-file) and [folders](/addons/api/api-folder)
 over at the [addon docs](/addons).

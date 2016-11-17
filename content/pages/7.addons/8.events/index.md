@@ -133,7 +133,7 @@ public function handle(User $user);
 
 Fired after the navigation has been created. A `Statamic\CP\Navigation\Nav` object will be passed through.
 
-Use this event to [add your own items to the navigation](/addons/classes/navigation).
+Use this event to [add your own items to the navigation](/addons/control-panel).
 
 ```
 public $events = ['cp.nav.created' => 'handle'];

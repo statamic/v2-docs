@@ -17,7 +17,7 @@ To kick off the indexer you can run `php please search:update` in your terminal,
 
 ## The Search Tag {#search-tag}
 
-Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page](/tags/search) for more details, but it works like this:
+Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page][search_tag] for more details, but it works like this:
 
 ```
 {{ search:results }}
@@ -61,7 +61,9 @@ If you'd like to restrict which fields/attributes Algolia makes searchable, you 
 from your Algolia index settings. You may do this from the Algolia website, or through the Control Panel's `Settings > Search`
 page.
 
-Please note that if you set up searchable attributes, you may _only_ use those fields in your [Search Tag](/docs/tags/search)'s
+Please note that if you set up searchable attributes, you may _only_ use those fields in your [Search Tag][search_tag]'s
 `fields` parameter. Specifying any additional fields in the tag parameter will cause your tag to yield no results.
 
 Similarly, only searchable attributes will be used when searching through the Control Panel.
+
+[search_tag]: /tags/search

@@ -46,8 +46,8 @@ $entry->save();
 
 Each factory starts off a little different. Entries use `Entry::create($slug)`, Pages use `Page::create($uri)`. Check out the docs for the factory you're using.
 
-- [ContentFactory](/addons/classes/contentfactory)
-- [PageFactory](/addons/classes/pagefactory)
-- [EntryFactory](/addons/classes/entryfactory)
-- [TermFactory](/addons/classes/termfactory)
-- [GlobalFactory](/addons/classes/globalfactory)
+- [ContentFactory](/addons/api/contentfactory)
+- [PageFactory](/addons/api/pagefactory)
+- [EntryFactory](/addons/api/entryfactory)
+- [TermFactory](/addons/api/termfactory)
+- [GlobalFactory](/addons/api/globalfactory)

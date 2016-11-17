@@ -11,7 +11,7 @@ Statamic emits a `cp.nav.created` just after the Control Panel's navigation gets
 the `Statamic\CP\Navigation\Nav` singleton. Any items added to this class will be reflected in the navigation bar.
 
 ## Adding Items
-Adding a navigation item should be done in your [Listener](/addons/classes/listeners) file.
+Adding a navigation item should be done in your [Listener](/addons/classes/event-listeners) file.
 
 Let's assume we're creating a Store addon, which has products and orders. We'll want to create a navigation item
 like this:
