@@ -5,7 +5,7 @@ overview: >
   By configuring additional locales, content becomes translatable with the flick of a switch. Each language can run on its own URL, so you can have `example.com` and `example.com/de` or `fr.example.com`, or `example.de`. Lots of control. Lots of options.
 ---
 
-## URL Structure
+## URL Structure {#url-structure}
 
 The first step in localizing a Statamic site is to decide on the URL structure.
 
@@ -20,7 +20,7 @@ For example:
 
 In this guide, we will assume we're using this subfolder approach in any examples. If you decide to go a different method, make sure any relative paths are updated for your situation. [See below for the subdomain version](#subdomains).
 
-## Creating the locale roots
+## Creating the locale roots {#locale-roots}
 
 Following from our subfolder example, we'll need to create those folders.
 
@@ -63,7 +63,7 @@ Lastly, the locale. This should correspond with the locale you will be adding to
 $locale = 'fr';
 ```
 
-### Nginx
+### Nginx {#nginx}
 
 If you're using Nginx, you'll want to slap one of these bad boys in for each locale.
 
@@ -77,7 +77,7 @@ location /fr/ {
 }
 ```
 
-## Adding Locales to Settings
+## Adding Locales to Settings {#locales}
 
 Next, Statamic will need to know we intend to localize our content.
 
@@ -102,21 +102,21 @@ locales:
     url: http://example.com/fr/
 ```
 
-## Localizing your content
+## Localizing your content {#localizing-contnet}
 
-### Fields
+### Fields {#fields}
 Once you've added your locales, you need to define which fields may be translated.
 
 You can do this by toggling the "Localizable" option for each field you wish to translate. If you aren't using the CP, you can just add `localizable: true` to each field in your fieldset.
 
-### Editing
+### Editing {#editing}
 Now, when _editing_ content, you should see a "Locales" list in the sidebar. This shows you all of your available locales. A green dot indicates the locale you are currently editing, a hollow dot indicates a locale exists, and no dot means the content hasn't been translated into that locale.
 
 Selecting one of those locales will take you to edit the same page, but only fields marked as localizable will be available.
 
 It's worth noting that a piece of content must already exist in the default locale before it can be localized.
 
-### Files
+### Files {#files}
 
 For those of you that are not using the control panel, or if you are just interested, here's how localizing works with files.
 
@@ -150,7 +150,7 @@ In both Collections and Taxonomies, the localized entries/terms are all stored i
 
 For pages, entries, and taxonomy terms: slugs may be localized by adding a `slug` field to the front-matter. The filenames shouldn't change. They should also all have `id` fields that match their default counterparts.
 
-### Routing
+### Routing {#routing}
 
 It's possible to assign a different collection and/or taxonomy routes for each locale. For example, you may want `/news/my-post` for English, but `/noticias/mi-publicacion` in Spanish.
 
@@ -164,7 +164,7 @@ collections:
 ```
 
 
-## Displaying your content
+## Displaying your content {#diplaying}
 
 When browsing your site, the locale of content that will be displayed will be determined by the URLs defined in your system settings.
 
@@ -239,6 +239,13 @@ Here's a brief rundown of how to setup subdomain locales, assuming you have the 
 - Links to your theme assets won't work because they will be relative, and the files don't actually exist there.  
   You can symlink `site/themes/` to inside your `fr` folder. That'll do the trick.
 - You can consider symlinking your public asset container folders in the same fashion.
+
+## Translating the Control Panel {#control-panel}
+
+You are able to translate the control panel. This is a separate process to localizing your site. The CP may be translated
+into languages other than what your site uses.
+
+Read about it on the [Control Panel](/control-panel#translating) page.
 
 ## Troubleshooting {#troubleshooting}
 
