@@ -99,11 +99,11 @@ For example, `$page->save()` would write both `index.md` and `fr.index.md` for y
 **Note:** It's worth noting that even though the `Data` class can hold data in multiple locales, some data types are not (yet) capable of being localized.
 
 
-# Content {#content}
+## Content {#content}
 
 Content is an extension of Data. Content is generally data that will be accessible on the front end. Pages, Entries, Taxonomy Terms, and Globals are all Content.
 
-## URI {#uri}
+### URI {#uri}
 
 When we talk about URIs in Statamic, we are referring to the identifying part of the URL that comes _after_ the root.
 
@@ -117,7 +117,7 @@ However you may have that page localized in Spanish as `/es/zanahoria`. The URI 
 $uri = \Statamic\API\URL::getDefaultUri('es', '/zanahoria'); // returns /carrot
 ```
 
-## URL {#url}
+### URL {#url}
 
 Similar to a URI, a URL is the location from the domain root.
 
