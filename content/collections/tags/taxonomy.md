@@ -219,4 +219,4 @@ The filter will get the taxonomy collection instance, _not_ the content collecti
 
 
 [conditions]: /conditions
-[custom_filters]: /addons/filters
+[custom_filters]: /addons/classes/filters
