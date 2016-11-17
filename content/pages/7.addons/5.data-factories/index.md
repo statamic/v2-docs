@@ -5,6 +5,8 @@ overview: >
   When you need to create a new data object, you shouldn't be "new-ing" it up like: `new Page`.
   Data Factories exist to make your life easier.
 ---
+**If you haven't already, please consider reading an [overview of managing data](/addons/data).**
+
 Statamic has some data factories that provide you with a nice fluent interface for creating them, as well as handling some additional behind-the-scenes logic automatically for you.
 
 Each data type will have its own factory, but they all follow the same basic workflow. First, use their respective API class to start up the factory. Then, you can go ahead and chain methods onto it. Once you're happy, you can get the object out of the factory.
