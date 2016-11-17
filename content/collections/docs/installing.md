@@ -43,22 +43,22 @@ You can (and probably should) run Statamic _locally_ while you develop your site
 
 If you're into that though, all the better. You can probably skip over the rest of this section.
 
-### Mac: MAMP/MAMP Pro
+### Mac: MAMP/MAMP Pro {#mamp}
 
 The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PHP 5.5.9 and all the modules you need. Download, install, and go.
 
-### Mac: Laravel Valet
+### Mac: Laravel Valet {#valet}
 
 [Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
 You can even share your sites publicly using local tunnels. We use it, it's brilliant.
 
 _Note: Valet supports the out-of-the-box Statamic directory structure. Subdirectory installs don't work._
 
-### Windows: WAMP
+### Windows: WAMP {#wamp}
 
 If you happen to be of the Microsoft persuasion, [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. So we hear.
 
-### Laravel Homestead
+### Laravel Homestead {#homestead}
 
 Prefer a virtual environment? You’re in luck, [Laravel Homestead][homestead] is a pre-packaged Vagrant "box" that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, or any other server software on your local machine. No more worrying about messing up your operating system! If something goes wrong, you can destroy and re-create the box in minutes.
 
@@ -75,7 +75,7 @@ folders:
     type: "nfs"
 ```
 
-### CLI Server
+### CLI Server {#cli-server}
 
 Statamic doesn't support Laravel's native `serve` command, but you _can_ use PHP's CLI Server (for which the `serve` command is just a wrapper for). You must
 specify `statamic/server.php` to use as a router file.
@@ -153,21 +153,21 @@ _Note: Out of the box, Statamic will assume you will be using URL rewrites. If y
 
 Most decent servers will support URL rewriting in some way. Choose your method below:
 
-#### Apache
+#### Apache {#apache}
 
 Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, taking special care to ensure that it's in the same directory as your `index.php` file. They're best friends, don't separate them.
 
 If this doesn't work, you're most likely someone who doesn't follow defaults and runs your own flavor of configuration. Google is your friend. If you're _really_ stuck, we'll do our best to [help you](https://statamic.com/support).
 
-#### Nginx
+#### Nginx {#nginx}
 
 Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further server configuration beyond the scope of this guide.
 
-#### IIS
+#### IIS {#iis}
 
 We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
 
-#### Disabling URL Rewrites
+#### Disabling URL Rewrites {#disable-rewrites}
 
 If for whatever reason you can't or don't want to use URL rewriting, you can configure Statamic to leave `index.php` in your URLs.
 
@@ -186,15 +186,15 @@ If you don't want to (or can't for some reason) use the GUI installer, here's wh
 - Log into the Control Panel at `yoursite.dev/cp`
 - Visit your System settings (/cp/settings/system) and set/confirm your basic site settings
 
-### There is no step 5.
+### There is no step 5. {#no-step-5}
 
 You're probably done. Now for some things to note, and a few additional steps for running above webroot and multilingual sites.
 
-#### About that License Key and Dev Mode
+#### About that License Key and Dev Mode {#dev-mode}
 
 If you don't have a license key, that's okay! You can use Statamic in developer mode for as long as you'd like in your local environment. Just be sure to [purchase](https://store.statamic.com) and add the key to your system config before you launch, otherwise you won't be able to access your control panel.
 
-#### Site URL and Permalinks
+#### Site URL and Permalinks {#site-url}
 
 Out of the box, Statamic will only use relative URLs as a way to get things going smoothly. However if you want to use permalinks (full URLs that
 include your domain) you'll need to adjust it in `site/settings/system.yaml` in the `locales` array. Change the `url` from a relative
@@ -204,7 +204,7 @@ to a full URL like `http://mysite.com/`. If you ran the [installer](#installer),
 
 For extra security you can [move your system files](/knowledge-base/running-above-webroot) above webroot. This prevents system files from potentially being accessed through a browser.
 
-#### Multilingual Sites
+#### Multilingual Sites {#multilingual}
 
 If you'd like to support multiple languages, head over to [Localization][localization] for a few additional steps.
 

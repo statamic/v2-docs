@@ -4,7 +4,7 @@ id: 102f8c10-9120-4a6e-a630-97050b494b89
 overview: >
   A flat-file CMS wouldn't be worth its salt without a few different caching mechanisms. In this guide we peel back the various layers like an onion and make at least one Shrek joke.
 ---
-## An introduction to flat-file caching
+## An introduction to flat-file caching {#intro}
 
 In most "traditional" applications (namely those involving a relational database for content and data storage), caching is usually just a performance-enhancing tool. Statamic on the other hand uses a caching layer as a data-source, much in the way a Redis or NoDB application might. We call this layer the _**"Stache"**_.
 
@@ -14,13 +14,13 @@ If Statamic were to search through and read all of your content and settings fil
 
 Statamic watches for changes to your content and settings and compiles a number of [ephemeral][ephemeral] data structures that are used to power your website not unlike an API. It is this Stache that allows fast content querying, relationships, routing, search indexing, URL traversing, and really everything else that makes Statamic useful. Think of your content as the permanence layer. As long as it exists, the Stache can always be rebuilt.
 
-### How is it invalidated?
+### How is it invalidated? {#stache-invalidation}
 
 Since the Stache is temporary and self-replicating, you can delete it to invalidate it or any content inside it anytime if you have need. Statamic will do this automatically when we detect changes to files or explicitly do so from the Control Panel, but since you can customize this behavior, it's good for you to know how to do it yourself.
 
 To clear the Stache (and refresh any content or settings), you can delete `local/cache/stache` or run `php please cache:clear` via the command line.
 
-### Can I turn it off?
+### Can I turn it off? {#turn-it-off}
 
 It is _always_ enabled and is powered by magic. You cannot, nor should you want to ever turn it off. If you were Aquaman, would you give away your powers? Didn't think so. Everyone wants to talk to fish.
 
@@ -29,7 +29,7 @@ It is _always_ enabled and is powered by magic. You cannot, nor should you want 
 
 The system cache is used by Statamic and addons to store data for defined lengths of time, much like sessions or cookies might do on the browser side. It uses Laravel's [cache][laravel-cache] API. As an example, the Image Transform feature uses this cache to store all the manipulated images and their various sizes.
 
-### How is it invalidated?
+### How is it invalidated? {#cache-invalidation}
 
 Each item in the system cache invalidates itself over time. Some features, like the Search Index Throttle, can have configured lengths of time, and others pre-set. It's highly unlikely you'll have to deal with this directly unless you're building addons.
 
@@ -47,7 +47,7 @@ Blink and Flash are two types of Request-based caches used by Statamic and addon
 
 **Flash** sets data for one-time use in the _next request_, like success messages and whatnot.
 
-### How is it invalidated?
+### How is it invalidated? {#blink-invalidation}
 
 Refresh the page. It's gone. And maybe even back again, who knows? We can't tell from here.
 
@@ -64,11 +64,11 @@ There are times when you may want to simply cache a _section_ of a template to g
 {{ /cache }}
 ```
 
-### Can I turn it off?
+### Can I turn it off? {#frag-off}
 
 Nope, just don't use it if you don't want it.
 
-### How is it invalidated?
+### How is it invalidated? {#frag-invalidation}
 
 Aw man, we were hoping you wouldn't ask that. We'll have a smart or automatic method soon, but for now you could change the markup a little bit (which creates a new cache hash) or manually wipe the System cache.
 
@@ -80,7 +80,7 @@ Certain features, like forms with server-side validation, don't work with static
 
 There are 2 stages of Static caching. Half Measure, and Full Measure.
 
-### Half Measure
+### Half Measure {#half-measure}
 
 Head to `System » Caching` or `site/settings/caching.yaml` and turn on **Static Caching**. This will still run every request through the full Statamic bootstrapping process but will serve all request data from a cache, speeding up load times often by half or more. This is an easy, one-and-done setting.
 
@@ -88,7 +88,7 @@ Head to `System » Caching` or `site/settings/caching.yaml` and turn on **Static
 static_caching_enabled: true
 ```
 
-### Full Measure
+### Full Measure {#full-measure}
 
 **Step one:** Head to `System » Caching` or `site/settings/caching.yaml` and turn on **Static Caching** and set the type to **File**. This will start generating full static HTML pages in a `static/` directory in your webroot.
 
@@ -103,7 +103,7 @@ static_caching_type: file
 
 ![Very Performance! So Speed!](/assets/img/screenshots/performance.png)
 
-### Query strings
+### Query strings {#query-strings}
 
 By default, static caching will _ignore_ any query strings in the URL. For example, visiting `/about` and `/about?something`
 will result in the same page being shown. This is useful for preventing the cache being broken by someone appending
@@ -111,7 +111,7 @@ will result in the same page being shown. This is useful for preventing the cach
 
 _Note that when using `static_caching_type: file`, query strings will **always** be ignored._
 
-### Excluding pages
+### Excluding pages {#excluding-pages}
 
 You may add a list of URLs you wish to exclude from being cached. You may want to exclude pages that need to always be dynamic, such
 as forms and listings with `sort="random"`.
@@ -121,7 +121,7 @@ static_caching_exclude:
   - /contact
 ```
 
-### Invalidation
+### Invalidation {#invalidation}
 
 When using half-measure, you're able to set the number of minutes before the cached pages automatically expire.
 

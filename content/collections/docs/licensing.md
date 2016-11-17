@@ -45,7 +45,7 @@ If any of the following rules match the domain is considered **not public** (let
 - Does it have a dev-sounding subdomain? eg. `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
 - Does it use a dev-related TLD? eg. `.dev`, `.local`, or `.app`
 
-### But you're special, eh?
+### But you're special, eh? {#special}
 
 If everyone was special, then no one would be. But, we understand that sometimes your domains can't be set up to coincide with our rules exactly because of client needs, backwards compatibility, SEO, or the humidity level in Denver. We totally get it.
 
