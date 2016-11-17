@@ -82,7 +82,7 @@ There are 2 stages of Static caching. Half Measure, and Full Measure.
 
 ### Half Measure
 
-Head to `System » Caching` or `site/config/caching.yaml` and turn on **Static Caching**. This will still run every request through the full Statamic bootstrapping process but will serve all request data from a cache, speeding up load times often by half or more. This is an easy, one-and-done setting.
+Head to `System » Caching` or `site/settings/caching.yaml` and turn on **Static Caching**. This will still run every request through the full Statamic bootstrapping process but will serve all request data from a cache, speeding up load times often by half or more. This is an easy, one-and-done setting.
 
 ```
 static_caching_enabled: true
@@ -90,7 +90,7 @@ static_caching_enabled: true
 
 ### Full Measure
 
-**Step one:** Head to `System » Caching` or `site/config/caching.yaml` and turn on **Static Caching** and set the type to **File**. This will start generating full static HTML pages in a `static/` directory in your webroot.
+**Step one:** Head to `System » Caching` or `site/settings/caching.yaml` and turn on **Static Caching** and set the type to **File**. This will start generating full static HTML pages in a `static/` directory in your webroot.
 
 ```
 static_caching_enabled: true
