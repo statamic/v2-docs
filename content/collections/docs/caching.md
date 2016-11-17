@@ -18,7 +18,7 @@ Statamic watches for changes to your content and settings and compiles a number 
 
 Since the Stache is temporary and self-replicating, you can delete it to invalidate it or any content inside it anytime if you have need. Statamic will do this automatically when we detect changes to files or explicitly do so from the Control Panel, but since you can customize this behavior, it's good for you to know how to do it yourself.
 
-To clear the Stache (and refresh any content or settings), you can delete `local/cache/stache` or run `php please cache:clear` via the command line.
+To clear the Stache (and refresh any content or settings), you can delete `local/storage/framework/cache/stache` or run `php please clear:stache` via the command line. (Alternatively, you could also delete `local/storage/framework/cache/` or run `php please clear:cache` via the command line. However, *that* would clear not just the stache, but also the larger cache, of which the stache is just one part.)
 
 ### Can I turn it off?
 
