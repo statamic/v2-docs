@@ -1,5 +1,5 @@
 ---
-title: "TokenMismatchException"
+title: "TokenMismatchException and Load Balancers"
 kb_categories:
   - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
 id: 6e1646e0-b1a6-11e6-9598-0800200c9a66
