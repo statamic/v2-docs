@@ -37,7 +37,15 @@ variables:
   -
     name: errors
     type: array
-    description: An array of any validation errors upon submission.
+    description: An indexed array of any validation errors upon submission. Suitable for looping through. eg. `{{ errors }}{{ value }}{{ /errors }}`
+  -
+    name: error
+    type: array
+    description: An array of validation errors indexed by field names. Suitable for targeting fields. eg. `{{ error:email }}`
+  -
+    name: old
+    type: array
+    description: An array of submitted values from the previous request. Useful for re-populating fields if there are validation errors.
   -
     name: success
     type: boolean
@@ -64,12 +72,19 @@ Here we'll be creating a form to submit an entry in the `contact` form.
         </div>
     {{ /if }}
 
+    {{# You can loop through fields from the formset... #}}
     {{ fields }}
         <div class="form-group">
             <label>{{ display }}</label>
             <input type="text" name="{{ name }}" value="{{ old }}" />
         </div>
     {{ /fields }}
+    
+    {{# Or you can hardcode fields... #}}
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" value="{{ old:email }}" />
+    </div>
 
     <button>Submit</button>
 
