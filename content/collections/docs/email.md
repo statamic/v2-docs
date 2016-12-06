@@ -45,7 +45,13 @@ subfolder of your `site/themes/theme-name/templates/` folder.
 
 ### HTML and Text versions {#html-and-text-versions}
 
-Email templates act the same as any other Statamic template, with one extra feature: you can specify both the text and html versions in the same file. The two versions are separated by `---` with the text version before, and the html version after.
+Email templates act the same as any other Statamic template, with one extra feature: you can specify both the text and html versions in the same file. The two versions are separated by `---` with the text version before, and the html version after. Note that if you’d like to use *only* an html version, you will still need to include at least two lines: *something* and the `---` separator at the start of your template file. For instance:
+```
+(No plaintext version)
+---
+```
+
+followed by your html template—otherwise the email that goes out will be a plain text message cluttered with your html markup.
 
 Since these are Statamic templates, you are able to use any tags, modifiers, and addons that you normally would anywhere else. _Note: you cannot use template front-matter in email templates._
 
