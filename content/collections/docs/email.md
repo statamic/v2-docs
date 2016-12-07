@@ -80,3 +80,15 @@ $email->to('b.lumbergh@initech.com')->subject('TPS Report')->template('tps_repor
 
 $email->send();
 ```
+
+If you have variables to parse in the template, make sure you use the `with` method.
+
+```.language-php
+$vars = [
+  'message' => 'Yeah... I'm gonna need this stapler',
+];
+
+$email->to('m.waddams@initech.com')->subject("You're fired.")->with($vars)->template('fired');
+
+$email->send();
+```
