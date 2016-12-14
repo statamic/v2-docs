@@ -19,7 +19,7 @@ variables:
     description: An array of validation errors.
 id: 9323ebd8-c36c-4f0f-b73a-cb5ac4544e72
 ---
-The `username`, `email`, `password`, and `password_confirmation` fields are all required.
+By default, `username`, `email`, `password`, and `password_confirmation` fields are all required. However, if `login_type` is set to `email` in `site/settings/users.yaml`, the `username` field can be omitted.
 
 ## Example {#example}
 
