@@ -111,7 +111,7 @@ Let's try an analogy, shall we? The Layout is like an intricate, gold-embossed p
 
 ### Rendering That Template {#placing-page-content}
 
-Now can put the `{{ template_content }}` tag anywhere in your Layout and Statamic will replace it with your template injected full of your current page’s data. A simple example might look like this:
+Now you can put the `{{ template_content }}` tag anywhere in your Layout and Statamic will replace it with your template injected full of your current page’s data. A simple example might look like this:
 
 ```
 <!doctype html>
