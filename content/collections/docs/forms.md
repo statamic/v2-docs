@@ -74,9 +74,9 @@ Alternately, you can take a full-control approach and write out all the inputs y
 
   <label>Level of Adoration</label>
   <select name="adoration">
-    <value>Appreciation</value>
-    <value>Fixation</value>
-    <value>Obsession</value>
+    <option>Appreciation</option>
+    <option>Fixation</option>
+    <option>Obsession</option>
   </select>
 
   <label>Your Message</label>
