@@ -11,7 +11,7 @@ string: I+just+want+%26+need+%24pecial+characters%21
 ```
 
 ```
-{{ string | urlencode }}
+{{ string | urldecode }}
 ```
 
 ```.language-output
