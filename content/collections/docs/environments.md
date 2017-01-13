@@ -5,7 +5,7 @@ overview: >
   Sometimes it's beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production.
 ---
 
-## The .env file {#the-env-file}
+## The .env file
 
 The `.env` contains environment level variables. These can be used within Statamic settings files and are also used to change Statamic's behavior.
 
@@ -20,17 +20,17 @@ Your `.env` file should _not_ be committed to version control, since it may cont
 
 If you are developing with a team, you may wish to continue including a `env.example` file. By putting placeholder values in the example file, other developers on your team can clearly see which environment variables are needed to run the site.
 
-## Defining Environments {#defining-environments}
+## Defining Environments
 
 By default, Statamic runs in the `production` environment.
 
 To specify a different environment, add `APP_ENV=foo` to your `.env` file, where `foo` is the name of your environment.
 
-## Environment settings {#environment-settings}
+## Environment settings
 
 There are two options when it comes to environment-specific settings. You can mix-and-match them. Whatever feels natural to you.
 
-### Option 1: Interpolation {#option-interpolation}
+### Option 1: Interpolation
 
 The first option is to add the `.env`-based variables directly into settings files using the `{env‌:}` helper.
 
@@ -54,7 +54,7 @@ NAME=ron
 
 Note: When interpolating, make sure to wrap your value in quotes.
 
-### Option 2: Environment files {#option-environment-files}
+### Option 2: Environment files
 
 The second option is to leverage the environment settings file.
 
@@ -86,6 +86,6 @@ settings:
     debug: "{env:APP_DEBUG}"
 ```
 
-## Editing environment settings {#editing-environment-settings}
+## Editing environment settings
 
 When an environment setting has been used, it becomes uneditable through the control panel. This prevents confusion on where the value is coming from.
