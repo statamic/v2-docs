@@ -145,7 +145,7 @@ bacon_images:
 <img src="/assets/canadian-bacon.jpg" alt="Canadian" /> Size: 125kb
 ```
 
-### Single Assets
+### Single Assets {#single-assets}
 
 If you have an asset field with `max_items: 1` the data will be saved as a `string`. As one cannot iterate over a string, the tag will adjust accordingly without complaining.
 
@@ -163,7 +163,7 @@ hero_image: f9ruqp-pjo32n43ojn3-rijo3209
 <img src="/assets/img/superman.jpg" />
 ```
 
-### Asset (singular) Tag
+### Asset (singular) Tag {#asset-singular-tag}
 
 You may have noticed that "Assets" is plural.  If you have an array of assets and only want the first or if it bothers you that a plural-powered Tag would return a single asset, we have you covered. We also support the singular word `Asset` for the explicit purpose of only ever accessing a single Asset.
 
@@ -181,7 +181,7 @@ hero_image: f9ruqp-pjo32n43ojn3-rijo3209
 <img src="/assets/img/quailman.jpg" />
 ```
 
-### Retrieving assets from a container or folder
+### Retrieving assets from a container or folder {#retrieving-assets-from-a-container-or-folder}
 
 It may be desirable to loop over all the assets in a container or folder instead of needing to pick out assets manually using a field.
 
