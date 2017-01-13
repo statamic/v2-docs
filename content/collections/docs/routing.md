@@ -19,6 +19,7 @@ To create a template route set the desired URL or pattern as a key under `routes
 /search:
   template: search-results
   title: Look What I Found!
+  layout: my-layout
   show_sidebar: false
 ```
 
