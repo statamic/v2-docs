@@ -94,10 +94,10 @@ Sends logs to a [Slack](https://slack.com/) channel.
 ```
 loggers:
   slack:
-    token:
-    channel:
-    username:
-    icon_emoji:
+    username: The user that will post the logs (might want a new one)
+    channel: This should be surround by quotes and include the hash, i.e. `"#myloggingchannel"`
+    token: Go to https://api.slack.com/docs/oauth-test-tokens (making sure you are logged in) and create one for your logging user
+    icon_emoji: This is optional
 ```
 
 #### Fleep {#log-fleep}
