@@ -34,8 +34,8 @@ For example, if you call this method from within `site/addons/MyAddon/MyAddonTag
 
 ## Events
 
-### emitEvent($event)
-Emits an event, namespaced by your addon.
+### emitEvent($event, $payload)
+Emits an event, namespaced by your addon. `$payload` is available to listeners as the first argument.
 
 For example, `$this->emitEvent('hello')` would emit `MyAddon.hello`.
 
