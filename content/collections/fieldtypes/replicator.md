@@ -84,6 +84,6 @@ and the set partial may look something like:
 {{# this is image_set.html #}}
 
 {{ assets:image }}
-  <img src="{{ glide:id }} alt="" >
+  <img src="{{ glide:id }}" alt="" >
 {{ /assets:image }}
 ```
