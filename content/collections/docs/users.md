@@ -27,7 +27,7 @@ Creating a user by hand will involve a plain text password. Have no fear, howeve
 
 ## Permissions
 
-Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Patanel.
+Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Panel.
 
 You can bypass all that by setting `super: true`. You'll have access to everything. And as the developer of a new Statamic site, that's probably what you want.
 
