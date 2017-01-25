@@ -115,6 +115,9 @@ Saves a `$value` to the cache under a `$key` for a specified number of minutes. 
 ### cache->exists($key)
 Checks if a given `$key` exists in the cache.
 
+### cache->forget($key) {#forgetkey-2}
+Clears cache for specific `$key`.
+
 ---
 
 ## Cookie
