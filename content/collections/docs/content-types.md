@@ -30,12 +30,10 @@ The primary attribute that defines a Content Type is the ability to configure an
 
 ### Universally Unique IDs {#ids}
 
-Universally unique IDs are generated for each item in each type, allowing you to relate items with each other and then retrieve that data later in your template if you so desire. Here are a few examples of how this is useful:
+Universally unique IDs are generated for each item in each type, allowing you to relate items with each other and then retrieve that data later in your template if you so desire. Here are a couple of examples of how this is useful:
 
 - Associate a User with an Entry creating an author.
 - Associate a list of Entries with another Entry to establish Related Posts.
-- Include a list of Assets on a page to create a photo gallery complete with pre-established and reusable titles and  captions.
-- Add Taxonomy Terms to an Entry to create tags, letting you sort and filter your entries.
 
 ## The Types {#list}
 
@@ -146,12 +144,7 @@ Each set/file becomes it's own scope, allowing you to group your Globals logical
 
 Assets are files, whether images, videos, documents, zip files, or anything else within reason you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.
 
-Containers can live in a number of locations and mounted onto Statamic:
-
-- Local filesystem
-- Amazon S3 bucket
-- Dropbox
-- S/FTP server
+Containers can live in your local filesystem or on Amazon S3.
 
 ![Assets Container](/assets/img/screenshots/cp-assets.png)
 
