@@ -27,11 +27,11 @@ This also means that you can only use the Control Panel from your _default_ loca
 
 If you attempt to use the site from another domain, you'll get a notification inside the Control Panel informing you that your key is being used on more than one site, and give you some time to figure that out. You may [change the domain][account] associated witha license at any time.
 
-### Developer Mode {#developer-mode}
+### Trial Mode {#trial-mode}
 
-Developer Mode gives you access to all features of Statamic as long as you are on a non-public domain (e.g. your local computer).
+Trial Mode gives you access to all features of Statamic as long as you are on a non-public domain (e.g. your local computer).
 
-[Read more about Developer Mode][dev-mode]
+[Read more about Trial Mode][trial-mode]
 
 ### What is a public domain? {#public-domain}
 
@@ -51,6 +51,6 @@ If everyone was special, then no one would be. But, we understand that sometimes
 
 For example, maybe your staging environment is on an entirely separate domain, like mysite.com and mystagingsite.com. That's okay. You can comma delimit domains in your licenses page, like so: `mysite.com, mystagingsite.com`. Problem solved.
 
-[dev-mode]: /knowledge-base/developer-mode
+[trial-mode]: /knowledge-base/trial-mode
 [terms]: https://statamic.com/terms
 [account]: https://account.statamic.com/licenses
