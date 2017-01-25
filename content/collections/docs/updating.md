@@ -18,9 +18,13 @@ You can get to this section at any time by going to `Tools » Updater`. It's pos
 
 ## Manual updates {#manual-updates}
 
-If you need to update your install by hand, download the latest version from [statamic.com](http://statamic.com) and replace your `statamic/` folder with the newest one, and then run `php please clear:cache` to – you guessed it – clear your cache.
+Manually updating is just as simple:
 
-If you have any addons installed, you should run `php please addons:refresh` to make sure they know there has been an update. If you don't have command line access, you can go to `Configure » Addons` and click "Refresh".
+- Download the latest version from [statamic.com](http://statamic.com).
+- Replace your `statamic/` folder with the newest one.
+- Run `php please clear:cache`.
+- Run `php please update:housekeeping` to perform any additional tasks that the updater would have taken care of automatically.
+- Run `php please addons:refresh` if you have any addons installed.
 
 ---
 
