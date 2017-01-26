@@ -11,6 +11,22 @@ options:
       The _name_ of the Redactor setting configuration you want to use.
       If you leave this blank, or specify a name that doesn't exist,
       Statamic will use the first set of settings in the list.
+  -
+    name: container
+    type: string
+    description: >
+      An asset container ID. When specified, the fieldtype will allow the user to add assets from the specified container.
+  -
+    name: folder
+    type: string
+    description: >
+      The folder (relative to the asset container) to use when choosing assets. If left blank, the root folder of the container will be used.
+  -
+    name: restrict_assets
+    type: bool
+    description: >
+      If set to `true`, navigation within the asset browser dialog will be disabled, and you
+      will be restricted to the container and folder specified.
 id: 25d8be49-2300-42ac-90e4-92df42fc2906
 ---
 ## Data Structure {#data-structure}
