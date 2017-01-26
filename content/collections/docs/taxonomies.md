@@ -143,6 +143,18 @@ You can decide whether to match *any* or *all* of the provided terms with the  `
 {{# Entries with both foo and bar will be matched. #}}
 ```
 
+You may filter by terms in multiple taxonomies by using multiple parameters.
+
+```
+{{ collection:blog taxonomy:tags="news" taxonomy:categories="chicken" }}
+{{#
+    Entries tagged with "news" AND categorized as "chicken" will be matched.
+    
+    Entries tagged with "news" but not categorized as "chicken" will not be matched.
+    The entry must satisfy both parameters.
+#}}
+```
+
 When on a term's URL (e.g. when matching a Taxonomy route pattern), adding `taxonomy="true"` will automatically filter your collection by the current term.
 
 ```
