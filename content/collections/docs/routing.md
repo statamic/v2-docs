@@ -42,7 +42,7 @@ routes:
 
 Any URL with `knock-knock-jokes` as the first segment, _anything_ as the second segment, and `punch-line` as the third, will match this route and be rendered with the `joke` template.
 
-You can pass the value of the wildcard segment into the template and create a variable on the fly. Instead of `*` you can set a parameter like this:
+You can pass the value of the wildcard segment into the template and create a variable on the fly. Instead of `*` you can set a parameter _name_ like this:
 
 ``` .language-yaml
 routes:
@@ -52,8 +52,6 @@ routes:
 Given a URL of [example.com/knock-knock-jokes/little-old-lady/punch-line](), your template can use `{{ setup }}` to access the value `little-old-lady`. This is more consistent, reliable, and readable than relying on segment variables and allows you to change the routes and rearrange your site structure without ever breaking a link.
 
 These wildcard variables can contain upper and lowercase letters, numbers, and underscores.
-
-> You can use wildcards and wildcard variables in your routes file, but you can't use both of them in the same route pattern.
 
 ### Ignoring Segments {#ignoring-segments}
 
@@ -77,22 +75,27 @@ Here's an example on how you might use this in the context of a form submission 
 {{ /if }}
 ```
 
-## Collection Routes {#collection-routes}
+## Collection and Taxonomy Routes {#collection-routes}
 
-By their very nature Collections don't determine their own URLs. To do so would limit their flexibility. This is where you get to decide just how their URLs are structured and where they go.
+By their very nature, Collections and Taxonomies don't determine their own URLs. To do so would limit their flexibility. This is where you get to decide just how their URLs are structured and where they go.
 
-The syntax is very similar to the [Template Routes'](#template-routes), plus all of the collection's custom field variables are available, along with a few other "meta" variables. Instead of passing variables into templates, here you're passing variables into the URL. It's the same, except different.
+The syntax is very similar to the [wildcards](#wildcard-segments) above, but instead of passing variables into templates, here you're passing variables into the URL. It's the same, except different.
 
-- `slug`
-- `year`
-- `month`
-- `day`
-- `order_key`
+Here are some things to note:
+
+- Entries and terms can use any variables from their data / front-matter.
+- Date-based entries also have access to `year`, `month`, and `day`.
+- Values will be slugified. Handy if the values are multi-word or contain international characters.
+- If an array is encountered, the first item will be used. (More info below)
+
+For example:
 
 ``` .language-yaml
 collections:
   blog: /blog/{year}/{month}/{slug}
   locations: /stores/{state}/{city}
+taxonomies:
+  tags: /blog/tags/{slug}
 ```
 
 Any time you're looping through the collection to render its data, each entry's `{{ url }}` will match to this format. For the `locations` collection, you could see URLs like the following:
@@ -105,47 +108,66 @@ And in the blog you might see this:
 - `/blog/2015/12/christmas-already-what-the-heck`
 - `/blog/2016/01/where-did-the-year-go`
 
-## Taxonomy Routes {#taxonomy-routes}
+Terms get their own URLs too. Some tag URLs might look like this:
 
-Taxonomy Terms are handled almost exactly like Entries and you can define the routes used when rendering a Taxonomy listing or index for each Taxonomy.
+- `/blog/tags/news`
+- `/blog/tags/events`
 
-The Taxonomy Term's `slug` variable is available for you to use in your patterns.
+### Arrays in Routes {#arrays-in-routes}
+
+When a route contains an array value, Statamic will use the first item.  
+
+We'll use a typical clothing store example. Say they have a product collection, where one product could be 
+in multiple categories, like this:
 
 ``` .language-yaml
-taxonomies:
-  categories: /blog/category/{slug}
-  sizes: /products/sizes/{slug}
-  colors: /products/colors/{slug}
+title: Awesome Shirt
+categories:
+  - shirts
+  - menswear
 ```
 
-> You can create any URL structure you like but keep in mind that the `taxonomy="true"` parameter on the Collection tag will assume the last 2 segments in your URL are the Taxonomy and Term's `slug`, respectively.
+Given a route of `/products/{categories}/{slug}`, the URL would be `/products/shirts/awesome-shirt`.  
+Since `categories` is an array, Statamic used the first item, which was `shirts`.
+
 
 ## Redirects {#redirects}
 
-_document these_
+Statamic supports 2 methods of redirecting routes. "Vanity" (ie. not permanent) redirects, and regular (ie. permanent) redirects. They both have their pros and cons.
 
-### Best Practices
+### Vanity URLs {#vanity-urls}
 
-While it’s possible to create permanent redirects with the vanity URLs feature, it’s best practice to do this via an `.htaccess` file or similar method. Vanity URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
+A Vanity URL is a dummy, easy to remember URL that redirects you to a permanent URL. A perfect use case would be to create a `example.com/promo` URL that redirects you to `example.com/blog/2016/09-this-months-promo`. You can change this redirect to any URL, any time, and never have to update your marketing material, ad buy, ad so on.
 
-## Vanity URLs {#vanity-urls}
-
-A Vanity URL is a dummy, easy to remember URL that redirects you to a perminant URL. A perfect use case would be to create a `example.com/promo` URL that redirects you to `example.com/blog/2016/09-this-months-promo`. You can change this redirect to any URL, any time, and never have to update your marketing material, ad buy, ad so on.
-
-
-
-```
+``` .language-yaml
 vanity:
   /party: /my-long/page-name
 ```
 
 This will forward `http://yoursite.com/party` to `http://yoursite.com/my-long/page-name`. Simple.
 
-### Best Practices
+**Best Practices**  
+Vanity routes are _not_ permanent redirects, but rather temporary or utility 302s.
 
-Vanity routes are _not_ perminant redirects, but rather temporary or utility 302s.
+### Regular / Permanent / 301 Redirects {#301-redirects}
+
+Whatever you like to call them, these are basically permanent. (Or at least, quite difficult to undo.)
+
+``` .language-yaml
+redirects:
+  /party: /my-long/page-name
+```
+
+**Best Practices**  
+You better be sure about what you enter here. Browsers can cache these pretty agressively and it can be hard to undo.
+
+Also, while it’s possible to create permanent redirects with this feature, it’s best practice to do this via an `.htaccess` file or similar server-based method. URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
+
 
 ## Content Types {#content-types}
+
+Don't confuse these with Statamic's Content Types (Naming things is hard, okay?)  
+Right now, we're talking about the MIME types that will be sent to your server through the `Content-Type` header.
 
 By default, pages are served as `text/html` which shouldn't come as a surprise. However, you may want to serve other
 types, like an RSS feed or JSON. To do this, just add `content_type` to your front-matter or route definition with the
