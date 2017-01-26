@@ -3,8 +3,8 @@ title: Taxonomy
 extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 description: Attach Taxonomy Terms to your content.
 overview: >
-  Allows you attach Taxonomy Terms to your content. Tagging, Categories, Colors, Flavors, you name it. Taxonomy all the things!
-image: 0c490534-470b-4255-a19a-29739fef10cf
+  Allows you attach Taxonomy Terms to your content. Tags, Categories, Colors, Flavors, you name it. Taxonomy all the things! Learn more about [Taxonomies](/taxonomies).
+image: 4d887024-b2d8-4d43-ae29-b10394d17574
 options:
   -
     name: taxonomy
@@ -20,16 +20,13 @@ options:
 id: 31adcc00-4fbb-4fe9-9b48-401061273096
 ---
 
-## This is a special field! {#special}
 
-If taxonomizing content (this is what most people use this field for), you should place this field within the `taxonomies` key in your fieldset. [More details](/taxonomies#control-panel)
-
-If not being used for taxonomizing ([more details](#without-taxonomizing)), put it in your `fields` array as usual.
+> **This is a special field!**
+If [taxonomizing content](/taxonomies#control-panel) (the most common use case), you should place this field within the `taxonomies` key in your fieldset. Othrwise, learn more about [how else it can be used](#without-taxonomizing).
 
 ## Data Structure {#data-structure}
 
-If the field is an actual taxonomy and used for taxonomizing (ie. the field name matches the taxonomy handle) then
-the term's slugs will be saved.
+If the field is being used for taxonomizing your content (ie. the field name matches the taxonomy handle), the term's _slugs_ will be saved.
 
 ``` .language-yaml
 wildlife:
@@ -37,7 +34,7 @@ wildlife:
   - three-toed-sloth
 ```
 
-Otherwise, the term's IDs will be saved. See [below](#without-taxonomizing) for more detail.
+However, if you just want to store references to taxonomy terms for other purposes, the term's IDs will be saved. See [below](#without-taxonomizing) for more detail.
 
 A term ID is the taxonomy handle combined with the slug.
 This way, you may reference terms from multiple taxonomies.
@@ -70,14 +67,11 @@ you will have all of the term's data available as variables.
 
 ## Using terms without taxonomizing {#without-taxonomizing}
 
-The usual usage for taxonomies is to "taxonomize" some content. Or, "to tag content".
+The most common use for this fieldtype is to taxonomize, or "tag", your entry.
 
-However, sometimes you just want to pick some additional terms. For instance you might have a "similar tags" field. 
-Or perhaps on a Page you'd like to select which terms you want to be displayed somewhere.
+However, sometimes you have other ideas in mind for using taxonomy terms. For instance, you might have a "similar tags" field, or want to create an index of many different, unrelated things. In this case, you aren't tagging the entry itself at all.
 
-In this case, you aren't really "taxonomizing" (or "tagging") the content.
-
-When using the taxonomy field in this way, terms will get saved using IDs instead of slugs.
+When using the taxonomy field in this way, terms will get saved using _IDs_ instead of slugs.
 
 ```
 similar_things:
