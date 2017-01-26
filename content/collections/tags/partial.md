@@ -17,8 +17,6 @@ parameters:
     description: >
       Any additional parameters specified will
       be sent into the partial as variables.
-      To pass in a variable, just use its
-      name. More information below.
 id: 1f683992-401e-44f6-8506-7967005778a5
 ---
 ## Example 1: The header {#example-header}
@@ -69,17 +67,9 @@ Then in our template, we want to output those animals using the partial.
 
 ```
 <div>
-  {{ partial:list header="Favorite Animals" items="animals" }}
+  {{ partial:list header="Favorite Animals" :items="animals" }}
 </div>
 ```
-
-Any parameters that are passed into the `partial` tag will be used as variables within the partial. So here we have `header` and `items`.
-
-Statamic will look for variables first, and then just treat them as strings.
-
-In the example, there is no variable named `{{ Favorite Animals }}`, so it will just use `Favorite Animals`, the string.
-
-But there _is_ an `{{ animals }}` variable, so it'll pass that through to the partial as `{{ items }}`.
 
 The resulting output would look like this:
 
@@ -91,3 +81,5 @@ The resulting output would look like this:
   <li>Alligator</li>
 </ul>
 ```
+
+The `:items` parameter was prefixed by a colon, which means it will be [retrieved from the context](/antlers#vars-in-params).
