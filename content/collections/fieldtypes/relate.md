@@ -21,6 +21,10 @@ options:
     type: string
     description: >
       How the values should appear. You may use variables within the string, eg. `"{{ title }} ({{ date format="Y" }})"`
+  -
+    name: mode
+    type: string *tags*
+    description: "Available UI modes are `panes` and `tags`."
 ---
 ## Relationship Types
 
@@ -30,32 +34,3 @@ You can relate any of the base [Content Types](/content-types), each of which wi
 - [Collection](/fieldtypes/collection) - for Entries
 - [Users](/fieldtypes/users) - for Users
 - [Assets](/fieldtypes/assets) - for Assets (it doesn't extend this Relate fieldtype)
-
-## Data Structure {#data-structure}
-
-Content relationships are formed between files through unique IDs. This `id` prevents any disruptions if their slugs, urls, or any other identifying fields are modified.
-
-``` .language-yaml
-wildlife:
-  - 892jfsd9a90as
-  - 134jk1h78dfas
-```
-
-### Templating {#templating}
-
-Use the [Relate tag](/tags/relate) to loop through the IDs and fetch the content data.
-
-```
-<ul>
-  {{ relate:wildlife }}
-    <li>{{ title }}</li>
-  {{ /relate:wildlife }}
-</ul>
-```
-
-``` .language-output
-<ul>
-  <li>Moose</li>
-  <li>Squirrel</li>
-</ul>
-```
