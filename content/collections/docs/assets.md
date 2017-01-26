@@ -2,47 +2,34 @@
 title: Assets
 id: 28bf911b-8f47-489b-8040-37607733b270
 overview: >
-  If we're going to have assets around, we have to be concerned about them and take care of them. This is a happy place. Let's make friends with our assets. Everyone needs a friend.
+  Assets are files that you want to take special care of. Special files. Files you'd like to be friends with, and invite over for dinner. They allow you attach add extra data to your files, like alt tags and captions, and can be managed with special Tags and Fieldtypes.
 ---
 ## Overview {#overview}
 
----
+> **Assets have recently been redesigned in Statamic 2.5.**  
+[Check out the differences](#statamic-2-5)!
 
-**Assets have been revamped with the release of Statamic 2.5.**  
-These docs assume you're using at least version 2.5.  
-If you're upgrading, [check out the differences below](#statamic-2-5).
-
----
-
-Assets are files, whether images, videos, documents, zip files, or anything else within reason you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.
+Assets can be images, videos, documents, zip files, or just about anything else you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.
 
 ![Some possible Assets](/assets/img/other/assets-filetypes.png)
 
 ## Containers {#containers}
 
-Each asset container has its configuration file located in `site/content/assets`.  
-For example, `site/content/assets/main.yaml` where `main` is the ID.
+Each asset container is represented by a yaml file inside  `site/content/assets`. We call the name of that file (e.g. `main.yaml`) the container ID.
 
-The container holds the details about its root location. This can be a folder on the server, or credentials to an Amazon S3 bucket. See the [Asset Container Drivers](#asset-container-drivers) for more detail.
+The container holds the details about the root location of its assets. The location can be a local folder or credentials to an Amazon S3 bucket. See the [Asset Container Drivers](#asset-container-drivers) for more detail. The container also holds any additional asset data.
 
-The container also holds any additional asset data.
-
-You may find it easier to create an asset container using the CLI with this command:
+You can use the wizard in the Control Panel found at `Configure > Content > Assets`, or use the CLI command:
 
 ``` .language-cli
 php please make:asset-container
 ```
 
-You may also use the wizard in the Control Panel found at `Configure > Content > Assets`.
-
-
 ## Managing Assets {#managing-assets}
 
-Any files placed within an asset container's directory will be recognized as assets. You may add as many subfolders as necessary to stay organized.
+Any files placed within an container's directory will be recognized and treated as assets. Subfolders are supported. Organize however you'd like.
 
-You can reference assets within your content by using its URL.
-
-For example:
+You can reference assets within your content by using its URL. For example:
 
 ``` .language-yaml
 title: Vacation to Italy
@@ -51,18 +38,35 @@ photos:
   - /assets/vacations/italy/colosseum.jpg
 ```
 
-The exception to this is assets located in private containers. Their IDs should be saved within content. See [Private Assets](#private-assets) for more detail.
+**Private Containers**
 
-If you're using the Control Panel, the [Asset fieldtype][assets-fieldtype] can be used to browser, select, upload, reorder, and remove assets from your content.
+There's always an exception to the rule. If you have a private container, perhaps located above webroot to protect your downloads, you'll need to also reference the container ID in your filename. See [Private Assets](#private-assets) for more detail.
 
-![Asset Fieldtype](/assets/img/other/cp-asset-fieldtype.png)
+## Control Panel {#control-panel}
 
-Moving or renaming assets (either manually or through the Control Panel) will *not* automatically update your content, which may result in broken links.
+In the Control Panel you have a number of ways to interact with your Assets. 
+
+You can use the Asset Manager to browse, edit, manage all your Assets across all containers, in one location.
+
+<div class="screenshot">
+  <h3>Asset Manager</h3>
+  <img src="/assets/img/other/cp-asset-manager.png">
+</div>
+
+You can also the [Assets fieldtype][assets-fieldtype] to to browse, select, upload, reorder, and remove assets from your content.
+
+<div class="screenshot">
+  <h3>Asset Fieldtype</h3>
+  <img src="/assets/img/other/cp-asset-fieldtype.png">
+</div>
+
+
+> Moving or renaming assets (either manually or through the Control Panel) will *not* automatically update your content, which may result in broken links. Thankfully the fix is only a Find & Replace away, right?
 
 
 ## Templating {#templating}
 
-Since assets live in your content with their URLs, you can simply iterate over an array:
+As assets are referenced in your content data by their URLs, you can iterate over the array directly:
 
 ```
 {{ photos }}
@@ -75,7 +79,7 @@ Since assets live in your content with their URLs, you can simply iterate over a
 <img src="/assets/vacations/italy/colosseum.jpg" />
 ```
 
-Of course, if your YAML contains a string instead of an array, or you'd like to target a specific item in the array, you can do that too:
+If your YAML contains a string instead of an array, or you'd like to target a specific item in the array, you can do that too:
 
 ``` .language-yaml
 photo: /assets/jerky.jpg
@@ -94,9 +98,9 @@ photos:
 /assets/whisky.jpg
 ```
 
-For more control, you may use the [Assets (or Asset) Tag][assets-tag].
+For even more control, and to use data associated with your assets, you may use the [Assets Tag][assets-tag].
 
-These tags will convert your URL references to actual Asset objects, which can contain more data for you to use within your templates.
+These tags will convert your URL references to Asset _objects_, which in turn contain all the additional data for you to use in your templates.
 
 ```
 {{ assets:photos }}
@@ -134,7 +138,7 @@ assets:
 When moving or renaming an asset, be sure to update its key in this array.  
 If you're using the Control Panel, this will be done automatically for you.
 
-Note: If you don't need any additional asset data, simply do nothing! (That's one of the changes that landed in [Statamic 2.5 - check it out](#statamic-2-5).)
+Note: If you don't need any additional asset data, you need nothing more than the URL reference. (That's one of the changes that landed in [Statamic 2.5 - check it out](#statamic-2-5).)
 
 
 ## Private Assets {#private-assets}
@@ -143,16 +147,16 @@ Sometimes it's handy to store assets that shouldn't be freely accessible through
 
 This means you should put the container somewhere above the webroot, which in turn means that it doesn't have a URL, nor will any of its assets.
 
-You may still reference and access private assets, by using a couple of extra steps.
+You can reference and access private assets with a few extra steps.
 
-Since private assets have no URLs, you must reference them with their IDs, which is the container ID and the path joined by a double colon.
+Since private assets have no URLs, you must reference them with their IDs, the container ID and the path joined by a double colon.
 
 ``` .language-yaml
 top_secret_stuff: 
   - confidential::docs/evil-lair-blueprints.jpg
 ```
 
-However now you can't simply iterate over `top_secret_stuff`, since it doesn't contain any real URLs. To combat this, you'll need to use the [Glide Tag][glide-tag] to transform it and place in a public location. You can even just use the glide tag without any parameters.
+However, you can't iterate over `top_secret_stuff` directly since it doesn't contain working URLs. If working with images you'd like to display, you can  use the [Glide Tag][glide-tag] to transform it and render a copy in a public location. You can even just use the glide tag without any parameters.
 
 ```
 {{ top_secret_stuff }}
@@ -160,14 +164,14 @@ However now you can't simply iterate over `top_secret_stuff`, since it doesn't c
 {{ /top_secret_stuff }}
 ```
 
-Of course, private assets may also have [their own data](#additional-data) which you can access using the [Assets tag][assets-tag] as mentioned earlier.
+Private assets may also have [their own data](#additional-data) which you can access using the [Assets tag][assets-tag] as mentioned earlier.
 
 
 ## Image Manipulation {#image-manipulation}
 
-Image assets may be manipulated in a number of ways. Size, color, quality, etc. We use [Glide](http://glide.thephpleague.com/) to power our image transformations.
+Image assets may be manipulated in a number of ways. You can alter size, color, quality, sharpness, and so o. We use [Glide](http://glide.thephpleague.com/) to power our image transformations.
 
-Statamic provides a URL-based manipulation API through Glide. Everything runs through a manipulation route (which by default is `img`.)
+Statamic provides a URL-based manipulation API through Glide. Everything runs through a manipulation route, which by default is `/img`. In other words, all images that start with `/img/*` will be manipulated.
 
 For example, take this URL:
 
@@ -205,25 +209,25 @@ image_manipulation_presets:
     h: 600
 ```
 
-Whenever you upload a new image asset through the control panel, all of that image's presets will be created automatically.
+Whenever you upload a new image asset through the control panel, all of that image's presets will be created _automatically_.
 
-To generate the presets for existing assets, you can run `php please assets:generate-presets`.
+To pre-generate the presets for existing assets, you can run the CLI command `php please assets:generate-presets`.
 
 #### Queueing Presets {#queueing-presets}
 
-As mentioned earlier, presets are generated when you upload the assets. Depending on how many presets you have, and what's involved in each one, this may take a long time or even cause the request to run out of memory.
+Presets are generated when you upload the assets. Depending on how many presets you have, and what's involved in each, this may take a long time, or even cause the request to run out of memory.
 
-You may place the presets in a queue so they can run in the background.
+You may push the presets into a queue so they can run in the background. Here's how:
 
 - Ensure [Redis][redis] is installed and running on your server.
 - Add `QUEUE_DRIVER=redis` to your `.env` file. [What's an .env file?](/environments).
 - Run `php please queue:listen`
 
-
+You can use whatever drivers Laravel supports for queues. On [Laravel Forge](https://forge.laravel.com), beanstalkd is enabled by default. 
 
 ## Asset Container Drivers {#asset-container-drivers}
 
-The examples above assume you are storing your assets in folders within your site. However, it’s possible to store them in other locations on your server, or even in the cloud using [Amazon S3](https://s3.amazonaws.com/).
+The examples above assume you are storing your assets in folders within your site. However, it is possible to store them in other locations on your server, or even in the cloud using [Amazon S3](https://s3.amazonaws.com/).
 
 Within each container’s configuration file, you may specify the `driver` and its various options.
 
@@ -275,14 +279,15 @@ The filesystem may be cached with [Redis][redis] to prevent repeated API calls.
 
 ## Statamic 2.5 Changes {#statamic-2-5}
 
-Statamic 2.5 changed a lot of how the asset system works. If you're coming from an earlier version, here's what you'll want to know:
+Statamic 2.5 fundamentally changed how the asset system works, for ease of use _and_ for performance reasons. If you're coming from an earlier version, here's what you'll want to know:
 
-- You no longer need to add each asset to a YAML file. If the file exists in the folder, it exists.
+- You no longer need to add each asset to a YAML file. If the file exists in the folder, it simply exists. No syncing necessary.
 - The containers have moved from `site/storage/assets/[id]/container.yaml` to `site/content/assets/[id].yaml`.
 - Instead of a separate `folder.yaml` file to track assets in each subfolder, all additional asset data is held in the container file.
-- You now reference assets in your content with URLs instead of IDs.
-- Asset IDs technically still exist, but now they are just `[container id]::[path to file]`. Not a crazy UUID.
+- You now reference assets in your content with their URLs instead of IDs.
+- Asset IDs _technically_ still exist, but now they are just `[container id]::[path to file]`. Not a crazy UUID.
 - Asset IDs are used in your content for private containers.
+- All of the required changes are handled during the upgrade process. It's all automatic.
 
 
 [glide-tag]: /tags/glide

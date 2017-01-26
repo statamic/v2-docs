@@ -7,7 +7,7 @@ overview: |
 ## Overview {#overview}
 
 > **Taxonomies have recently been redesigned in Statamic 2.5.**  
-If you've recently upgraded, [check out the differences](#statamic-2-5).
+[Check out the differences](#statamic-2-5)!
 
 Taxonomies are one of Statamic's 6 core [Content Types][content-types]. They are similar, in many ways, to Entries and Pages. Each Taxonomy can have its own fields, unique slugs, and be routed with supported URL patterns. They differ in that they are not meant to be stand-alone content, but rather describe and group _other_ content.
 
