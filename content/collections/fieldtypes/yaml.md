@@ -1,7 +1,7 @@
 ---
 title: YAML
 overview: >
-  A Code textarea that will store data as raw YAML.
+  A textarea with a code editor behind the scenes to help you write and store raw data as YAML. [Learn more about YAML](/yaml).
 image: d9da02ac-097d-46f7-b288-67d5c13852fc
 options:
   -

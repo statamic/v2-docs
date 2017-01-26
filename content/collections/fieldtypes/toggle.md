@@ -1,6 +1,6 @@
 ---
 title: Toggle
-overview: A tactile on/off switch. 
+overview: A tactile on/off switch. It's used to create boolean settings. True and false. Nice, simple, and uncomplicated.
 image: e9be6d9e-7678-444d-ba27-85ebb0eed3aa
 id: ac5f8f98-616f-4621-a7ee-dbc8bbc15525
 ---
