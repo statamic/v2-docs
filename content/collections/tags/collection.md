@@ -204,7 +204,7 @@ on date-based entries would still be the entry date.
 
 ## Filtering {#filtering}
 
-There are two options when it comes to filtering. There's the conditions syntax, and the custom filter class. You can't use both at the same time, so pick your poison.
+There are a number of ways to filter your collection. There's the conditions syntax for filtering by fields, taxonomy filter for using terms, and the custom filter class if you need extra control.
 
 ### Conditions syntax {#conditions}
 
@@ -219,6 +219,18 @@ Want to get entries where the title has the words "awesome" and "thing", and "jo
 ```
 
 There are a bunch of conditions available to you, like `:is`, `:isnt`, `:contains`, `:starts_with`, and `:is_before`. There are many more than that. In fact, there's a whole page dedicated to [conditions - check them out][conditions].
+
+### Taxonomies {#taxonomies}
+
+Filtering by a taxonomy term (or terms) is done using the `taxonomy` parameter, similar to the conditions syntax mentioned above.
+
+To show entries with the `harry-potter` term within the `tags` taxonomy, you could do this:
+
+```
+{{ collection:blog taxonomy:tags="harry-potter" }}
+```
+
+[Read more about filtering in the Taxonomies Guide](/taxonomies#collections)
 
 
 ### Custom filters {#custom-filters}
