@@ -39,6 +39,10 @@ public function doSomething(PageDeleted $event)
 
 ## Events {#events}
 
+### Laravel {#laravel}
+
+Statamic provides its own events, however you are free to also listen for any [Laravel events](https://laravel.com/docs/5.1/events#framework-events) such as `auth.login` and `auth.logout`.
+
 ### cp.add_to_head {#cpaddtohead}
 
 Fired on every CP request. Any strings returned will be added to the Control Panel’s `<head>` element. Useful for adding early-loaded Javascript.
