@@ -223,6 +223,25 @@ public $events = ['user.registered' => 'handle'];
 public function handle(User $user);
 ```
 
+### auth.login {#authlogin}
+
+Fired after a user has logged in with the [Login Form](/tags/user-login_form). The `User` and if the session should persist will be passed through.
+
+```
+public $events = ['auth.login' => 'handle'];
+
+public function handle(User $user, $remember);
+```
+
+### auth.logout {#authlogout}
+
+Fired after a user has logged out. The `User` will be passed through.
+
+```
+public $events = ['auth.logout' => 'handle'];
+
+public function handle(User $user);
+```
 
 ### Statamic\Events\StacheUpdated {#statamiceventsstacheupdated}
 
