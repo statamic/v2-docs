@@ -53,7 +53,7 @@ You can use the Asset Manager to browse, edit, manage all your Assets across all
   <img src="/assets/img/other/cp-asset-manager.png">
 </div>
 
-You can also the [Assets fieldtype][assets-fieldtype] to to browse, select, upload, reorder, and remove assets from your content.
+You can also use the [Assets fieldtype][assets-fieldtype] to browse, select, upload, reorder, and remove assets from your content.
 
 <div class="screenshot">
   <h3>Asset Fieldtype</h3>
