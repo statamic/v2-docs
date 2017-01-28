@@ -152,7 +152,7 @@ layout: landing_b
 ---
 ```
 
-This will use the code from `promo.html` within your current theme’s `layouts` folder. If that file doesn’t exist, Statamic will graciously display an error.
+This will use the code from `landing_b.html` within your current theme’s `layouts` folder. If that file doesn’t exist, Statamic will graciously display an error.
 
 #### Per Folder
 
