@@ -39,7 +39,7 @@ like field weighting, typo tolerance, etc – we recommend using the Algolia dri
 
 ### Algolia {#algolia-driver}
 
-[Algolia](https://algolia.com) is a popular search service. It is lightning fast and highly customizable.
+[Algolia](https://www.algolia.com/referrals/36eaab9b/join) is a popular search service. It is lightning fast and highly customizable.
 
 To enable the Algolia driver (first make sure you have an account) head to the `Settings > Search` page, select `algolia`, and enter your API credentials. That's it.
 
@@ -52,6 +52,7 @@ If you are using the Algolia driver we recommend using a Javascript implementati
 
 Here's a couple of links to get you started:
 
+- [Free Algolia Signup](https://www.algolia.com/referrals/36eaab9b/join)
 - [Algolia JavaScript docs](https://www.algolia.com/doc/javascript)
 - [Algolia demos](https://www.algolia.com/demos)
 
