@@ -169,7 +169,7 @@ Private assets may also have [their own data](#additional-data) which you can ac
 
 ## Image Manipulation {#image-manipulation}
 
-Image assets may be manipulated in a number of ways. You can alter size, color, quality, sharpness, and so o. We use [Glide](http://glide.thephpleague.com/) to power our image transformations.
+Image assets may be manipulated in a number of ways. You can alter size, color, quality, sharpness, and so on. We use [Glide](http://glide.thephpleague.com/) to power our image transformations.
 
 Statamic provides a URL-based manipulation API through Glide. Everything runs through a manipulation route, which by default is `/img`. In other words, all images that start with `/img/*` will be manipulated.
 
