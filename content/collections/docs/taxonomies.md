@@ -64,7 +64,7 @@ A term **value** is how you might identify a term in your content. For example, 
 
 A term **slug** is the URL-safe version, and is what Statamic uses internally to track terms, e.g. `star-wars`. The slug is created automatically based on a few rules. Let's cover them now.
 
-** How we slugify your terms:**
+### How we slugify your terms: ###
 
 ``` .language-yaml
 tags:
