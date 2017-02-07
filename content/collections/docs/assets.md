@@ -179,7 +179,7 @@ For example, take this URL:
 /img/assets/vacations/italy/trevi-fountain.jpg?w=100&h=100
 ```
 
-- Statamic sees its an image manipulation URL because it starts with `/img/`
+- Statamic sees it's an image manipulation URL because it starts with `/img/`
 - It sees the path to an image: `assets/vacations/italy/trevi-fountain.jpg`
 - It will manipulate and output an image based on the parameters. `?w=100&h=100`.
 
