@@ -19,3 +19,8 @@ options:
     description: >
       If set to `true`, navigation within the asset browser dialog will be disabled, and you
       will be restricted to the container and folder specified.
+  -
+    name: cheatsheet
+    type: bool
+    description: >
+      If set to `true`, display a link to open a Markdown cheatsheet from the specified field.
