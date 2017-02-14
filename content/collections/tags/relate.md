@@ -5,11 +5,17 @@ overview: |
   Relate allows you to fetch content from a relationship using a very simple tag syntax. Relate tags can even be nested inside each other.
 
   It is designed to work hand in hand with the Relate field.
+parameters:
+  -
+    name: taxonomy
+    type: string
+    description: |
+      When referencing a list of term values, this is the taxonomy that you'd like to pull them from. 
+      If you have a list of term IDs, this parameter is not necessary. [More details](/taxonomies#without-taxonomizing)
+parameters_content: |
+  The parameters are inherited from the [collection](/tags/collection) tag. Everything available there is available here.
 id: dd9513b4-4cbb-4481-bf72-eb076e053b04
 ---
-## Parameters {#parameters}
-
-The parameters are inherited from the [collection](/tags/collection) tag. Everything available there is available here.
 
 ## Example {#example}
 
