@@ -169,6 +169,8 @@ public function handle(Submission $submission)
 }
 ```
 
+To stop the submission, but make it appear as though it was successful (for example, a Honeypot spam technique) you may throw a `Statamic\Exceptions\SilentFormFailureException`.
+
 ### Form.submission.created {#formsubmissioncreated}
 
 Fired when the submission is successfully saved. The `Submission` object is passed through.
