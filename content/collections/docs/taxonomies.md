@@ -57,6 +57,8 @@ The taxonomy field should have an array of term _values_. In this example, `wond
 In the Control Panel, the taxonomy fields will be displayed in the meta sidebar.
 Learn more about [Taxonomies in the Control Panel](#control-panel) below.
 
+It's also possible to use terms in your content without "taxonomizing" it. [More details below](#without-taxonomizing)
+
 
 ## Term Values and Slugs {#values-and-slugs}
 
@@ -79,6 +81,14 @@ Titles are saved on a first-come, first-serve basis, which means consistency is 
 
 To further clarify,
 `Star wars`, `star wars`, `StAr WaRS`, and `star-wars` are all treated as the _same term_. If perfect consistency is important, you can add a `title` field to a term's [additional data](#additional-data).
+
+## Term IDs {#ids}
+
+A term ID is simply the taxonomy handle and the slug joined by a slash.  
+For example, the `Star Wars` term's ID would be `tags/star-wars`.
+
+Most of the time, you don't need to worry or care about IDs. The only time you might is if you're writing an addon, or referencing terms [without taxonomizing](#without-taxonomizing).
+
 
 ## Terms in the Control Panel {#terms-in-the-cp}
 
@@ -268,12 +278,50 @@ Note:
 - Specifying `type: taxonomy` is not required.
 
 
+## Using terms without taxonomizing {#without-taxonomizing}
+
+You're free to reference terms in your content without necessarily taxonomizing (or "tagging") it.
+
+For instance, you may want to have a field in your entry called `similar_tags` which holds a list of
+terms that you want to show in a template, but you don't want _this_ entry to be tagged as one of them.
+
+When using this technique, Statamic will _not_ automatically convert your field values to term objects since the
+field name you choose will be completely arbitrary.
+
+For example:
+
+``` .language-yaml
+---
+title: My Entry
+tags: 
+  - coffee
+  - espresso
+similar_tags: 
+  - tea
+---
+```
+
+When doing this, you _will_ need to use the [Relate Tag][relate-tag].  
+However, in the example above, there's nothing informing Statamic which taxonomy `tea` is a part of. Simply adding a `taxonomy="tags"` parameter
+to the tag is enough to push it in the right direction.
+
+```
+{{ relate:similar_tags taxonomy="tags" }} ... {{ /relate:similar_tags }}
+```
+
+Alternatively, instead of writing term values (or slugs), you can reference the [term IDs](#ids).  
+For example, instead of `tea`, you could write `tags/tea`. In this case, the Relate tag will be able to automatically determine the taxonomy. No need to add the parameter.
+
+When using the [taxonomy fieldtype](/fieldtypes/taxonomy) for this, the Control Panel will save term IDs for you.
+
+
 ## Statamic 2.5 Changes {#statamic-2-5}
 
 - Terms no longer require their own file unless you want to add [additional data](#additional-data) or need to leverage [unused terms](#unused-terms).
 - Terms no longer need to exist before you add them to content. Just add them!
-- Term IDs are no longer used in content. [Terms values](#values-and-slugs) are used.
+- Term IDs (at least, those crazy UUIDs) are no longer used in content. [Terms values](#values-and-slugs) are used.
 
 [content-types]: /content-types
 [collection-tag]: /tags/collection
 [taxonomy-tag]: /tags/taxonomy
+[relate-tag]: /tags/relate
