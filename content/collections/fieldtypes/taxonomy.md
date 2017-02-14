@@ -22,7 +22,7 @@ id: 31adcc00-4fbb-4fe9-9b48-401061273096
 
 
 > **This is a special field!**
-If [taxonomizing content](/taxonomies#control-panel) (the most common use case), you should place this field within the `taxonomies` key in your fieldset. Othrwise, learn more about [how else it can be used](#without-taxonomizing).
+If [taxonomizing content](/taxonomies#control-panel) (the most common use case), you should place this field within the `taxonomies` key in your fieldset. Otherwise, learn more about [how else it can be used](#without-taxonomizing).
 
 ## Data Structure {#data-structure}
 
