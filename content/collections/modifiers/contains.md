@@ -48,9 +48,9 @@ gross: broccoli
 ```
 
 ```
-{{ if list | contains:bacon }}
-{{ if list | contains:delicious }}
-{{ if list | contains:gross }}
+{{ if foods | contains:bacon }}
+{{ if foods | contains:delicious }}
+{{ if foods | contains:gross }}
 ```
 
 ``` .language-output
