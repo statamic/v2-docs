@@ -10,7 +10,7 @@ Listeners should define a list of events mapped to the class methods. When match
 
 ## Generating an Event Listener Class {#generating}
 
-You can generate a an event listener class file with a console command.
+You can generate an event listener class file with a console command.
 
 ``` .language-console
 php please make:listener AddonName
