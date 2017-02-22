@@ -213,6 +213,13 @@ Whenever you upload a new image asset through the control panel, all of that ima
 
 To pre-generate the presets for existing assets, you can run the CLI command `php please assets:generate-presets`.
 
+To use presets combine them with a [Glide Tag][glide-tag].
+
+```
+{{ glide src="/assets/vacations/italy/trevi-fountain.jpg"
+         preset="sml" }}
+```
+
 #### Queueing Presets {#queueing-presets}
 
 Presets are generated when you upload the assets. Depending on how many presets you have, and what's involved in each, this may take a long time, or even cause the request to run out of memory.
