@@ -216,8 +216,7 @@ To pre-generate the presets for existing assets, you can run the CLI command `ph
 To use presets combine them with a [Glide Tag][glide-tag].
 
 ```
-{{ glide src="/assets/vacations/italy/trevi-fountain.jpg"
-         preset="sml" }}
+{{ glide src="/assets/vacations/italy/trevi-fountain.jpg" preset="sml" }}
 ```
 
 #### Queueing Presets {#queueing-presets}
