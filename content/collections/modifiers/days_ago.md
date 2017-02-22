@@ -19,3 +19,5 @@ date: October 1 2015
 ```.language-output
 {{ test_date | days_ago }}
 ```
+
+Related: List of (Date Modifiers){/modifiers#date}
