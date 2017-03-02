@@ -317,7 +317,7 @@ When using the [taxonomy fieldtype](/fieldtypes/taxonomy) for this, the Control 
 
 ## Statamic 2.5 Changes {#statamic-2-5}
 
-- Terms no longer require their own file unless you want to add [additional data](#additional-data) or need to leverage [unused terms](#unused-terms).
+- Terms no longer require their own file unless you want to add [additional data](#additional-data) or need to leverage [unused terms](#creating-unused-terms).
 - Terms no longer need to exist before you add them to content. Just add them!
 - Term IDs (at least, those crazy UUIDs) are no longer used in content. [Terms values](#values-and-slugs) are used.
 
