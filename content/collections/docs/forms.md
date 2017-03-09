@@ -20,7 +20,7 @@ Okay let's just pretend you're a famous celebrity's _web developer_. You've been
 - level of adoration (appreciation, fixation, or obsession)
 - message
 
-### Create the formset
+### Create the formset {#create-the-formset}
 
 First, head to `/cp/forms` in the Tools area of the Control Panel and click the **Create Form** button. Alternately you can create a `.yaml` file in `site/settings/formsets` which will contain all the form fields and settings.
 
@@ -49,7 +49,7 @@ fields:
 
 Next you can check out some of the other [Form Tags][tags] available to you to display any errors, show a success message, and so on. We'll keep this example brief and you can explore those at leisure.
 
-### The Template
+### The Template {#the-template}
 
 Next, we need to set up the form in your template. There are two basic ways to markup your form's HTML. The first is to loop through your form's fields like so:
 
@@ -152,7 +152,7 @@ Here we'll send two emails for every submission of this form. One will go to the
 The first one uses a Statamic template, the other gets an "automagic" email. The automagic email will be a simple
 list of all the fields and values in the submission.
 
-### Setting the "Reply To"
+### Setting the "Reply To" {#setting-the-reply-to}
 
 If you want to set the `reply_to` to be the user submitting the form, you can configure that quite simply. Assuming you have a form input with `name="email"`:
 
@@ -199,7 +199,7 @@ fields:
 
 **Asset Uploads**: Set `type: asset`, specify the asset `container` via handle or ID, and which folder inside said container.
 
-### Multiple files
+### Multiple files {#multiple-files}
 
 You have two methods available to you:
 
