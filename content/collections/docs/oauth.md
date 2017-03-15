@@ -5,7 +5,7 @@ overview: >
   As of Statamic 2.1, authenticating with OAuth is supported with the help of Laravel Socialite and a simple bridge addon
 that connects the pieces together.
 ---
-## Overview
+## Overview {#overview}
 
 Out of the box, Statamic supports the providers that are bundled with Socialite (Facebook, Twitter, Google, LinkedIn, GitHub, and
 Bitbucket).
@@ -16,7 +16,7 @@ additional providers (91 at the time of writing) that require minimal effort to 
 Finally, if you require a provider that isn't on that list, you may write your own, which is also quite straight forward.
 [Here's how.](#custom-providers)
 
-## Setup
+## Setup {#setup}
 
 Install the OAuth Bridge addon files. You can find them below.
 
@@ -25,7 +25,7 @@ If using any third party providers from [SocialiteProviders](http://socialitepro
 Add the providers to the `OAuthBridgeServiceProvider`'s `$oauth_providers` array with the name of the provider as the key, and the event listener as the value. If you are using a provider that comes with Socialite (Facebook, Twitter, Google, LinkedIn, GitHub and Bitbucket), the listener can be `null`.
 
 
-### OAuthBridge addon files
+### OAuthBridge addon files {#oauthbridge-addon-files}
 
 `site/addons/OAuthBridge/composer.json`
 
@@ -65,15 +65,15 @@ class OAuthBridgeServiceProvider extends ServiceProvider
 ```
 
 
-## Configuring OAuth
+## Configuring OAuth {#configuring-oauth}
 
-### Create an application
+### Create an application {#create-an-application}
 
 Create an OAuth application on the service of your choice. Take note of the client and secret keys.
 
 When they ask for a "callback URL" or "redirect URL", you should provide `http://your-site.com/oauth/{provider}/callback`, where `{provider}` would be `github`, `facebook`, etc.
 
-### Add your credentials to Statamic
+### Add your credentials to Statamic {#add-your-credentials-to-statamic}
 
 The Socialite docs will instruct you to add your credentials to `services.php`. Instead, add your OAuth credentials to `site/settings/services.yaml` in the format of:
 
@@ -92,7 +92,7 @@ You can use environment variables here by doing `client_id: '{env:GITHUB_CLIENT_
 
 Other Socialite documentation will normally instruct you to add `redirect` keys to each service. You can leave these out, Statamic will automatically set them to `http://your-site.com/oauth/{provider}/callback`. for you
 
-### Routing
+### Routing {#routing}
 
 Out of the box, the oauth route will be located at `/oauth/*`. You can change that by adding the following to your `OAuthBridgeServiceProvider`:
 
@@ -102,13 +102,13 @@ public static $oauth_route = 'foo/bar';
 
 This will change the routes to `/foo/bar/*`.
 
-### Redirect
+### Redirect {#redirect}
 
 By default, once you log in with OAuth, you will be redirected to the homepage. You may override this behavior
 by adding a `redirect` query parameter. This can be added with a parameter on the [oauth][oauth_tag] tag.
 
 
-## Usage
+## Usage {#usage}
 
 Send your users to the provider's login URL to begin the OAuth workflow. You may do this with the `oauth` tag.
 
@@ -124,11 +124,11 @@ or the shorthand:
 
 Read more about the [OAuth Tag][oauth_tag].
 
-## Customization
+## Customization {#customization}
 
 By default, when someone authenticates with a service, Statamic will look for an existing user that is assigned the corresponding OAuth ID, and log in as them. If no matching user is found, a user will be created with an automated username.
 
-### User creation
+### User creation {#user-creation}
 
 You may override the whole user creation logic by listening for `Statamic\Events\OAuth\FindingUser`. You may perform whatever logic you need, as long as you return an instance of a `Statamic\Contracts\Users\User`.
 
@@ -156,7 +156,7 @@ public function findUser(FindingUser $event)
 By listening for this event and providing a user, you are in control of all the logic.
 
 
-### Username creation
+### Username creation {#username-creation}
 
 If you don't need to control all the user find/create logic, but would like to customize the username, you may listen for the `Statamic\Events\OAuth\GeneratingUsername` event and then return a string.
 
@@ -175,7 +175,7 @@ public function username(GeneratingUsername $event)
 
 By default, Statamic will generate a username by slugifying the email address and appending a timestamp.
 
-### User data creation
+### User data creation {#user-data-creation}
 
 Like the username creation, you may also just specify the data to be saved to the user.
 
