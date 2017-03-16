@@ -10,7 +10,7 @@ A User by itself has no permission to access or change any aspect of Statamic ex
 
 Access to Statamic's Control Panel and the ability to access, create, edit, and delete content and settings is broken out across many different Permissions. Let's cover some lingo before we move on further.
 
-## Super Users
+## Super Users {#super-users}
 
 You may have heard the term _super user_, _super admin_, or _root user_ thrown around the internet. This is a way of saying someone that has unlimited permissions.
 
@@ -22,7 +22,7 @@ A user can be considered _super_ if they belong to a role or user group with a `
 
 Super users are the only ones that are able to _configure_ the site through the Control Panel. They can create and delete content collections (entry collections, taxonomies, global sets, asset containers, etc); manage fieldsets, edit system settings, and more.
 
-## Roles
+## Roles {#roles}
 
 Assigning permissions one at a time per-user would be a tedious endeavor, much like cleaning up a bucket of Lego bricks dumped out on your kitchen floor with one hand.
 
@@ -36,7 +36,7 @@ It is through the Roles interface that you even access the available Permissions
 
 Roles are created and managed in `Configure » Users`, assuming you have necessary permissions to access it.
 
-## Groups
+## Groups {#groups}
 
 Just in case you have a complex publishing workflow or lots of cooks in the kitchen (metaphorically speaking of course - if you have lots of real cooks we'd like to try what you're cooking and formally request invites to this event too), assigning multiple Permissions to every User can _also_ be tedious, as are an over abundance of metaphors and subtexts.
 
@@ -44,7 +44,7 @@ Enter: **User Groups**. When a User registers on your site, or you create a user
 
 Groups are created and managed in `Configure » Users`, again assuming you have the necessary permissions to access it.
 
-## Conclusion
+## Conclusion {#conclusion}
 
 To explain this any further would likely be futile. Log into the Control Panel, head to the `Configure` area, and start clicking. We're pretty sure you can take it from here.
 
