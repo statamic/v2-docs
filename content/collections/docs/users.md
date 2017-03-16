@@ -5,7 +5,7 @@ overview: >
   Normally a User is someone with an account and access to the [Control Panel](/control-panel), but that's not _always_ the case. Statamic's flexible User system gives you a lot of flexibility around what being a "User" can mean.
 ---
 
-## Creating Your First User
+## Creating Your First User {#creating-your-first-user}
 
 Your first User account is normally created during [installation][installation], but you can also create one by hand.
 
@@ -21,11 +21,11 @@ password: YourPasswordGoesHere
 
 Two important things to note here: the `super`, and the `password`.
 
-### The Password
+### The Password {#the-password}
 
 Creating a user by hand will involve a plain text password. Have no fear, however! As soon as you log in, it will be encrypted and hashed and as secure as any DB driven auth system you've ever seen (you can log in by visiting `/cp`).
 
-## Permissions
+## Permissions {#permissions}
 
 Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Panel.
 
