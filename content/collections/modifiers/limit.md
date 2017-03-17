@@ -14,13 +14,25 @@ playlist:
   - Justin Bieber
 ```
 
+Use with the pipe syntax to continue chaining in a single tag like so:
+
 ```
-{{ playlist | limit:3 }}
+{{ playlist | limit:2 | join }}
 ```
 
 ```.language-output
-playlist:
-  - Emancipator
-  - Gong Gong
-  - Possom Posse
+Emancipator, Gong Gong
+```
+
+Or using the parameter syntax:
+
+```
+{{ playlist limit="2" }}
+    <li>{{ value }}</li>
+{{ /playlist }}
+```
+
+```.language-output
+<li>Emancipator</li>
+<li>Gong Gong</li>
 ```
