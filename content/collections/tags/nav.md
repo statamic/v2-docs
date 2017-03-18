@@ -161,10 +161,10 @@ has been removed in favor of the following workflow.
 2. In your `nav` tag, use the [conditions syntax](/conditions) to remove any hidden pages:
 
    ```
-   {{ nav from="/" is_hidden:isnt_set="true" }}
+   {{ nav from="/" is_hidden:isnt="true" }}
        ...
    {{ /nav }}
    ```
 
-   This is saying, only show pages where the `is_hidden` field _isn't set_. That will leave you with unhidden pages.
+   This is saying, only show pages where the `is_hidden` field _isn't set to true_. That will leave you with unhidden pages.
    Remember, the field can be named whatever you want.
