@@ -123,11 +123,12 @@ Done.
 
 ### Step 2: Set permissions {#permissions}
 
-Every Statamic instance needs full write access to the following 3 directories recursively (e.g. all their subfolders and files).
+Every Statamic instance needs full write access to the following 4 directories recursively (e.g. all their subfolders and files).
 
 - `site`
 - `local`
 - `statamic`
+- `assets`
 
 In order to have write access, the necessary permissions depend on which system user PHP is running as and which user owns the files and folders. Here are some recommendations. When in doubt, just use `777`:
 
