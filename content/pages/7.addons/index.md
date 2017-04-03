@@ -17,7 +17,7 @@ Statamic Addons involve writing PHP. While we have a lot of helper methods and A
 
 An addon can contain a number of classes, each . It can be made up of one of them, or up to all of them. Each aspect accomplishes different missions.
 
-- The [Addon][addon] container itself has functionality that other aspects inherit.
+- The Addon container itself has functionality that other aspects inherit.
 - [Tags][tags] create tags for use within templates.
 - [Modifiers][modifiers] are used in your templates to manipulate variables.
 - [Fieldtypes][fieldtypes] create new ways to enter data into the Control Panel.
