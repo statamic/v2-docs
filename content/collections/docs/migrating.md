@@ -19,9 +19,7 @@ From here out we will explain what has changed, why, and what you'll need to do 
 
 We recommend starting with a fresh Statamic 2 install and moving your content, theme, fieldsets, and users over group by section. It'll help to focus on which areas need changes and isolate any unexpected behaviors.
 
-The best way to move your content is through is probably to use the [Statamic v1 Exporter][exporter]. It will generate a JSON representation of all of your content (pages, entries, globals, and taxonomies) and let you use v2's Importer to generate all the right files in the right places.
-
-The v2 Importer can be found in the Control Panel, in the `Tools` section.
+The best way to move your content is to use the [Importer and Exporter][importer]. It can generate a JSON representation of all of your content (pages, entries, globals, and taxonomies) and then generate all the right files in the right places.
 
 ## Breaking Changes {#breaking-changes}
 
@@ -176,4 +174,4 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 [routes]: /routing#collection-routes
 [semver]: http://semver.org
 [template-language-guide]: /antlers
-[exporter]: http://github.com/statamic/exporter
+[importer]: /importer
