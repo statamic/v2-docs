@@ -58,9 +58,9 @@ parameters:
     description: The number of entries the results should by offset by.
   -
     name: taxonomy
-    type: 'boolean *false*'
+    type: mixed
     description: >
-      If enabled, the current URL will be used to filter the listing by the appropriate taxonomy.
+      A multitude of ways to filter by taxonomies. [More details](#taxonomies)
   -
     name: group_by_date
     type: string
@@ -230,7 +230,8 @@ To show entries with the `harry-potter` term within the `tags` taxonomy, you cou
 {{ collection:blog taxonomy:tags="harry-potter" }}
 ```
 
-[Read more about filtering in the Taxonomies Guide](/taxonomies#collections)
+There are a number of different ways to use this parameter. They are explained in depth in the 
+[Taxonomies Guide](/taxonomies#collections)
 
 
 ### Custom filters {#custom-filters}

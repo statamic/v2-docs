@@ -123,15 +123,20 @@ If you need to access the un-modified variable data, you can append `_raw` to th
 
 ### Collections {#collections}
 
-Collections may be filtered by taxonomies in two primary ways.
+Collections may be filtered by taxonomies in a number of ways.
 
-1. Specifying the taxonomy and term slugs manually.
+#### Specifying the taxonomy and term slugs manually {#filter-manually}
 
 ```
 {{ collection:blog taxonomy:tags="foo|bar" }}
 ```
 
-2. Specifying a variable name by prefixing with a colon.
+This will get all blog entries where the tags contain either foo or bar.
+
+#### Specifying a variable name by prefixing with a colon {#filter-from-variable}
+
+The following works just like the previous example except instead of hardcoding the terms into the parameter,
+you reference a variable.
 
 ``` .language-yaml
 the_tags:
@@ -143,35 +148,67 @@ the_tags:
 {{ collection:blog :taxonomy:tags="the_tags" }}
 ```
 
+#### Specifying the match type {#filter-match-type}
+
 You can decide whether to match *any* or *all* of the provided terms with the  `any` and `all` syntaxes. The default behavior is *any*.
+
+The following will output entries tagged with _either_ foo or bar.
 
 ```
 {{ collection:blog taxonomy:tags:any="foo|bar" }}
-{{# Entries with either foo or bar will be matched. #}}
-
-{{ collection:blog taxonomy:tags:all="foo|bar" }}
-{{# Entries with both foo and bar will be matched. #}}
 ```
 
-You may filter by terms in multiple taxonomies by using multiple parameters.
+The following will output entries tagged with _both_ foo and bar.
+
+```
+{{ collection:blog taxonomy:tags:all="foo|bar" }}
+```
+
+#### Filter by terms in multiple taxonomies by using multiple parameters {#filter-multiple-parameters}
 
 ```
 {{ collection:blog taxonomy:tags="news" taxonomy:categories="chicken" }}
-{{#
-    Entries tagged with "news" AND categorized as "chicken" will be matched.
-    
-    Entries tagged with "news" but not categorized as "chicken" will not be matched.
-    The entry must satisfy both parameters.
-#}}
 ```
+Entries tagged with "news" AND categorized as "chicken" will be matched.
+    
+Entries tagged with "news" but not categorized as "chicken" will not be matched.
+The entry must satisfy both parameters.
+
+#### Filter by term IDs {#filter-term-ids}
+
+If you have a list of taxonomy term IDs you wish to filter a collection by, you can omit the second part of the parameter.
+Your data may be formatted this way when using terms [without taxonomizing](#without-taxonomizing).
+
+``` .language-yaml
+things:
+  - tags/foo
+  - tags/bar
+  - categories/news
+```
+
+```
+{{ collection:blog :taxonomy="things" }}
+```
+
+This will get entries in the blog collection where tags contains either foo or bar, or where categories contains news.
+
+You may also hardcode a pipe delimited list of term IDs instead of referencing a variable. Just omit the colon prefix.
+
+```
+{{ collection:blog taxonomy="tags/foo|tags/bar|categories/news" }}
+```
+
+#### Filter by current URL {#filter-url}
 
 When on a term's URL (e.g. when matching a Taxonomy route pattern), adding `taxonomy="true"` will automatically filter your collection by the current term.
 
 ```
 {{ collection:blog taxonomy="true" }}
-{{# Equivalent to {{ collection:blog taxonomy:tags="foo" }} #}}
 ```
 
+For example, if your taxonomy route is defined as `/tags/{slug}` and you are on `/tags/foo`, this will output entries that are tagged with `foo`.
+
+This is equivalent to `{{ collection:blog taxonomy:tags="foo" }}`
 
 ## Additional Term Data {#additional-data}
 

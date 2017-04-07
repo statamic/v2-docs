@@ -118,6 +118,7 @@ Professional advice given, here's what to do:
 
 - Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
 - Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
+- For any local driver based asset containers that you create, their `url` values will need to contain this subdirectory. (eg. `/your_subdirectory/assets`)
 
 Done.
 
