@@ -49,7 +49,7 @@ partials/
 |   |-- message.html
 ```
 
-To render a partial that's inside a subdirectory, we would simply add `{{ partial:$folder/$file }}` in our template. In other words, to get our top nav partial we would do `{{ partial:nav/top }}`.
+To render a partial that's inside a subdirectory, we would simply add `{{ partial:$folder/$filename }}` in our template. In other words, to get our top nav partial we would do `{{ partial:nav/top }}`.
 
 ## Example 2: The reusable chunk {#example-reuse}
 
