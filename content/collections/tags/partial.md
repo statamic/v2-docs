@@ -35,9 +35,21 @@ The most common usage of a partial is to add a header or navigation into a layou
 </html>
 ```
 
-The `{{ partial:header }}` tag would output the contents of `site/themes/theme_name/partials/header.html`.
+The `{{ partial:header }}` tag would output the contents of `site/themes/theme_name/partials/header.html`.  
 
-Splitting your templates up into partials is a nice way to keep things clean and organized.
+Splitting your templates up into partials is a nice way to keep things clean and organized. Another great way to keep things tidy is to split up your partials into subdirectories:
+
+```
+partials/
+|-- nav/
+|   |-- top.html
+|-- authors/
+|   |-- meta.html
+|-- session/
+|   |-- message.html
+```
+
+To render a partial that's inside a subdirectory, we would simply add `{{ partial:$folder/$file }}` in our template. In other words, to get our top nav partial we would do `{{ partial:nav/top }}`.
 
 ## Example 2: The reusable chunk {#example-reuse}
 
