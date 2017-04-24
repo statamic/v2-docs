@@ -2,12 +2,12 @@
 title: Content Types
 id: 4076fea7-63c9-4b1c-b16d-7eb565040d81
 overview: >
-  Content Types are the pillars that hold, contain, and snuggle all of the editable aspects of your site. Each Content Type has its own special attributes that make it unique. In this guide, you get to learn about all six of Statamic's primary Content Types.
+  Content Types are the pillars that hold, contain, and snuggle all of the editable aspects of your site. Each of the six Content Types has its own special attributes that make it unique.
 ---
 
 ## Overview {#overview}
 
-All of your site's content, everything that is managed, edited, uploaded, published and ultimately shown to the world, lives in one of Statamic's six Content Types:
+All of your managable site content -- everything created, edited, uploaded, published, and ultimately shown to the world, lives in one of Statamic's six Content Types:
 
 - [Pages](#pages)
 - [Collections](#collections)
@@ -16,9 +16,29 @@ All of your site's content, everything that is managed, edited, uploaded, publis
 - [Assets](#assets)
 - [Users](#users)
 
-Each type is a container for any number of items inside that type. For example, you can create any number of Collections, each with its own name, purpose, and data structure, that contains any number of Entries. This pattern is similar in each Content Type.
+Each type is a _container_ for any number of items inside that type. For example, you can create any number of _Collections_, each with its own name, purpose, and data structure, that contains any number of _Entries_. This pattern is similar in each Content Type.
 
-The individual items in each Content Type are usually represented by content files in a YAML Front-Loaded format. If those words don't mean anything to you - and you're a developer - hang in there and we'll explain everything. If you're a content manager, just ignore 'em! The Control Panel does all this stuff for you.
+The individual items in each Content Type are usually represented by content files in a YAML Front-Loaded format. If these words don't mean anything to you and you're a developer - hang in there and we'll explain everything. If you're a content manager, just ignore 'em! The Control Panel does all this stuff for you.
+
+## Container/Item Names
+
+Each container and corresponding child type has their own names. Their names are as follows:
+
+```language-files
+Content Types
+|-- Pages/
+|   |-- Page
+|-- Collection/
+|   |-- Entry
+|-- Global/
+|   |-- Set
+|-- Taxonomy/
+|   |-- Term
+|-- Asset Container/
+|   |-- Asset
+|-- Users/
+|   |-- User
+```
 
 ## Shared Attributes {#shared-attributes}
 
@@ -28,12 +48,13 @@ Content Types are defined by their similarities and their differences. Let's fir
 
 The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a **fieldset**) to model your content in whatever fashion you desire.
 
-### Universally Unique IDs {#ids}
+### Unique IDs {#ids}
 
-Universally unique IDs are generated for each item in each type, allowing you to relate items with each other and then retrieve that data later in your template if you so desire. Here are a couple of examples of how this is useful:
+Each content type has it's own method of ensure uniquness, providing you with the ability to create relationships or request their content by ID. Here are a couple of examples of how this is useful:
 
-- Associate a User with an Entry creating an author.
-- Associate a list of Entries with another Entry to establish Related Posts.
+- Relate a User with an Entry, thereby creating an author.
+- Relate a list of Entries with another Entry establishing Related Posts.
+- Relate a group of Assets with a Entry, creating a gallery.
 
 ## The Types {#list}
 
@@ -148,7 +169,9 @@ Containers can live in your local filesystem or on Amazon S3.
 
 ![Assets Container](/assets/img/screenshots/cp-assets.png)
 
-Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. Here are some ideas on how you can use this to your advantage:
+Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. To specify a fieldset, add add `fieldset: insert_fieldset_name` to the container's config file.
+
+Here are some ideas on how you can use this to your advantage:
 
 - Images can have their own alt tags, captions, and display controls.
 - Videos can have transcripts, descriptions, and credits.
