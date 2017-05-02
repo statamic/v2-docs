@@ -5,7 +5,7 @@ overview: >
 title: Controllers
 id: 01b6596e-19c1-41e7-a3e1-e92144abc211
 ---
-## Creating a Controller
+## Creating a Controller {#creating-a-controller}
 
 To create a controller, you will need a class file named `[AddonName]Controller.php`. eg. `KarmaController.php`.
 
@@ -31,12 +31,12 @@ class KarmaController extends Controller
 }
 ```
 
-## Usage
+## Usage {#usage}
 
 There are two ways routes can be directed into a controller. They differ depending on whether they are going through
 the front-end of the site, or through the control panel.
 
-### Front-end
+### Front-end {#frontend}
 
 A common use case for addons is to be able to have a form, which would need to be handled somehow. You could submit
 that form to the method a controller would handle.
@@ -53,7 +53,7 @@ If you're familiar with Laravel, this can be thought of as similar to `Route::co
 
 Note that the `/!/` in the URL is customizable, so when outputting form actions, you can use the [$this->actionUrl()](/addons/helpers#actionUrl) helper.
 
-### Control Panel
+### Control Panel {#control-panel}
 
 We can route to the controller action above by editing the routes array in our addon's `routes.yaml` file.
 
@@ -67,7 +67,7 @@ The key is the route itself, and the value is the controller method.
 All of an addon's routes are prefixed by the addon route. So the `foo` route above would actually be `/cp/addons/karma/foo`.
 
 
-#### CP Routing schema
+#### CP Routing schema {#cp-routing-schema}
 
 Your routing array can handle more than basic GET requests.
 
