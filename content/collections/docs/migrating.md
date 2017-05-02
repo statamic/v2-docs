@@ -44,7 +44,6 @@ Each of these changes may require a little bit of work.
 
 ### Removed Variables {#removed-variables}
 
-- `{{ environment }}`
 - `{{ _is_draft }}`
 - `{{ _is_hidden }}`
 - `{{ taxonomy_name }}`
