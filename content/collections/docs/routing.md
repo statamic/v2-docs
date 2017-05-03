@@ -147,37 +147,30 @@ vanity:
 This will forward `http://yoursite.com/party` to `http://yoursite.com/my-long/page-name`. Simple.
 
 **Best Practices**  
-Vanity routes are _not_ permanent redirects, but rather temporary or utility 302s.
+Vanity routes are temporary/utility 302s and should not be used as permanent redirects. It's a Google thing.
 
 ### Regular / Permanent / 301 Redirects {#301-redirects}
 
-Whatever you like to call them, these are basically permanent. (Or at least, quite difficult to undo.)
+No matter what you call them, these are meant to be permanent redirects.
 
 ``` .language-yaml
-redirects:
+redirect:
   /party: /my-long/page-name
 ```
 
 **Best Practices**  
-You better be sure about what you enter here. Browsers can cache these pretty agressively and it can be hard to undo.
-
-Also, while it’s possible to create permanent redirects with this feature, it’s best practice to do this via an `.htaccess` file or similar server-based method. URL redirects are going to be slower than server-level redirects (although the difference may not be noticeable in all situations).
+Browsers cache 301 redirects agressively, so use these accordingly. Ideally 301 redirects should be handled via rules in an `.htaccess` file or nginx conf rule. Server level redirects are faster because the requests don't have to run Statamic to find where to send the request to.
 
 
 ## Content Types {#content-types}
 
-Don't confuse these with Statamic's Content Types (Naming things is hard, okay?)  
-Right now, we're talking about the MIME types that will be sent to your server through the `Content-Type` header.
-
-By default, pages are served as `text/html` which shouldn't come as a surprise. However, you may want to serve other
-types, like an RSS feed or JSON. To do this, just add `content_type` to your front-matter or route definition with the
-appropriate MIME type, like so:
+You can modify the `Content-Type` request headers (not to be confused with Statamic "Content Types") from `text/html` to anything else you might need. Add `content_type` to your front-matter or route definition with the appropriate MIME type, like so:
 
 ``` .language-yaml
   content_type: application/json
 ```
 
-We've also added a few shorthands to make life a little easier:
+We've also added a few shorthands you can use without needing to look anything up.
 
 - `json` becomes: `application/json`
 - `xml` becomes: `text/xml`
