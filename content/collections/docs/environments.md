@@ -2,33 +2,31 @@
 title: Environments
 id: 0b47d058-a8cc-41ec-9938-b9ef68c03d8d
 overview: >
-  Sometimes it's beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production.
+  It is often beneficial to have different settings depending on where you are running the site. For instance, you might want to enabele debug mode when in development, but not in production.
 ---
 
 ## The .env file {#the-env-file}
 
-The `.env` contains environment level variables. These can be used within Statamic settings files and are also used to change Statamic's behavior.
+Environment variables are contained in a file named `.env`, kept in the root of your site. Many system settings can be affected here, and you can also set your own variables to use in any of Statamic's system settings.
 
-The syntax in this file is:
+The `.env` syntax is a key/value pair that looks exactly like this:
 
 ```
 MY_VARIABLE=value
 DELICIOUSNESS=bacon
 ```
 
-Your `.env` file should _not_ be committed to version control, since it may contain confidential information, and since each developer / server could require a different environment configuration.
+You should _not_ commit your `.env` file to version control. It may contain confidential information (such as API keys), and each developer and/or server may require a different configuration setting.
 
-If you are developing with a team, you may wish to continue including a `env.example` file. By putting placeholder values in the example file, other developers on your team can clearly see which environment variables are needed to run the site.
+If you are working on a team, you may wish to continue including a `env.example` file filled with placeholder values. This is common best practice, alloweding other developers to get up and running quickly.
 
 ## Defining Environments {#defining-environments}
 
-By default, Statamic runs in the `production` environment.
+Statamic runs in the `production` environment by default, unless otherwise specified. To specify a another environment, add `APP_ENV=foo` to your `.env` file, where `foo` is the name of your environment.
 
-To specify a different environment, add `APP_ENV=foo` to your `.env` file, where `foo` is the name of your environment.
+## Environment Settings {#environment-settings}
 
-## Environment settings {#environment-settings}
-
-There are two options when it comes to environment-specific settings. You can mix-and-match them. Whatever feels natural to you.
+There are two options when it comes to environment-specific settings. You can mix-and-match them, using whichever approach feels most logical to you.
 
 ### Option 1: Interpolation {#option-interpolation}
 
@@ -52,15 +50,11 @@ greeting: "Hello {env:NAME}"
 NAME=ron
 ```
 
-Note: When interpolating, make sure to wrap your value in quotes.
+_Note: When interpolating, make sure to wrap your value in quotes._
 
 ### Option 2: Environment files {#option-environment-files}
 
-The second option is to leverage the environment settings file.
-
-Statamic will load `site/settings/environments/foo.yaml` where `foo` is the current environment.
-
-In here, any variables are added to the cascade.
+The second option is to leverage an environment system settings file, located in `site/settings/environments/`. Each `yaml` file here becomes an environment name, and any data defined here is added to the [cascade][/cascade] when running in that specific environment.
 
 For instance:
 
@@ -74,11 +68,11 @@ addons:
     slices: 20
 ```
 
-Anything nested under `settings` would override values in the corresponding yaml file. So in this example, `debug` and `debug_bar` will override the values in `debug.yaml`.
+Anything nested under `settings` would override values in the corresponding yaml file. In this example, `debug` and `debug_bar` will override the values in `debug.yaml`.
 
-Anything nested under `addons` would override values in the corresponding addon's yaml file. So in this example, `slices` would override the value in the `bacon` addon's setting file.
+Anything nested under `addons` would override values in the corresponding addon's yaml file. In this example, `slices` will override the value in the `bacon` addon's setting file.
 
-You can also interpolate in your environment files, if you wish.
+You may also interpolate in your environment files, if you wish.
 
 ``` .language-yaml
 settings:
@@ -88,4 +82,4 @@ settings:
 
 ## Editing environment settings {#editing-environment-settings}
 
-When an environment setting has been used, it becomes uneditable through the control panel. This prevents confusion on where the value is coming from.
+When an environment setting has been used, it becomes uneditable through the control panel. This provides clarity in the UI as to where the value is coming from.
