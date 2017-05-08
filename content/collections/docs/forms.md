@@ -2,32 +2,30 @@
 title: Forms
 id: b1144402-a282-4b6f-9e43-98ceae02c9e2
 overview: |
-  Forms are a natural part of the internet experience and a core component of most websites in some shape or form. From "Contact Us" to "Vote for Your Favorite Naked Mole Rat", Statamic can help manage your forms and make your life a little easier.
+  Forms are a natural part of the internet experience and a core component of most websites. From "Contact Us" to "Vote for Your Favorite Naked Mole Rat", Statamic can help manage your forms and make your life a little easier.
 ---
 
 ## Overview {#overview}
 
-Statamic forms serve to collect, report, and reuse user submitted data. The end-to-end solution includes Tags, settings, and a dedicated area of the Control Panel. These features together effectively replace v1's first-party form module, Raven. And yes, "Forms" is a pretty boring title. But at least it's fairly clear as to what it does.
+Statamic forms can be used to collect, report, and even reuse and display user submitted data. Statamic's Form solution includes Tags, various settings, and a dedicated area of the Control Panel for viewing submitted responses.
 
 ## Your first form {#create}
 
-Let's pretend, shall we, that you are a famous celebrity with a large following of dedicated fans. If that is true of you -- kudos by the way -- but why are you building your own website? You don't have time for that. Who's going to sail your yacht?
-
-Okay let's just pretend you're a famous celebrity's _web developer_. You've been tasked with collecting electronic fan mail (we'll call it ef-Mail). You want to collect the following bits of info from <del>crazed</del> enthusiastic fans:
+Let's pretend you are Johnny Depp's web developer. You've been tasked with collecting electronic fan mail (we'll call it ef-Mail). You want to collect the following bits of info from <del>crazed</del> enthusiastic fans:
 
 - name
 - age
 - level of adoration (appreciation, fixation, or obsession)
 - message
 
-### Create the formset {#create-the-formset}
+### Create a formset {#create-the-formset}
 
-First, head to `/cp/forms` in the Tools area of the Control Panel and click the **Create Form** button. Alternately you can create a `.yaml` file in `site/settings/formsets` which will contain all the form fields and settings.
+The first thing you'll need to do is create a Formset. Each formset has its own settings, felds, and validation rules. Head to `/cp/forms` in the Tools area of the Control Panel and click the **Create Form** button. (Alternately you can create a `.yaml` file in `site/settings/formsets` which will contain the form fields and settings.)
 
 Each form should contain a title and a set of fields with [validation rules][rules]. Optionally it may also have metrics
-and email configuration.
+and email configuration. Fields can be created similar to how fieldsets work for regular Statamic content.
 
-Once configured you will have a formset file that looks something like this:
+Go ahead and create the four aforementioned fields. Once configured you will have a formset file that mike look something like this:
 
 ```.language-yaml
 title: Super Fans
@@ -51,7 +49,9 @@ Next you can check out some of the other [Form Tags][tags] available to you to d
 
 ### The Template {#the-template}
 
-Next, we need to set up the form in your template. There are two basic ways to markup your form's HTML. The first is to loop through your form's fields like so:
+Next, we need to set up the form in your template. Forms work just like standard HTML forms, except `<form></form>` open and close tags are replaced with `{{ form:create }}{{ /form:create }}` Statamic tags, which take care of setting actions, CSRF tokens for security, and a few other things automatically.
+
+Next, the form inputs can be written one of two basic ways. The first is to loop through your form's fields like so:
 
 ```
 {{ form:create in="superfans" }}
@@ -62,7 +62,7 @@ Next, we need to set up the form in your template. There are two basic ways to m
 {{ /form:create }}
 ```
 
-Alternately, you can take a full-control approach and write out all the inputs yourself explicitly. This is useful when all of your fields aren't uniform -- when certain aspects require more control. In this case, your template might look more like this:
+Or alternately, you can take a full-control approach and write out all the inputs yourself. This is useful when all of your fields aren't uniform -- when certain aspects require more control. We usually do it this way to reduce complexity. In this case, your template might look more like this:
 
 ```
 {{ form:create in="superfans" }}
