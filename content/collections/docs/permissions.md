@@ -34,7 +34,83 @@ It is through the Roles interface that you even access the available Permissions
 
 ![Bacon, ladies and gentlemen](/assets/img/other/bacon.jpg)
 
-Roles are created and managed in `Configure » Users`, assuming you have necessary permissions to access it.
+Roles are created and managed in `Configure » Users » User Roles`, assuming you have necessary permissions to access it. To edit permissions, select an existing role in the list or tap the Create Role button.
+
+The Editing Roles panel that appears has the usual Title and Slug fields, followed by a checkbox determining whether or not this role is to be a Super User:
+```
+☐ Super User
+```
+Selecting Super User makes all the following permission options disappear—because by definition Super Users can do everything!
+Otherwise, checkmark the separate permissions you want to associate with this particular role:
+
+#### General
+```
+☐ Access the Control Panel
+☐ View drafts on the front-end
+```
+
+Below, note that Editing or being allowed to make changes is separate and different from the greater power to create, delete, and reorder things.
+
+#### Pages
+```
+☐ Edit pages
+  ☐ Create new pages
+  ☐ Delete pages
+  ☐ Reorder pages
+```
+
+There will a permission block for each collection:
+
+#### Collection: {collection name} *(for example,* Blog *)*
+```
+☐ Edit entries
+  ☐ Create entries
+  ☐ Delete entries
+```
+
+And likewise, for each taxonomy:
+
+#### Taxonomy:  {taxonomy name} *(for example,* Tags *)*
+```
+☐ Edit taxonomy terms
+  ☐ Create taxonomy terms
+  ☐ Delete taxonomy terms
+```
+
+#### Global: General
+```
+☐ Edit globals
+```
+
+#### Asset Containers: Main Assets
+```
+☐ Edit assets
+  ☐ Create assets
+  ☐ Delete assets
+```
+
+#### Forms
+```
+☐ Access Forms
+```
+
+#### Updater
+```
+☐ Access the updater to see updates
+  ☐ Perform updates
+```
+
+#### Importer
+```
+☐ Import data
+```
+
+#### Users
+```
+☐ Edit users
+  ☐ Create users
+  ☐ Delete users
+```
 
 ## Groups {#groups}
 
