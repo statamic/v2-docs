@@ -36,6 +36,23 @@ It is through the Roles interface that you even access the available Permissions
 
 Roles are created and managed in `Configure » Users`, assuming you have necessary permissions to access it.
 
+
+It so happens that when roles are created via the Control Panel (CP) they are identified under the hood in `/site/settings/users/roles.yaml` by a system-created alphanumeric ID, such as:
+```
+d32e14fb-08c9-44c2-aaf8-21200852bafd:
+  title: Admin
+  permissions:
+    - super```
+```
+This works just fine, as such IDs are never seen by folks who interact with the site exclusively via the CP. However, if you are setting up your site by hand, you can opt to define roles yourself by editing `.../roles.yaml` and give them more human-readable names. For instance,
+```
+admin:
+  title: Admin
+  permissions:
+    - super
+```
+Both approaches work equally well, but the later may be more convenient for hands-on programmers.
+
 ## Groups {#groups}
 
 Just in case you have a complex publishing workflow or lots of cooks in the kitchen (metaphorically speaking of course - if you have lots of real cooks we'd like to try what you're cooking and formally request invites to this event too), assigning multiple Permissions to every User can _also_ be tedious, as are an over abundance of metaphors and subtexts.
