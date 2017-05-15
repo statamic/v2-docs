@@ -89,7 +89,7 @@ Listening on http://localhost:3000
 
 ## Installing {#installing}
 
-Grab the latest version of [statamic](https://account.statamic.com/try) and let's do this.
+Grab the latest version of [statamic](https://statamic.com/try) and let's do this.
 
 ### Step 1: Unzip files into your webroot {#step-1-files}
 
