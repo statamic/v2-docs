@@ -51,6 +51,11 @@ parameters:
     description: >
       Alias of the [crop](http://glide.thephpleague.com/1.0/api/crop/#crop-crop) Glide API parameter.
   -
+    name: absolute
+    type: 'boolean *false*'
+    description: >
+      When set to `true`, this tag will output the full URL rather than the default relative URL.
+  -
     name: orient
     type: mixed
     description: >
