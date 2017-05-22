@@ -12,4 +12,4 @@ we assume you will have URL rewrites set up in one way or another.
 If you're running Apache, you're probably missing an `.htaccess` file. If you're running Nginx, you haven't set up
 rules in your `nginx.conf.` Statamic comes bundled with sample versions of these files.
 
-For more details, check out the [URL rewrite manual page](http://docs.statamic.com/getting-started#rewrites)
+For more details, check out the [URL rewrite manual page](https://docs.statamic.com/installing#rewrites)
