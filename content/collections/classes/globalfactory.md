@@ -3,7 +3,7 @@ title: GlobalFactory
 class: Statamic\Data\Globals\GlobalFactory
 id: 2735b88d-6104-4b71-a281-9cb017bff7e2
 ---
-Inheritance: [ContentFactory](/addons/classes/contentfactory)
+Inheritance: [ContentFactory](/addons/api/contentfactory)
 
 ## Usage
 
