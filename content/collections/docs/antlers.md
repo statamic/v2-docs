@@ -407,3 +407,9 @@ Alternatively, you can prefix the parameter with a `:` and it'll look for the va
 [logical]: http://php.net/manual/language.operators.logical.php
 [modifiers]: /modifiers
 [tags-vs-vars]: /knowledge-base/tags-vs-variables
+
+## Syntax Highlighting (#syntax-highlighting)
+
+Make antlers the code look pretty in your code editor:
+
+- [Sublime Text](https://github.com/addisonhall/antlers-statamic-sublime-syntax)
