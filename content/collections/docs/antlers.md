@@ -402,6 +402,10 @@ Alternatively, you can prefix the parameter with a `:` and it'll look for the va
 {{ nav :from="segment_1" }}
 ```
 
+## Resources
+
+If you use [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) as a code editor, you can use the [Antlers Syntax Package](https://github.com/addisonhall/antlers-statamic-sublime-syntax) to enable code highlighting. It's lovely!
+
 [guide-yaml]: /yaml
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
 [logical]: http://php.net/manual/language.operators.logical.php
