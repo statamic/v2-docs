@@ -20,10 +20,11 @@ Let's pretend you are Johnny Depp's web developer. You've been tasked with colle
 
 ### Create a formset {#create-the-formset}
 
-The first thing you'll need to do is create a Formset. Each formset has its own settings, felds, and validation rules. Head to `/cp/forms` in the Tools area of the Control Panel and click the **Create Form** button. (Alternately you can create a `.yaml` file in `site/settings/formsets` which will contain the form fields and settings.)
+The first thing you'll need to do is create a Formset. Each formset has its own settings, felds, and validation rules. Head to `/cp/forms` in the Tools area of the Control Panel and click the **Create Form** button. 
 
-Each form should contain a title and a set of fields with [validation rules][rules]. Optionally it may also have metrics
-and email configuration. Fields can be created similar to how fieldsets work for regular Statamic content.
+Alternately you can create a `.yaml` file in `site/settings/formsets` which will contain the form fields and settings. In that case you also use arbitrary settings that will be passed to the template, for example `type`.
+
+Each form should contain a title and a set of fields with [validation rules][rules]. Optionally it may also have metrics and email configuration. Fields can be created similar to how fieldsets work for regular Statamic content.
 
 Go ahead and create the four aforementioned fields. Once configured you will have a formset file that mike look something like this:
 
@@ -44,8 +45,6 @@ fields:
     display: Message
     validate: required
 ```
-
-Next you can check out some of the other [Form Tags][tags] available to you to display any errors, show a success message, and so on. We'll keep this example brief and you can explore those at leisure.
 
 ### The Template {#the-template}
 
@@ -85,6 +84,7 @@ Or alternately, you can take a full-control approach and write out all the input
 {{ /form:create }}
 ```
 
+Next you can check out some of the other [Form Tags][tags] available to you to display any errors, show a success message, and so on. We'll keep this example brief and you can explore those at leisure.
 
 ## Viewing submissions {#viewing-submissions}
 
