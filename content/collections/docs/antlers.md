@@ -247,6 +247,13 @@ Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They se
 
 Conditions are converted to, and therefore behave just like, PHP expressions. You can use any of PHP’s [comparison][comparison] and [logical][logical] operators.
 
+### Conditions on Tags vs Variables
+
+When working with [tags](/tags) instead of variables, you must wrap the tag in a pair of additional single braces to tell the parser to run that logic first.
+
+```
+{{ if {form:errors} }} // yep, there are form errors {{ /if }}
+```
 
 ### Truthiness and existence {#truthiness-and-existence}
 
