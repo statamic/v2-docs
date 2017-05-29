@@ -32,5 +32,6 @@ You can relate any of the base [Content Types](/content-types), each of which wi
 
 - [Taxonomy](/fieldtypes/taxonomy) - for Taxonomy Terms
 - [Collection](/fieldtypes/collection) - for Entries
+- [Pages](/fieldtypes/pages) - for Pages
 - [Users](/fieldtypes/users) - for Users
 - [Assets](/fieldtypes/assets) - for Assets (it doesn't extend this Relate fieldtype)
