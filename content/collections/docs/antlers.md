@@ -418,3 +418,9 @@ If you use [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.i
 [logical]: http://php.net/manual/language.operators.logical.php
 [modifiers]: /modifiers
 [tags-vs-vars]: /knowledge-base/tags-vs-variables
+
+## Syntax Highlighting (#syntax-highlighting)
+
+Make antlers the code look pretty in your code editor:
+
+- [Sublime Text](https://github.com/addisonhall/antlers-statamic-sublime-syntax)
