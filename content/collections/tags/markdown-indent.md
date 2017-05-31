@@ -8,14 +8,14 @@ Similar to the [`{{ markdown }}`](/tags/markdown) tag, `{{ markdown:indent }}` i
 ## Example {#example}
 
 ```
-  {{ markdown:indent }}
+{{ markdown:indent }}
   ## Ode To Bacon
 
   Bacon. Mmm, bacon.
-  {{ /markdown:indent }}
+{{ /markdown:indent }}
 ```
 
 ``` .language-output
-  <h3>Ode To Bacon</h3>
-  <p>Bacon. Mmm, bacon.</p>
+<h3>Ode To Bacon</h3>
+<p>Bacon. Mmm, bacon.</p>
 ```
