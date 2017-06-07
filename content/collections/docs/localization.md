@@ -24,7 +24,7 @@ In this guide, we will assume we're using this subfolder approach in any example
 
 Following from our subfolder example, we'll need to create those folders.
 
-For each locale, you should copy the `index.php` and `.htaccess` into their respective folders.
+For each locale, you should copy the `index.php` (and `.htaccess` if using Apache) into their respective folders.
 
 ``` .language-files
 / /
