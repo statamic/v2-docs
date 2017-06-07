@@ -4,7 +4,7 @@ id: df6aaa3c-2ffd-4a84-be3a-1fbde5037b77
 overview: >
   Modifers give you the ability to manipulate the data of your variables on the fly. They can manipulate strings, filter arrays and lists, help you compare things, do basic math, simplify your markup, play Numberwang, and even help you debug.
 ---
-## Anatomy of a Modifier
+## Anatomy of a Modifier {#anatomy}
 
 A modifer consists of a few parts. Let's break it down.
 
@@ -18,15 +18,11 @@ A modifer consists of a few parts. Let's break it down.
 
 Parameters are used to modify the behavior of a modifier. They could be anything from an integer or boolean to a variable reference. It's up to you.
 
-## There Can Only Be One.
-
-An addon can have _one_ modifier. This is because the modifier will take on the name of the addon itself.
-
-For example, have a `Bacon` addon? If you were to include a modifier, you'd now have access to `{{ var | bacon }}` in your templates. Please do that. The world needs more bacon.
-
 ## Example Class {#example-class}
 
-The class file must be named `AddonNameModifier.php`.
+Your modifier class must extend `Statamic\Extend\Modifer`.
+
+The name of the file and class can differ depending on your situation. See [Multiple Modifiers](#multiple) below.
 
 ``` .language-php
 <?php
@@ -44,6 +40,49 @@ class EchoModifier extends Modifier
 }
 ```
 
+## Multiple Modifiers {#multiple}
+
+Since 2.6, an addon may have more than one modifier. One "primary" modifier, and multiple "secondary" modifiers.
+
+### Directory Structure {#directory-structure}
+
+You may store your modifier classes either in the root directory, like so:
+
+``` .lang-files
+site/addons/Bacon
+|-- BaconModifier.php
+|-- BitsModifier.php
+`-- meta.yaml
+```
+
+...or within a `Modifiers` directory/namespace if you wish to stay more organized:
+
+``` .lang-files
+site/addons/Bacon
+|-- Modifiers
+|   |-- BaconModifier.php
+|   `-- BitsModifier.php
+`-- meta.yaml
+```
+
+### Primary vs. Secondary {#primary-secondary}
+
+An addon's primary modifier will use the name of the addon.  
+
+``` .lang-template
+{{ variable | your_addon }}
+```
+
+This will correspond to the `Statamic\Addons\YourAddon\YourAddonModifier` or `Statamic\Addons\YourAddon\Modifiers\YourAddonModifier` class.
+
+Secondary modifiers will be use the name of the addon and the secondary name, delimited by a dot.
+
+``` .lang-template
+{{ variable | your_addon.secondary }}
+```
+
+This will correspond to the `Statamic\Addons\YourAddon\SecondaryModifier` or `Statamic\Addons\YourAddon\Modifiers\SecondaryModifier` class.
+
 ## Generating {#generating}
 
 You can generate a modifier class file with a console command.
@@ -51,6 +90,8 @@ You can generate a modifier class file with a console command.
 ``` .language-console
 php please make:modifier AddonName
 ```
+
+**Note**: This will only generate a primary modifier in the root directory.
 
 ## Class Rules & Standards {#rules}
 
@@ -67,7 +108,7 @@ The other two arguments are optional:
  - `$params` will be an array of any parameters.
  - `$context` will be an array of contextual data available at that position in the template.
 
-## A More Elaborate Example
+## A More Elaborate Example {#elaborate-example}
 
 Let's say we need a modifier that repeats things. Maybe even delicious things.
  
