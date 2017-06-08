@@ -27,24 +27,68 @@ Statamic has a Search results tag that will allow you to retrieve content based 
 
 ## Drivers {#drivers}
 
-Statamic's search component comes loaded with a couple different drivers.
+Statamic's search component comes loaded with a couple different drivers. You may specify which to use by adding the appropriate 
+`driver` value to your `site/settings/search.yaml` file.
 
-### Zend {#zend-driver}
+### Local {#local-driver}
 
-Zend is the default driver and it will build its index in your filesystem. The Zend driver requires
-no additional setup aside from having the `local` folder writable, and from initially indexing your content.
+The local driver (internally named "Comb") is the default driver and it will build its index in your filesystem.
 
-The Zend driver will provide you with basic search abilities. If you are looking for more flexibility/features –
+It is enabled by default, but you can be explicit about it by adding the following to your `search.yaml`:
+
+``` .lang-yaml
+driver: local
+```
+
+The local driver requires no additional setup aside from having the `local` folder writable, and from initially indexing your content.
+
+The local driver will provide you with basic search abilities. If you are looking for more flexibility/features –
 like field weighting, typo tolerance, etc – we recommend using the Algolia driver.
 
 ### Algolia {#algolia-driver}
 
 [Algolia](https://www.algolia.com/referrals/36eaab9b/join) is a popular search service. It is lightning fast and highly customizable.
 
-To enable the Algolia driver (first make sure you have an account) head to the `Settings > Search` page, select `algolia`, and enter your API credentials. That's it.
+To enable the Algolia driver (first make sure you have an account) head to the `Settings > Search` page, select `algolia`, and enter your API credentials.
+
+Or, you may add the following to your `search.yaml`:
+
+``` .lang-yaml
+driver: algolia
+algolia_app_id: your-app-id
+algolia_api_key: your-admin-api-key
+```
+
+## Searching Collections {#collection-indexes}
+
+By default, all content will go into a default master index.
+
+To give a collection its own index, add a `searchable` array into the collection's `folder.yaml` with a list of the fields that should be indexed.
+
+For example, in `site/content/collections/blog/folder.yaml`:
+
+``` .lang-yaml
+searchable:
+  - title
+  - subtitle
+  - content
+```
+
+This tells Statamic that only those 3 fields should be indexed, and will result in a leaner index with faster searches.
+
+Then, to create the index, run the following command:
+
+``` .lang-bash
+php please search:update collections/blog
+```
+
 
 ## Searching in the Control Panel {#searching-in-the-cp}
 In the Control Panel, the search bar at the top of the page will allow you to search for content and will take you directly to the page to edit it.
+
+When searching a collection's entries (not the global search) the [collection's index](#collection-indexes) will be favored.  
+If no index exists, then the default index will be used. If the default index hasn't been created either, Statamic will simply try to find an entry with a matching title.
+
 
 ## Algolia {#algolia}
 
