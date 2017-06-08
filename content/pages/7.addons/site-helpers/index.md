@@ -31,6 +31,7 @@ You may generate the helper files by running their corresponding commands:
 php please make:tags-helper
 php please make:modifiers-helper
 php please make:filters-helper
+php please make:controller-helper name
 ```
 
 If the files already exist, Statamic will prompt you for a method name which will be appended to the file.
@@ -120,3 +121,25 @@ class Filters extends Filter
 ```
 
 Filters inside a site helper work almost identically to how [Filters](/addons/classes/filters) work within the context of an addon.
+
+## Controllers {#controllers}
+
+You may have multiple controller classes, which can be used for the [Controller Routes](/docs/routing#controller-routes) feature.
+
+```
+<?php
+
+namespace Statamic\SiteHelpers;
+
+use Statamic\Extend\Controller;
+
+class FoodController extends Controller
+{
+    public function bacon()
+    {
+        return 'Bacon!';
+    }
+}
+```
+
+For example, when adding `/foods/bacon: FoodController@bacon` to your routes file, the contents of the `bacon` method will be returned.

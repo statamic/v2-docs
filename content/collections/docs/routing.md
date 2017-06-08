@@ -75,6 +75,22 @@ Here's an example on how you might use this in the context of a form submission 
 {{ /if }}
 ```
 
+
+## Controller Routes {#controllers}
+
+If you're in need of more control of your output, you may use a controller. Specifically, one located in your [site helpers](/addons/site-helpers) area.
+
+``` .lang-yaml
+routes:
+  /complicated/stuff: ComplicatedController@stuff
+```
+
+This will output whatever the `stuff` method in your `Statamic\SiteHelpers\ComplicatedController` class returns.
+
+Make sure to return something that Laravel can convert into a response.  
+For example: a string, an array (which will be converted to JSON), or a `Response` object.
+
+
 ## Collection and Taxonomy Routes {#collection-routes}
 
 By their very nature, Collections and Taxonomies don't determine their own URLs. To do so would limit their flexibility. This is where you get to decide just how their URLs are structured and where they go.
