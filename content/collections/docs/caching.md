@@ -97,7 +97,32 @@ static_caching_enabled: true
 static_caching_type: file
 ```
 
-**Step two:** Enable the reverse proxy setting for whichever server you're running. It's commented out in each of the sample server config files (nginx.conf, .htaccess, and web.config) included with Statamic.
+**Step two:** Enable the rewrite rule for whichever server you're running. It's commented out in each of the sample server config files included with Statamic.
+
+Apache:
+
+```
+RewriteCond %{DOCUMENT_ROOT}/static/%{REQUEST_URI}_%{QUERY_STRING}\.html -s
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule .* static/%{REQUEST_URI}_%{QUERY_STRING}\.html [L,T=text/html]
+```
+
+Nginx:
+
+```
+location / {
+  try_files /static${uri}_${args}.html $uri /index.php?$args;
+}
+```
+
+IIS:
+
+```
+<rule name="Static Caching" stopProcessing="true">
+  <match url="^(.*)"  />
+  <action type="Rewrite" url="/static/{R:1}_{QUERY_STRING}.html"  />
+</rule>            
+```
 
 **Step three:** Watch your site fly!
 
