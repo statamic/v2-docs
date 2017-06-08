@@ -36,8 +36,8 @@ class FeedController extends Controller
         return [
             'version' => 'https://jsonfeed.org/version/1',
             'title' => 'My Awesome Site',
-            'home_page_url' => 'https://my-awesome-site.dev/',
-            'feed_url' => 'https://my-awesome-site.dev/feed.json',
+            'home_page_url' => 'https://my-awesome-site.com/',
+            'feed_url' => 'https://my-awesome-site.com/feed.json',
             'items' => $this->getItems()
         ];
     }
