@@ -132,7 +132,7 @@ national_parks:
   - Redwood
 ```
 
-As you may have guessed, you can access the variable with `{{ national_parks }}`. Since this is an array though, that's only the beginning. Add a closing tag, `{{ /national_parks }}` and some helper variables you can use display the bits inside, and you're in action. You can fetch the key (the order, starting from zero) with `{{ key }}` and the value (the reason we’re here) with `{{ value }}`.
+As you may have guessed, you can access the variable with `{{ national_parks }}`. Since this is an array though, that's only the beginning. Add a closing tag, `{{ /national_parks }}`, and some helper variables you can use to display the bits inside, and you're in action. You can fetch the key (the order, starting from zero) with `{{ key }}` and the value (the reason we’re here) with `{{ value }}`.
 
 ```
 {{ national_parks }}
