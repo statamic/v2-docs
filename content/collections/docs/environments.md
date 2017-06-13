@@ -72,6 +72,36 @@ Anything nested under `settings` would override values in the corresponding yaml
 
 Anything nested under `addons` would override values in the corresponding addon's yaml file. In this example, `slices` will override the value in the `bacon` addon's setting file.
 
+Nesting must always be from the "root" (`settings:`) and include any pre-existing nesting already within whichever `.yaml` file for the value you wish to override. For instance, if you want to override just the `url:` field in `settings.yaml`, 
+
+```
+app_key: …
+license_key: …
+locales:
+  en:
+    full: en_US
+    name: English
+    url: http://example.dev
+```
+
+you'd need to include a full, properly indented path in your named environment's `.yaml` file, called e.g., `ON-REMOTE-SERVER.yaml`:
+
+```
+settings:
+  system:
+    locales:
+      en:
+        url: http://example.com
+```
+
+Pair that with a suitable `.env` file on the server (only),
+
+```
+APP_ENV=ON-REMOTE-SERVER
+```
+
+so that whenever you upload your work to that server, the `site_url` global variable will "automatically" take on a `.com` extention in place of `.dev`. (Note the `.dev` default in `settings.yaml` already has your development environment covered, so there's perhaps no need for a parallel local environment file (e.g., `ON-MY-LAPTOP.yaml`) unless you're locally overriding other settings too.)
+
 You may also interpolate in your environment files, if you wish.
 
 ``` .language-yaml
