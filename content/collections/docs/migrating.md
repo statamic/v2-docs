@@ -40,7 +40,7 @@ Each of these changes may require a little bit of work.
 ### Renamed Variables {#renamed-variables}
 
 - `{{ layout_content }}` is now `{{ template_content }}` because it's the actual contents of the template. Feels so much more natural.
-- ``{{ current_time }}``
+- `{{ current_date }}`  is now `{{ now }}` 
 
 ### Removed Variables {#removed-variables}
 
