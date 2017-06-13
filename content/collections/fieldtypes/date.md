@@ -8,4 +8,8 @@ options:
     name: allow_time
     type: boolean (true)
     description: Enable/disable the timepicker
+  -
+    name: allow_blank
+    type: boolean (false)
+    description: Allow the field to be left blank on save
 id: 7dfba904-8a74-40e1-b507-51cd2b5f6123
