@@ -1,6 +1,6 @@
 title: Textarea
 overview: A simple, multi-line textarea input.
-image: 29859332-425c-4600-91a7-891c7c81710f
+image: /assets/fieldtypes/textarea.png
 options:
   -
     name: rows

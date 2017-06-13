@@ -1,0 +1,6 @@
+title: Assets
+path: assets
+url: /assets
+assets:
+  fieldtypes/yaml.png:
+    title: yaml

@@ -1,7 +1,7 @@
 ---
 title: Configuring File Upload Size
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 id: 51f8e44c-7be2-4af0-9ee2-941e2267e10a
 ---
 It's often necessary to modify your server configuration to increase the maximum size of any file uploads. It's annoying, but there's just nothing we can do about it on the application side, aside from displaying a message saying the file is too darn big.

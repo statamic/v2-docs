@@ -5,7 +5,7 @@ overview: |
   The Replicator is a meta fieldtype giving you the ability to define _sets_ of fields that you can dynamically piece together in whatever order and arrangement you imagine. You can build long-form articles like [Medium.com](http://medium.com) and take advantage of the extra markup control.
 
   It's so much better than a WYSIWYG field.
-image: 83b593df-8be3-48f9-8b4f-8ea7280d5dbd
+image: /assets/fieldtypes/replicator.png
 options:
   -
     name: sets

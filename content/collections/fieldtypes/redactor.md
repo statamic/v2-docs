@@ -2,7 +2,7 @@
 title: Redactor
 description: A fast, customizable WYSIWYG editor.
 overview: 'Redactor is a fast, retina-ready WYSIWYG editor fieldtype. It’s lightweight, customizable, and powerful. Currently using [Redactor 10](https://imperavi.com/assets/pdf/redactor-documentation-10.pdf) you can check out the docs to see what options are available to customize.'
-image: 22318543-6610-45b9-b21b-d1bed3b2afe7
+image: /assets/fieldtypes/redactor.png
 options:
   -
     name: settings

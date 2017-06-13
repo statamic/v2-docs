@@ -3,7 +3,7 @@ title: Users
 description: Relate one or more Users to your content.
 overview: >
   Allows you attach Users to your content. This can be used to show authorship, team members, or whatever other use you have for showing people with your content.
-image: 1732af72-da76-4a23-81fb-69a41b860027
+image: /assets/fieldtypes/users.png
 id: 0f8102b9-c948-4264-8cb8-cbfbd0415a04
 options:
   -

@@ -1,7 +1,7 @@
 ---
 title: The wrong variables are being shown
 kb_categories:
-  - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
+  - Troubleshooting Common Scenarios
 overview: Looping over some data and the wrong variables are being displayed? Perhaps ones from the current page?
 id: 0400d150-134a-465e-858f-b37df6e1115f
 ---

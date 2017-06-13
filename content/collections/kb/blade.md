@@ -2,7 +2,7 @@
 title: Using Laravel Blade for templating
 id: efa34b0d-b4c3-43fc-bb91-a6d331dc6026
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 ---
 ## The Blade Templating Language
 
