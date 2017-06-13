@@ -23,7 +23,10 @@ Two important things to note here: the `super`, and the `password`.
 
 ### The Password {#the-password}
 
-Creating a user by hand will involve a plain text password. Have no fear, however! As soon as you log in, it will be encrypted and hashed and as secure as any DB driven auth system you've ever seen (you can log in by visiting `/cp`).
+Creating a user by hand will involve a plain text password. Have no fear, however! As soon as you log in, it will be encrypted and hashed and as secure as any DB driven auth system you've ever seen.
+
+### Login
+You can log in by visiting `/cp`. By default, users will log in with username and password, but this can be changed to email and password in `site/settings/users.yaml` or in the Control Panel. Any users created before this change will need to have their filename updated in `site/users/` to reflect their email address instead of their username.
 
 ## Permissions {#permissions}
 
