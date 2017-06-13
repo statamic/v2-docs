@@ -42,3 +42,13 @@ Since the collection tag accepts a pipe-delimited list of collection names, you 
   <li>etc</li>
 </ul>
 ```
+
+## Fieldset YAML
+
+Set the collections as an array, as per below:
+
+```
+collection: 
+  - collection1
+  - collection2
+```
