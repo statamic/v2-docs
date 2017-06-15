@@ -43,3 +43,11 @@ Statamic uses PSR-4 Autoloading to load addons in the `site/addons/` folder. Thi
 
 Your addon’s folder needs to live in a directory named after the StudlyCased name of your addon.  
 Have an addon named `Bacon Bits`? You'll want to create `site/addons/BaconBits/`.
+
+**Note: Case is important!** Be sure to name your files and class names in **StudlyCase**.
+
+OSX/macOS is case _insensitive_. Linux is case _sensitive_.
+
+A common problem developers run into is while developing locally everything seems fine, but after pushing to production, things don't work.
+
+What usually happens here is that when Statamic requests `SomeClass.php`, your Mac will happily provide `someclass.php`. But once you push to a server, typically running Linux, it'll only look for `SomeClass.php`, and _not_ `someclass.php`.
