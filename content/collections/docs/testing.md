@@ -21,6 +21,12 @@ Statamic will recognize any PHPUnit test classes (which are just PHP classes end
 
 Your test classes can extend `Statamic\Testing\TestCase` if you need to boot up Statamic, or simply use `PHPUnit_Framework_TestCase` for a true unit test class. Your classes do not need to be namespaced.
 
+You may also generate a test class with a command:
+
+``` .lang-bash
+php please make:test Example
+```
+
 ## Running Tests {#running-tests}
 
 You may run your tests using the following command:
