@@ -137,7 +137,7 @@ It's possible to use recursive tags for semi-automatically creating deeply-neste
 </ul>
 ```
 
-The `{{ *recursive children* }}` tag will repeat the contents of the entire `{{ nav }}` tag using child elements if they exist. This means that as long as there are children to display, and we’re still on either the current or parent page of those children, the nav tag will traverse deeper.
+The `{{ *recursive children* }}` tag will repeat the contents of the entire `{{ nav }}` tag using child elements if they exist. This means that as long as there are children to display, and we’re still on either the current or parent page of those children, the nav tag will traverse deeper. If your scoped variables have trouble making it through to the next recursion, you can glue them to children like this: `{{ *recursive children:my_scoped_variable* }}`.
 
 It’s an admittedly weird concept, and might take some fiddling with to truly understand, but is very powerful when fully understood. Take the time. Learn to wield it. A powerful Jedi will you be.
 
