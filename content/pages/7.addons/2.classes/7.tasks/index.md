@@ -5,7 +5,10 @@ overview: >
 title: Tasks
 id: 4ccdc432-2a6a-4a74-9228-f09f93c9d1ad
 ---
-Typically, to automate tasks you would use various "cron jobs" that runs things at specified intervals. You'd need to use the command line and remember strange syntaxes to get it working. How annoying. The Task Scheduler makes this simple.
+
+## Overview {#overview}
+
+Typically, to automate tasks on a server you would use various "cron jobs" that runs things at specified intervals. You'd need to use the command line and remember strange syntaxes to get it working. How annoying. The Task Scheduler makes this simple.
 
 ## Starting the Scheduler {#starting}
 
@@ -17,6 +20,7 @@ To enable task scheduling, add the following Cron entry to your server:
 
 This Cron will call the Statamic/Laravel command scheduler every minute and run any tasks that you have scheduled and runs them if they're due, automatically. This single Cron entry is all it takes.
 
+Instead of remembering the cron syntax, you can literally copy/paste the line above (and adjust the path to the `please` file).
 
 ## Generating {#generating}
 
