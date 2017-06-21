@@ -51,7 +51,7 @@ admin:
   permissions:
     - super
 ```
-Both approaches work equally well, but the later may be more convenient for hands-on programmers.
+Both approaches work equally well, but the latter may be more convenient for hands-on programmers.
 
 ## Groups {#groups}
 
