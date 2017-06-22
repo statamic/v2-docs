@@ -64,3 +64,5 @@ However, if your addon has any [Composer dependencies](/addons/bootstrapping#com
 ``` .lang-bash
 php please update:addons
 ```
+
+If you want to programatically know if an addon is installed, you can do this by `$addon->isInstalled()`.
