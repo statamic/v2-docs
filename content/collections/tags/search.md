@@ -17,6 +17,11 @@ parameters:
     description: >
       The query string parameter used for the
       search term.
+  -
+    name: supplement_data
+    type: 'string *true*'
+    description: >
+      When this is `true` it will convert search results to the appropriate content objects, which makes all their fields available in your templates. Disabling this will result in a performance increase, but only indexed fields will be available.
 variables:
   -
     name: no_results
@@ -58,10 +63,7 @@ variables:
     name: content data
     type: array
     description: >
-      Each page being iterated has access to
-      all the variables inside that page. This
-      includes things like `title`, `content`,
-      etc.
+      Each page being iterated has access to all the variables inside that page. This includes things like `title`, `content`, etc. When the `supplement_data` parameter has been set to `false`, only indexed fields will be available.
   -
     name: is_page
     type: boolean
@@ -74,6 +76,13 @@ variables:
     name: is_term
     type: boolean
     description: Whether the current item is a taxonomy term.
+  -
+    name: _highlightResult
+    type: array
+    description: >
+      When using the Algolia driver, this array will be available as per their [documentation][doc]. You can use this to output a field with the search term automatically highlighted. eg. `{{ _highlightResult:myfield:value }}`
+
+      [doc]: https://www.algolia.com/doc/api-client/php/search#fields
 
 ---
 ## Overview {#overview}
