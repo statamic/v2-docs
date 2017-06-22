@@ -54,3 +54,13 @@ OSX/macOS is case _insensitive_. Linux is case _sensitive_.
 A common problem developers run into is while developing locally everything seems fine, but after pushing to production, things don't work.
 
 What usually happens here is that when Statamic requests `SomeClass.php`, your Mac will happily provide `someclass.php`. But once you push to a server, typically running Linux, it'll only look for `SomeClass.php`, and _not_ `someclass.php`.
+
+## Installing an Addon {#installing}
+
+Most of the time, an addon is considered "installed" just by dropping the files into your project.
+
+However, if your addon has any [Composer dependencies](/addons/bootstrapping#composer), it won't be considered installed until you've brought those into Statamic. You can do that with this command:
+
+``` .lang-bash
+php please update:addons
+```
