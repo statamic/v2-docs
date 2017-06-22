@@ -15,6 +15,18 @@ Statamic builds indexes of your content to provide lickity-split search results.
 
 To kick off the indexer you can run `php please search:update` in your terminal, visit `/cp/search/update`, or simply perform a search _in the control panel_. Also, in the Control Panel you will find settings to enable automatic indexing of content. Every time a change to content is detected, that update is pushed into the index.
 
+### What fields are indexed {#searchable-fields}
+
+By default, just the `title` is indexed. If you'd like to customize this, you may edit the `searchable` array in `site/settings/search.yaml`.
+
+``` .lang-yaml
+searchable:
+  - title
+  - content
+```
+
+This setting only applies to the `default` index.
+
 ## The Search Tag {#search-tag}
 
 Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page][search_tag] for more details, but it works like this:
