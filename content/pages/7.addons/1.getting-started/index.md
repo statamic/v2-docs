@@ -25,6 +25,7 @@ description: Charge your customers with the grace of a Bison.
 addon_url: http://statamic.com/addons/charging-bison
 developer: Statamic
 developer_url: http://statamic.com
+commercial: true
 ```
 
 Congratulations, you've built an addon!
@@ -33,6 +34,8 @@ Well, kinda. But it does nothing. That's like saying breakfast is ready but all 
 Now you'll need to cook the bacon – er, [write some code](#code-structure).
 
 **Note:** Technically this step is only required if you plan to display details in the _Addons_ section of the control panel. If you want to whip up something quick for yourself, you don't need a meta file. You may even consider creating a [site helper](/addons/site-helpers) instead of an addon.
+
+Marking your addon as `commercial` won't dump money into your bank account, but it will automatically add a `license_key` field to your [settings page](/addons/classes/settings#ui).
 
 
 ## Code Structure {#code-structure}
