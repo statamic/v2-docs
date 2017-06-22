@@ -100,15 +100,4 @@ Here's a couple of links to get you started:
 - [Algolia JavaScript docs](https://www.algolia.com/doc/javascript)
 - [Algolia demos](https://www.algolia.com/demos)
 
-### Searchable Attributes {#algolia-searchable-attributes}
-
-If you'd like to restrict which fields/attributes Algolia makes searchable, you may specify "Searchable Attributes"
-from your Algolia index settings. You may do this from the Algolia website, or through the Control Panel's `Settings > Search`
-page.
-
-Please note that if you set up searchable attributes, you may _only_ use those fields in your [Search Tag][search_tag]'s
-`fields` parameter. Specifying any additional fields in the tag parameter will cause your tag to yield no results.
-
-Similarly, only searchable attributes will be used when searching through the Control Panel.
-
 [search_tag]: /tags/search
