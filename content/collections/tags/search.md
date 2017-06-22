@@ -12,6 +12,11 @@ parameters:
       Note: If you're using Algolia and have set up searchable attributes, you may only specify fields exist in there.
       Any additional fields will cause you the search tag to yield no results.
   -
+    name: collection
+    type: string
+    description: >
+      The name of a collection, to search through its index. If this parameter is not provided, the default index will be used.
+  -
     name: param
     type: 'string *q*'
     description: >
