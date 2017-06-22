@@ -7,7 +7,7 @@ parameters:
     name: fields
     type: array
     description: |
-      Specify the fields the search should look through. You can pipe-separate multiple fields, eg. `title|content`.
+      Narrow down your search by looking in specific fields. The fields you select must be located in the corresponding index. You can pipe-separate multiple fields, eg. `title|content`.
       
       Note: If you're using Algolia and have set up searchable attributes, you may only specify fields exist in there.
       Any additional fields will cause you the search tag to yield no results.
@@ -53,7 +53,7 @@ variables:
       The internal relevance score that
       Statamic given to this result. Helpful
       for debugging, but useless to the
-      public.
+      public. Only applies when using the local driver.
   -
     name: content data
     type: array
@@ -62,22 +62,34 @@ variables:
       all the variables inside that page. This
       includes things like `title`, `content`,
       etc.
+  -
+    name: is_page
+    type: boolean
+    description: Whether the current item is a page.
+  -
+    name: is_entry
+    type: boolean
+    description: Whether the current item is an entry.
+  -
+    name: is_term
+    type: boolean
+    description: Whether the current item is a taxonomy term.
 
 ---
-## Overview
+## Overview {#overview}
 
 An overview on how to _configure_ search, indexing, and the query form can be found in the [Search Docs](/search).
 
 
-## Example
+## Example {#example}
 
-On a search result page, you can loop through the results of the search like they were entries or pages. Because they are. You'll have access to all the data of all the content returned so you can format your results however you'd like. In this example, we're displaying a truncated vresion of the `content` field.
+On a search result page, you can loop through the results of the search like they were entries or pages. Because they are. You'll have access to all the data of all the content returned so you can format your results however you'd like. In this example, we're displaying a truncated version of the `content` field.
 
 ```
 {{ search:results }}
 
-	{{ if no_results }}
-		<h2>No results.</h2>
+  {{ if no_results }}
+    <h2>No results.</h2>
   {{ else }}
 
     <a href="{{ url }}" class="result">
@@ -89,11 +101,3 @@ On a search result page, you can loop through the results of the search like the
 
 {{ /search:results }}
 ```
-
-## Distinguishing Content Types
-
-You can use the following helper variables to check and display (or not display) results by content type:
-
-- `is_page` 
-- `is_entry`
-- `is_term`
