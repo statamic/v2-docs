@@ -40,3 +40,5 @@ You'd then use the `relate` tag to fetch field data from those entries with a si
   {{ /relate:similar_posts }}
 </ul>
 ```
+
+> Take note when closing the relate tag to repeat the use of your variable. e.g. `{{ /relate:similar_posts }}`
