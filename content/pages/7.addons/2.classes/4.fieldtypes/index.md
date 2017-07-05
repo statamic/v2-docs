@@ -70,23 +70,23 @@ Vue.component('password_toggle-fieldtype', {
 });
 ```
 
-### Props
+### Props {#props}
 
 The three `props` are passed into your fieldtype by a parent fieldtype builder component. You have to include that array just like you see above. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
 
-### Data 
+### Data {#data}
 
 `data` should be a function that returns an object containing any variables you want available in your component.
 
 In the example, we're defining `show` to keep track of whether the value should be shown or not.
 
-### Computed
+### Computed {#computed}
 
 The `computed` property is an object containing any values that should be dynamically evaluated.
 
 In the example, we're letting `inputType` be the value for the input's `type` attribute - making it either a text or password field.
 
-### Template
+### Template {#template}
 
 `template` is the html that'll be rendered where you'd expect to see your fieldtype.
 
@@ -106,17 +106,17 @@ The colons will evaluate the value and turn it into the attribute. So, `:type="i
 
 The `v-model` attributes will bind the values to the form input. If you type into the text box, `data` will get updated. If you check the checkbox, `show` will get updated.
 
-### Methods, Events, Ready...
+### Methods, Events, Ready... {#methods-events}
 
 Vue has more features you can use in your fieldtypes. Remember, a fieldtype is just a Vue component. You aren't limited to the items used in the example.
 
 Refer to the [Vue component docs][vue-component] for more information.
 
-## The PHP Side
+## The PHP Side {#php-side}
 
 The PHP side of your fieldtype is responsible for manipulating data before  the data is loaded or after it's submitted. This will let you enforce data types, set relationships, fire events, or any other number of things.
 
-## Example Fieldtype Class
+## Example Fieldtype Class {#example-fieldtype}
 
 ``` .language-php
 <?php
@@ -146,11 +146,11 @@ class MyAddonFieldtype extends Fieldtype
 
 These are the default method values for a fieldtype. As you can see, we're just passing the data along untouched, but you could do anything you'd like here.
 
-### Blank value
+### Blank value {#blank-value}
 
 The value returned by the `blank` method will be used as the "default" value for fields using your fieldtype. For example, maybe your field should be dealing with arrays by default. In that case, you should return `[]`.
 
-### Processing
+### Processing {#processing}
 
 The `preProcess` and `process` methods handle any manipulation of data coming to and from the field.
 
