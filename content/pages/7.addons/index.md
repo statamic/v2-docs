@@ -11,7 +11,7 @@ Each Addon can be viewed as a new "feature", or group of features, for your site
 
 ## Assumed Knowledge
 
-Statamic Addons involve writing PHP. While we have a lot of helper methods and API classes to take advantage of, you'll still need to know how to write PHP, and be familiary with [object oriented programming][oop], [PHP namespacing][namespacing], and ideally - [Laravel][laravel].
+Statamic Addons involve writing PHP. While we have a lot of helper methods and API classes to take advantage of, you'll still need to know how to write PHP, and be familiar with [object oriented programming][oop], [PHP namespacing][namespacing], and ideally - [Laravel][laravel].
 
 ## Addon Structure
 
