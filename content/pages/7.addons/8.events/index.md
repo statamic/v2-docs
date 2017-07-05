@@ -211,13 +211,7 @@ public function handle(Response $response);
 
 ### system.updated {#systemupdated}
 
-Fired when the Updater has completed.
-
-```
-public $events = ['system.updated' => 'handle'];
-
-public function handle(Submission $submission);
-```
+Deprecated. See [StatamicUpdated](#statamiceventsstatamicupdated)
 
 ### user.registered {#userregistered}
 
@@ -267,3 +261,16 @@ public function handle(SearchQueryPerformed $event)
 }
 ```
 
+### Statamic\Events\StatamicUpdated {#statamiceventsstatamicupdated}
+
+Fired when the Updater has completed, either through the Control Panel or the command line.
+
+```
+public $events = [StatamicUpdated::class => 'handle'];
+
+public function handle(StatamicUpdated $event)
+{
+    $event->version;          // The current/new version of Statamic.
+    $event->previousVersion;  // The version Statamic was updated from.
+}
+```
