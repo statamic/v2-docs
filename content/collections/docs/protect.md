@@ -170,6 +170,13 @@ It should go without saying, but for the sake of completeness here be careful in
 Each user’s passwords will expire once their session has expired. To manually invalidate a password, simply remove it from the list of allowed passwords on the page. The next time a user with that password visits this page, they’ll be redirected to the password form just like everyone else.
 
 
+## Complete "whole hog" Protection {#complete}
+
+If you want to protect a page from anyone - regardless of authentication status, IP address, time of day, weather, or beverage preference - you can simply add `protect: true` to the front-matter.
+
+One may find this useful to quickly disable something.
+
+
 
 ## Site-wide Protection {#site}
 
