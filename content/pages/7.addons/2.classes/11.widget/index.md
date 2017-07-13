@@ -5,6 +5,7 @@ overview: >
 title: Widgets
 id: c6a4207b-8477-48db-9a7f-576b9a714031
 ---
+
 ## Creating a Widget {#creating}
 
 To create a widget, you will need a class file named `[AddonName]Widget.php`. eg. `ComplimentWidget.php`.
@@ -37,8 +38,7 @@ Simply add an `html` method that returns a string. That's it.
 
 ## Adding the widget to the dashboard {#adding-to-dashboard}
 
-In your Control Panel settings (`Configure > Settings > Control Panel` or `site/settings/cp.yaml`), add your widget
-to the array.
+In your Control Panel settings (`Configure > Settings > Control Panel` or `site/settings/cp.yaml`), add your widget to the array:
 
 ``` .lang-yaml
 widgets:
