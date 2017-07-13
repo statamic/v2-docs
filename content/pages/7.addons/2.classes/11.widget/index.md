@@ -46,6 +46,8 @@ widgets:
     type: compliment
 ```
 
+> You are free to add the same type of widget multiple times, with (or without) different parameters.
+
 ## Multiple Widgets {#multiple}
 
 Since 2.6, an addon may have more than one widget. One "primary" widget, and multiple "secondary" widgets.
