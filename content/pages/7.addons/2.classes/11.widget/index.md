@@ -89,26 +89,58 @@ type: addon.secondary
 
 This will correspond to the `Statamic\Addons\YourAddon\SecondaryWidget` or `Statamic\Addons\YourAddon\Widgets\SecondaryWidget` class.
 
-## Configuring a widget {#configuring}
+## Working with Input {#input}
 
-You may add configuration options to your widget, much like parameters on tags or options in a fieldtype.
+Widgets, like all parts of an Addon, have access to the addon’s configuration with the `$this->getConfig()` methods. Configuration files are a great place to store default values, especially for values that a user may want to change across all widget instances.
 
-Let's say we want to add the option to specify the `gender` receiving the compliment.
+Widgets also have parameters which are used for configuration on the instance-level. For example, in the fictional `compliment` widget above, you may want to specify the `gender` of the person receiving the compliment. Your widget can access these parameter values with the `$this->getParam()` methods.
+
+- `$this->getParam('gender')` to get a string.
+- `$this->getParamBool('enthusiastic')` to get a boolean.
+- `$this->getParamInt('enthusiasm_level')` to get an integer.
+
+There are also super methods that will retrieve values from parameter or config (in that order) if none was found.
+
+- `$this->get('gender')`
+- `$this->getBool('enthusiastic')`
+- `$this->getInt('enthusiasm_level')`
+
+Let's say we have the following in the `site/addons/compliment.yaml` file:
 
 ``` .language-yaml
-widget:
+gender: male
+enthusiastic: true
+enthusiasm_level: 2
+```
+
+and the following in the `site/settings/cp.yaml` file:
+
+
+``` .language-yaml
+compliment:
+  type: compliment
+compliment_her:
   type: compliment
   gender: female
 ```
 
-You can retrieve the config option within the Widget class by using `$this->getConfig('gender')`.
+
 
 ``` .language-php
 public function html()
 {
-    $adjective = ($this->getConfig('gender', 'male') === 'male')
-        ? 'handsome' : 'beautiful';
+    $adjective = ($this->get('gender') === 'male') ? 'handsome' : 'beautiful';
 
-    return '<p>You look extra ' . $adjective . ' today.</p>';
+    $punctuation = ($this->getBool('enthusiastic'))
+      ? str_repeat('!', $this->getInt('enthusiasm_level'))
+      : '.';
+
+    return '<p>You look extra ' . $adjective . ' today' . $punctuation . '</p>';
 }
 ```
+
+In the first widget, we'll see a male compliment since the `gender` was not specified as a parameter, and will come from the config.
+
+In the second, we'll see a female compliment, since the `gender` was specified.
+
+In both cases, the compliment will end with 2 exclamation points, since `enthusiastic` and `enthusiasm_level` are retrieved from the config.
