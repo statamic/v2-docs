@@ -17,10 +17,16 @@ $control_panel = 'chamber-of-secrets';
 
 ## Disabling {#disabling}
 
-Disabling the control panel is done in the `index.php` file as well.
+You may disable the Control Panel by editing the value in your `index.php` file.
 
 ```language-php
 $control_panel = false; // disabled
+```
+
+If you want to disable per-environment, you may add the following to your `.env` file on the appropriate environments.
+
+```
+DISABLE_CP=true
 ```
 
 ## Translating {#translating}
