@@ -4,7 +4,7 @@ overview: >
   The Suggest field allows you to define a list of suggestions. You can get those from wherever you want: your own list, somewhere on the internet, or your local grocer.
 id: dd9212d0-978c-4b86-a51f-745464ff0721
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 ---
 The "[Relate](/fieldtypes/relate)" fields – "[Users](/fieldtypes/users)", "[Taxonomy](/fieldtypes/taxonomy)", "[Collection](/fieldtypes/collection)" – all leverage the "[Suggest](/fieldtypes/suggest)" field behind the scenes.
 

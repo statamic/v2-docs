@@ -1,7 +1,7 @@
 ---
 title: Assets
 overview: Upload files and use the Asset Browser to pick from existing files in your Asset Containers.
-image: e77d6351-1a1c-4f6b-85e0-ab447e0b3bb6
+image: /assets/fieldtypes/assets.png
 options:
   -
     name: container

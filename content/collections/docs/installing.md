@@ -31,9 +31,16 @@ These should all be compiled in PHP 5.5.9+ by default but we find it's best to b
 - [JSON](https://secure.php.net/manual/en/book.json.php)
 - [PCRE](http://php.net/manual/en/book.pcre.php)
 
-### Optional (But Recommended) {#optional}
+### Conditional {#conditional-requirements}
 
-- [GD](http://php.net/manual/en/book.image.php) or [ImageMagick](http://php.net/manual/en/book.imagick.php)
+If you plan to use image Assets, you'll need either GD or ImageMagick, and the FileInfo extension.
+
+- [GD](http://php.net/manual/en/book.image.php)
+- [ImageMagick](http://php.net/manual/en/book.imagick.php)
+- [FileInfo](http://php.net/manual/en/book.fileinfo.php)
+
+### Optional (But Recommended) {#optional-requirements}
+
 - [Composer](https://getcomposer.org/)
 
 

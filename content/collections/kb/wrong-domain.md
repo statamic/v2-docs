@@ -1,7 +1,7 @@
 ---
 title: My license belongs to another domain
 kb_categories:
-  - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
+  - Troubleshooting Common Scenarios
 id: 33984e54-475e-4a19-86af-05a0abe00192
 ---
 You've logged into the control panel and you're being told that your license belongs to another domain.

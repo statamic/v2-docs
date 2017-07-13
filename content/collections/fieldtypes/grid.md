@@ -6,7 +6,7 @@ overview: >
 
   Let's go deeper.
 
-image: 0dbd58ba-8177-4d64-a97d-b169c1812230
+image: /assets/fieldtypes/grid.png
 options:
   -
     name: min_rows

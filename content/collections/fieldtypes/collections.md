@@ -3,6 +3,12 @@ title: Collections
 extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 description: Choose from one or more collections.
 overview: Allows you to choose one or more collections.
+options:
+  -
+    name: collection
+    type: string/array
+    description: >
+      You can pass a single collection as a string or multiple collections as an array.
 id: 44c3da60-ef47-408e-afc4-a33026c86f5d
 ---
 ## Data Structure {#data-structure}

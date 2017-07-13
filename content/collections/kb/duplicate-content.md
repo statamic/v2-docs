@@ -1,7 +1,7 @@
 ---
 title: "There's duplicate content on my site"
 kb_categories:
-  - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
+  - Troubleshooting Common Scenarios
 id: 4d1c5fe8-1b58-4384-931f-aaee97677c05
 ---
 Are you seeing two of the same entries? (or pages, assets, etc) If so, there may have been two files with the same

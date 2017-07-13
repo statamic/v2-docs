@@ -1,7 +1,7 @@
 ---
 title: Pages
 overview: Allows you attach other Pages to your content.
-image: 1ae0abcc-d9c7-412c-8647-fbeedaaa8444
+image: /assets/fieldtypes/collection.png
 options:
   -
     name: parent

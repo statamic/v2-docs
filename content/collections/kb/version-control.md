@@ -1,7 +1,7 @@
 ---
 title: Version Control Strategies
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 id: 7c9fd9f6-69d8-402a-ac95-ae676200c293
 ---
 Statamic is literally designed from the ground up to be 100% version controllable. The Flat File approach enables workflows that would be impossible with a database-driven platform. You can branch, fork, pull request, merge, and rollback any changes to your content, templates, assets, you name it.

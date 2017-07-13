@@ -12,7 +12,7 @@ If you're in the need for a quick feature, you may consider creating a [site hel
 
 ## Assumed Knowledge
 
-Statamic Addons involve writing PHP. While we have a lot of helper methods and API classes to take advantage of, you'll still need to know how to write PHP, and be familiary with [object oriented programming][oop], [PHP namespacing][namespacing], and ideally - [Laravel][laravel].
+Statamic Addons involve writing PHP. While we have a lot of helper methods and API classes to take advantage of, you'll still need to know how to write PHP, and be familiar with [object oriented programming][oop], [PHP namespacing][namespacing], and ideally - [Laravel][laravel].
 
 ## Addon Structure
 
