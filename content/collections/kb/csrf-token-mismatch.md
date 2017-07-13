@@ -1,7 +1,7 @@
 ---
 title: "TokenMismatchException and Load Balancers"
 kb_categories:
-  - f470efec-cdc6-4e6a-ac40-bf30f3515cc4
+  - Troubleshooting Common Scenarios
 id: 6e1646e0-b1a6-11e6-9598-0800200c9a66
 ---
 If you're getting a `TokenMismatchException` when submitting forms and you're also running a load balancer, this might clear things up.

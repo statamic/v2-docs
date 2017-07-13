@@ -1,7 +1,7 @@
 ---
 title: How do I clear the cache?
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 id: fa5809bf-79e4-48cc-906f-625214391eaa
 ---
 If you have command line access, the easiest way to clear the cache is to use `please` command.

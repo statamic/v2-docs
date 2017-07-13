@@ -4,13 +4,13 @@ overview: Manipulate images on the fly using the wonderful [Glide](http://glide.
 parameters_content: |
   You may pass anything from the [Glide API](http://glide.thephpleague.com/1.0/api/quick-reference/) as a parameter.  
   For example, `{{ glide or="90" }}` will use the [orientation](http://glide.thephpleague.com/1.0/api/orientation/#orientation-or)
-  API paramter.
+  API parameter.
 parameters:
   -
     name: src|path|id
     type: string
     description: >
-      The URL of the image when _not_ using the shorthand syntax. (Use the shorthand syntax if you can, it's nicer.) 
+      The URL of the image when _not_ using the shorthand syntax. (Use the shorthand syntax if you can, it's nicer.)
       This also accepts asset IDs, if using [private assets](/assets#private-assets), for example.
   -
     name: field
@@ -57,12 +57,12 @@ parameters:
     name: brightness
     type: integer
     description: >
-      Alias of the [bri](http://glide.thephpleague.com/1.0/api/adjustments/#brightness-bri) Glide API parameter. 
+      Alias of the [bri](http://glide.thephpleague.com/1.0/api/adjustments/#brightness-bri) Glide API parameter.
   -
     name: contrast
     type: integer
     description: >
-      Alias of the [con](http://glide.thephpleague.com/1.0/api/adjustments/#contrast-con) Glide API parameter. 
+      Alias of the [con](http://glide.thephpleague.com/1.0/api/adjustments/#contrast-con) Glide API parameter.
   -
     name: gamma
     type: integer

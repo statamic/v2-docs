@@ -3,6 +3,10 @@ title: Login Form
 overview:	Generate necessary markup to create a User login form.
 parameters:
   -
+    name: attr
+    type: string
+    description: Set HTML attributes, e.g., `attr="class:form|id:form"`
+  -
     name: redirect
     type: string
     description: Where the user should be taken after successfully logging in.

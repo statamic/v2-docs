@@ -1,7 +1,7 @@
 ---
 title: How can I increase performance?
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 id: 302be45f-bd9d-4a26-b836-d0f5c84b4773
 ---
 ## Upgrade Statamic

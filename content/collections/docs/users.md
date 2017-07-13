@@ -28,6 +28,42 @@ Creating a user by hand will involve a plain text password. Have no fear, howeve
 ### Login
 You can log in by visiting `/cp`. By default, users will log in with username and password, but this can be changed to email and password in `site/settings/users.yaml` or in the Control Panel. Any users created before this change will need to have their filename updated in `site/users/` to reflect their email address instead of their username.
 
+### Custom Profile Fields {#custom-profile-fields}
+
+Want a more robust profile for your users that you can manage with the Control Panel? Need to add a phone number, current address, favorite character from The Office?
+
+Create a new fieldset at `/site/settings/fieldsets/user.yaml` and add all the fields you need. Remember to add in all the default fields or they will disappear in the Control Panel for all your users. Here's an example.
+
+```.language-yaml
+hide: true
+fields:
+  username:
+    type: text
+    display: Username
+    width: 50
+  roles:
+    type: user_roles
+    width: 50
+  email:
+    type: text
+    display: Email address
+  first_name:
+    type: text
+    display: First Name
+    width: 50
+  last_name:
+    type: text
+    display: Last Name
+    width: 50
+  phone-number:
+    type: text
+    display: Phone Number
+    width: 50
+  content:
+    type: textarea
+    display: Biography
+```
+
 ## Permissions {#permissions}
 
 Statamic has a whole [Permissions and Roles][permission] system letting you create and configure some pretty granular controls over who can see and do what in the Control Panel.

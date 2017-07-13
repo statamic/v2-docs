@@ -1,7 +1,7 @@
 ---
 title: "What's Trial Mode?"
 kb_categories:
-  - 41f8eb46-342c-4a52-91a3-809d971a5165
+  - Tips, Tricks, and How-Tos
 id: 1791b60f-878c-4741-a2bf-a4997ad92a15
 ---
 Statamic will run in _Trial Mode_ (previously _Developer Mode_) if you haven't specified a license key. Trial mode gets you access to
