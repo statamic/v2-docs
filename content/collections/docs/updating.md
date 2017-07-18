@@ -4,9 +4,19 @@ id: e7560816-e650-4fc4-886e-43d9b14ee558
 overview: Statamic is updated regularly! We're always fixing bugs, adding features, and playing hopscotch. You can keep an eye on the [Changelog](https://statamic.com/changelog) or your Control Panel sidebar to see when new updates are available.
 ---
 
-## One-click updates {#one-click-updates}
+## Command line {#command-line}
 
-Statamic has a one-click updater in the Control Panel. When an update is available, users with Update permissions will see a badge in the sidebar next to the logo. Clicking on that badge will take you to a magical, bountiful land flowing with updates and releases.
+Statamic has a command line updater. Just run the following command:
+
+``` .lang-bash
+php please update
+```
+
+That's it! It'll make a backup, download the latest release, swap out the files, and clean up after itself. 
+
+## Control Panel {#control-panel}
+
+Statamic also has an updater in the Control Panel. When an update is available, users with Update permissions will see a badge in the sidebar next to the logo. Clicking on that badge will take you to a magical, bountiful land flowing with updates and releases.
 
 <div class="screenshot">
 		<img src="/assets/img/screenshots/update-available.png">

@@ -3,15 +3,28 @@ overview: "Sometimes people might prefer getting things done through the termina
 title: Commands
 id: 58770216-49bf-442f-a0d6-cdfe30a56a08
 ---
-[Read more about console commands][commands].
+
+## Overview {#overview}
 
 An addon can have any number of console commands. To create a command, you'll need to create a class file. There's a sample below.
+
 The command classes can go anywhere inside your addon's folder, but we recommend putting them inside a `Commands` subdirectory.
-The classes should be named `[AddonName][CommandName]Command.php`, eg. `HelloGreetCommand.php`.
+The classes should be named `[CommandName]Command.php`, eg. `GreetCommand.php`.
 
-You can even use a command to generate a command file. (How meta!) `php please make:command AddonName` will generate one for you.
+``` .lang-files
+site/addons/Hello
+`-- Commands
+    `-- GreetCommand.php
+```
 
-## Example
+You can even use a command to generate a command file. (How meta!) 
+
+``` .lang-bash
+php please make:command AddonName CommandName  # makes addon-name:command-name
+php please make:command hello greet            # makes hello:greet
+```
+
+## Example {#example}
 
 The following is a simple example command belonging to the `Hello` addon.
 
@@ -86,5 +99,4 @@ In addition to any methods and properties you might expect in a Laravel command 
 inherited from Statamic's `Addon` class.
 
 
-[commands]: /
 [laravel-artisan]: http://laravel.com/docs/5.1/artisan#writing-commands

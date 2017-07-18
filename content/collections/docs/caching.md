@@ -97,7 +97,32 @@ static_caching_enabled: true
 static_caching_type: file
 ```
 
-**Step two:** Enable the reverse proxy setting for whichever server you're running. It's commented out in each of the sample server config files (nginx.conf, .htaccess, and web.config) included with Statamic.
+**Step two:** Enable the rewrite rule for whichever server you're running. It's commented out in each of the sample server config files included with Statamic.
+
+Apache:
+
+```
+RewriteCond %{DOCUMENT_ROOT}/static/%{REQUEST_URI}_%{QUERY_STRING}\.html -s
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule .* static/%{REQUEST_URI}_%{QUERY_STRING}\.html [L,T=text/html]
+```
+
+Nginx:
+
+```
+location / {
+  try_files /static${uri}_${args}.html $uri /index.php?$args;
+}
+```
+
+IIS:
+
+```
+<rule name="Static Caching" stopProcessing="true">
+  <match url="^(.*)"  />
+  <action type="Rewrite" url="/static/{R:1}_{QUERY_STRING}.html"  />
+</rule>            
+```
 
 **Step three:** Watch your site fly!
 
@@ -109,8 +134,6 @@ By default, static caching will _ignore_ any query strings in the URL. For examp
 will result in the same page being shown. This is useful for preventing the cache being broken by someone appending
 `?whatever` to the URL. However, it will break any functionality that relies on query strings, like pagination.
 
-_Note that when using `static_caching_type: file`, query strings will **always** be ignored._
-
 ### Excluding pages {#excluding-pages}
 
 You may add a list of URLs you wish to exclude from being cached. You may want to exclude pages that need to always be dynamic, such
@@ -121,7 +144,20 @@ static_caching_exclude:
   - /contact
 ```
 
+Wildcards may be used at the end of URLs.
+
+``` .lang-yaml
+static_caching_exclude:
+  - /blog/*  # Excludes /blog/post-name, but not /blog  
+  - /news*   # Exclude /news, /news/article, and /newspaper
+```
+
+**Note:** Query strings will be omitted from exclusion rules automatically, regardless of whether wildcards are used. 
+For example, choosing to ignore `/blog` will also ignore `/blog?page=2`, etc.
+
 ### Invalidation {#invalidation}
+
+#### Time limit {#invalidation-time}
 
 When using half-measure, you're able to set the number of minutes before the cached pages automatically expire.
 
@@ -131,7 +167,11 @@ static_caching_default_cache_length: 5
 
 For full-measure, since the generated html files will be served before PHP ever gets hit, the cache length option is _not_ available.
 
-You may also set specific rules for invalidating pages when entries in collections have been saved. For example:
+#### When saving {#invalidation-saving}
+
+When saving content, the corresponding item's URL will be flushed from the static cache automatically.
+
+You may also set specific rules for invalidating _other_ pages when content is saved. For example:
 
 ``` .language-yaml
 static_caching_invalidation:
@@ -141,12 +181,59 @@ static_caching_invalidation:
         - /blog
         - /blog/category/*
         - /
+  taxonomies:
+    tags:
+      urls:
+        - /blog
+        - /blog/category/*
+        - /
+  pages:
+    /about:
+      urls:
+        - *
 ```
 
-This says "when an entry in the `blog` collection is saved, we should invalidate the `/blog` page, any pages beginning with `/blog/category/`, and the home page."
-Of course, you may add as many collections as you need.
+This says:
 
-To clear the static file cache you can run `php please clear:static` or delete the `static/` folder in the web root.
+  - "when an entry in the `blog` collection is saved, we should invalidate the `/blog` page, any pages beginning with `/blog/category/`, and the home page."
+  - "when a term in the `tags` taxonomy is saved, we should invalidate those same pages"
+  - "when the /about page is saved, invalidate all pages"
+
+Of course, you may add as many collections, taxonomies, and pages as you need.
+
+You may also choose to invalidate the entire static cache by specifying `all`.
+
+``` .lang-yaml
+static_cache_invalidation: all
+```
+
+#### By force {#invalidation-force}
+
+To clear the static file cache you can run `php please clear:static` (and/or delete the appropriate static file locations).
+
+### File Locations {#file-locations}
+
+When using full measure caching, the static html files are stored in the `static` directory.
+
+You may customize this by changing the `static_caching_file_path` variable.
+
+``` .lang-yaml
+static_caching_file_path: static_files
+```
+
+You will need to update your appropriate server rewrite rules.
+
+### Localization {#localization}
+
+When using full measure caching combined with localization, you may need to save the html files within each appropriate locale's webroot.
+
+You may do this by placing an array in the [file locations](#file-locations) with the various locales.
+
+``` .lang-yaml
+static_caching_file_path:
+  en: static
+  fr: fr/static
+```
 
 ## Static Site Generation {#static-generator}
 

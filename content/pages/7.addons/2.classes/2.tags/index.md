@@ -4,7 +4,7 @@ overview: >
   Ultimately a Tag is nothing more than a PHP Method called from an Antlers template. This common pattern allows non-PHP developers to take advantage of dynamic features in their site easily without writing any code.
 id: 405d7c97-7cba-4613-8653-325c8cf09812
 ---
-## Anatomy of a Tag
+## Anatomy of a Tag {#anatomy}
 
 A tag consists of several parts, none of which are named the "thorax". Let's break a Tag down:
 
@@ -29,7 +29,7 @@ Anything in-between your tag pair is available as `$this->content`. Sometimes yo
 
 ## Example Class {#example-class}
 
-The class file must be named `AddonNameTags.php`.
+The class file must be named `AddonNameTags.php`, located in the root of your addon directory, and must extend `Statamic\Extend\Tags`.
 
 ```{.language-php}
 <?php

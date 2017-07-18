@@ -7,9 +7,27 @@ id: 01b6596e-19c1-41e7-a3e1-e92144abc211
 ---
 ## Creating a Controller {#creating-a-controller}
 
-To create a controller, you will need a class file named `[AddonName]Controller.php`. eg. `KarmaController.php`.
+An addon can have any number of controllers for usage through the Control Panel. For usage through the front-end of a site, you are limited to
+a single controller. An addon may contain controllers for both Control Panel _and_ front-end usage.
 
-You can also use `php please make:controller AddonName` to have one generated for you.
+To create a controller, you'll need to create a class file. You may either place your controllers in the root of your addon directory, or
+nested within a `Controllers` namespace.
+
+``` .lang-files
+site/addons/Karma
+|-- KarmaController.php 
+|-- AnotherController.php
+`-- Controllers
+    `-- KarmaController.php
+    `-- AnotherController.php
+```
+
+You can also use a command to generate the controller.
+
+``` .lang-bash
+php please make:controller AddonName                # makes AddonNameController.php
+php please make:controller AddonName FooController  # makes FooController.php
+```
 
 Here's a basic controller. Each public method in the class can receive a route.
 
@@ -62,9 +80,21 @@ routes:
   foo: getFoo
 ```
 
-The key is the route itself, and the value is the controller method.
+The key is the route itself, and the value is the controller method
 
 All of an addon's routes are prefixed by the addon route. So the `foo` route above would actually be `/cp/addons/karma/foo`.
+
+By default, the controller used will be named after your addon.  
+For example, `Statamic\Addons\Karma\KarmaController`.  
+
+You may specify a controller by prefixing it with the class name.
+
+``` .lang-yaml
+routes:
+  foo: FooController@index
+```
+
+This will look for either `Statamic\Addons\Karma\FooController` or `Statamic\Addons\Karma\Controllers\FooController`.
 
 
 #### CP Routing schema {#cp-routing-schema}

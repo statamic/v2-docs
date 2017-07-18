@@ -1,71 +1,19 @@
 ---
-title: Addon Classes
-overview: >  
-  Your Addon can contain one or many different classes that serve various purposes. Each will inherit functionality, and therefore will `Extend` the core `Statamic\API\Addon` class, either directly, or abstractly. 
+title: Overview
 id: 395dc432-0273-4874-873e-6ed0b772cc27
 ---
 
-## The Addon Class {#addon}
+## What to extend {#what-to-extend}
 
-This core class will automatically provide your Addon with contextual information, settings, context, and helper methods, all as part of `$this->`.
+There is no "Addon class" per-se. Generally speaking, you will create an "Addon aspect" which will have a corresponding parent class for you to extend.
 
-## Helpers {#helpers}
+For example, if you want to create a [Tag](/addons/classes/tags), you'd extend our abstract `Statamic\Extend\Tags` class.
 
-Whether you're retrieving a tag parameter, a config value, or manipulating the cache; there are various helper methods available throughout an addon package. 
+The abstract classes will provide your class with methods and properties that you can use to access contextual information, settings, data, and other helpful things.
 
-There is a whole section dedicated to the [helper methods][helpers] available throughout your addons.
+Depending on the aspect you're creating, you may gain additional helpers, however there are a number of them that all aspects will inherit.
+You may view a list of them over at the [helper methods](/addons/helpers) section.
 
-## Bootstrapping {#bootstrapping}
+## Extensible Trait {#extensible-trait}
 
-An addon will automatically look for a `bootstrap.php` file in your directory. You can use this file to add any configuration you might need available in every aspect of your addon.
-
-For example, if you need to load a custom library, you might want to do that here.
-
-```.language-php
-<?php
-
-require_once __DIR__.'/libs/library.php';
-```
-
-## Dependencies {#dependencies}
-
-Statamic will handle the installation of any Composer dependencies you may have. Simply drop a `composer.json` in your addon's directory.
-
-``` .language-javascript
-{
-  "name": "bob/html-to-markdown",
-  "require": {
-    "league/html-to-markdown": "~4.1"
-  }
-}
-```
-
-Your addon _does not_ need to be registered on Packagist. The `name` key should just be in the format of `developer-name/addon-name`.
-
-There's no need to bundle a vendor folder with your addon.
-
-## Initializing {#initializing}
-
-The nature of how Statamic loads some of your classes means that a constructor method isn’t really suitable for initializing any values you might need available to other methods. You can create an init() method which acts as a pseudo constructor. This gets called during the parent constructor.
-
-``` .language-php
-<?php namespace Statamic\Addons\MyAddon;
-
-class MyAddonTags extends \Statamic\Extend\Tags
-{
-    private $thing;
-
-    public function init() {
-        $this->thing = new Thing;
-    }
-
-    public function myTag() {
-        return $this->thing->doThing();
-    }
-}
-```
-
-An alternative to the `init()` method is to use a [Service Provider][service-provider] to bind classes into Laravel’s Service Container.
-
-[helpers]: /addons/helpers
-[service-provider]: /addons/classes/service-providers
+For any non-addon classes in your addon (your own classes, that are _not_ Tags, Modifiers, etc) you may use the `Statamic\Extend\Extensible` trait to get access to the helper methods. This trait is used by all the addon classes, which you get for free when extending one of the abstract classes.

@@ -94,7 +94,20 @@ PHP 5.6.10 Development Server started at Thu Jan 21 10:30:00 2016
 Listening on http://localhost:3000
 ```
 
-## Installing {#installing}
+## Command Line Installation {#command-line-installation}
+
+First, [download the Statamic CLI](https://github.com/statamic/cli#installing-the-package) tool using Composer. You only have to do this once.
+
+Once installed, the `statamic new` command will create a fresh Statamic site in the directory you specify.
+
+``` .lang-bash
+statamic new awesome-site
+```
+
+This will download and install Statamic into the `awesome-site` directory.
+
+
+## Manual Installation {#manual-installation}
 
 Grab the latest version of [statamic](https://statamic.com/try) and let's do this.
 
