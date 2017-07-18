@@ -11,7 +11,7 @@ string: "The 'bacon' is <b>crispy</b>";
 ```
 
 ```
-{{ string | decode }}
+{{ string | entities }}
 ```
 
 ```.language-output
