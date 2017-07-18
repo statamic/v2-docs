@@ -90,7 +90,7 @@ namespace Statamic\Addons\Karma;
 use Statamic\API\User;
 use Statamic\Extend\Addon;
 
-class ScoreKeeper extends Addon
+class ScoreKeeper
 {
     public function getPoints($user)
     {
@@ -101,4 +101,4 @@ class ScoreKeeper extends Addon
 
 As you can see, both addon aspects simply pass the work onto a common class.
 
-Note that you can use any of your classes by the `Addon` class if you want to be able to use addon helpers like cache, etc.
+If you'd like to use addon helper methods in your extra classes (eg. the `ScoreKeeper` class), you can use the `Statamic\Extend\Extensible` trait.
