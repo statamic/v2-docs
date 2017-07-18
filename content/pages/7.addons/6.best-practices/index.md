@@ -88,7 +88,6 @@ Finally, the scorekeeper class:
 namespace Statamic\Addons\Karma;
 
 use Statamic\API\User;
-use Statamic\Extend\Addon;
 
 class ScoreKeeper
 {
