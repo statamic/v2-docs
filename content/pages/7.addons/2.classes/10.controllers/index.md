@@ -25,8 +25,7 @@ site/addons/Karma
 You can also use a command to generate the controller.
 
 ``` .lang-bash
-php please make:controller AddonName                # makes AddonNameController.php
-php please make:controller AddonName FooController  # makes FooController.php
+php please make:controller AddonName
 ```
 
 Here's a basic controller. Each public method in the class can receive a route.
