@@ -27,6 +27,7 @@ noun: carrot
 {{ if summary | contains:BEST:true }}
 {{ if summary | contains:adjective }}
 {{ if summary | contains:noun }}
+{{ if (summary | contains:"noun with spaces") }}
 ```
 
 ```.language-output
