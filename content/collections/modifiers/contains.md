@@ -27,7 +27,6 @@ noun: carrot
 {{ if summary | contains:BEST:true }}
 {{ if summary | contains:adjective }}
 {{ if summary | contains:noun }}
-{{ if (summary | contains:"noun with spaces") }}
 ```
 
 ```.language-output
@@ -52,10 +51,12 @@ gross: broccoli
 {{ if foods | contains:bacon }}
 {{ if foods | contains:delicious }}
 {{ if foods | contains:gross }}
+{{ if (foods | contains:"vegan bacon strips") }}
 ```
 
 ``` .language-output
 true   (there's no field named "bacon", so it searched for literally "bacon") 
 true   (there's a field named "delicious", and it got the value which was "bacon")
 false  (there's a field named "gross", and it got the value which was "broccoli")
+true   (there's no field named "vegan bacon strips", so it searched for literally "vegan bacon strips")
 ```
