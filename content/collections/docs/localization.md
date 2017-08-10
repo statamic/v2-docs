@@ -102,7 +102,7 @@ locales:
     url: http://example.com/fr/
 ```
 
-## Localizing your content {#localizing-contnet}
+## Localizing your content {#localizing-content}
 
 ### Fields {#fields}
 Once you've added your locales, you need to define which fields may be translated.
