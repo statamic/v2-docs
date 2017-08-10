@@ -17,3 +17,13 @@ title: As the World Turns
 ```.language-output
 <h1>As the World Turns</h1>
 ```
+
+You may also use Emmet-style CSS classes to be added to the tag.
+
+```
+{{ title | wrap:h1.fast.furious }}
+```
+
+``` .language-output
+<h1 class="fast furious">As the World Turns</h1>
+```
