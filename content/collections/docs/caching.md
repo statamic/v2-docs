@@ -204,7 +204,7 @@ Of course, you may add as many collections, taxonomies, and pages as you need.
 You may also choose to invalidate the entire static cache by specifying `all`.
 
 ``` .lang-yaml
-static_cache_invalidation: all
+static_caching_invalidation: all
 ```
 
 #### By force {#invalidation-force}
