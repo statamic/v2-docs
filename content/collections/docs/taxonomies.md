@@ -145,7 +145,7 @@ the_tags:
 ```
 
 ```
-{{ collection:blog :taxonomy:tags="the_tags" }}
+{{ collection:blog taxonomy:tags="the_tags" }}
 ```
 
 #### Specifying the match type {#filter-match-type}
