@@ -14,7 +14,7 @@ places: Scotland, England, Switzerland, Italy
 {{ places | explode:, | ul }}
 ```
 
-```.language-yaml
+```.language-html
 <ul>
   <li>Scotland</li>
   <li>England</li>
