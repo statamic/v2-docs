@@ -34,6 +34,10 @@ parameters:
     name: sort
     type: any fieldname
     description: Sort results by any fieldname when fetching multiple content files.
+  -
+    name: locale
+    type: string
+    description: Show the retrieved content in the selected locale.
 ---
 ## Example {#example}
 

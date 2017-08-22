@@ -94,6 +94,10 @@ parameters:
     description: >
       By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
       This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
+  -
+    name: locale
+    type: string
+    description: Show the retrieved content in the selected locale.
 variables:
   -
     name: first
