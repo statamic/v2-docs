@@ -17,6 +17,14 @@ parameters:
     type: tag part
     description: 'The name of the field containing the asset ID or image path when using the shorthand syntax. This is not actually a parameter, but part of the tag itself. For example, `{{ glide:hero_image }}`.'    
   -
+    name: tag
+    type: boolean *false*
+    description: When set to true, this will output an `<img>` tag with the URL in the `src` attribute, rather than just the URL.
+  -
+    name: alt
+    type: string
+    description: When using the `tag` parameter, this will insert the given text into the `alt` attribute.
+  -
     name: width
     type: integer
     description: >
