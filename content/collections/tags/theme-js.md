@@ -22,6 +22,10 @@ parameters:
       Setting this to `true` will add the timestamp of the asset to the end of
       the URL in a `?v=` query param. Use this to version files if you are
       _not_ using Elixir.
+  -
+    name: absolute
+    type: boolean *false*
+    description: Render the URL in an absolute format.
 ---
 ## Example {#example}
 ```

@@ -18,6 +18,10 @@ parameters:
     description: >
       Setting this to `true` will add the timestamp of the asset to the end of
       the URL in a `?v=` query param.
+  -
+    name: absolute
+    type: boolean *false*
+    description: Render the URL in an absolute format.
 id: de348605-5489-4282-9257-bd9ffd92438e
 ---
 ## Explicit mode {#explicit-mode}
