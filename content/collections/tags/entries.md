@@ -20,6 +20,12 @@ parameters:
     name: folder
     type: string
     description: Alias of `url`
+  -
+    name: supplement_taxonomies
+    type: boolean *true*
+    description: >
+      By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
+      This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 ---
 ## Usage {#usage}
 

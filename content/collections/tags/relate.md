@@ -12,6 +12,12 @@ parameters:
     description: |
       When referencing a list of term values, this is the taxonomy that you'd like to pull them from. 
       If you have a list of term IDs, this parameter is not necessary. [More details](/taxonomies#without-taxonomizing)
+  -
+    name: supplement_taxonomies
+    type: boolean *true*
+    description: >
+      By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
+      This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 parameters_content: |
   The parameters are inherited from the [collection](/tags/collection) tag. Everything available there is available here.
 id: dd9513b4-4cbb-4481-bf72-eb076e053b04

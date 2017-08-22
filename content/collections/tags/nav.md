@@ -52,6 +52,12 @@ parameters:
     type: wizardry
     description: >
       Filter the tree by using a special conditions syntax, the same as the [Collections tag](/tags/collection). View the [available conditions](/conditions).
+  -
+    name: supplement_taxonomies
+    type: boolean *true*
+    description: >
+      By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
+      This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 variables:
   -
     name: is_published

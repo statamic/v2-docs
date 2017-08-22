@@ -32,6 +32,12 @@ parameters:
     name: depth
     type: integer *1*
     description: How deep to traverse the hierarchy to find child pages.
+  -
+    name: supplement_taxonomies
+    type: boolean *true*
+    description: >
+      By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
+      This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 id: 73f02fa0-d60a-47f6-b5c2-226fcb3d4d8b
 ---
 ## Usage {#usage}

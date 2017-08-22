@@ -27,6 +27,12 @@ parameters:
     type: 'string *true*'
     description: >
       When this is `true` it will convert search results to the appropriate content objects, which makes all their fields available in your templates. Disabling this will result in a performance increase, but only indexed fields will be available.
+  -
+    name: supplement_taxonomies
+    type: boolean *true*
+    description: >
+      By default, Statamic will convert taxonomy term values into actual term objects that you may loop through.
+      This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 variables:
   -
     name: no_results
