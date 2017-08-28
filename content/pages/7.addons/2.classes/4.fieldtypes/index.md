@@ -97,7 +97,7 @@ Let's start with the Vue component.
 ``` .language-javascript
 Vue.component('password_toggle-fieldtype', {
 
-    props: ['data', 'config', 'name'],
+    mixins: [Fieldtype],
 
     data: function() {
         return {
@@ -122,9 +122,13 @@ Vue.component('password_toggle-fieldtype', {
 });
 ```
 
-### Props
+### Fieldtype Mixin
 
-The three `props` are passed into your fieldtype by a parent fieldtype builder component. You have to include that array just like you see above. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
+This mixin provides some basics for you automatically.  
+
+It gives you the three required `props` that are passed into your fieldtype by a parent fieldtype builder component. The `data` prop contains the field's value, the `name` prop is the name of the field in the fieldset, and the `config` props is the config from the fieldset.
+
+It also sets things up like data value change watchers. [See below for more information](#data-change-watcher).
 
 ### Data 
 
@@ -163,6 +167,39 @@ The `v-model` attributes will bind the values to the form input. If you type int
 Vue has more features you can use in your fieldtypes. Remember, a fieldtype is just a Vue component. You aren't limited to the items used in the example.
 
 Refer to the [Vue component docs][vue-component] for more information.
+
+### Data Change Watcher {#data-change-watcher}
+
+Have you ever filled out a long form and accidentally navigated away from the page, only to lose all your progress?
+That's really annoying! The publish page component will monitor fieldtypes for any changes, and prevent users from navigating away by mistake.
+
+For simple fieldtypes, this is done automatically just by making sure to mix in the `Fieldtype` mixin, as demonstrated above.
+This mixin will fire up an event watcher, monitoring your `data` prop for any changes and telling the publish component that something's different.
+
+If your fieldtype is more complex, there are a couple of steps for you to add to get this going. By "more complex" we mean you might perform
+some initial data modification once your component is ready, like AJAX loading or setting a default value. 
+
+First, tell the fieldtype to _not_ automatically bind the watcher. Then, bind it manually when you're ready. Take this example that needs to adjust the initial data after an AJAX request.
+
+``` .language-js
+{
+    mixins: [Fieldtype],
+
+    data: function () {
+        return {
+            autoBindChangeWatcher: false // Disable the automagic binding
+        }
+    },
+
+    ready: function () {
+        this.$http.get('/example', function (response) {
+            this.data = response.data.something; // Manipulate as required.
+            this.bindChangeWatcher(); // Bind manually once you're ready.
+        });
+    }
+}
+```
+
 
 ## The PHP Side {#php}
 
