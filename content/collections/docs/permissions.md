@@ -42,7 +42,7 @@ It so happens that when roles are created via the Control Panel (CP) they are id
 d32e14fb-08c9-44c2-aaf8-21200852bafd:
   title: Admin
   permissions:
-    - super```
+    - super
 ```
 This works just fine, as such IDs are never seen by folks who interact with the site exclusively via the CP. However, if you are setting up your site by hand, you can opt to define roles yourself by editing `.../roles.yaml` and give them more human-readable names. For instance,
 ```
