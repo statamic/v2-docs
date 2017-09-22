@@ -34,6 +34,7 @@ protect:
 Some top secret content.
 ```
 
+You may protect an entire folder of pages by adding the `protect` variable to a `folder.yaml`.
 
 > If you are familiar with this feature from v1, take note that the syntax has been simplified.
 
