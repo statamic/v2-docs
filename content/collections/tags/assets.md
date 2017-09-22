@@ -23,6 +23,11 @@ parameters:
     description: |
       When retrieving assets directly from a container, this will let you target a specific folder.
   -
+    name: recursive
+    type: boolean *false*
+    description: |
+      When retrieving assets directly from a container, this determines whether to get assets recursively through subdirectories.
+  -
     name: limit
     type: integer
     description: Limit the total results.
