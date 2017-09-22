@@ -2,6 +2,7 @@
 title: "Mixed Content Error"
 kb_categories:
   - Troubleshooting Common Scenarios
+id: 61f2d69c-9aee-4b02-a7be-3b9cae1a5a2d
 ---
 If you're getting a `Mixed Content` error:
 ```
