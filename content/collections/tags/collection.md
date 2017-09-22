@@ -14,7 +14,7 @@ parameters:
     description: 'The name of the collection when using the shorthand syntax. This is not actually a parameter, but part of the tag itself. For example, `{{ collection:blog }}`.'
   -
     name: show_unpublished
-    type: 'boolean *true*'
+    type: 'boolean *false*'
     description: "Unpublished content is, by it's very nature, unpublished. That is, unless you show it by turning on this parameter."
   -
     name: show_published
