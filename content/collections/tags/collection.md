@@ -17,6 +17,10 @@ parameters:
     type: 'boolean *true*'
     description: "Unpublished content is, by it's very nature, unpublished. That is, unless you show it by turning on this parameter."
   -
+    name: show_published
+    type: 'boolean *true*'
+    description: 'Setting this to `false` will prevent published entries from being displayed. Pairs nicely with `show_unpublished="true"` to only show drafts.'
+  -
     name: show_future
     type: 'boolean *false*'
     description: >
