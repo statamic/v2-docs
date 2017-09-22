@@ -65,12 +65,12 @@ public function handle();
 
 ### content.saved {#contentsaved}
 
-Fired when any Page, Entry, Taxonomy Term, or Global is saved. The respective class will be passed through.
+Fired when any Page, Entry, Taxonomy Term, or Global is saved. The respective class will be passed through, along with original attributes from before it was updated.
 
 ```
 public $events = ['content.saved' => 'handle'];
 
-public function handle(Content $content);
+public function handle(Content $content, $original);
 ```
 
 ### cp.published {#cppublished}
