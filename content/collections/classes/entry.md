@@ -21,10 +21,10 @@ $entry->collection($collection); // Returns null
 Get or set the associated collection.
 
 ```
-$entry->collection(); // Returns a string, eg. 'blog'
+$entry->collectionName(); // Returns a string, eg. 'blog'
 ```
 ```
-$entry->collection('blog'); // Returns null
+$entry->collectionName('blog'); // Returns null
 ```
 
 ## orderType
