@@ -110,11 +110,9 @@ Once you've added your locales, you need to define which fields may be translate
 You can do this by toggling the "Localizable" option for each field you wish to translate. If you aren't using the CP, you can just add `localizable: true` to each field in your fieldset.
 
 ### Editing {#editing}
-Now, when _editing_ content, you should see a "Locales" list in the sidebar. This shows you all of your available locales. A green dot indicates the locale you are currently editing, a hollow dot indicates a locale exists, and no dot means the content hasn't been translated into that locale.
+Now, when _editing_ content, you should see a "Locales" list in the sidebar. This shows you all of your available locales. A checkmark indicates the locale you are currently editing, a green dot indicates that locale is available (published), and a white dot means the content is unavailable (draft).
 
 Selecting one of those locales will take you to edit the same page, but only fields marked as localizable will be available.
-
-It's worth noting that a piece of content must already exist in the default locale before it can be localized.
 
 ### Files {#files}
 
