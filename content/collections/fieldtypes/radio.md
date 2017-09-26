@@ -7,3 +7,7 @@ options:
     name: options
     type: array
     description: Sets of key/value pairs that define the values and labels of the radio options.
+  -
+    name: inline
+    type: boolean *false*
+    description: Setting to true will align the radio buttons inline / horizontally instead of stacking vertically.
