@@ -200,6 +200,22 @@ First, tell the fieldtype to _not_ automatically bind the watcher. Then, bind it
 }
 ```
 
+### Replicator Preview Text {#replicator-preview-text}
+
+When [Replicator](/fieldtypes/replicator) sets are collapsed, Statamic will display a preview of the data within it.
+
+By default, Statamic will do its best to display your fields data. However, if you have a value more complex than a simple string or array, you may want to customize it.
+
+You may customize the preview text by adding a `getReplicatorPreviewText()` method to your Vue component.
+
+``` .language-javascript
+methods: {
+    getReplicatorPreviewText() {
+        return this.data.join('+');
+    }
+}
+```
+
 
 ## The PHP Side {#php}
 
