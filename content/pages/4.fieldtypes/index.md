@@ -27,6 +27,10 @@ options:
     type: string
     description: 'A pipe delimited string of [validation rules](http://laravel.com/docs/5.1/validation#available-validation-rules)'
   -
+    name: bold
+    type: boolean *false*
+    description: Setting to true will make the field label bold.
+  -
     name: show_when
     type: string|array
     description: |
