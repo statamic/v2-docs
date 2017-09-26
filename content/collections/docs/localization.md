@@ -148,6 +148,16 @@ In both Collections and Taxonomies, the localized entries/terms are all stored i
 
 For pages, entries, and taxonomy terms: slugs may be localized by adding a `slug` field to the front-matter. The filenames shouldn't change. They should also all have `id` fields that match their default counterparts.
 
+### Publish States / Statuses {#publish-states}
+
+It's possible to have a different status per locale. For instance, you may want to have a page that only exists in one locale (or multiple, but not all of them).
+
+In the Control Panel this should be straightforward: There is a toggle next to the locale you're editing. Toggle it off to set it as a draft.
+
+In the files, the default locale's status is defined in the filename as per usual (an underscore to make it a draft). For additional locales, you may add a `published: true` or `false` to their front matter.
+
+Keep in mind that additional locales will inherit the status of the default locale. If you change the status of the default locale, the other locales will also become drafts unless you already added a `published` value to their front-matter.
+
 ### Routing {#routing}
 
 It's possible to assign a different collection and/or taxonomy routes for each locale. For example, you may want `/news/my-post` for English, but `/noticias/mi-publicacion` in Spanish.
