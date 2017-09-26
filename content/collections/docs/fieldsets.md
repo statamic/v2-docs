@@ -138,14 +138,12 @@ show_when:
 
 If you need something more complex than the YAML syntax provides, you may write your own logic.
 
-In your `site/helpers/cp/scripts.js` file (or within an addon), you should add a function to the `window.conditions` object.
+In your `site/helpers/cp/scripts.js` file (or within an addon), you should add a function to the `Statamic.conditions` object.
 
 ``` .language-javascript
-window.conditions = {
-    reallyLovesFood: function (fields) {
-        return fields['favorite_foods'].length > 10;
-    }
-}
+Statamic.conditions.reallyLovesFood = function (fields) {
+    return fields['favorite_foods'].length > 10;
+};
 ```
 
 ``` .language-yaml
