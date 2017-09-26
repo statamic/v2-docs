@@ -185,7 +185,7 @@ Lastly we come to Users. A non-traditional Content Type to be sure, but one neve
 
 User data can be routed and displayed on the site much like Entries, allowing you to use them as a single location for all data pertaining to a specific person.
 
-You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire *Guide on Users* (WIP).
+You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire [*Guide on Users*](/users).
 
 [nav-tag]: /tags/nav
 [taxonomies]: /taxonomies
