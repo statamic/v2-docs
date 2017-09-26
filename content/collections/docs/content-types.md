@@ -169,7 +169,7 @@ Containers can live in your local filesystem or on Amazon S3.
 
 ![Assets Container](/assets/img/screenshots/cp-assets.png)
 
-Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. To specify a fieldset, add add `fieldset: insert_fieldset_name` to the container's config file.
+Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. To specify a fieldset, add `fieldset: insert_fieldset_name` to the container's config file.
 
 Here are some ideas on how you can use this to your advantage:
 
