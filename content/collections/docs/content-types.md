@@ -46,7 +46,7 @@ Content Types are defined by their similarities and their differences. Let's fir
 
 ### Customizable Custom Fields {#custom-fields}
 
-The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a **fieldset**) to model your content in whatever fashion you desire.
+The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a [**fieldset**](/fieldsets)) to model your content in whatever fashion you desire.
 
 ### Unique IDs {#ids}
 
