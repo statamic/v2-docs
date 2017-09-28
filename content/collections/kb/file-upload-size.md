@@ -35,3 +35,4 @@ server {
 
   # all that other stuff
 }
+```
