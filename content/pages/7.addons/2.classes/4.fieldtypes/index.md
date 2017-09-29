@@ -200,13 +200,30 @@ First, tell the fieldtype to _not_ automatically bind the watcher. Then, bind it
 }
 ```
 
+### Focus {#focus}
+
+When Statamic wants to programatically focus your field (for example, when adding a new Replicator set or Grid row), it needs to know how to do so.
+
+By default, Statamic will simply call `.focus()` on your Vue component's `$el` property (a DOM element). This will work fine if you have a simple fieldtype like the `text` field.
+
+You may customize how focusing works by adding a `focus()` method to your Vue component. For example:
+
+``` .language-javascript
+template: `<div><div><input type="text" v-el:my-custom-element /></div></div>`,
+methods: {
+    focus() {
+        this.$els.myCustomElement.focus();
+    }
+}
+```
+
 ### Replicator Preview Text {#replicator-preview-text}
 
 When [Replicator](/fieldtypes/replicator) sets are collapsed, Statamic will display a preview of the data within it.
 
 By default, Statamic will do its best to display your fields data. However, if you have a value more complex than a simple string or array, you may want to customize it.
 
-You may customize the preview text by adding a `getReplicatorPreviewText()` method to your Vue component.
+You may customize the preview text by adding a `getReplicatorPreviewText()` method to your Vue component. For example:
 
 ``` .language-javascript
 methods: {
