@@ -5,12 +5,12 @@ overview: >
   it be nice if there was an easy way to access them? The Control Panel's navigation bar isn't just for core items. You are able to add your own items in there, too.
 id: a5e391e7-31ac-40a2-8f13-1746b660197b
 ---
-## Overview
+## Overview {#overview}
 
 Statamic emits a `cp.nav.created` just after the Control Panel's navigation gets created. This event passes along
 the `Statamic\CP\Navigation\Nav` singleton. Any items added to this class will be reflected in the navigation bar.
 
-## Adding Items
+## Adding Items {#adding-items}
 Adding a navigation item should be done in your [Listener](/addons/classes/event-listeners) file.
 
 Let's assume we're creating a Store addon, which has products and orders. We'll want to create a navigation item
@@ -53,12 +53,12 @@ class StoreListener extends Listener
 }
 ```
 
-## The NavItem class
+## The NavItem class {#navitem-class}
 
 Each item you see in the navigation is an instance of the `Statamic\CP\Navigation\NavItem` class. Each instance may
 contain its own collection of `NavItem` objects, and so on, letting you create nested sets of navigation.
 
-### Basic API
+### Basic API {#basic-api}
 
 In the code example, you'll notice `Nav::item()`. This is simply a shortcut to creating a new instance of `Statamic\CP\Navigation\NavItem`.
 
@@ -74,7 +74,7 @@ So, fire up a `Nav::item('foo')` then go ahead chaining with methods below:
 | `badge` | Add a badge. Useful for displaying something like an "unread count". |
 | `add` | Add a child item to the item. You can pass a `NavItem` or a closure, like the code example above. |
 
-### Icons
+### Icons {#icons}
 
 The Statamic CP uses Entypo for icons. When using `$item->icon($name)`, you can pass any name available.
 
