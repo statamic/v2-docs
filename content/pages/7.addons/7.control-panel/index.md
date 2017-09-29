@@ -71,6 +71,7 @@ So, fire up a `Nav::item('foo')` then go ahead chaining with methods below:
 | `url` | The `href` of the link to be rendered. |
 | `route` | A shorthand to set the `url` based on a route. |
 | `icon` | The name of the icon to render. Icons are only displayed on top level nav items. |
+| `badge` | Add a badge. Useful for displaying something like an "unread count". |
 | `add` | Add a child item to the item. You can pass a `NavItem` or a closure, like the code example above. |
 
 ### Icons
