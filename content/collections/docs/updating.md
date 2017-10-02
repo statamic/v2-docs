@@ -32,7 +32,6 @@ Manually updating is just as simple:
 
 - Download the latest version from [statamic.com](http://statamic.com).
 - Replace your `statamic/` folder with the newest one.
-- Run `php please clear:cache`.
 - Run `php please update:housekeeping` to perform any additional tasks that the updater would have taken care of automatically.
 - Run `php please update:addons` if you have any addons installed.
 
