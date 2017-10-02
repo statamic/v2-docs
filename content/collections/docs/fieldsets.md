@@ -79,7 +79,23 @@ Partials can only be used at the root level (ie. not within [Grid](/fieldtypes/g
 
 It's possible to have some fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
 
-Here's a basic example:
+The most basic example would be to show a field with a toggle.
+
+``` .language-yaml
+title: Blog Post
+fields:
+  has_author:
+    type: toggle
+  author:
+    type: users
+    max_items: 1
+    show_when:
+      has_author: true
+```
+
+If you don't need to toggle it but instead "just show" the author field, you may be interested in the [Revealer fieldtype](/fieldtypes/revealer).
+
+Here's another basic example using a select field:
 
 ``` .language-yaml
 title: Blog Post
