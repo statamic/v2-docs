@@ -5,7 +5,7 @@ overview: |
   Statamic lets you define sets of fields in arrangements, aptly named _fieldsets_. You then tell Statamic which content uses which fieldsets, and the Control Panel builds out the appropriate form for you.
 ---
 
-## What is a fieldset?
+## What is a fieldset? {#what-is-a-fieldset}
 
 A _fieldset_ is a simple YAML file that defines a list of fields. Your fieldsets are kept in the `site/settings/fieldsets` directory. The main section of a fieldset is the `fields` key which allows you to set and configure any number of fields utilizing any combination of the available [fieldtypes](/fieldtypes).
 
@@ -26,33 +26,33 @@ fields:
     max_items: 1
 ```
 
-## Using a fieldset
+## Using a fieldset {#usage}
 
 To assign a fieldset to a piece of content, add a `fieldset` key to its YAML data.
 
-### Via content
+### Via content {#using-via-content}
 
 You may add it directly to a page, entry, global set, or taxonomy term. This may be useful if you have a need for a single-use fieldset. For example, one page may require a specific fieldset.
 
-### Via container
+### Via container {#using-via-container}
 
 You may also add it to the corresponding content containers (Collection, Taxonomy, Asset Container, etc) which will cascade down to all of its items. For example, adding `fieldset` to a Collection's `folder.yaml` will ensure that all the entries (new and existing) will use that fieldset.
 
 If you've defined a container level fieldset, you may still override it on the content level.
 
-## Configuring a fieldset 
+## Configuring a fieldset {#configuration}
 
-### Naming fields
+### Naming fields {#naming}
 
 You can name your fields any way you choose, but each field name needs to be unique. You cannot use hyphens, but underscores are okay.
 
-### Required field settings
+### Required field settings {#required-settings}
 
 In the snippet above, the only thing that's really required is the `type` key. Even without that, Statamic will treat it as a [text fieldtype](/fieldtypes/text) by default.
 
 Some fieldtypes will have their own required settings. For example, the [assets fieldtype](/fieldtypes/assets) requires that you specify a container.
 
-### Validation Rules
+### Validation Rules {#validation}
 
 Each field can accept a pipe-delimited list of [Laravel validation rules](https://laravel.com/docs/5.1/validation#available-validation-rules).
 
@@ -69,13 +69,13 @@ This would make the field required, ensure only alpha-numeric characters and das
 
 Note that not _every_ validation rule would be usable in Statamic. For instance, the database rules (exists, unique, etc) would not apply since we do not use a database.
 
-## Reusing fields across fieldsets
+## Reusing fields across fieldsets {#partials}
 
 It's fairly common to want to repeat certain fields across multiple fieldsets. In this case, you may use the [Partial fieldtype](/fieldtypes/partial) to include another fieldset. Any of the partial fieldset's fields will be included where you specify.
 
 Partials can only be used at the root level (ie. not within [Grid](/fieldtypes/grid) or [Replicator](/fieldtypes/replicator) fields).
 
-## Conditional Fields
+## Conditional Fields {#conditional-fields}
 
 It's possible to have some fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
 
@@ -105,7 +105,7 @@ fields:
 - The `youtube_id` field will only be displayed when the `post_type` field has `video` selected.
 - The `image` field will only be displayed when the `post_type` value is `image`.
 
-### Multiple fields
+### Multiple fields {#multiple-conditional-fields}
 
 You can combine fields by adding to the `show_when` or `hide_when` array.
 
@@ -134,7 +134,7 @@ show_when:
   this_field: [bacon, eggs, hash brows]
 ```
 
-### Custom Logic
+### Custom Logic {#custom-conditional-logic}
 
 If you need something more complex than the YAML syntax provides, you may write your own logic.
 
