@@ -17,7 +17,7 @@ Out of the box Statamic supports the following email drivers.
 
 **Log** -- The log driver writes email output to your log file instead of actually sending it. This is very useful for testing without cluttering your inbox.
 
-**PHP Mail and Sendmail** -- These native methods of sending email oten "just work" on many servers by default, but can sometimes be disabled, especially in shared hosting environments.
+**PHP Mail and Sendmail** -- These native methods of sending email often "just work" on many servers by default, but can sometimes be disabled, especially in shared hosting environments.
 
 **[Mandrill](https://mandrillapp.com) and [Mailgun](https://www.mailgun.com/)** -- These third party services may require accounts with API keys, but are quick to set up and are as close to "bulletproof" as it gets with email delivery.
 
