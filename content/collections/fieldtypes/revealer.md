@@ -34,3 +34,5 @@ fields:
     show_when:
       has_extended_content: true
 ```
+
+Regardless of whether the button was clicked or not, no data will be saved.
