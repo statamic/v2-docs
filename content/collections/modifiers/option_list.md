@@ -17,4 +17,4 @@ collections:
 {{ collection from="{collections|option_list}" }}
 ```
 
-Can also be used by it's alias, [`piped`](/modifiers/piped).
+Can also be used by its alias, [`piped`](/modifiers/piped).
