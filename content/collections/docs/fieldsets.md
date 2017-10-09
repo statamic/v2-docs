@@ -123,6 +123,15 @@ fields:
 
 > Note: Only top level fields can be conditional. (ie. Not within Grids or Replicators)
 
+### Not Nulls {#not-null}
+
+You may specify a value to be "not null" which is handy when you need to say "Show this when another field has any value."
+
+``` .language-yaml
+show_when:
+  that_field: not null
+```
+
 ### Multiple fields {#multiple-conditional-fields}
 
 You can combine fields by adding to the `show_when` or `hide_when` array.
