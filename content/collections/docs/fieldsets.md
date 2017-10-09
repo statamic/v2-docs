@@ -121,6 +121,8 @@ fields:
 - The `youtube_id` field will only be displayed when the `post_type` field has `video` selected.
 - The `image` field will only be displayed when the `post_type` value is `image`.
 
+> Note: Only top level fields can be conditional. (ie. Not within Grids or Replicators)
+
 ### Multiple fields {#multiple-conditional-fields}
 
 You can combine fields by adding to the `show_when` or `hide_when` array.
