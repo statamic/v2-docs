@@ -13,7 +13,7 @@ options:
     description: An array containing sets of fields.
 id: 00b140e3-413a-4d91-b9e7-65f58d56a41b
 ---
-## Usage
+## Usage {#usage}
 
 You will be presented with a button for each set you’ve defined. Clicking one will replicate an empty set. You can [replicate](https://www.youtube.com/watch?v=qD4EVXkfe0w) a single set type as many times as you like as well as dragging and dropping them to adjust their order.
 

@@ -26,7 +26,7 @@ options:
     type: string *tags*
     description: "Available UI modes are `panes` and `tags`."
 ---
-## Relationship Types
+## Relationship Types {#relationship-types}
 
 You can relate any of the base [Content Types](/content-types), each of which with its own specific fieldtype. They all extend this core Relate fieldtype.
 
