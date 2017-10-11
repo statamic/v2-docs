@@ -5,7 +5,7 @@ overview: >
   You have a website, some data, templates, and you're not writing PHP anywhere. How on earth do you look under the hood? Know when something is broken? Fine-tune performance? Excellent question. Here come the answers.
 ---
 
-## Debug Mode
+## Debug Mode {#debug-mode}
 
 Enabling Debug Mode in `System » Settings » Debugging` in the control panel, or with `debug: true` in `site/settings/debug.yaml`, will render any errors and exceptions to the browser will a full stack trace. Some of the messages are really clear and helpful, like `Can't write such and such file or folder`, but others are a bit more cryptic.
 

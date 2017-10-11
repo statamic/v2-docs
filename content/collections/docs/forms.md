@@ -112,7 +112,7 @@ metrics:
 
 You have access to `average`, `sum`, `min`, `max`, and `total` metrics that can be applied to any field in your form.
 
-## Displaying submission data
+## Displaying submission data {#displaying-submission-data}
 
 You can display any or all of the submissions of your forms on the front-end of your site using the [formsubmissions][submissions] Tag.
 
@@ -123,7 +123,7 @@ You can display any or all of the submissions of your forms on the front-end of 
 {{ /form:submissions }}
 ```
 
-## Exporting your data
+## Exporting your data {#exporting-your-data}
 
 Exporting your data is as easy as click the **Export** button when viewing your form in the Control Panel. You have the choice between CSV and JSON. Choose wisely.
 

@@ -2,7 +2,7 @@
 title: The Cascade
 id: 767fe16a-406f-450b-840b-a7c34ebba465
 ---
-## What is the Cascade?
+## What is the Cascade? {#what-is-the-cascade}
 Statamic's unique data structure gives you the ability to set and override data, variables and settings alike, as you traverse deeper into your file structure.
 
 To best illustrate the Cascade, we'll use the example of a blog post that contains a list of related posts.
