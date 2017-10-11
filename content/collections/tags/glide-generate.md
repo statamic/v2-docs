@@ -25,7 +25,7 @@ variables:
     type: integer
     description: The height of the resized image.
 ---
-## Usage
+## Usage {#usage}
 This tag is similar to the [Glide Tag][glide_tag] with a few differences:
 
 - It's a tag pair.
@@ -34,7 +34,7 @@ This tag is similar to the [Glide Tag][glide_tag] with a few differences:
 
 This tag can be useful if you need to know the dimensions of the resized image before it's rendered.
 
-## Example
+## Example {#example}
 
 We have an image's asset ID saved in the YAML, and we want to resize it to 300x200, fit it inside the area by cropping it, and apply a sepia filter.
 

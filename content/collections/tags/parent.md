@@ -12,7 +12,7 @@ id: 932ae2b5-0ff0-40e3-b8a4-1c71784917e4
 ---
 ## Example {#example}
 
-### Fetching and iterating over values
+### Fetching and iterating over values {#fetching-and-iterating-over-values}
 
 ``` .language-yaml
 # pages/about/index.md
@@ -58,7 +58,7 @@ uno, dos
 potatoes have eyes, bacon gives you superpowers,
 ```
 
-### Without a tag part
+### Without a tag part {#without-a-tag-part}
 
 You can also use the parent tag without a tag part. This can do two things:
 

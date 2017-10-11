@@ -8,7 +8,7 @@ parameters:
     description: "In the event that the requested variable doesn't exist, this will be used a fallback."
 id: 967d4bad-34a0-4a6a-8af1-6e88c6b900ed
 ---
-## Example
+## Example {#example}
 
 This tag is a nice simple way to output values from your environment variables.
 

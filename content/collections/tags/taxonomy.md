@@ -132,7 +132,7 @@ id: ba832b71-a567-491c-b1a3-3b3fae214703
 ---
 ## Example {#example}
 
-### Shorthand Syntax
+### Shorthand Syntax {#shorthand-syntax}
 
 A simple listing of taxonomies in the `categories` group.
 
@@ -145,7 +145,7 @@ A simple listing of taxonomies in the `categories` group.
 </ul>
 ```
 
-### Verbose syntax
+### Verbose syntax {#verbose-syntax}
 
 The verbose syntax is useful if you need to pass the taxonomy as a parameter.
 
