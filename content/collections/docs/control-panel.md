@@ -70,3 +70,11 @@ locale: fr
 ```
 
 Learn more about [localization](/localization).
+
+## Customizing the Stylesheet {#customizing-the-stylesheet}
+
+Statamic will automatically load `site/helpers/cp/override.css` if it exists. You may drop any styles you wish into that file.
+
+## Adding custom JavaScript {#adding-custom-javascript}
+
+Statamic will automatically load `site/helpers/cp/scripts.js` if it exists. This could be a good place to add things like custom field conditions.

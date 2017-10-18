@@ -132,15 +132,9 @@ webroot/
 
 #### Running in a subdirectory {#subdir}
 
-Let's pause for just a moment. Do you want to run in a subdirectory for the right reason? Using Statamic in a `blog` subdirectory in an existing site is one such reason. Not feeling like setting up a virtual host isn't. We can't stop you, but if you plan to run the site in webroot in production, you should do the same thing in development.
+Subdirectory installs are a little special. We've dedicated a whole page to it!
 
-Professional advice given, here's what to do:
-
-- Open `index.php` and change `$site_root` from `"/"` to `"/your_subdirectory/"`
-- Open `site/settings/system.yaml` and change the URL from `/` to `/your_subdirectory/`
-- For any local driver based asset containers that you create, their `url` values will need to contain this subdirectory. (eg. `/your_subdirectory/assets`)
-
-Done.
+[How to run Statamic in a subdirectory](/knowledge-base/subdirectory-installation)
 
 ### Step 2: Set permissions {#permissions}
 

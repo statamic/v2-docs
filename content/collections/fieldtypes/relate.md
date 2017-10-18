@@ -26,7 +26,7 @@ options:
     type: string *tags*
     description: "Available UI modes are `panes` and `tags`."
 ---
-## Relationship Types
+## Relationship Types {#types}
 
 You can relate any of the base [Content Types](/content-types), each of which with its own specific fieldtype. They all extend this core Relate fieldtype.
 
@@ -35,3 +35,11 @@ You can relate any of the base [Content Types](/content-types), each of which wi
 - [Pages](/fieldtypes/pages) - for Pages
 - [Users](/fieldtypes/users) - for Users
 - [Assets](/fieldtypes/assets) - for Assets (it doesn't extend this Relate fieldtype)
+
+## Display Modes {#modes}
+
+The Relate field can be displayed in two different modes. Both are functionally the same, just with a different UI.
+
+Tags mode (the first field in the screenshot) is a more traditional tagging syntax. It will refine the selections as you type.
+
+Panes mode (the second field) shows the available values and selections in separate fields.

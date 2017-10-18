@@ -1,3 +1,4 @@
+---
 title: Markdown
 overview: Write and preview Markdown with the help of formatting buttons and other neat things.
 image: /assets/fieldtypes/markdown.png
@@ -24,3 +25,28 @@ options:
     type: bool
     description: >
       If set to `true`, display a link to open a Markdown cheatsheet from the specified field.
+---
+## Data Structure {#data-structure}
+
+The data will be saved exactly as displayed in the field - as Markdown.
+
+## Templating {#templating}
+
+Since the data is a plain string, you will need to parse it as Markdown.
+
+``` .language-yaml
+my_markdown_field: 'This is **bold**'
+```
+
+```
+{{ my_markdown_field }}
+{{ my_markdown_field | markdown }}
+```
+
+``` .language-output
+This is **bold**
+This is <strong>bold</strong>
+```
+
+> The `content` field will automatically parsed as Markdown if you are using md files. 
+> You do not need to use the markdown modifier. Simply using `{{ content }}` will do!

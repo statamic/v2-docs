@@ -46,7 +46,7 @@ Content Types are defined by their similarities and their differences. Let's fir
 
 ### Customizable Custom Fields {#custom-fields}
 
-The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a **fieldset**) to model your content in whatever fashion you desire.
+The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a [**fieldset**](/fieldsets)) to model your content in whatever fashion you desire.
 
 ### Unique IDs {#ids}
 
@@ -169,7 +169,7 @@ Containers can live in your local filesystem or on Amazon S3.
 
 ![Assets Container](/assets/img/screenshots/cp-assets.png)
 
-Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. To specify a fieldset, add add `fieldset: insert_fieldset_name` to the container's config file.
+Asset Containers can use fieldsets to store additional data along with each asset that will be available anywhere your asset is being used, in addition to file-driven metadata. To specify a fieldset, add `fieldset: insert_fieldset_name` to the container's config file.
 
 Here are some ideas on how you can use this to your advantage:
 
@@ -185,7 +185,7 @@ Lastly we come to Users. A non-traditional Content Type to be sure, but one neve
 
 User data can be routed and displayed on the site much like Entries, allowing you to use them as a single location for all data pertaining to a specific person.
 
-You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire *Guide on Users* (WIP).
+You can create listings and single view URLs, like with Entries, and group them into User Groups which have Roles you can assign Permissions to. There are so many things you can accomplish with Users that we simply must recommend you read the entire [*Guide on Users*](/users).
 
 [nav-tag]: /tags/nav
 [taxonomies]: /taxonomies

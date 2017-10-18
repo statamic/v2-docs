@@ -26,6 +26,20 @@ options:
     name: validate
     type: string
     description: 'A pipe delimited string of [validation rules](http://laravel.com/docs/5.1/validation#available-validation-rules)'
+  -
+    name: bold
+    type: boolean *false*
+    description: Setting to true will make the field label bold.
+  -
+    name: show_when
+    type: string|array
+    description: |
+      The conditions under which this field should be displayed. You can do things like "show this field when this other field has this value".  
+      [Learn how to configure conditional fields](/fieldsets#conditional-fields)
+  -
+    name: hide_when
+    type: string|array
+    description: The same as `show_when`, but with the logic inverted.
 
 ---
 ## Default Settings {#default-settings}

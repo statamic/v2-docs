@@ -110,11 +110,9 @@ Once you've added your locales, you need to define which fields may be translate
 You can do this by toggling the "Localizable" option for each field you wish to translate. If you aren't using the CP, you can just add `localizable: true` to each field in your fieldset.
 
 ### Editing {#editing}
-Now, when _editing_ content, you should see a "Locales" list in the sidebar. This shows you all of your available locales. A green dot indicates the locale you are currently editing, a hollow dot indicates a locale exists, and no dot means the content hasn't been translated into that locale.
+Now, when _editing_ content, you should see a "Locales" list in the sidebar. This shows you all of your available locales. A checkmark indicates the locale you are currently editing, a green dot indicates that locale is available (published), and a white dot means the content is unavailable (draft).
 
 Selecting one of those locales will take you to edit the same page, but only fields marked as localizable will be available.
-
-It's worth noting that a piece of content must already exist in the default locale before it can be localized.
 
 ### Files {#files}
 
@@ -149,6 +147,16 @@ In Pages, each folder represents a page. The default locale is simply named `ind
 In both Collections and Taxonomies, the localized entries/terms are all stored in subfolders with identical filenames to the default locale. eg. `categories/news.md` and `categories/fr/news.md`.
 
 For pages, entries, and taxonomy terms: slugs may be localized by adding a `slug` field to the front-matter. The filenames shouldn't change. They should also all have `id` fields that match their default counterparts.
+
+### Publish States / Statuses {#publish-states}
+
+It's possible to have a different status per locale. For instance, you may want to have a page that only exists in one locale (or multiple, but not all of them).
+
+In the Control Panel this should be straightforward: There is a toggle next to the locale you're editing. Toggle it off to set it as a draft.
+
+In the files, the default locale's status is defined in the filename as per usual (an underscore to make it a draft). For additional locales, you may add a `published: true` or `false` to their front matter.
+
+Keep in mind that additional locales will inherit the status of the default locale. If you change the status of the default locale, the other locales will also become drafts unless you already added a `published` value to their front-matter.
 
 ### Routing {#routing}
 
