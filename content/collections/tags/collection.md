@@ -323,7 +323,7 @@ The `paginate` variable will become available to you. This is an array containin
 
 <br>
 
-### Pagination Examples
+### Pagination Examples {#pagination-examples}
 
 The `auto_links` tag is designed to be your friend. It'll save you more than a few keystrokes, and even more headaches.
 It'll output a Twitter Bootstrap-ready list of links for you. With a large number of pages, it will create segments
