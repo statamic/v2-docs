@@ -194,7 +194,7 @@ With this list of templates, we have all of the ways content will be displayed o
 
 ### Naming and Choosing Templates {#naming-templates}
 
-Naming templates works exactly the same as [naming layouts](#naming-layouts), but in the `templates` folder.
+Naming templates works exactly the same as [naming layouts](#choosing-layouts), but in the `templates` folder.
 
 You also choose templates in the same way as with layouts (per-page and per-folder), except – you guessed it – `template` instead of `layout`.
 
