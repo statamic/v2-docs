@@ -53,6 +53,34 @@ class StoreListener extends Listener
 }
 ```
 
+## Removing Items {#removing-items}
+
+You can also remove items (as of 2.7.2). An example of why you might want to do this is to replace an existing sidebar section with something custom.
+
+For instance, you might want to replace the nested collections with top level ones.
+
+``` .language-php
+class CollectionWangjanglerListener extends Listener
+{
+    public $events = [
+        'cp.nav.created' => 'wangjangle'
+    ];
+
+    public function wangjangle($nav)
+    {
+        // Remove the items. Dot notation is supported for nested items.
+        $nav->remove('content.collections');
+
+        // Add as necessary...
+        $nav->addTo('content', function ($item) {
+            $item->add(Nav::item('Blog')->route('entries.show', 'blog')->icon('book'));
+            $item->add(Nav::item('Events')->route('entries.show', 'events')->icon('calendar'));
+        });
+    }
+}
+```
+
+
 ## The NavItem class {#navitem-class}
 
 Each item you see in the navigation is an instance of the `Statamic\CP\Navigation\NavItem` class. Each instance may
@@ -73,6 +101,9 @@ So, fire up a `Nav::item('foo')` then go ahead chaining with methods below:
 | `icon` | The name of the icon to render. Icons are only displayed on top level nav items. |
 | `badge` | Add a badge. Useful for displaying something like an "unread count". |
 | `add` | Add a child item to the item. You can pass a `NavItem` or a closure, like the code example above. |
+| `remove` | Remove a child item. Dot notation is supported to access nested child items. |
+| `get` | Get a child item. Dot notation is supported to access nested child items. |
+| `children` | Get the child items. This will be an `Illuminate\Support\Collection` instance. |
 
 ### Icons {#icons}
 

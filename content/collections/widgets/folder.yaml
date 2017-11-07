@@ -1,0 +1,4 @@
+order: alphabetical
+template: docs/widget
+parse_content: false
+fieldset: widget
