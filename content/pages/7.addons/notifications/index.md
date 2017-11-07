@@ -8,7 +8,7 @@ Within your Control Panel Vue components, you may trigger any number of flash no
 
 ## Success
 
-Trigger a green success notification.
+Trigger a success notification.
 
 ``` .language-js
 this.$notify.success('Thing updated!');
@@ -16,7 +16,7 @@ this.$notify.success('Thing updated!');
 
 ## Error
 
-Trigger a red error notification.
+Trigger an error notification.
 
 ``` .language-js
 this.$notify.error('Oh no! That thing failed.');
