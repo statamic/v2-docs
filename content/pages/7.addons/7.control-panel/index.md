@@ -53,6 +53,34 @@ class StoreListener extends Listener
 }
 ```
 
+## Removing Items {#removing-items}
+
+You can also remove items (as of 2.7.2). An example of why you might want to do this is to replace an existing sidebar section with something custom.
+
+For instance, you might want to replace the nested collections with top level ones.
+
+``` .language-php
+class CollectionWangjanglerListener extends Listener
+{
+    public $events = [
+        'cp.nav.created' => 'wangjangle'
+    ];
+
+    public function wangjangle($nav)
+    {
+        // Remove the items. Dot notation is supported for nested items.
+        $nav->remove('content.collections');
+
+        // Add as necessary...
+        $nav->addTo('content', function ($item) {
+            $item->add(Nav::item('Blog')->route('entries.show', 'blog')->icon('book'));
+            $item->add(Nav::item('Events')->route('entries.show', 'events')->icon('calendar'));
+        });
+    }
+}
+```
+
+
 ## The NavItem class {#navitem-class}
 
 Each item you see in the navigation is an instance of the `Statamic\CP\Navigation\NavItem` class. Each instance may
