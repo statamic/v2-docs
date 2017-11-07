@@ -347,7 +347,7 @@ RegExes aren't for the faint of heart, but if you're capable of [writing one](ht
 {{ unless content ~ '/\bbest\b.+\bever/'}}
   # The hyperbole here is at least tolerable. Continue!
   {{ content }}
-{{ /if }}
+{{ /unless }}
 ```
 
 **Tips:**
