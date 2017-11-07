@@ -101,6 +101,9 @@ So, fire up a `Nav::item('foo')` then go ahead chaining with methods below:
 | `icon` | The name of the icon to render. Icons are only displayed on top level nav items. |
 | `badge` | Add a badge. Useful for displaying something like an "unread count". |
 | `add` | Add a child item to the item. You can pass a `NavItem` or a closure, like the code example above. |
+| `remove` | Remove a child item. Dot notation is supported to access nested child items. |
+| `get` | Get a child item. Dot notation is supported to access nested child items. |
+| `children` | Get the child items. This will be an `Illuminate\Support\Collection` instance. |
 
 ### Icons {#icons}
 
