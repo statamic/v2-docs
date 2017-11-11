@@ -54,7 +54,7 @@ A basic registration form, with validation errors.
 ```
 
 
-### Additional Fields
+### Additional Fields {#additional-fields}
 
 You are allowed to add any additional fields to your registration form, and they will be added to the user's account
 provided that they exist in the `user.yaml` fieldset.
@@ -63,7 +63,7 @@ Any submitted data that does _not_ exist in the fieldset will be completely igno
 
 Additional fields will be validated as per your fieldset `validate` rules.
 
-### New user roles
+### New user roles {#new-user-roles}
 
 Most of the time, new members will need some roles assigned to them so that they can do different things on your site. You get to choose these roles with the `new_user_roles` array in your `site/settings/users.yaml` file. When a user successfully registers as a member, their account will automatically be assigned the roles in this list.
 

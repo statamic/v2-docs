@@ -6,7 +6,7 @@ id: b0275e02-2a64-4233-a335-1da161f23216
 It's useful for checking whether or not a certain tree should be displayed.  
 It uses the same parameters to the `nav` tag.
 
-## Example
+## Example {#example}
 
 ```
 {{ nav:exists from="/foo" }}

@@ -247,7 +247,7 @@ Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They se
 
 Conditions are converted to, and therefore behave just like, PHP expressions. You can use any of PHP’s [comparison][comparison] and [logical][logical] operators.
 
-### Conditions on Tags vs Variables
+### Conditions on Tags vs Variables {#conditions-on-tags-vs-variables}
 
 When working with [tags](/tags) instead of variables, you must wrap the tag in a pair of additional single braces to tell the parser to run that logic first.
 

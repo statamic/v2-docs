@@ -25,7 +25,7 @@ shows:
   - 134jk1h78dfas
 ```
 
-## Templating
+## Templating {#templating}
 
 Use the [Relate tag](/tags/relate) to loop through the IDs and fetch the content data.
 

@@ -20,7 +20,7 @@ Each type is a _container_ for any number of items inside that type. For example
 
 The individual items in each Content Type are usually represented by content files in a YAML Front-Loaded format. If these words don't mean anything to you and you're a developer - hang in there and we'll explain everything. If you're a content manager, just ignore 'em! The Control Panel does all this stuff for you.
 
-## Container/Item Names
+## Container/Item Names {#containeritem-names}
 
 Each container and corresponding child type has their own names. Their names are as follows:
 

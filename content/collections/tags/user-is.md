@@ -28,6 +28,6 @@ A shorthand syntax is also available, however this only allows checking against 
 {{ /is:bacon_enthusiast }}
 ```
 
-### Isn't
+### Isn't {#isnt}
 
 We also support the inverse using `{{ user:isnt }}` tags.

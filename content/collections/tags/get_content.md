@@ -54,7 +54,7 @@ In addition to the `get_content` tag, we'll be using the [shuffle](#) and [limit
 {{ /get_content }}
 ```
 
-### Shorthand syntax
+### Shorthand syntax {#shorthand-syntax}
 
 You may also use a shorthand syntax, where the second tag part refers to a variable. This variable should hold the URL or
 ID of the content you're fetching.

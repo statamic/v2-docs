@@ -27,7 +27,7 @@ start typing to narrow down the suggestions.
 
 The values come from either a predefined array of `options`, or from a third-party suggest mode.
 
-## Suggest Modes
+## Suggest Modes {#suggest-modes}
 
 The suggestions in this field will normally come from the `options` array, which is a predefined list of values.
 

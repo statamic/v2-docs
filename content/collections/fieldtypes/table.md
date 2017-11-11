@@ -6,7 +6,7 @@ overview: >
 image: /assets/fieldtypes/table.gif
 id: 11e0ab78-7698-44c8-98f1-1194cb12ce28
 ---
-## Data Structure
+## Data Structure {#data-structure}
 
 Data from the Table fieldtype is saved in an array like this:
 
@@ -31,7 +31,7 @@ my_table:
 
 This data format makes it trivial when it comes time to render it templates.
 
-## Templating
+## Templating {#templating}
 
 This fieldtype comes with a handy [`table`](/modifiers/table) modifier, which will turn your data into a simple HTML `<table>`.
 

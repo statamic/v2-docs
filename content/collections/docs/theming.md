@@ -48,7 +48,7 @@ can access your theme’s partials through the [partial tag](/tags/partial).
 
 This folder is where your theme’s [templates](#templates) live. A theme must have at least one template file to work.
 
-#### Other Folders
+#### Other Folders {#other-folders}
 
 A theme can contain any number of other folders as well. Beyond the core folders, the rest is up to you. We just recommend following a few [naming conventions](#conventions). As a rule of thumb, your theme should contain all files needed to render your design, and from there any additional resources would be considered "Assets" and part of the site content.
 
@@ -83,11 +83,11 @@ If that’s the case, you have two options:
 
 Stylesheets and scripts should be placed into a `css` folder and a `js` folder (respectively) at the root of your theme’s folder. Feel free to compile, concatenate, or otherwise generate files _into_ these folders. We do it and so should you.
 
-#### Primary Stylesheet
+#### Primary Stylesheet {#primary-stylesheet}
 
 Your main stylesheet should be named the same as your theme. If your theme is called _Linguine_ and lives in a `linguine` folder, your main stylesheet should be named `css/linguine.css`.
 
-#### Primary JavaScript Script
+#### Primary JavaScript Script {#primary-javascript-script}
 
 Your main script file should also be named the same as your theme. `{{ theme:js }}`is going to be look for `js/linguine.js`.
 
@@ -102,7 +102,7 @@ A layout is the markup foundation of your theme. When you create a site there ar
 
 By default Statamic will look for a layout called `layouts/default.html`. You can name your layouts (if you need more than one) whatever you’d like, but if you choose a name other than `default` for your default layout, you’ll need to set it explicitly wherever you want to use it.
 
-### If You Think in "Headers & Footers"
+### If You Think in "Headers & Footers" {#if-you-think-in-headers-amp-footers}
 
 Some other systems force you create a header partial, a footer partial, and then
 make you manually include them in every page template throughout your site. Layouts works similarly _in concept_, but rather in reverse.
@@ -141,7 +141,7 @@ Aside from the complete output of your template using `template_content`, it's a
 
 ### Choosing a Layout {#choosing-layouts}
 
-#### Per Page
+#### Per Page {#per-page}
 
 To tell one page of your site to use a specific layout, set `layout` in your page’s front-matter. For example, if you’re using the `default` layout in most of the site but want something different for your `promotion` page, that page’s front-matter might look like this:
 
@@ -154,7 +154,7 @@ layout: landing_b
 
 This will use the code from `landing_b.html` within your current theme’s `layouts` folder. If that file doesn’t exist, Statamic will graciously display an error.
 
-#### Per Folder
+#### Per Folder {#per-folder}
 
 If you want to change the layout for an entire folder of your site, you can set `layout` in the `folder.yaml` file of that folder. Your folder’s page file might look like this:
 

@@ -22,7 +22,7 @@ listings:
   - things
 ```
 
-## Templating
+## Templating {#templating}
 
 You're more than likely using this field as a way to dynamically display a collection.
 

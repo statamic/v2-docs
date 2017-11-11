@@ -35,7 +35,7 @@ Each item in the system cache invalidates itself over time. Some features, like 
 
 If you find the need to invalidate this cache for some reason, you can wipe the contents of the `local/storage/framework/cache` folder. It will rebuild itself as needed.
 
-### Can I turn it off?
+### Can I turn it off? {#can-i-turn-it-off}
 
 Nope.
 
