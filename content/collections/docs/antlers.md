@@ -373,7 +373,7 @@ You can prevent the Statamic template parser from parsing chunks of code by wrap
   Welcome to {{ fast_food_chain }},
   home of the {{ fast_food_chain_specialty_item }},
   can I take your order?
-{{ ⁄noparse }}
+{{ /noparse }}
 ```
 
 You can also prevent single variables from being parsed by prefixing them with an `@` symbol.
