@@ -145,11 +145,11 @@ Every Statamic instance needs full write access to the following 4 directories r
 - `statamic`
 - `assets`
 
-In order to have write access, the necessary permissions depend on which system user PHP is running as and which user owns the files and folders. Here are some recommendations. When in doubt, just use `777`:
+In order to have write access, the necessary permissions depend on which system user PHP is running as and which user owns the files and folders. Here are some recommendations. When in doubt (or on dev), throw caution to the wind with `777`:
 
 - If they are the same user, use `744`.
 - If they are the same group, use `774`.
-- If they are neither the same user nor in the same group, or if you're tired of messing with this, just use `777`.
+- If they are neither the same user nor in the same group, or if you're tired of messing with this and you're still in dev, just use `777`.
 
 > Apply the permissions recursively so Statamic can write where it needs to.
 
