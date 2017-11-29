@@ -1,5 +1,5 @@
 title: Text
-description: A simple, boring text field.
+description: A simple text field that has the ability to morph into Dragons! Just kidding. Just standard HTML5 input types.
 overview: >
   This is as basic as a fieldtype gets. In fact, it is _the_ default fieldtype. A plain, text input used to store string data. It also supports the ability to use any native HTML input types, though your mileage may vary with some of them.
 options:
