@@ -7,6 +7,6 @@ options:
     name: mode
     type: string
     description: >
-      You can pass the name of an [HTML5 input mode](https://www.w3schools.com/html/html_form_input_types.asp) to switch its behavior. For example, `number`, or `email`.
+      You can pass the name of an [HTML5 input mode](https://www.w3schools.com/html/html_form_input_types.asp) to switch its behavior. For example, `number` or `email`.
 image: /assets/fieldtypes/text.png
 id: 306b112b-b0cc-4359-b681-da353eeb50ac
