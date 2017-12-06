@@ -1,5 +1,5 @@
 ---
-class: Statamic\Data\Data
+class: Statamic\API\Data
 title: Data
 id: 8e4e9077-5393-44c4-b26f-fd18831c9e6e
 ---
