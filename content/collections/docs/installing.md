@@ -1,19 +1,19 @@
 ---
-title: Installing
-overview: We're pretty sure Statamic might be one of the simplest CMS's to get running, but there are so many different ways to run PHP apps that we need to cover a lot of bases here. Feel free to skip right to your particular dev environment. It's unlikely that _everything_ in this article will apply to you.
+title: Installing Statamic
+overview: Statamic is one of the simplest web applications to get up and running, but there are many different ways to run PHP apps, so we'll cover a lot of variations here. Feel free to skip around until you find your particular dev environment. It's unlikely that _everything_ in this article will apply to your personal style.
 id: a7668389-57ab-47aa-b26f-6d2299b5b534
 ---
 
 ## The Screencast Version {#screencast}
 
-Visual learner? Watch how simple it is to install Statamic.
+Are you a visual learner? Watch how to install Statamic.
 
 <iframe src="https://player.vimeo.com/video/165632057?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ## Requirements {#requirements}
 
-Statamic has a few system requirements. Not all servers are created equal and not all hosts play nice. Statamic v2 is built on [Laravel][laravel] so as a rule of thumb, anywhere Laravel runs, Statamic runs. You can even use [Forge][forge] + [Digital Ocean][do]. We do, and we love it. Anyway, here's what you're going to need.
+Statamic has a few server requirements. Not all servers are created equal and not all hosts play nice. Statamic v2 is built on [Laravel][laravel], so as a rule of thumb -- anywhere Laravel 5.1 runs, Statamic runs. You can even use [Forge][forge] + [Digital Ocean][do]. We do, and we love it. Anyway, here's what you're going to need.
 
 ### Server Requirements {#server-requirements}
 
@@ -23,20 +23,14 @@ Statamic has a few system requirements. Not all servers are created equal and no
 
 ### Required PHP Extensions {#required-php-extensions}
 
-These should all be compiled in PHP 5.5.9+ by default but we find it's best to be thorough.
+These should all be included in PHP 5.5.9+ by default, but in case you're a tinkerer, you're going to need these:
 
 - [OpenSSL](http://php.net/manual/en/book.openssl.php)
 - [Multibyte String](http://php.net/manual/en/book.mbstring.php)
 - [Tokenizer](https://secure.php.net/manual/en/book.tokenizer.php)
 - [JSON](https://secure.php.net/manual/en/book.json.php)
 - [PCRE](http://php.net/manual/en/book.pcre.php)
-
-### Conditional {#conditional-requirements}
-
-If you plan to use image Assets, you'll need either GD or ImageMagick, and the FileInfo extension.
-
-- [GD](http://php.net/manual/en/book.image.php)
-- [ImageMagick](http://php.net/manual/en/book.imagick.php)
+- [GD](http://php.net/manual/en/book.image.php) or [ImageMagick](http://php.net/manual/en/book.imagick.php)
 - [FileInfo](http://php.net/manual/en/book.fileinfo.php)
 
 ### Optional (But Recommended) {#optional-requirements}
@@ -46,24 +40,23 @@ If you plan to use image Assets, you'll need either GD or ImageMagick, and the F
 
 ## Suggested Development Environments {#dev-environments}
 
-You can (and probably should) run Statamic _locally_ while you develop your site. There are a number of solutions that give you all the tools you need without having to compile anything by hand.
+You can (and probably should) run Statamic **locally** while you develop your site. There are a number of solutions that give you all the tools you need without having to compile anything by hand.
 
 If you're into that though, all the better. You can probably skip over the rest of this section.
 
-### Mac: MAMP/MAMP Pro {#mamp}
+<h3 id="valet">Mac: Laravel Valet <span class="bg-pink py-px px-1 rounded text-sm uppercase text-white">Our Favorite!</span></h3>
 
-The latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, PHP 5.5.9 and all the modules you need. Download, install, and go.
-
-### Mac: Laravel Valet {#valet}
-
-[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No /etc/hosts file.
-You can even share your sites publicly using local tunnels. We use it, it's brilliant.
+[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.dev` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
 
 _Note: Valet supports the out-of-the-box Statamic directory structure. Subdirectory installs don't work._
 
+### Mac: MAMP/MAMP Pro {#mamp}
+
+If you prefer a GUI interface, the latest version of [MAMP and MAMP Pro][mamp] comes pre-loaded with Apache, up to date versions of PHP and all the modules you need. Download, install, and go.
+
 ### Windows: WAMP {#wamp}
 
-If you happen to be of the Microsoft persuasion, [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. So we hear.
+If you happen to be from the Microsoft camp, we hear [WAMP](http://www.wampserver.com/en/) is a good choice, and pretty similar to MAMP. We don't do Windows so we can't vouch for it personally.
 
 ### Laravel Homestead {#homestead}
 

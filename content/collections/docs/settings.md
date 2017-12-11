@@ -1,7 +1,13 @@
 ---
 title: Settings
 id: 00b392fc-1fdc-4699-8e73-438da24fc4fc
+overview: >
+  Statamic has many configuration options that allow for a lot of flexibility in behavior and functionality. Settings can be set in the Control Panel, your YAML files, and even your `.env` file if you would like them to differ depending on your environment.
 ---
+## Overview
+
+The settings are grouped into several different categories to help you find similar and related options quickly.
+
 ## General {#general}
 
 Statamic stores its settings into groups located in `site/settings/[group].yaml`. These various files map to pages in

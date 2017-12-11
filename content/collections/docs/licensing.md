@@ -1,37 +1,33 @@
 ---
 title: Licensing
 id: 9e838cce-abbc-49a4-8d9a-6394a4dcd767
-overview: Statamic is **commercial software**, so there are some terms of use rules to go over so you can be a kind, good-hearted person and help us continue to grow and support Statamic for millenia to come.
+overview: Statamic is **commercial software**, so we have a few terms and rules to go over. These are pretty important. Study up!
 ---
 
-In a nutshell, you can use Statamic _locally_ without a license key. We call this [Dev Mode][dev-mode]. Once you want to launch the site and put it on a _public_ domain, you'll need to buy a license and add your key to the site. You won't be able to use the Control Panel until you do.
-
-You can provide your *license key* in the _Settings_ section of the _Control Panel_, or in `site/settings/system.yaml` as `license_key`.
+In a nutshell, you can use Statamic **locally** without a license key. this is  called [Trial Mode][trial-mode]. Once it's time to launch the site on  a _public_ domain, you need to buy a license and add the key to the settings area of the Control Panel (or in `site/settings/system.yaml`).
 
 ## How the license security works {#technical}
 
 If you want to know about the _legal terms_ you can [read those here][terms].
-The rest of this article covers the technical aspects of the call-home features, domain restructions, and so forth.
+The rest of this article covers the technical aspects of the call-home features, domain restrictions, and so forth.
 
-### The Outpost {#outpost}
+### Statamic "Calls Home" to The Outpost... {#outpost}
 
-Statamic will "radio in: to our web service we affectionately named _The Outpost_ because we like to brand things. We collect just the license key and domain so we can validate that they are connected and everything is cool.
+Statamic will "radio in" to The Outpost (our wilderness-branded web service) on a regular basis. It collects the license key and domain info so we can validate that they are valid and match your account.
 
-This happens just once an hour, and only when logged into the control panel. Changing your license key setting will force Statamic to ping The Outpost immediately. Tampering with outgoing API call will cause Statamic to consider your license invalid. We'll also send our flying police monkeys to your office to throw poop at you. Maybe.
+This happens just once an hour, when logged into the Control Panel. Changing your license key setting will trigger an immediate ping to the The Outpost. Tampering with outgoing API call will cause Statamic to consider your license invalid. We might also send our Flying Enforcer Monkeys™ to your office to throw unmentionable things at you. We might not. But we might.
 
-### One License = One Website {#single-website}
+### Because one license belongs to one website. {#single-website}
 
-A Statamic license entitles you to use it on _one domain_. You need to specify the domain you plan to use from the [licenses area of your Statamic Account][account]. This domain will be treated as a wildcard so you can use subdomains for locales and so on.
+A Statamic license entitles you to use it on _one domain_. You will need to specify the domain you plan to use from the [license area of your Statamic Account][account]. This domain will be treated as a wildcard so you can use subdomains for locales, testing, and other purposes.
 
 This also means that you can only use the Control Panel from your _default_ locale.
 
-If you attempt to use the site from another domain, you'll get a notification inside the Control Panel informing you that your key is being used on more than one site, and give you some time to figure that out. You may [change the domain][account] associated witha license at any time.
+If you attempt to use the site from another domain you will get a notification inside the Control Panel informing you that your key is being used on more than one site and be prompted to make the necessary changes. You may [change the domain][account] associated with a license at any time.
 
-### Trial Mode {#trial-mode}
+### Trial Mode (during development) {#trial-mode}
 
-Trial Mode gives you access to all features of Statamic as long as you are on a non-public domain (e.g. your local computer).
-
-[Read more about Trial Mode][trial-mode]
+[Trial Mode][trial-mode] gives you access to all features of Statamic as long as you are on a non-public domain.
 
 ### What is a public domain? {#public-domain}
 
@@ -45,11 +41,11 @@ If any of the following rules match the domain is considered **not public** (let
 - Does it have a dev-related subdomain? `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
 - Does it use a dev-related TLD? `.dev`, `.local`, `.localhost`, `.test`, `.invalid`, `.example` or `.app`
 
-### But you're special, eh? {#special}
+### Special Circumstances {#special}
 
-If everyone was special, then no one would be. But, we understand that sometimes your domains can't be set up to coincide with our rules exactly because of client needs, backwards compatibility, SEO, or the humidity level in Denver. We totally get it.
+We understand that sometimes your domains can't be set up to coincide with our rules exactly because of firewall or client needs, backwards compatibility, SEO, or the humidity level in Denver. We totally get it, and have a solution.
 
-For example, maybe your staging environment is on an entirely separate domain, like mysite.com and mystagingsite.com. That's okay. You can comma delimit domains in your licenses page, like so: `mysite.com, mystagingsite.com`. Problem solved.
+You can comma delimit domains in your licenses page, like so: `mysite.com, mystagingsite.com`. These will be reviewed periodically to ensure they're not being abused to get around the One License One Website™ rule. But you wouldn't do that to a little small business, would you?
 
 [trial-mode]: /knowledge-base/trial-mode
 [terms]: https://statamic.com/terms
