@@ -2,7 +2,7 @@
 title: Settings
 id: 00b392fc-1fdc-4699-8e73-438da24fc4fc
 ---
-## General settings {#general}
+## General {#general}
 
 Statamic stores its settings into groups located in `site/settings/[group].yaml`. These various files map to pages in
 the CP under `Configure > Settings`.
@@ -10,14 +10,14 @@ the CP under `Configure > Settings`.
 The settings files are organized based on their general functions. For example, `assets.yaml` configures assets and image manipulation, `caching.yaml` for cache settings, `system.yaml` for general system settings, and so on.
 
 
-## Addon settings {#addon}
+## Addons {#addon}
 
 Each addon can have their own settings file located in `site/settings/addons/addon_name.yaml`.
 
 Addon settings can be overridden in your environment files. See below for more details.
 
 
-## Environment Specific Settings {#environment}
+## Environment Specific {#environment}
 
 Sometimes is beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production. Or perhaps running some analytics javascript snippet only on production.
 

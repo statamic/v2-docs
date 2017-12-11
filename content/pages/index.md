@@ -1,7 +1,10 @@
 ---
-title: Statamic 2 Documentation
+title: What Is Statamic?
 template: home
 id: db0ae4e3-4f10-4802-bc40-0b880cbf02c7
-overview: >
-  Statamic is a flat file CMS designed to be approachable, logical, and easy-to-use by developers and clients alike. Whether you're looking to stand up a simple blog, or build a large community site, these docs should help you get there.
+overview: |
+  Statamic is different than other Content Management Systems like Wordpress, Drupal, or Craft CMS in many important and powerful ways, but the most obvious is **we removed the MySQL database.** It's for your own good.
 ---
+By eliminating the rigid, relational database, we unlock the ability to create and support any data structure you can imagine and providing you with a Control Panel that is flexible in ways you might assume are impossible.
+
+Out of the box, Statamic runs on a "flat file" engine based on Markdown and YAML files with an optional Redis driver when high-performance and concurrency is important. Read on to explore all the ways Statamic can change the way you build sites forever. No hyperbole or exaggeration.

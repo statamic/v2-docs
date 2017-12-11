@@ -3,11 +3,11 @@ title: Collection
 overview: Display a listing of entries from a collection.
 description: Display a listing of entries from a collection.
 parameters:
-  - 
+  -
     name: collection
     type: string
     description: The collection from which to list entries.
-  - 
+  -
     name: limit
     type: integer
     description: Limit the total results.
@@ -21,3 +21,6 @@ parameters:
     description: The title of the widget. Defaults to the name of the collection.
 id: fae9809d-a09d-46dc-9010-ae119930c023
 ---
+## Overview
+
+You can use the Collection Widget to show a select number of entries from one of your Collections in the dashboard. You can customize how many entries it displays as well as the date format.

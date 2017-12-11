@@ -1,3 +1,4 @@
+---
 title: Form
 overview: Display a listing of form submissions.
 description: Display a listing of form submissions.
@@ -25,3 +26,7 @@ parameters:
     type: string
     description: The title of the widget. Defaults to the name of the form.
 id: 6edfd5dd-ed24-4055-a548-34a2926776a4
+---
+## Overview
+
+You can use the Form Widget to show the most recent form submissions in your dashboard. You can customize how many submissions it displays as well as which columns you want shown.
