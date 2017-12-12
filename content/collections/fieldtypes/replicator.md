@@ -35,12 +35,11 @@ replicator:
     caption: "Romeo's Location"
 ```
 
-> Please note that you **can not** use a Replicator fieldtype for the `content` field. Since the data is saved as an array,
-it needs to be part of the front-matter.
+> Please note that you **can not** use a Replicator fieldtype for the `content` field.
 
 ## Templating {#templating}
 
-Use the tag pair syntax with an `if` `else` conditions to style accordingly each set accordingly.
+Use the tag pair syntax with an `if/else` conditions to style each set accordingly.
 
 ```
 {{ my_replicator_field }}
@@ -85,7 +84,5 @@ and the set partial may look something like:
 ```
 {{# this is image_set.html #}}
 
-{{ assets:image }}
-  <img src="{{ glide:id }}" alt="" >
-{{ /assets:image }}
+<img src="{{ image }}" alt="{{ caption }}" >
 ```
