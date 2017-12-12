@@ -4,6 +4,7 @@ description: Preview videos YouTube, Vimeo, and more just by entering URLs.
 overview: |
   Preview videos YouTube, Vimeo, and more just by entering URLs.
 image: /assets/fieldtypes/video.png
+added_in: 2.8
 id: ced8b901-95bd-4006-b70e-4ea04d72fcb7
 ---
 ## Usage {#usage}
@@ -40,4 +41,3 @@ Since the field saves regular Video URLs, you can use the [is_embeddable](/modif
     <video src="{{ video | embed_url }}" ...></video>
 {{ /if }}
 ```
-
