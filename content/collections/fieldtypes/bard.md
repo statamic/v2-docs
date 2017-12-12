@@ -4,7 +4,7 @@ description: "Bard is designed for rich post layouts and maxmium flexibility."
 overview: |
   <span class="highlight">Bard is designed for rich article layouts</span>. It's more than a content editor, it's practically a layout designer. Bard starts with simple, rich text editor with popup formatting controls. It stores structured data and adds the ability to insert blocks of any arrangement of custom fields amidst the text.
 
-  It's a lot like [Medium.com](https://medium.com), but for your own site. It's also 100% compatible with [Replicator's](/fieldtypes/replicator) data structure — you can easily switch between their interfaces if you desire.
+  It's a lot like [Medium's](https://medium.com) editor, but for your own site. It's also 100% compatible with [Replicator's](/fieldtypes/replicator) data structure — you can easily switch between their interfaces if you desire.
 image: /assets/fieldtypes/bard.gif
 options:
   -
@@ -17,6 +17,7 @@ options:
     name: allow_source
     type: boolean _true_
     description: Controls whether the "show source code" button is available to your editors.
+related_reading:
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
 ## Usage
@@ -82,9 +83,9 @@ Use tag pair syntax with `if/else` conditions to style each set accordingly.
   {{ /if }}
 
 {{ /bard_field }}
-
 ```
-An alternative approach is to create multiple "set" partials and pass the data to them dynamically, and create corresponding partials using the set name.
+
+An alternative approach (for those who like DRY or small templates) is to create multiple "set" partials and pass the data to them dynamically, moving the markup into corresponding partials bearing the set's name.
 
 ```
 {{ bard_field }}
@@ -95,20 +96,11 @@ An alternative approach is to create multiple "set" partials and pass the data t
 ```language-files
 partials/
 |-- sets/
+|   |-- gallery.html
 |   |-- image.html
+|   |-- poll.html
 |   |-- text.html
-```
-
-
-The contents of a set partial may look something like this:
-
-```
-{{# this is image.html #}}
-
-<figure>
-  <img src="{{ image }}" alt="{{ caption }}" />
-  <figcaption>{{ caption }}</figcaption>
-</figure>
+|   |-- video.html
 ```
 
 [replicator]: /fieldtypes/replicator
