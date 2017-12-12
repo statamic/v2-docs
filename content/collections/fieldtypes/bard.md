@@ -92,10 +92,13 @@ An alternative approach is to create multiple "set" partials and pass the data t
 {{ /bard_field }}
 ```
 
+```language-files
+partials/
+|-- sets/
+|   |-- image.html
+|   |-- text.html
 ```
-partials/sets/text.html
-partials/sets/image.html
-```
+
 
 The contents of a set partial may look something like this:
 
