@@ -2,59 +2,50 @@
 title: Content Types
 id: 4076fea7-63c9-4b1c-b16d-7eb565040d81
 overview: >
-  Content Types are the pillars that hold, contain, and snuggle all of the editable aspects of your site. Each of the six Content Types has its own special attributes that make it unique.
+  All content is stored in one of six content types. They all share a common data format (YAML/Markdown files), but each has <span class="highlight">unique characteristics</span> to optimize and simplify the way you manage the content. For example, Pages automatically generate Navigation and Globals are made available in all of your templates.
 ---
 
 ## Overview {#overview}
 
-All of your managable site content -- everything created, edited, uploaded, published, and ultimately shown to the world, lives in one of Statamic's six Content Types:
+All of your site's content -- everything created, edited, uploaded, published, and available to display somewhere on your site, lives in one of Statamic's six Content Types:
 
-- [Pages](#pages)
-- [Collections](#collections)
-- [Globals](#globals)
-- [Taxonomies](#taxonomies)
-- [Assets](#assets)
-- [Users](#users)
+1. [Pages](#pages)
+1. [Collections](#collections)
+1. [Globals](#globals)
+1. [Taxonomies](#taxonomies)
+1. [Assets](#assets)
+1. [Users](#users)
 
-Each type is a _container_ for any number of items inside that type. For example, you can create any number of _Collections_, each with its own name, purpose, and data structure, that contains any number of _Entries_. This pattern is similar in each Content Type.
+## The Lingo (container and child names) {#lingo}
 
-The individual items in each Content Type are usually represented by content files in a YAML Front-Loaded format. If these words don't mean anything to you and you're a developer - hang in there and we'll explain everything. If you're a content manager, just ignore 'em! The Control Panel does all this stuff for you.
+Each content type is a **container** for any number of items. For instance, you can create any number of **Collections** -- each with its own name, purpose, and data structure -- that contain an unlimited number of **Entries**. This "belongs to" pattern exists in each Content Type, not unlike SAT Analogy Questions. Do you remember those? They were super annoying.
 
-## Container/Item Names
+The individual items in each Content Type are (in most cases) represented by content files in a [YAML Front-Loaded][yaml] format. Each container and corresponding child type has their own pair of labels.
 
-Each container and corresponding child type has their own names. Their names are as follows:
+| Content Type        | Child Type      |
+|---------------------|-----------------|
+| **Pages**           | Page            |
+| **Collection**      | Entry           |
+| **Global**          | Set             |
+| **Taxonomy**        | Term            |
+| **Asset Container** | Asset           |
+| **Users**           | User            |
 
-```language-files
-Content Types
-|-- Pages/
-|   |-- Page
-|-- Collection/
-|   |-- Entry
-|-- Global/
-|   |-- Set
-|-- Taxonomy/
-|   |-- Term
-|-- Asset Container/
-|   |-- Asset
-|-- Users/
-|   |-- User
-```
+## Each Content Type has this stuff in common {#shared-attributes}
 
-## Shared Attributes {#shared-attributes}
+Content Types are defined by their differences, but they share a whole lot of features and attributes. Let's cover these first because they're pretty important -- and useful.
 
-Content Types are defined by their similarities and their differences. Let's first dive into the well of similarities, drink of its goodness, and be wholly refreshed.
+### Custom Fields
 
-### Customizable Custom Fields {#custom-fields}
-
-The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (called a [**fieldset**](/fieldsets)) to model your content in whatever fashion you desire.
+The primary attribute that defines a Content Type is the ability to configure any number of **Custom Fields** (in a group called a [**fieldset**](/fieldsets)) to model and structure your content however you see fit. Whether you want one giant text field or a hundred little granular fields and options, you're doing it right.
 
 ### Unique IDs {#ids}
 
-Each content type has it's own method of ensure uniquness, providing you with the ability to create relationships or request their content by ID. Here are a couple of examples of how this is useful:
+Each content type has it's own method of ensure "uniqueness", which lets you create relationships or simply fetch content by ID. Here are a couple of examples of how this is useful:
 
-- Relate a User with an Entry, thereby creating an author.
-- Relate a list of Entries with another Entry establishing Related Posts.
-- Relate a group of Assets with a Entry, creating a gallery.
+- Relate a User with an Entry, thereby creating an **author**.
+- Relate a list of Entries with another Entry establishing **related articles**.
+- Relate a group of Assets with a Entry, creating a **gallery**.
 
 ## The Types {#list}
 
@@ -191,4 +182,4 @@ You can create listings and single view URLs, like with Entries, and group them 
 [taxonomies]: /taxonomies
 [glide-tag]: /tags/glide
 [taxonomy-fieldtype]: /fieldtypes/taxonomy
-[guide-users]: #
+[yaml]: /yaml
