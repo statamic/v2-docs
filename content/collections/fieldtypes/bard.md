@@ -12,6 +12,11 @@ options:
     type: array
     description: An array containing sets of fields.
 added_in: 2.8
+options:
+  -
+    name: allow_source
+    type: boolean _true_
+    description: Controls whether the "show source code" button is available to your editors.
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
 ## Usage
@@ -32,7 +37,7 @@ At first glance, Bard looks and feels like a simple text editor, but once you st
 
 ## Data Structure {#data-structure}
 
-Bard stores your data as an array, exactly like [Replicator][replicator]. Sensing a theme? The main/default text content will be scoped into `type: text` as HTML content.
+Bard stores your data as an array, exactly like [Replicator][replicator]. Sensing a theme? The default text content will be scoped into `type: text` as HTML content.
 
 ```.language-yaml
 bard_field:
@@ -43,6 +48,13 @@ bard_field:
     type: image
     image: /assets/img/sax.jpg
     caption: "I want this mounted above my fireplace."
+```
+
+### Text-only Mode
+
+If you don't configure any additional sets the field data will be saved as a string.
+```.language-yaml
+bard_field: "<p>Oh hi Mark.</p>"
 ```
 
 > Please note that you **cannot** use a Bard fieldtype for the `content` field.
