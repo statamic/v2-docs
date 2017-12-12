@@ -9,19 +9,19 @@ id: ced8b901-95bd-4006-b70e-4ea04d72fcb7
 ---
 ## Usage {#usage}
 
-Type or paste a URL to a video, and it will be displayed beneath so you can preview it.
+Enter a video URL and it will be loaded and displayed in a player directly beneath so you can preview it. Or watch the whole thing instead of working.
 
 You may enter:
 
-- YouTube URLs. eg. `https://www.youtube.com/watch?v=s9F5fhJQo34`
-- Vimeo URLs. eg. `https://vimeo.com/22439234`
-- mp4, ogv, mov, or webm direct URLs. eg. `http://example.com/video.mp4`
+- YouTube URLs: `https://www.youtube.com/watch?v=s9F5fhJQo34`
+- Vimeo URLs: `https://vimeo.com/22439234`
+- mp4, ogv, mov, or webm direct URLs: `http://example.com/video.mp4`
 
-You can enter anything else you want, although no video preview will appear.
+You can enter anything else you want -- although no video preview will appear. One might be tempted to ask why you would do that, but we refuse to judge.
 
 ## Data Structure {#data-structure}
 
-The Video field will simply save whatever you've entered.
+The Video field will save the URL of the video you've entered. If you paste embed code into the field, it will extract the proper URL for you.
 
 ``` yaml
 video: https://www.youtube.com/watch?v=s9F5fhJQo34
@@ -30,7 +30,7 @@ video: https://www.youtube.com/watch?v=s9F5fhJQo34
 ## Templating {#templating}
 
 Since the field saves regular Video URLs, you can use the [is_embeddable](/modifiers/is_embeddable) and
-[embed_url](/modifiers/embed_url) modifiers to output the appropriate URLs.
+[embed_url](/modifiers/embed_url) modifiers to display your video player.
 
 ```
 {{ if video | is_embeddable }}
