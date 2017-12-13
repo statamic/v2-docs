@@ -7,13 +7,13 @@ overview: >
 
 ## Overview
 
-StatamicThe most basic aspect of the Statamic Template Language is the tag, with a lowercase “t.” It can be and do many things, just like you if you try hard enough and don't listen to people discouraging you.
+The most basic aspect of the Antlers template language is the tag (lowercase “t.”, an important distinction which we'll make later). It can be and do many things, <span class="highlight">just like you -- if you don't give up and ignore the people discouraging you.</span>
 
 ```
-{{ tag }}
+This is a tag: {{ tag }}
 ```
 
-There you have it. A pair of double curly braces with some stuff in the middle. Like an Oreo. Some people call these squiggly braces, double mustaches, curly brackets, and we’ve even seen them called squirrelly brackets. We secretly think of them as antlers, but that’s a different story and involves branding and other less-important things.
+There you have it. A pair of double curly braces with some stuff in the middle. Like an Oreo. Some people call these **squiggly braces**, **double mustaches**, **curly brackets**, and we’ve even heard them called **squirrelly brackets**. We like calling them **antler braces**. Because they look like antlers.
 
 Nearly all of the power of Statamic is at your disposal in one way or another in the form of these tags. They're used in any Statamic template, layout, or partial - essentially any file in your theme ending in `.html`.
 
@@ -23,7 +23,7 @@ It’s important to cover how these tags are designed to be used, note a few of 
 
 ### Braces stick together {#braces-stick-together}
 
-Each set of double curly braces must always, at all times, stick together. Think of them as friends, or lovers if you must. Feel free to give them names like Turner and Hooch or Troy and Abed, but the left two and the right two are each as one.
+Each set of double curly braces **must** always, at all times, stick together. Think of them as friends, or lovers if you must. Feel free to give them names like Turner and Hooch or Troy and Abed, but the left two and the right two are each as one.
 
  All of these are perfectly fine, use whatever style you like best, just be consistent with it or your templates will probably look messy and annoy you one day when you least expect it.
 
@@ -177,7 +177,7 @@ Chester is an experienced Oriental Roller.
 Longbottom is an experienced Showpen Homer.
 ```
 
-### Chaining modifiers {#chaining-modifiers}
+### Chaining Modifiers {#chaining-modifiers}
 
 You can string as many modifiers as you'd like in a row and each will be executed in sequence, with the altered data passed right along to the next modifier, like a donut frosting assembly line. This allows you to sort data before filtering it, check if some condition exists or a date is in the future before continuing, you name it.
 
@@ -196,7 +196,7 @@ Alister has 12 successful carries.
 Chester has 8 successful carries.
 ```
 
-### Syntax options {#syntax-options}
+### Syntax Options {#syntax-options}
 
 Modifiers can be written two different ways to help with readability and to simplify different use cases.
 
@@ -249,13 +249,13 @@ Conditions are converted to, and therefore behave just like, PHP expressions. Yo
 
 ### Conditions on Tags vs Variables
 
-When working with [tags](/tags) instead of variables, you must wrap the tag in a pair of additional single braces to tell the parser to run that logic first.
+When working with [tags](/tags) instead of variables, you **must** wrap the tag in a pair of additional single braces to tell the parser to run that logic first.
 
 ```
 {{ if {form:errors} }} // yep, there are form errors {{ /if }}
 ```
 
-### Truthiness and existence {#truthiness-and-existence}
+### Truthiness and Existence {#truthiness-and-existence}
 
 A condition is considered "truthy" when variable exists, is not `null`, and is not `false`.
 
@@ -311,7 +311,7 @@ A condition is considered "falsy" when variable doesn't exist, is `null`, or is 
 {{ /if }}
 ```
 
-### Variable fallbacks {#variable-fallbacks}
+### Variable Fallbacks {#variable-fallbacks}
 
 When all you need to do is display a variable and set a fallback for when it's falsy, use the `or` shorthand. The following two code blocks are functionally identical. Which do you prefer?
 
@@ -329,7 +329,7 @@ When all you need to do is display a variable and set a fallback for when it's f
 {{ /if }}
 ```
 
-## Combining modifiers {#combining-modifiers}
+## Combining Modifiers {#combining-modifiers}
 
 You can use [modifiers][modifiers] inside your conditions if you wrap them them up along with their variable in `( parentheses )`.
 
@@ -339,7 +339,7 @@ You can use [modifiers][modifiers] inside your conditions if you wrap them them 
 {{ /if }}
 ```
 
-### Regular expressions {#regular-expressions}
+### Regular Expressions {#regular-expressions}
 
 RegExes aren't for the faint of heart, but if you're capable of [writing one](https://regex101.com/) (or let's face it, copying and pasting from Stack Overflow), you can use the `~` squiggle operator to get the job done.
 
