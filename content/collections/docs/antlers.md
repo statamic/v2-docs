@@ -17,7 +17,7 @@ There you have it. A pair of double curly braces with some stuff in the middle. 
 
 Nearly all of the power of Statamic is at your disposal in one way or another in the form of these tags. They're used in any Statamic template, layout, or partial - essentially any file in your theme ending in `.html`.
 
-## Tag syntax {#tag-syntax}
+## Tag Syntax {#tag-syntax}
 
 It’s important to cover how these tags are designed to be used, note a few of their important attributes, and then cover how they’re designed _not_ to be used.
 
@@ -46,11 +46,11 @@ We like `{{ tag }}` with single spaces between the braces and the contents. It�
 {{{{{{ tag }}}}}}
 ```
 
-### Tags are case-sensitive {#tags-are-case-sensitive}
+### Tags are caseSensitive {#tags-are-case-sensitive}
 
 This is important enough to repeat our own heading. Tags are case-sensitive. That means that `{{ title }}` and `{{ Title }}` are two separate tags that won’t behave the same. Additionally, hyphens and underscores are not interchangeable.
 
-### Be consistent {#be-consistent}
+### Be Consistent! {#be-consistent}
 
 We generally recommend keeping all of your variable names lowercase and using underscores for consistency. It’s a simple and effective convention. You’ll see us use it throughout the docs.
 
