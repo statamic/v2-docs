@@ -8,16 +8,14 @@ overview: |
 image: /assets/fieldtypes/bard.gif
 options:
   -
+    name: allow_source
+    type: boolean _true_
+    description: Controls whether the "show source code" button is available to your editors.
+  -
     name: sets
     type: array
     description: An array containing sets of fields.
 added_in: 2.8
-options:
-  -
-    name: allow_source
-    type: boolean _true_
-    description: Controls whether the "show source code" button is available to your editors.
-related_reading:
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
 ## Usage
