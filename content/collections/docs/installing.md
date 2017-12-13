@@ -48,7 +48,7 @@ If you're into that though, all the better. You can probably skip over the rest 
 
 [Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.dev` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
 
-_Note: Valet supports the out-of-the-box Statamic directory structure. Subdirectory installs don't work._
+> Note: Valet supports the Statamic running in web root, but not in a subdirectory.
 
 ### Mac: MAMP/MAMP Pro {#mamp}
 
@@ -64,7 +64,7 @@ Prefer a virtual environment? You’re in luck, [Laravel Homestead][homestead] i
 
 Homestead runs on any Windows, Mac, or Linux system, and includes the Nginx web server, PHP 5.6, MySQL, Postgres, Redis, Memcached, Node, and all of the other goodies you need to develop amazing Laravel applications.
 
-_Note: Homestead is not a **fast** local dev environment for applications that leverage lots of small files due to NFS sync delays. It's best to not use file sharing and run Statamic directly in your VM for best results._
+> Note: Homestead is not a fast local dev environment for applications that manage lots of small files due to NFS sync delays. For best results avoid file sharing and run Statamic directly in your VM.
 
 You can try enabling NFS to speed up Homestead. In your `homestead.yaml`, add `type: "nfs"` to your `folders` array.
 
