@@ -2,12 +2,12 @@
 title: Antlers Templates
 id: 88472f52-93db-413c-a266-65014390c3f6
 overview: >
-  Statamic has its very own template language designed to make complex things simple. It does most of the hard work when it comes to fetching, formatting, and displaying your content, data, and assets. It even does other things, too. If you know  even a little HTML, you’ll probably catch on quickly.
+  Statamic has its own template language designed to make complex things simple. It does most of the hard work when it comes to fetching, formatting, filtering, and displaying your content. If you know even just a little HTML, you’ll understand the basics rather quickly.
 ---
 
-## Overview {#overview}
+## Overview
 
-[Let’s start at the very beginning. It’s a very good place to start.](https://www.youtube.com/watch?v=1RW3nDRmu6k) The most basic aspect of the Statamic Template Language is the tag, with a lowercase “t.” It can be and do many things, just like you if you try hard enough and don't listen to people discouraging you.
+StatamicThe most basic aspect of the Statamic Template Language is the tag, with a lowercase “t.” It can be and do many things, just like you if you try hard enough and don't listen to people discouraging you.
 
 ```
 {{ tag }}
