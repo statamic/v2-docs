@@ -25,34 +25,22 @@ It’s important to cover how these tags are designed to be used, note a few of 
 
 Each set of double curly braces **must** always, at all times, stick together. Think of them as friends, or lovers if you must. Feel free to give them names like Turner and Hooch or Troy and Abed, but the left two and the right two are each as one.
 
- All of these are perfectly fine, use whatever style you like best, just be consistent with it or your templates will probably look messy and annoy you one day when you least expect it.
+All of the examples and styles are perfectly fine, technically. Use whatever style you like best, just be consistent with it or your templates will probably look messy, and then one day you will be super annoyed with yourself.
 
 ```
-{{ tag }}
-{{tag}}
-{{ tag}}
-{{ tag}}
-{{
-	tag
-}}
+{{ tag }}         This one is best
+{{tag}}           This is okay
+{{ tag}}          Stop it
+{{tag       }}    OMG WHY
 ```
 
-We like `{{ tag }}` with single spaces between the braces and the contents. It’s easy to read. As for what not to do? There’s no telling what could happen if you format your tags like these imposters:
-
-```
-{{ t a g }}
-{ {tag} }
-{{ tag }
-{{{{{{ tag }}}}}}
-```
-
-### Tags are caseSensitive {#tags-are-case-sensitive}
+### Tags are CaSe SeNsiTivE {#case-sensitive}
 
 This is important enough to repeat our own heading. Tags are case-sensitive. That means that `{{ title }}` and `{{ Title }}` are two separate tags that won’t behave the same. Additionally, hyphens and underscores are not interchangeable.
 
 ### Be Consistent! {#be-consistent}
 
-We generally recommend keeping all of your variable names lowercase and using underscores for consistency. It’s a simple and effective convention. You’ll see us use it throughout the docs.
+Most important of all, be consistent. We recommend keeping all of your variable names lowercase and using underscores. It’s a simple and effective convention. We'll be using it everywhere in the docs.
 
 ## Variables {#variables}
 
