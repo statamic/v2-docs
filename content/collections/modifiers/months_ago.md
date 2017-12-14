@@ -7,7 +7,7 @@ parse_content: true
 Returns the number of months since a given date variable. Statamic will attempt to parse any string as a date, but try to keep it in the least ambiguous date format possible.
 
 ```.language-yaml
-date: October 1 2015
+date: October 1 2017
 ```
 
 {{ noparse }}
