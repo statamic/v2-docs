@@ -3,7 +3,7 @@ title: Variables
 overview: A plethora of variables are automatically available at your fingertips based on context. Let's have a look!
 id: 7408e005-23e7-4ba2-bc7b-9f00ee457995
 template: variables
-types:
+var_types:
   -
     type: global
     description: |
