@@ -49,7 +49,7 @@ So, what to tackle first? Let's [get started][getting-started]..
 [api]: /addons/classes/api
 [controllers]: /addons/classes/controllers
 [filters]: /addons/classes/filters
-[widgets]: /addons/classes/widgets
+[widgets]: /addons/classes/widget
 [laravel]: http://laravel.com
 [laravels-features]: http://laravel.com/docs
 [oop]: http://php.net/manual/en/language.oop5.php
