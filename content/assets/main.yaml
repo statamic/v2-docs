@@ -1,6 +1,9 @@
 title: Assets
 path: assets
 url: /assets
+fieldset: assets
 assets:
   fieldtypes/yaml.png:
     title: yaml
+  fieldtypes/time.gif:
+    width: "169"
