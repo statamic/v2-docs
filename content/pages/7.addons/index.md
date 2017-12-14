@@ -28,7 +28,7 @@ An addon can contain a number of classes, each. It can be made up of one of them
 - [API][api] allows you to interact with other addons, and them with you.
 - [Controllers][controllers] allow you to create pages in the control panel.
 - [Filters][filters] let you perform more complicated filtering of content on certain tags.
-- [Widgets][widgets] can be added to your Control Panel's dashboard.
+- [Widgets][widget] can be added to your Control Panel's dashboard.
 
 
 By using combinations of these aspects in your addons, you can create some truly fascinating results. And remember, all of these aspects are simply PHP, so anything you can do with PHP is possible here.
