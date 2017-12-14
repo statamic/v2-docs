@@ -1,6 +1,6 @@
 ---
 title: Login Form
-overview:	Generate necessary markup to create a User login form.
+overview: Generate necessary markup to create a User login form.
 parameters:
   -
     name: attr
