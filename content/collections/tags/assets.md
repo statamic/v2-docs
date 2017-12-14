@@ -43,17 +43,13 @@ parameters:
       For example, `sort="size"` or `sort="size:asc|title:desc"` to sort by size then by title.  
 variables:
   -
-    name: id
+    name: url
     type: string
-    description: The ID of the asset
+    description: "The URL to the asset."
   -
     name: title
     type: string
     description: "The title, if set."
-  -
-    name: url
-    type: string
-    description: "The URL to the asset."
   -
     name: path
     type: string
@@ -135,8 +131,8 @@ Here's an example of some Assets in use.
 
 ``` .language-yaml
 bacon_images:
-  - 89jf89r32-fdsmar39ifm9-932c9m3j3
-  - 2n329ofna-90fjqp49j9fr-e98rjaa82
+  - /img/applewood-smoked.jpg
+  - /img/canadian.jpg
 ```
 
 ```
@@ -146,8 +142,8 @@ bacon_images:
 ```
 
 ``` .language-output
-<img src="/assets/applewood-smoked.jpg" alt="Applewood" /> Size: 355kb
-<img src="/assets/canadian-bacon.jpg" alt="Canadian" /> Size: 125kb
+<img src="/img/applewood-smoked.jpg" alt="Applewood" /> Size: 355kb
+<img src="/img/canadian-bacon.jpg" alt="Canadian" /> Size: 125kb
 ```
 
 ### Single Assets {#single-assets}
@@ -155,7 +151,7 @@ bacon_images:
 If you have an asset field with `max_items: 1` the data will be saved as a `string`. As one cannot iterate over a string, the tag will adjust accordingly without complaining.
 
 ``` .language-yaml
-hero_image: f9ruqp-pjo32n43ojn3-rijo3209
+hero_image: /img/negasonic-teenage-warhead.jpg
 ```
 
 ```
@@ -165,7 +161,7 @@ hero_image: f9ruqp-pjo32n43ojn3-rijo3209
 ```
 
 ``` .language-output
-<img src="/assets/img/superman.jpg" />
+<img src="/img/negasonic-teenage-warhead.jpg" />
 ```
 
 ### Asset (singular) Tag {#asset-singular-tag}
@@ -173,7 +169,7 @@ hero_image: f9ruqp-pjo32n43ojn3-rijo3209
 You may have noticed that "Assets" is plural.  If you have an array of assets and only want the first or if it bothers you that a plural-powered Tag would return a single asset, we have you covered. We also support the singular word `Asset` for the explicit purpose of only ever accessing a single Asset.
 
 ``` .language-yaml
-hero_image: f9ruqp-pjo32n43ojn3-rijo3209
+hero_image: /img/quailman.jpg
 ```
 
 ```
@@ -193,7 +189,7 @@ It may be desirable to loop over all the assets in a container or folder instead
 In this case, you may omit the second tagpart, and use parameters to drive the tag.
 
 ```
-{{ assets container="123-456-789" }}
+{{ assets container="photoshoots" }}
     <img src="{{ url }}" />
 {{ /assets }}
 ```
