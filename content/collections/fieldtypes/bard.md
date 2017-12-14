@@ -101,5 +101,51 @@ partials/
 |   |-- video.html
 ```
 
+## Custom Buttons {#custom-buttons}
+
+You can create custom buttons by creating a [MediumEditor button extension](https://github.com/yabwe/medium-editor/blob/master/src/js/extensions/WALKTHROUGH-BUTTON.md).
+You can load the Javascript either through an addon's `scripts.js`, or by your own `site/helpers/cp/scripts.js`.
+
+Here's an example of a button that prompts you for a link:
+
+``` .language-yaml
+fields:
+  story:
+    type: bard
+    buttons:
+      - bold
+      - askForLink # corresponds to the "name" of the extension
+```
+
+``` .language-js
+var AskForLinkButton = MediumEditor.extensions.button.extend({
+    // Should match what you add to the Statamic object below, and the button name.
+    name: 'askForLink',
+
+    tagNames: ['a'],
+    contentDefault: '<span class="icon icon-bug"></span>',
+    aria: 'Ask For Link',
+
+    handleClick: function () {
+        const href = this.getHref();
+        if (!href) return;
+
+        const selection = this.base.options.contentWindow.getSelection().toString().trim();
+        const html = `<a href="${href}">${selection}</a>`;
+        this.base.pasteHTML(html);
+
+        this.base.checkContentChanged();
+    },
+
+    getHref: function () {
+        // Get the href from a modal, etc.
+        return prompt('Enter the link?');
+    }
+});
+
+// Add it to the Statamic object.
+Statamic.MediumEditorExtensions.askForLink = new AskForLinkButton;
+```
+
 [replicator]: /fieldtypes/replicator
 [fieldtypes]: /fieldtypes
