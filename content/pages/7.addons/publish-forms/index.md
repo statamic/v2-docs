@@ -167,8 +167,26 @@ The Blade view should place the JSON encoded data in the `Statamic.Publish.conte
              fieldset-name="post"
              content-type="entry"
              submit-url="{{ $submitUrl }}"
-             uuid="{{ $id }}"
+             id="{{ $id }}"
+             :extra='{"collection": "blog"}'
+             :remove-title="true"
     ></publish>
 
 @endsection
 ```
+
+| Prop | Description |
+|------|-------------|
+| `title` | The heading of the form. This is typically the entry's title, or "New Blog Post". |
+| `is-new` | A boolean that controls a couple of feature such as whether slugs should be auto-generated. |
+| `fieldset-name` | The name of the fieldset to be rendered. |
+| `content-type` | Generally an `entry` or `page`. If you choose `entry`, you can pass `extra.collection` to make it editable based whether the user can edit that collection.  If you choose `page` it'll be editable if they can edit pages. You may omit this prop. |
+| `submit-url` | Where the form will be submitted. You should point it at one of your controller routes. |
+| `id` | The ID of the item. It'll get posted at submission. |
+| `remove-title` | A boolean that hides the `title` field if one exists in the fieldset. A special title field is added to the component that'll be _before_ the sidebar meta on narrow viewports. |
+| `extra` | An object containing some extra data specific to certain cases. |
+| `extra.collection` | When using `content-type: entry` this will be the corresponding collection. |
+| `extra.order_type` | When using `content-type: entry` this will be the the way the collection is ordered. eg, `date`. |
+| `extra.datetime` | When using `content-type: entry` this is the date (and time) of the entry. eg, `2017-07-31 10:42` |
+| `extra.datetime` | When using `content-type: taxonomy` for editing taxonomy terms, this is name of the taxonomy. |
+| `extra.parent_url` | When using `content-type: page` this will be the parent page's URL. |
