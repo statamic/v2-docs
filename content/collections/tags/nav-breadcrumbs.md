@@ -1,5 +1,6 @@
+---
 overview: >
-  Breadcrumbs are a common form of site navigation, usually used in situations where you have a lot of hierarchal content the user must navigate and you want to make sure they know where they are. They consist of a list of links, separated by a divider, leading you from the current page back up to the home page.
+  Breadcrumbs are a common form of site navigation designed to give the user heirarchial context. Much like the crumbs left by a little German boy named Hansel (so 🔥 right now), they lead from where you are, all the way back home.
 description: Display breadcrumb-style navigation links to your current page.
 parameters:
   -
@@ -42,3 +43,19 @@ variables:
       etc.
 title: Breadcrumbs
 id: 485f1703-fc6f-4d0f-94f2-e84ae625e1b7
+---
+## Example
+
+Here's an example of what breadcrumbs might look like, as well as a code example in use.
+
+![img](/assets/img/other/breadcrumbs.png) {width=450}
+
+``` php
+{{ nav:breadcrumbs }}
+<ul class="breadcrumbs">
+    <li{{ if is_current }} class="current"{{ /if }}>
+        <a href="{{ url }}">{{ title }}</a>
+    </li>
+</ul>
+{{ /nav:breadcrumbs }}
+```
