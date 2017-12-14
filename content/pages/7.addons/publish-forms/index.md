@@ -16,9 +16,11 @@ However, in your addon, you may want to edit data coming directly from an extern
 The flow is essentially this:
 
 - You retrieve data from somewhere, however you want.
-- Pass that data along with a fieldset into the `populateWithBlanks` method. This will prepare the data for consumption by the Vue component.
+- Pass that data along with a fieldset into the `preProcessFields` method. This will run each value through their fieldtype's pre-processor.
+- Pass that data along with the fieldset to the `addBlankFields` method. This will add any blank/default values that might be missing from your data so the reactivity in the Vue component will be initialized correctly.
+- (The above two steps can be combined using the `preProcessWithBlankFields` method)
 - Render the Vue component by passing in some props.
-- Pass the submitted form fields along with the fieldset into the `processFields` method. This will prepare the data for saving to your source.
+- Pass the submitted form fields along with the fieldset into the `processFields` method. This will prepare the data for saving to your source by running it through the fieldtype post-processors.
 - Save the data somewhere, however you want.
 
 ## Example
