@@ -40,12 +40,10 @@ use Statamic\API\Fieldset;
 use Illuminate\Http\Request;
 use Statamic\Extend\Controller;
 use Statamic\CP\Publish\ProcessesFields;
-use Statamic\CP\Publish\PopulatesWithBlanks;
 
 class ContentStoreController extends Controller
 {
     use ProcessesFields;
-    use PopulatesWithBlanks;
 
     private $store;
 
@@ -106,7 +104,7 @@ class ContentStoreController extends Controller
      */
     private function prepareData($data)
     {
-        return $this->populateWithBlanks(Fieldset::get('post'), $data);
+        return $this->preProcessWithBlankFields(Fieldset::get('post'), $data);
     }
 
     private function save($id, $request)
