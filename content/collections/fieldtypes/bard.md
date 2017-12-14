@@ -15,6 +15,14 @@ options:
     name: sets
     type: array
     description: An array containing sets of fields.
+  -
+    name: buttons
+    type: array
+    description: |
+      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h2`, `h3`, `quote`,
+      and any [custom buttons][custom]. By default, all of them are displayed.
+
+      [custom]: #custom-buttons
 added_in: 2.8
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
