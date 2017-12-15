@@ -6,11 +6,11 @@ image: /assets/fieldtypes/date.png
 options:
   -
     name: allow_time
-    type: boolean (true)
+    type: boolean *true*
     description: Enable/disable the timepicker
   -
     name: allow_blank
-    type: boolean (false)
+    type: boolean *false*
     description: Allow the field to be left blank on save
   -
     name: format
