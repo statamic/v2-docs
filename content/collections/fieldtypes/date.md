@@ -12,4 +12,8 @@ options:
     name: allow_blank
     type: boolean (false)
     description: Allow the field to be left blank on save
+  -
+    name: format
+    type: string *Y-m-d* (*H:i*)
+    description: How the date should be saved. Any [PHP date formatting variables](http://php.net/manual/en/function.date.php) may be used.
 id: 7dfba904-8a74-40e1-b507-51cd2b5f6123
