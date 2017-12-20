@@ -62,7 +62,7 @@ Now let's explore the differences between Content Types. Each has a distinct pur
 <div class="flex flex-wrap -mx-1 mb-3">
   {{ relate:content_types }}
     <div class="p-1 w-1/2 lg:w-1/3">
-        <a href="/tags" class="bg-grey-lightest hover-lift block p-2 rounded h-full">
+        <a href="{{ url }}" class="bg-grey-lightest hover-lift block p-2 rounded h-full">
             <span class="text-lg font-bold text-pink">{{ title }}</span>
         </a>
     </div>
