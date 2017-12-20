@@ -4,7 +4,7 @@ id: 4076fea7-63c9-4b1c-b16d-7eb565040d81
 overview: >
   All content is stored in one of six content types. They all share a common data format (YAML/Markdown files), but each has <span class="highlight">unique characteristics</span> to optimize and simplify the way you manage the content. For example, Pages automatically generate Navigation and Globals are made available in all of your templates.
 content_types:
-  - 73f02fa0-d60a-47f6-b5c2-226fcb3d4d8b
+  - db0ae4e3-4f10-4802-bc40-0b880cbf02c7
   - 9e4bd6e1-0b91-42bc-92df-610ec6dbf3f4
   - e8092f11-c3b4-477a-a3a4-9c5e65f45cc4
   - 30955bc8-9c14-4523-858f-01c308b50d63
