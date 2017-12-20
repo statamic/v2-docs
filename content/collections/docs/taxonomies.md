@@ -2,21 +2,20 @@
 title: Taxonomies
 id: 30955bc8-9c14-4523-858f-01c308b50d63
 overview: |
-    A **taxonomy** is a system of classifying data around a set of unique characteristics. Scientists have been using this system for years, grouping all living creatures into Kingdoms, Class, Species and so on. On the web, most often you see Categories and Tags. Think of Taxonomies as the way Statamic _relates content together_ by topic or a shared attribute.
+    A **taxonomy** is a system of classifying data around a set of unique characteristics. Scientists have been using this system for years, grouping all living creatures into Kingdoms, Class, Species and so on. On the web you'll most often see <span class="highlight">Categories and Tags</span>. Think of Taxonomies as the way Statamic _relates content together_ by topic or a shared attribute.
 ---
 ## Overview {#overview}
 
-> **Taxonomies have recently been redesigned in Statamic 2.5.**  
-[Check out the differences](#statamic-2-5)!
+Taxonomies are one of Statamic's 6 core [Content Types][content-types]. They are similar in many ways to Entries and Pages. Each Taxonomy can have its own fields, unique slugs, and be routed with supported URL patterns. They differ in that they are not meant to be stand-alone content, but rather describe and group _other_ content.
 
-Taxonomies are one of Statamic's 6 core [Content Types][content-types]. They are similar, in many ways, to Entries and Pages. Each Taxonomy can have its own fields, unique slugs, and be routed with supported URL patterns. They differ in that they are not meant to be stand-alone content, but rather describe and group _other_ content.
+A good example of a Taxonomy is "Tags". Entries in your blog are "tagged" with with descriptive terms. The aggregation of all the tags used across all entries would be referenced as a taxonomy called "Tags".
 
-A prime example of a Taxonomy is "Tags". Entries in your blog are tagged with any and all appropriate terms, each of which exist inside the parent taxonomy "Tags". You then can use those terms to display related content. Want to see all your blog posts about sausage casings? Now you can.
+You then can use those terms to display related content. Want to see all your blog posts about sausage casings? Artisan sock washing methods? Now you can. Assuming you tagged them thusly.
 
 
 ## The Taxonomy {#taxonomy}
 
-Each **taxonomy** acts as a container for **terms** in the same way that **Collections** contain **entries**.
+Each **Taxonomy** acts as a container for **Terms** in the same way that **Collections** contain **Entries**.
 
 ```
 Taxonomy -> Term
@@ -35,7 +34,7 @@ template: tag_index
 
 ```
 
-The existence of the _file itself_ is enough for Statamic to do its magic, but if you're using the Control Panel, you may want to add a proper `title` for display purposes.
+The existence of the _file itself_ is enough for Statamic to do its magic and group all the data across your site, but if you're using the Control Panel you may want to add a proper `title` for display purposes.
 
 Any additional fields inside this config file will cascade down to the terms themselves as default variables. In the above example, specifying `template`
 in the taxonomy is equivalent to setting the template in each and every one of its terms by hand. Except way easier.
@@ -71,6 +70,8 @@ A term **slug** is the URL-safe version, and is what Statamic uses internally to
 ``` .language-yaml
 tags:
   - Star Wars
+  - Tatooine
+  - Droids We're Not Looking For
 ```
 
 - The value `Star Wars` will be converted to lowercase, and all spaces and special characters will be replaced with hyphens: `star-wars`.
@@ -94,7 +95,7 @@ Most of the time, you don't need to worry or care about IDs. The only time you m
 
 When adding terms in the Control Panel:
 
-- Term _slugs_ will _always_ be saved to content.
+- Term slugs will **always** be saved to content.
 - If a term has a title, it will always be used for display purposes.
 - If you add a new term and it doesn't match its slug-to-be, a term file will be created with the title explicitly defined. (See [Additional Term Data](#additional-data) below)
 
@@ -103,9 +104,7 @@ When adding terms in the Control Panel:
 
 ### Terms {#terms}
 
-Taxonomy term values in your content will be converted to Term objects automatically.
-
-If you're [used to pre v2.5](#statamic-2-5), you may reach for the Relate tag at this point to render your data. Good news! It's no longer necessary. You can simply work with the field name itself. Relate will still work here though, because backwards compatibility is important.
+Taxonomy term values in your content will be converted to Term objects automatically. You need only loop through the variable pair.
 
 ```
 {{ tags }}
@@ -121,7 +120,7 @@ If you need to access the un-modified variable data, you can append `_raw` to th
 {{ /tags_raw }}
 ```
 
-### Collections {#collections}
+### Filtering by Collection {#collections}
 
 Collections may be filtered by taxonomies in a number of ways.
 
@@ -170,7 +169,7 @@ The following will output entries tagged with _both_ foo and bar.
 {{ collection:blog taxonomy:tags="news" taxonomy:categories="chicken" }}
 ```
 Entries tagged with "news" AND categorized as "chicken" will be matched.
-    
+
 Entries tagged with "news" but not categorized as "chicken" will not be matched.
 The entry must satisfy both parameters.
 
@@ -330,10 +329,10 @@ For example:
 ``` .language-yaml
 ---
 title: My Entry
-tags: 
+tags:
   - coffee
   - espresso
-similar_tags: 
+similar_tags:
   - tea
 ---
 ```
@@ -350,13 +349,6 @@ Alternatively, instead of writing term values (or slugs), you can reference the 
 For example, instead of `tea`, you could write `tags/tea`. In this case, the Relate tag will be able to automatically determine the taxonomy. No need to add the parameter.
 
 When using the [taxonomy fieldtype](/fieldtypes/taxonomy) for this, the Control Panel will save term IDs for you.
-
-
-## Statamic 2.5 Changes {#statamic-2-5}
-
-- Terms no longer require their own file unless you want to add [additional data](#additional-data) or need to leverage [unused terms](#creating-unused-terms).
-- Terms no longer need to exist before you add them to content. Just add them!
-- Term IDs (at least, those crazy UUIDs) are no longer used in content. [Terms values](#values-and-slugs) are used.
 
 [content-types]: /content-types
 [collection-tag]: /tags/collection

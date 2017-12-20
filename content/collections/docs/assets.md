@@ -2,22 +2,25 @@
 title: Assets
 id: 28bf911b-8f47-489b-8040-37607733b270
 overview: >
-  Assets are files that you want to take special care of. Special files. Files you'd like to be friends with, and invite over for dinner. They allow you attach add extra data to your files, like alt tags and captions, and can be managed with special Tags and Fieldtypes.
+  Assets are Statamic-managed files, from image and videos to documents and zip files and anything in between, that can be stored in different locations and have metadata attached to them.
 ---
 ## Overview {#overview}
 
-> **Assets have recently been redesigned in Statamic 2.5.**  
-[Check out the differences](#statamic-2-5)!
+ Assets are grouped into Containers and can have their own fieldsets attached to manage extra data and information. Like such as...
 
-Assets can be images, videos, documents, zip files, or just about anything else you want to upload, manage, and display on your site. Assets are grouped into Containers, allowing you to keep your files organized.
+ - Images can have their own alt tags, captions, and display controls.
+ - Videos can have transcripts, descriptions, and credits.
+ - Zip files can have descriptions and MD5sums.
 
 ![Some possible Assets](/assets/img/other/assets-filetypes.png)
 
 ## Containers {#containers}
 
-Each asset container is represented by a yaml file inside  `site/content/assets`. We call the name of that file (e.g. `main.yaml`) the container ID.
+Each Asset Container is essentially a directory located locally or on Amazon S3 that can contain any number of files, file types, and subfolders.
 
-The container holds the details about the root location of its assets. The location can be a local folder or credentials to an Amazon S3 bucket. See the [Asset Container Drivers](#asset-container-drivers) for more detail. The container also holds any additional asset data.
+Each Asset Container and its configuration is represented by a YAML file inside  `site/content/assets`. The name of that file (e.g. `main.yaml`) the container ID (`main`).
+
+The container holds the details about the root location of its Assets, as well as default data set on each Asset. The location can be a local folder or credentials to an Amazon S3 bucket. See the [Asset Container Drivers](#asset-container-drivers) for more detail.
 
 You can use the wizard in the Control Panel found at `Configure > Content > Assets`, or use the CLI command:
 
@@ -33,7 +36,7 @@ You can reference assets within your content by using its URL. For example:
 
 ``` .language-yaml
 title: Vacation to Italy
-photos: 
+photos:
   - /assets/vacations/italy/trevi-fountain.jpg
   - /assets/vacations/italy/colosseum.jpg
 ```
@@ -44,7 +47,7 @@ There's always an exception to the rule. If you have a private container, perhap
 
 ## Control Panel {#control-panel}
 
-In the Control Panel you have a number of ways to interact with your Assets. 
+In the Control Panel you have a number of ways to interact with your Assets.
 
 You can use the Asset Manager to browse, edit, manage all your Assets across all containers, in one location.
 
@@ -114,7 +117,7 @@ These tags will convert your URL references to Asset _objects_, which in turn co
 ```
 
 
-## Additional asset data {#additional-data}
+## Additional Custom Field Data {#custom-data}
 
 You may attach data (fields) to an asset just like you would with entries or pages. This is useful for things like alt text.
 
@@ -152,7 +155,7 @@ You can reference and access private assets with a few extra steps.
 Since private assets have no URLs, you must reference them with their IDs, the container ID and the path joined by a double colon.
 
 ``` .language-yaml
-top_secret_stuff: 
+top_secret_stuff:
   - confidential::docs/evil-lair-blueprints.jpg
 ```
 
@@ -235,7 +238,7 @@ You may push the presets into a queue so they can run in the background. Here's 
 - Add `QUEUE_DRIVER=redis` to your `.env` file. [What's an .env file?](/environments).
 - Run `php please queue:listen`
 
-You can use whatever drivers Laravel supports for queues. On [Laravel Forge](https://forge.laravel.com), beanstalkd is enabled by default. 
+You can use whatever drivers Laravel supports for queues. On [Laravel Forge](https://forge.laravel.com), beanstalkd is enabled by default.
 
 ## Asset Container Drivers {#asset-container-drivers}
 
@@ -287,20 +290,6 @@ The filesystem may be cached with [Redis][redis] to prevent repeated API calls.
 
 - Ensure your server has Redis installed and running.
 - Set the `cache` key in your container configuration file to the number of seconds a particular folder's contents should be cached.
-
-
-## Statamic 2.5 Changes {#statamic-2-5}
-
-Statamic 2.5 fundamentally changed how the asset system works, for ease of use _and_ for performance reasons. If you're coming from an earlier version, here's what you'll want to know:
-
-- You no longer need to add each asset to a YAML file. If the file exists in the folder, it simply exists. No syncing necessary.
-- The containers have moved from `site/storage/assets/[id]/container.yaml` to `site/content/assets/[id].yaml`.
-- Instead of a separate `folder.yaml` file to track assets in each subfolder, all additional asset data is held in the container file.
-- You now reference assets in your content with their URLs instead of IDs.
-- Asset IDs _technically_ still exist, but now they are just `[container id]::[path to file]`. Not a crazy UUID.
-- Asset IDs are used in your content for private containers.
-- All of the required changes are handled during the upgrade process. It's all automatic.
-
 
 [glide-tag]: /tags/glide
 [assets-tag]: /tags/assets
