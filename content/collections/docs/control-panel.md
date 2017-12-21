@@ -13,7 +13,7 @@ $control_panel = 'chamber-of-secrets';
 ```
 
 
-![Control Panel](/assets/img/screenshots/cp-login.jpg)
+![Control Panel](/assets/img/screenshots/cp-login.jpg) {.rounded}
 
 ## Disabling {#disabling}
 
