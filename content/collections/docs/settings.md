@@ -6,21 +6,18 @@ overview: >
 ---
 ## Overview
 
-The settings are grouped into several different categories to help you find similar and related options quickly.
+The settings are grouped into categories to help you find related options quickly. All of Statamic's settings are available in the Control Panel's `Configure » Settings` area.
 
-## General {#general}
+![Settings](/assets/img/screenshots/cp-settings.jpg) {.rounded}
 
-Statamic stores its settings into groups located in `site/settings/[group].yaml`. These various files map to pages in
-the CP under `Configure > Settings`.
+On the filesystem side, Statamic stores its settings into groups located in `site/settings/[group_name].yaml`.
 
-The settings files are organized based on their general functions. For example, `assets.yaml` configures assets and image manipulation, `caching.yaml` for cache settings, `system.yaml` for general system settings, and so on.
+The files are organized based on their general functions. For example, `assets.yaml` configures assets and image manipulation, `caching.yaml` for cache settings, `system.yaml` for general system settings, and so on.
 
 
 ## Addons {#addon}
 
-Each addon can have their own settings file located in `site/settings/addons/addon_name.yaml`.
-
-Addon settings can be overridden in your environment files. See below for more details.
+Each addon can have their own settings file located in `site/settings/addons/addon_name.yaml`. Addon settings can be overridden in your environment files. See below for more details.
 
 
 ## Environment Specific {#environment}
@@ -44,5 +41,4 @@ php please down   # enable maintenance mode. take your site "down"
 php please up     # disable. bring your site back "up"
 ```
 
-This feature is the same as [Laravel's](https://laravel.com/docs/5.1/installation#maintenance-mode). You may customize
-the view by adding a `503.html` error template to your theme.
+This feature is the same as [Laravel's](https://laravel.com/docs/5.1/installation#maintenance-mode). You may customize the view by adding a `503.html` error template to your theme.
