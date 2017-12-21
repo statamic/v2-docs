@@ -5,7 +5,7 @@ overview: >
   We made a number of breaking changes, every one of them on purpose. We will now justify those decisions, get you to believe in them, and then show you how to bring your v1 site up to Statamic 2.
 ---
 
-## Improvement Requires Change {#change}
+## Overview {#change}
 
 We spent over 3 years growing v1, learning what our users needed, and maintaining backwards compatibility at every turn. We never made a [semantic][semver] 2.0 update (even though maybe we should have for marketing purposes) that would break anything.
 
@@ -17,13 +17,13 @@ From here out we will explain what has changed, why, and what you'll need to do 
 
 ## Recommended Upgrade Approach {#approach}
 
-We recommend starting with a fresh Statamic 2 install and moving your content, theme, fieldsets, and users over group by section. It'll help to focus on which areas need changes and isolate any unexpected behaviors.
+**We recommend starting with a fresh Statamic 2 install** and then moving your content, theme, fieldsets, and users over, section by section. It'll help you to focus on which areas need changes and isolate any unexpected behaviors.
 
 The best way to move your content is to use the [Importer and Exporter][importer]. It can generate a JSON representation of all of your content (pages, entries, globals, and taxonomies) and then generate all the right files in the right places.
 
 ## Breaking Changes {#breaking-changes}
 
-Each of these changes may require a little bit of work.
+Each of these changes may require a little bit of manual work.
 
 ### File and Folder Naming Conventions {#file-and-folder}
 
@@ -40,7 +40,7 @@ Each of these changes may require a little bit of work.
 ### Renamed Variables {#renamed-variables}
 
 - `{{ layout_content }}` is now `{{ template_content }}` because it's the actual contents of the template. Feels so much more natural.
-- `{{ current_date }}`  is now `{{ now }}` 
+- `{{ current_date }}`  is now `{{ now }}`
 
 ### Removed Variables {#removed-variables}
 
@@ -51,7 +51,7 @@ Each of these changes may require a little bit of work.
 
 ### Setting and Variable Naming Conventions {#settings-and-variables}
 
-You know all those things that start with an underscore? `_site_root`, `_layout`, `_template`. We grew to hate those blasted underscores. They're all gone. All of them, everywhere. They're replaced with non-underscored versions of themselves. We now have some system protected words. Don't name your variables any of these words:
+You know all those things that start with an underscore? `_site_root`, `_layout`, `_template`. We grew to hate those darn underscores. They were ugly. Annoying. They're all gone. All of them, everywhere. They're replaced with non-underscored versions of themselves. Also, we now have some system protected words. Don't name your variables any of these words:
 
 - `template`
 - `layout`
@@ -71,12 +71,12 @@ The Location fieldtype, tag, and `{{ entries:meld }}` tag have been removed. We 
 
 The File fieldtype is replaced by [Assets](/fieldtypes/assets). As long as you don't move your files, your links won't break, but you will lose your Control Panel connection to them. Check out the [Assets guide][assets] to learn about the new and improved ways.
 
-Status is gone. We now have the notion of "published" and "unpublished". Unpublished content is represented by files beginning with an _underscore.
+Status is gone. We now have the notion of "published" and "unpublished". Unpublished content is represented by files beginning with an underscore `_`.
 
 
 ### Removed Modifiers {#modifiers}
 
-The following modifiers were removed because they were rarely, if ever used and only served to make scanning the docs tedious. Feel free to copy and paste them out of v1 and release them as free addons. You have our 100% permission.
+The following modifiers were removed because they were rarely, if ever used and only served to make scanning the docs tedious. They were part of some mapping features we removed from core. Feel free to copy and paste them out of v1 and release them as free addons. You have our 100% permission.
 
 - abs
 - acos
@@ -110,7 +110,7 @@ Addons are structured pretty differently in v2. Chances are [porting one][addons
 
 ### The Control Panel {#control-panel}
 
-The [Control Panel](control-panel) is now accessible at `/cp` instead of `admin.php`. You can rename that in your `index.php` file.
+The [Control Panel](control-panel) is now accessible at `/cp` instead of `admin.php`. If youwan to rename it, you can do so in your `index.php` file.
 
 
 ## New Defaults {#new-defaults}
