@@ -2,14 +2,14 @@
 title: Forms
 id: b1144402-a282-4b6f-9e43-98ceae02c9e2
 overview: |
-  Forms are a natural part of the internet experience and a core component of most websites in some shape or form. From "Contact Us" to "Vote for Your Favorite Naked Mole Rat", Statamic can help manage your forms and make your life a little easier.
+  Forms are a natural part of the internet experience and a core component of most websites in some shape or form. From "Contact Us" to "Vote for Your Favorite Porg", Statamic can help manage your forms and make your life a little easier.
 ---
 
 ## Overview {#overview}
 
-Statamic forms serve to collect, report, and reuse user submitted data. The end-to-end solution includes Tags, settings, and a dedicated area of the Control Panel. These features together effectively replace v1's first-party form module, Raven. And yes, "Forms" is a pretty boring title. But at least it's fairly clear as to what it does.
+Statamic forms serve to collect, report, and reuse user submitted data. The end-to-end solution includes Tags, settings, and a dedicated area of the Control Panel. And yes, "Forms" is a pretty boring title. But at least it's fairly clear as to what it does.
 
-## Your first form {#create}
+## Your First Form {#create}
 
 Let's pretend, shall we, that you are a famous celebrity with a large following of dedicated fans. If that is true of you -- kudos by the way -- but why are you building your own website? You don't have time for that. Who's going to sail your yacht?
 
