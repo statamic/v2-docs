@@ -86,23 +86,28 @@ Alternately, you can take a full-control approach and write out all the inputs y
 ```
 
 
-## Viewing submissions {#viewing-submissions}
+## Viewing Submissions {#viewing-submissions}
 
 The Control Panel enables you to explore the collected responses, configure dashboards with reporting metrics, and export that data to CSV or JSON formats.
 
-![Forms](/assets/img/screenshots/cp-forms.png)
+![Forms](/assets/img/screenshots/cp-forms.jpg) {.rounded}
 
-You can jump back into your form's settings and pick which fields you want shown and set up metrics you'd like shown above your responses. Here's an example:
+You can jump back into your form's settings and pick which fields you want shown, as well as configure metrics you'd like shown above your responses. **Here's an example:**
 
-![Metrics](/assets/img/screenshots/cp-metrics.png)
+![Metrics](/assets/img/screenshots/cp-metrics.jpg) {.rounded}
 
-These metrics would have a configuration like so:
+These metrics would have a configuration like this:
 
 ```language-yaml
 metrics:
   -
     type: total
     label: Total Responses
+  -
+    type: average
+    field: rating
+    label: Average Rating
+    precision: 1
   -
     type: average
     field: age
@@ -218,8 +223,7 @@ fields:
     destination: uploads/
 ```
 
-_Note: If you use the square bracket `name` syntax, but use the singular `type` in your formset, only the first selected
-file will be uploaded. So don't forget to set both._
+> If you use the square bracket `name` syntax, but use the singular `type` in your formset, only the first selected file will be uploaded. Don't forget to set both.
 
 ## Honeypot {#honeypot}
 
@@ -244,9 +248,7 @@ For example:
 If you're worried about smarter spam bots realizing that the honeypot field is named `honeypot`, you may customize the
 name of the field by adding `honeypot: something` to your formset.
 
-_Note: We say the submission will "fail", but that's not exactly true. On the front end, it will appear that the form was
-submitted successfully. However, nothing will get saved, no emails will be sent, etc. This is the key to
-tricking bots into believing everything went smoothly._
+> We say the submission will "fail", but that's not **exactly** true. On the front end it will appear that the form was submitted successfully. However, nothing will get saved and no emails will be sent. This is the key to tricking bots into believing everything went smoothly.
 
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
 [tags]: /tags/form

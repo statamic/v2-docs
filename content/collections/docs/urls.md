@@ -9,7 +9,7 @@ Pages are literally™ a literal representation of your site's URL structures. E
 
 If you want to be thorough and overly detailed with the analogy, we could also find some grandparents, cousins, aunts, uncles, nephews, orphans, and probably that weird next-door neighbor who invites himself to all of your parties and calls himself **<FEED.XML>** in all caps.
 
-![Hark! Pages!](/assets/img/screenshots/cp-page-tree.png)
+![Hark! Pages!](/assets/img/screenshots/cp-page-tree.jpg) {.rounded}
 
 Each page has its own `slug`, or segment of a URL (such as `oh-hi-mark`) and those slugs team up based on hierarchy to create URLs. Let's walk through an example and then we'll have a visual.
 
