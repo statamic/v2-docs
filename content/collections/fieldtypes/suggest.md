@@ -1,6 +1,6 @@
 ---
 title: Suggest
-image: /assets/fieldtypes/suggest.png
+image: /assets/fieldtypes/suggest.jpg
 overview: Simple Select or Multi select fieldtype powered by autocomplete suggestions from flexible sources.
 id: ec50b1fd-0c62-44e4-8314-1720ff60796d
 options:

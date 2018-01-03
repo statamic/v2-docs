@@ -36,7 +36,7 @@ All of the examples and styles are perfectly fine, technically. Use whatever sty
 
 ### Tags are CaSe SeNsiTivE {#case-sensitive}
 
-This is important enough to repeat our own heading. Tags are case-sensitive. That means that `{{ title }}` and `{{ Title }}` are two separate tags that won’t behave the same. Additionally, hyphens and underscores are not interchangeable.
+This means that `{{ title }}` and `{{ Title }}` are **two separate tags** that won’t behave the same. Additionally, hyphens and underscores are not interchangeable. The difference can be subtle. Don't let it bite you.
 
 ### Be Consistent! {#be-consistent}
 

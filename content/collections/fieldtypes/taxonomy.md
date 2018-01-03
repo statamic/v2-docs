@@ -4,13 +4,13 @@ extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 description: Attach Taxonomy Terms to your content.
 overview: >
   Allows you attach Taxonomy Terms to your content. Tags, Categories, Colors, Flavors, you name it. Taxonomy all the things! Learn more about [Taxonomies](/taxonomies).
-image: /assets/fieldtypes/taxonomy.png
+image: /assets/fieldtypes/taxonomy.jpg
 options:
   -
     name: taxonomy
     type: string
     description: >
-      The handle of the Taxonomy from which to fetch Terms. Not needed when placed in the fieldset's `taxonomies` array. 
+      The handle of the Taxonomy from which to fetch Terms. Not needed when placed in the fieldset's `taxonomies` array.
       In that case, it'll get the taxonomy from the field name.
   -
     name: create
@@ -32,6 +32,8 @@ If the field is being used for taxonomizing your content (ie. the field name mat
 wildlife:
   - kangaroo
   - three-toed-sloth
+  - panda
+  - porg
 ```
 
 However, if you just want to store references to taxonomy terms for other purposes, the term's IDs will be saved. See [below](#without-taxonomizing) for more detail.

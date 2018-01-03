@@ -1,8 +1,8 @@
 ---
 title: YAML
 overview: >
-  A textarea with a code editor behind the scenes to help you write and store raw data as YAML. [Learn more about YAML](/yaml).
-image: /assets/fieldtypes/yaml.png
+  A code editor set to YAML mode to help you write and store raw data as, you guessted it, YAML. Want to [learn more about YAML?](/yaml) Want us to say YAML again?
+image: /assets/fieldtypes/yaml.jpg
 options:
   -
     name: rows

@@ -2,7 +2,7 @@
 title: Relate
 description: Create relationships with other content.
 overview: "Allows you create relationships. Data relationships that is, this doesn't help your online dating game much, if at all."
-image: /assets/fieldtypes/relate.png
+image: /assets/fieldtypes/collection.png
 id: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 options:
   -

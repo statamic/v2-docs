@@ -1,6 +1,6 @@
 ---
 title: Tags
-image: /assets/fieldtypes/tags.png
+image: /assets/fieldtypes/tags.jpg
 description: Enter "tag" style data, stored as an array.
 overview: >
   Users can input “taggable” values, which are formatted

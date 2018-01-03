@@ -3,7 +3,7 @@ title: Users
 description: Relate one or more Users to your content.
 overview: >
   Allows you attach Users to your content. This can be used to show authorship, team members, or whatever other use you have for showing people with your content.
-image: /assets/fieldtypes/users.png
+image: /assets/fieldtypes/users.jpg
 id: 0f8102b9-c948-4264-8cb8-cbfbd0415a04
 options:
   -
@@ -11,6 +11,11 @@ options:
     type: string
     description: >
       The default value. If you specify `current`, then the logged in user will be selected by default.
+  -
+    name: max_items
+    type: integer
+    description: >
+      The maximum number of users than can be selected. By default (blank) there is no limit. Setting to `1` will save the value as a `string` instead of an `array` and will switch to a select dropdown UI.
 ---
 ## Data Structure {#data-structure}
 
