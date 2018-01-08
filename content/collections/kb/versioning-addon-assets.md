@@ -5,6 +5,8 @@ kb_categories:
 id: e6f184c1-0309-46eb-a156-f462bb0a6321
 ---
 
+## Overview
+
 Addons may have assets (stylesheets, javascript files, etc) which can be loaded automatically or programatically depending on the situation.
 
 Statamic will automatically load any addon's `resources/assets/js/fieldtype.js` and `scripts.js` files. You may also reference files in your addon by doing `$this->js->url('foo')` to output a URL to `resources/assets/js/foo.js`.
