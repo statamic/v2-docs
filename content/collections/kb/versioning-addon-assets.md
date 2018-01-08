@@ -31,6 +31,8 @@ public function register()
 }
 ```
 
+> The container binding closure should return another closure to be used as the callback. Don't be tempted to just return the $path string directly.
+
 ## Laravel Mix Example
 
 In this example, we version the fieldtype js file using mix's `version` method. An `id` parameter gets appended to the path inside `mix-manifest.json`. We then use that inside the callback.
