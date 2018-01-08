@@ -71,6 +71,39 @@ mix.version();
 $this->js->url('fieldtype'); // returns `js/fieldtype.js?id=123` as per the manifest
 ``` 
 
+``` .language-php
+<?php
+
+namespace Statamic\Addons\MyAddon;
+
+use Statamic\API\Str;
+use Statamic\API\Path;
+use Statamic\API\File;
+use Statamic\Extend\ServiceProvider;
+
+class MyAddonServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        $this->app->bind('MyAddon.resolve-resource-path', function () {
+            return function ($path, $addon) {
+                // Read the JSON from the manifest file
+                $contents = File::get($addon->directory() . '/mix-manifest.json');
+                $manifest = json_decode($contents, true);
+
+                // Get the versioned filename
+                $versioned = array_get($manifest, '/resources/assets/' . $path);
+
+                // Statamic is expecting a path relative to the addon's 
+                // resources/assets directory.
+                return Str::removeLeft($versioned, '/resources/assets/');
+            };
+        });
+    }
+}
+
+```
+
 ## Custom Webpack Example
 In this example, the addon's build process will save the new version of the asset with a string within the filename. eg. `foo.js` becomes `foo.somehash.js`
 
