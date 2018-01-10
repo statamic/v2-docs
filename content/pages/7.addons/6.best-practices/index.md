@@ -43,7 +43,7 @@ class KarmaAPI extends API
 {
     private $scorekeeper;
 
-    protected function __construct(ScoreKeeper)
+    protected function __construct(ScoreKeeper $scorekeeper)
     {
         $this->scorekeeper = $scorekeeper;
     }
@@ -68,7 +68,7 @@ class KarmaTags extends Tags
 {
     private $scorekeeper;
 
-    protected function __construct(ScoreKeeper)
+    protected function __construct(ScoreKeeper $scorekeeper)
     {
         $this->scorekeeper = $scorekeeper;
     }
