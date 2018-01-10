@@ -23,6 +23,11 @@ options:
       and any [custom buttons][custom]. By default, all of them are displayed.
 
       [custom]: #custom-buttons
+  -
+    name: markdown
+    type: boolean *false*
+    description: |
+      _Experimental_. Enabling this option will allow you to author (and save) Markdown. The toolbar, toggle source button, and keyboard shortcuts will be disabled.
 added_in: 2.8
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
