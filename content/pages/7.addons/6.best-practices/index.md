@@ -43,9 +43,9 @@ class KarmaAPI extends API
 {
     private $scorekeeper;
 
-    protected function init()
+    protected function __construct(ScoreKeeper)
     {
-        $this->scorekeeper = new Scorekeeper;
+        $this->scorekeeper = $scorekeeper;
     }
 
     public function getPoints($user)
@@ -68,9 +68,9 @@ class KarmaTags extends Tags
 {
     private $scorekeeper;
 
-    protected function init()
+    protected function __construct(ScoreKeeper)
     {
-        $this->scorekeeper = new Scorekeeper;
+        $this->scorekeeper = $scorekeeper;
     }
 
     public function getPoints($user)
