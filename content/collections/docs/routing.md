@@ -75,6 +75,19 @@ Here's an example on how you might use this in the context of a form submission 
 {{ /if }}
 ```
 
+### Loading Content [Since 2.8.0] {#loading-content}
+
+You may automatically load content into routes by providing a `load` variable pointing to either a URL or an ID of a content item.
+
+``` .lang-yaml
+routes:
+  biography:
+    template: about
+    load: /about
+```
+
+This will make all the variables from the `/about` page available as top level variables on the `/biography` route, just as though you were on the page itself. This allows you to do away with any extra `get_content` tags.
+
 
 ## Controller Routes {#controllers}
 

@@ -17,7 +17,7 @@ id: 00b140e3-413a-4d91-b9e7-65f58d56a41b
 
 You will be presented with a button for each set you’ve defined. Clicking one will replicate an empty set. You can [replicate](https://www.youtube.com/watch?v=qD4EVXkfe0w) a single set type as many times as you like as well as dragging and dropping them to adjust their order.
 
-You may collapse your sets to conserve space. If you do, a preview of the data contained within it will be displayed. [Third party fieldtypes may control how their data will be previewed](/addons/classes/fieldtypes#replicator-preview-text).
+You may collapse your sets to conserve space. If you do, a preview of the data contained within it will be displayed. [Third party fieldtypes may control how their data will be previewed](/addons/classes/fieldtypes#replicator-preview-text). You can prevent certain fields being shown in the preview text by adding `replicator_preview: false`.
 
 ## Data Structure {#data-structure}
 
@@ -35,12 +35,11 @@ replicator:
     caption: "Romeo's Location"
 ```
 
-> Please note that you **can not** use a Replicator fieldtype for the `content` field. Since the data is saved as an array,
-it needs to be part of the front-matter.
+> Please note that you **can not** use a Replicator fieldtype for the `content` field.
 
 ## Templating {#templating}
 
-Use the tag pair syntax with an `if` `else` conditions to style accordingly each set accordingly.
+Use the tag pair syntax with an `if/else` conditions to style each set accordingly.
 
 ```
 {{ my_replicator_field }}
@@ -85,7 +84,5 @@ and the set partial may look something like:
 ```
 {{# this is image_set.html #}}
 
-{{ assets:image }}
-  <img src="{{ glide:id }}" alt="" >
-{{ /assets:image }}
+<img src="{{ image }}" alt="{{ caption }}" >
 ```

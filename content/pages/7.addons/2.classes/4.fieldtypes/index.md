@@ -283,6 +283,31 @@ The `process` is the opposite: it's called after the publish page is submitted a
 In both cases, simply return the value after you've manipulated it.
 
 
+## Extras
+
+### Auto-slugify {#auto-slugify}
+
+If you have a need to automatically create a slug in one place based off the value of another field, we have a Vue mixin you can use in your component.
+An example of this is when you type into a `title` field and the `slug` field gets generated as you type.
+
+``` .language-js
+{
+    mixins: [Fieldtype, AutoSlug],
+
+    ready() {
+        this.autoSlug()
+    }
+}
+```
+
+The `autoSlug` method takes 2 arguments:
+
+- The name of the field to generate a slug from. In the example above, this would be `"title"`.
+- The name of an instance property on your Vue component where the slug should be stored. If left blank, it will be `"data"` which is like doing `this.data = newSlug`.
+
+> If you're thinking about using this to make a simple slugging field, the [Text fieldtype](/fieldtypes/text) has an `autoslug` option that does this.
+
+
 
 [vue]: http://vuejs.org
 [vue-component]: http://vuejs.org/guide/components.html

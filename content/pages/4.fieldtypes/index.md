@@ -40,6 +40,12 @@ options:
     name: hide_when
     type: string|array
     description: The same as `show_when`, but with the logic inverted.
+  -
+    name: replicator_preview
+    type: boolean *true*
+    description: |
+      When set to `false`, this field will not be displayed in the preview text for a collapsed [Replicator][replicator] set.
+      [replicator]: /fieldtypes/replicator
 
 ---
 ## Default Settings {#default-settings}

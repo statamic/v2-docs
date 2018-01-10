@@ -111,3 +111,21 @@ The Statamic CP uses Entypo for icons. When using `$item->icon($name)`, you can 
 
 To see the list of icon names available, head to [the Entypo website](http://entypo.com/) where you'll
 see all the icons. Find the one you like, inspect the source and the filename will be there.
+
+## Hiding the Navigation
+
+If you'd like your view to span the entire width of the page, you may hide the navigation by:
+
+1. Yielding a `hide-nav` class in the `content-class` section.
+2. Overriding the `nav-main` section with nothing.  
+  (Needs to be _something_. Empty strings won't work, but a comment will.)
+
+``` .language-blade
+@extends('layout')
+@section('nav-main', '<!-- -->')
+@section('content-class', 'hide-nav')
+
+@section('content')
+    <!-- your view -->
+@endsection
+```
