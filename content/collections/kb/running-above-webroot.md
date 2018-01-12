@@ -75,8 +75,6 @@ Open the `index.php` file, and update the `$statamic` variable.
 By default it is `./statamic` (meaning the same directory level), and in our example, we'd update it to `../statamic`
 (meaning _up_ one level).
 
-If you have moved the `please` file, you will need to adjust it in the same fashion.
-
 ### Everything else
 
 Now that the folders have been moved, you'll need to tell Statamic where they are.
@@ -92,7 +90,7 @@ You'll also want to update your asset container `path` and `url` values, which c
 
 1. Move system folders above webroot.
 2. Ensure web accessible files are left in the webroot. (`assets`, `site/themes`, `index.php`, etc.)
-3. Adjust the `$statamic` path variable in `index.php` (and `please`).
+3. Adjust the `$statamic` path variable in `index.php`.
 4. Adjust [filesystem references][filesystems].
 5. Adjust the asset container's path in `container.yaml`.
 
