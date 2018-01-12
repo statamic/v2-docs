@@ -54,6 +54,8 @@ loggers:
     daily: true
 ```
 
+By default, it logs `debug` severity and up.
+
 #### Browser {#log-brower}
 
 Logs directly to your browser's console.
@@ -62,6 +64,8 @@ Logs directly to your browser's console.
 loggers:
   browser: true
 ```
+
+By default, it logs `debug` severity and up.
 
 #### Email {#log-email}
 
@@ -75,6 +79,8 @@ loggers:
     subject: An error has occurred
 ```
 
+By default, it logs `error` severity and up.
+
 #### Hipchat {#log-hipchat}
 
 Sends logs to a [Hipchat](https://www.hipchat.com/) room.
@@ -86,6 +92,8 @@ loggers:
     room:
     name:
 ```
+
+By default, it logs `critical` severity and up.
 
 #### Slack {#log-slack}
 
@@ -100,6 +108,8 @@ loggers:
     icon_emoji: This is optional
 ```
 
+By default, it logs `critical` severity and up.
+
 #### Fleep {#log-fleep}
 
 Sends logs to [Fleep.io](https://fleep.io/)
@@ -109,6 +119,8 @@ loggers:
   fleep:
     token:
 ```
+
+By default, it logs `error` severity and up.
 
 #### Flowdock {#log-flowdock}
 
@@ -120,6 +132,8 @@ loggers:
     token:
 ```
 
+By default, it logs `critical` severity and up.
+
 #### Syslog {#log-syslog}
 
 Sends logs to your system log.
@@ -129,6 +143,8 @@ loggers:
   syslog:
     identity: Statamic
 ```
+
+By default, it logs `error` severity and up.
 
 ### Triggering Logs {#log-trigger}
 
