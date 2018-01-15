@@ -19,8 +19,8 @@ options:
     name: buttons
     type: array
     description: |
-      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h2`, `h3`, `quote`,
-      and any [custom buttons][custom]. By default, all of them are displayed.
+      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h1` through `h6`, `quote`, `assets`,
+      and any [custom buttons][custom]. By default, a sensible set of buttons will be used.
 
       [custom]: #custom-buttons
   -
@@ -28,6 +28,22 @@ options:
     type: boolean *false*
     description: |
       _Experimental_. Enabling this option will allow you to author (and save) Markdown. The toolbar, toggle source button, and keyboard shortcuts will be disabled.
+  -
+    name: container
+    type: string
+    description: >
+      An asset container ID. When specified, the fieldtype will allow the user to add a link to an asset from the specified container.
+  -
+    name: folder
+    type: string
+    description: >
+      The folder (relative to the asset container) to use when choosing an asset. If left blank, the root folder of the container will be used.
+  -
+    name: restrict_assets
+    type: bool
+    description: >
+      If set to `true`, navigation within the asset browser dialog will be disabled, and you
+      will be restricted to the container and folder specified.
 added_in: 2.8
 id: f4bf58d3-cbce-4957-b883-d92fd4791e89
 ---
