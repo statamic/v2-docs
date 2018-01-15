@@ -157,7 +157,7 @@ var AskForLinkButton = MediumEditor.extensions.button.extend({
 });
 
 // Add it to the Statamic object.
-Statamic.MediumEditorExtensions.askForLink = new AskForLinkButton;
+Statamic.MediumEditorExtensions.askForLink = AskForLinkButton;
 ```
 
 [replicator]: /fieldtypes/replicator
