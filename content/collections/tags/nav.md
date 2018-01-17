@@ -109,6 +109,10 @@ variables:
       being viewed. Also useful for outputting
       active states.
   -
+    name: depth
+    type: integer
+    description: The depth of the page within the nav structure.
+  -
     name: page data
     type: mixed
     description: >
