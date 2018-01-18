@@ -13,5 +13,5 @@ options:
     type: string
     description: >
       Generate a slug in this text field based on the value of a given field. For example, how an entry's `slug` field gets generated from the `title` field.
-image: /assets/fieldtypes/text.png
+image: /assets/fieldtypes/text.jpg
 id: 306b112b-b0cc-4359-b681-da353eeb50ac
