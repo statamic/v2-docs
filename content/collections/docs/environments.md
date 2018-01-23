@@ -50,7 +50,9 @@ greeting: "Hello {env:NAME}"
 NAME=ron
 ```
 
-_Note: When interpolating, make sure to wrap your value in quotes._
+When interpolating, make sure to wrap your value in quotes.
+
+> Some of the `env:` code examples on this page use an invisible character to prevent it from actually rendering the environment variable. If you copy/paste directly from here, be sure to delete it - or just write it by hand!
 
 ### Option 2: Environment files {#option-environment-files}
 
