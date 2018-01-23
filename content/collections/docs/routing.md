@@ -3,6 +3,7 @@ title: Routing
 id: 96fc1a83-6fe6-48b5-a8ba-7d66ab0ab2ff
 overview: |
   Routes are rules that map URL patterns to your templates, content, other URLs, or other parts of the application.
+video: https://youtu.be/_to78g1XvJ8
 ---
 
 All of Statamic's routes are defined in `site/settings/routes.yaml` (also accessible in the Control Panel `Settings » Routes` area). We support Five different types of routes.
@@ -146,7 +147,7 @@ Terms get their own URLs too. Some tag URLs might look like this:
 
 When a route contains an array value, Statamic will use the first item.  
 
-We'll use a typical clothing store example. Say they have a product collection, where one product could be 
+We'll use a typical clothing store example. Say they have a product collection, where one product could be
 in multiple categories, like this:
 
 ``` .language-yaml
