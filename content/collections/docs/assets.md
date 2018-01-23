@@ -2,7 +2,7 @@
 title: Assets
 id: 28bf911b-8f47-489b-8040-37607733b270
 overview: >
-  Assets are external files -- anything from images and videos to documents and zip files -- that are managed by Statamic.
+  Assets are external files managed by Statamic. They can be anything from images and videos to documents and zip files. Just like entries and pages, they can have custom data attached to them.
 ---
 ## Overview {#overview}
 
