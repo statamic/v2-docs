@@ -1,6 +1,7 @@
 ---
 id: 5b748a3f-be0e-41c1-8877-73f6b7ee1d0a
 title: Assets
+video: https://youtu.be/FHhlvKEvgPs
 overview: >
     Used to retrieve Assets data from either an [Asset Fieldtype](/fieldtypes/assets) or directly from an Container.
     Your site's Assets are managed and stored independently of your pages and entries and have a joined relationship through their `id`. [Learn more about Assets](/assets).

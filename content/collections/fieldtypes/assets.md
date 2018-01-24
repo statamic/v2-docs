@@ -1,6 +1,7 @@
 ---
 title: Assets
 overview: Upload files and use the Asset Browser to pick from existing files in your Asset Containers.
+video: https://youtu.be/FHhlvKEvgPs
 image: /assets/fieldtypes/assets.png
 options:
   -
@@ -24,7 +25,7 @@ options:
     description: >
       If set to `true`, navigation within the browser dialog will be disabled, and you
       will be restricted to the container and folder specified.
-    
+
 id: d0c65546-74f1-4a15-89d5-1562a95ee2c6
 ---
 ## Data Structure {#data-structure}
