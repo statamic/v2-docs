@@ -2,7 +2,7 @@
 title: Fieldsets
 id: 4da38f4b-0154-42ec-873e-35a5bfbafc79
 overview: |
-  Fieldsets are the tool used create your Control Panel publish forms. They define your content model, like a scheme that define your fields, data types, and the interface used to manage them.
+  Fieldsets are the tool used create your Control Panel publish forms. They define your content model, essentially a schema that defines your fields, data types, and the interface used to manage them.
 ---
 
 ## What is a fieldset? {#what-is-a-fieldset}
