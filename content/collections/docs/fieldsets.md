@@ -2,12 +2,14 @@
 title: Fieldsets
 id: 4da38f4b-0154-42ec-873e-35a5bfbafc79
 overview: |
-  Statamic lets you define sets of fields in arrangements, aptly named _fieldsets_. You then tell Statamic which content uses which fieldsets, and the Control Panel builds out the appropriate form for you.
+  Fieldsets are the tool used create your Control Panel publish forms. They define your content model, like a scheme that define your fields, data types, and the interface used to manage them.
 ---
 
 ## What is a fieldset? {#what-is-a-fieldset}
 
-A _fieldset_ is a simple YAML file that defines a list of fields. Your fieldsets are kept in the `site/settings/fieldsets` directory. The main section of a fieldset is the `fields` key which allows you to set and configure any number of fields utilizing any combination of the available [fieldtypes](/fieldtypes).
+A _fieldset_ is YAML file that defines a list of fields used to create content. They're reusuable, highly configurable, and the cornerstone of a customized and tailor-fit Control Panel.
+
+Your fieldsets are kept in the `site/settings/fieldsets` directory. The main section of a fieldset is the `fields` key which allows you to set and configure any number of fields utilizing any combination of the available [fieldtypes](/fieldtypes).
 
 An example of what a fieldset might look like:
 
