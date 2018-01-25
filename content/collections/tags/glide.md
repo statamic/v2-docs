@@ -28,12 +28,12 @@ parameters:
     name: width
     type: integer
     description: >
-      Alias of the [w](http://glide.thephpleague.com/1.0/api/size/#width-w) Glide API parameter.
+      Sets the width of the image, in pixels.
   -
     name: height
     type: integer
     description: >
-      Alias of the [h](http://glide.thephpleague.com/1.0/api/size/#height-h) Glide API parameter.
+      Sets the height of the image, in pixels.
   -
     name: square
     type: integer
@@ -43,14 +43,14 @@ parameters:
     name: fit
     type: string
     description: >
-      Alias of the [fit](http://glide.thephpleague.com/1.0/api/size/#fit-fit) Glide API parameter. In addition to the
-      Glide fit options, Statamic also accepts `crop_focal` to automatically fit/crop to a predefined focal point.
+      See the [Glide docs](http://glide.thephpleague.com/1.0/api/size/#fit-fit) on this parameter. In addition to the
+      Glide's fit options, Statamic also supports `crop_focal` to automatically fit/crop to a predefined focal point.
       See the [_Focal Crop_](#focal-crop) section for more details.
   -
     name: crop
     type: string
     description: >
-      Alias of the [crop](http://glide.thephpleague.com/1.0/api/crop/#crop-crop) Glide API parameter.
+      Crops the image to specific dimensions prior to any other resize operations. Required format: `width,height,x,y`.
   -
     name: absolute
     type: 'boolean *false*'
@@ -58,44 +58,55 @@ parameters:
       When set to `true`, this tag will output the full URL rather than the default relative URL.
   -
     name: orient
-    type: mixed
+    type: mixed *auto*
     description: >
-      Alias of the [or](http://glide.thephpleague.com/1.0/api/orientation/#orientation-or) Glide API parameter.
+      Rotates the image. Accepts `auto`, `0`, `90`, `180` or `270`. The `auto` option uses Exif data to automatically orient images correctly.
   -
     name: brightness
     type: integer
     description: >
-      Alias of the [bri](http://glide.thephpleague.com/1.0/api/adjustments/#brightness-bri) Glide API parameter.
+      Adds a blur effect to the image. Use values between `0` and `100`.
+  -
+    name: brightness
+    type: string
+    description: >
+      Adjusts the image brightness. Use values between `-100` and `+100`, where `0` represents no change.
   -
     name: contrast
-    type: integer
+    type: string
     description: >
-      Alias of the [con](http://glide.thephpleague.com/1.0/api/adjustments/#contrast-con) Glide API parameter.
+        Adjusts the image contrast. Use values between `-100` and `+100`, where `0` represents no change.
   -
     name: gamma
-    type: integer
+    type: float
     description: >
-      Alias of the [gam](http://glide.thephpleague.com/1.0/api/adjustments/#gamma-gam) Glide API parameter.
+      Adjusts the image gamma. Use values between `0.1` and `9.99`.
   -
     name: sharpen
     type: integer
     description: >
-      Alias of the [sharp](http://glide.thephpleague.com/1.0/api/adjustments/#sharpen-sharp) Glide API parameter.
+      Sharpen the image. Use values between `0` and `100`.
   -
     name: pixelate
     type: integer
     description: >
-      Alias of the [pixel](http://glide.thephpleague.com/1.0/api/effects/#pixelate-pixel) Glide API parameter.
+      Applies a pixelation effect to the image. Use values between `0` and `1000`.
   -
     name: filter
     type: string
     description: >
-      Alias of the [filt](http://glide.thephpleague.com/1.0/api/effects/#filter-filt) Glide API parameter.
+      Applies a filter effect to the image. Accepts `greyscale` or `sepia`.
   -
     name: quality
     type: integer *90*
     description: >
-      Alias of the [q](http://glide.thephpleague.com/1.0/api/encode/#quality-q) Glide API parameter.
+      Defines the quality of the image. Use values between `0` and `100`. Only relevant if the format is `jpg`.
+  -
+    name: format
+    type: string *jpg*
+    description: >
+      Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg), `png` or `gif`.
+
 id: b70a3d9a-6605-446e-b278-de99ba561fe0
 ---
 ## Examples {#examples}
