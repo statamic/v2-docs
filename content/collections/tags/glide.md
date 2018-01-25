@@ -2,6 +2,7 @@
 title: Glide
 overview: Manipulate images on the fly using the wonderful [Glide](http://glide.thephpleague.com/) library.
 template: tag-glide
+video: https://youtu.be/cwRxk-lqxpg
 parameters_content: |
   You may pass any parameter straight from the [Glide API](http://glide.thephpleague.com/1.0/api/quick-reference/) as a parameter.  
   For example, `{{ glide w="300" }}` will use the [width](http://glide.thephpleague.com/1.0/api/size#width-w)
