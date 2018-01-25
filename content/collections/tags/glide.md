@@ -1,10 +1,11 @@
 ---
 title: Glide
 overview: Manipulate images on the fly using the wonderful [Glide](http://glide.thephpleague.com/) library.
+template: tag-glide
 parameters_content: |
-  You may pass anything from the [Glide API](http://glide.thephpleague.com/1.0/api/quick-reference/) as a parameter.  
-  For example, `{{ glide or="90" }}` will use the [orientation](http://glide.thephpleague.com/1.0/api/orientation/#orientation-or)
-  API parameter.
+  You may pass any parameter straight from the [Glide API](http://glide.thephpleague.com/1.0/api/quick-reference/) as a parameter.  
+  For example, `{{ glide w="300" }}` will use the [width](http://glide.thephpleague.com/1.0/api/size#width-w)
+  API parameter. You can also use our easier-to-read alias parameters below. We're not a huge fan of shortening already short words.
 parameters:
   -
     name: src|path|id
@@ -25,6 +26,12 @@ parameters:
     type: string
     description: When using the `tag` parameter, this will insert the given text into the `alt` attribute.
   -
+    name: absolute
+    type: 'boolean *false*'
+    description: >
+      When set to `true`, this tag will output the full URL rather than the default relative URL.
+shape:
+  -
     name: width
     type: integer
     description: >
@@ -38,7 +45,7 @@ parameters:
     name: square
     type: integer
     description: >
-      A shortcut for setting `width` (`w`) and `height` (`h`) to the same value.
+      A shortcut for setting `width` and `height` to the same value.
   -
     name: fit
     type: string
@@ -52,15 +59,22 @@ parameters:
     description: >
       Crops the image to specific dimensions prior to any other resize operations. Required format: `width,height,x,y`.
   -
-    name: absolute
-    type: 'boolean *false*'
-    description: >
-      When set to `true`, this tag will output the full URL rather than the default relative URL.
-  -
     name: orient
     type: mixed *auto*
     description: >
       Rotates the image. Accepts `auto`, `0`, `90`, `180` or `270`. The `auto` option uses Exif data to automatically orient images correctly.
+  -
+    name: quality
+    type: integer *90*
+    description: >
+      Defines the quality of the image. Use values between `0` and `100`. Only relevant if the format is `jpg`.
+  -
+    name: format
+    type: string *jpg*
+    description: >
+      Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg), `png` or `gif`.
+
+filters:
   -
     name: brightness
     type: integer
@@ -96,16 +110,6 @@ parameters:
     type: string
     description: >
       Applies a filter effect to the image. Accepts `greyscale` or `sepia`.
-  -
-    name: quality
-    type: integer *90*
-    description: >
-      Defines the quality of the image. Use values between `0` and `100`. Only relevant if the format is `jpg`.
-  -
-    name: format
-    type: string *jpg*
-    description: >
-      Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg), `png` or `gif`.
 
 id: b70a3d9a-6605-446e-b278-de99ba561fe0
 ---
