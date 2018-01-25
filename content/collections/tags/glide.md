@@ -76,7 +76,7 @@ shape:
 
 filters:
   -
-    name: brightness
+    name: blur
     type: integer
     description: >
       Adds a blur effect to the image. Use values between `0` and `100`.
