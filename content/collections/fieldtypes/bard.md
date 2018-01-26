@@ -19,8 +19,7 @@ options:
     name: buttons
     type: array
     description: |
-      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h1` through `h6`, `quote`, `assets`,
-      and any [custom buttons][custom]. By default, a sensible set of buttons will be used.
+      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h1` through `h6`, `quote`, `assets`, or really just any of the [built-in Medium Editor buttons](https://github.com/yabwe/medium-editor#all-buttons), as well as any [custom buttons][custom]. By default, a sensible set of buttons will be used.
 
       [custom]: #custom-buttons
   -
