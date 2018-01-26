@@ -11,7 +11,7 @@ Our [article about how licensing works][licensing] explains how we define a publ
 
 This allows you to try out Statamic and even develop the site until you're ready to purchase a license.
 
-What we recommend is to run Statamic locally on a `mysite.dev` domain. Then, when you're ready: purchase a license,
+What we recommend is to run Statamic locally on a `mysite.test` domain. Then, when you're ready: purchase a license,
 drop in the key, and deploy your site.
 
 [licensing]: /licensing
