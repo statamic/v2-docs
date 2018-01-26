@@ -20,7 +20,7 @@ options:
     type: array
     description: |
       An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h1` through `h6`, `quote`, `assets`,
-      and any [custom buttons][custom]. By default, a sensible set of buttons will be used.
+      and any [custom buttons][custom]. By default, a sensible set of buttons will be used. Or any of the [available Buttons.](https://github.com/yabwe/medium-editor#all-buttons)
 
       [custom]: #custom-buttons
   -
