@@ -6,7 +6,7 @@ overview: |
 ---
 ## Overview {#overview}
 
-Taxonomies are one of Statamic's 6 core [Content Types][content-types]. They are similar in many ways to Entries and Pages. Each Taxonomy can have its own fields, unique slugs, and be routed with supported URL patterns. They differ in that they are not meant to be stand-alone content, but rather describe and group _other_ content.
+Taxonomies are one of Statamic's six core [Content Types][content-types]. They are similar in many ways to Entries and Pages. Each Taxonomy can have its own fields, unique slugs, and be routed with supported URL patterns. They differ in that they are not meant to be stand-alone content, but rather describe and group _other_ content.
 
 A good example of a Taxonomy is "Tags". Entries in your blog are "tagged" with with descriptive terms. The aggregation of all the tags used across all entries would be referenced as a taxonomy called "Tags".
 
