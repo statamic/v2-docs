@@ -4,7 +4,7 @@ id: e7560816-e650-4fc4-886e-43d9b14ee558
 overview: Statamic is updated regularly, with an average release every other week. We never stop fixing bugs, adding features, and playing hopscotch with our adult neighbors. You can keep an eye on the [Changelog](https://statamic.com/changelog) or your Control Panel sidebar to see when new updates are available.
 ---
 
-## Method One: The Command Line {#cli}
+## Via Command Line {#cli}
 
 Statamic has a command line updater. Just run the following command...
 
@@ -14,7 +14,7 @@ php please update
 
 ...and that's it. It'll make a backup, download the latest release, swap out the files, and clean up after itself, unlike guests at your annual Christmas party.
 
-## Control Panel {#control-panel}
+## Via Control Panel {#control-panel}
 
 Statamic also has an updater in the Control Panel. When updates are available, users with Update permissions will see a badge in the sidebar nav with the number available. Clicking on that badge will take you to a magical, bountiful land flowing with updates and releases.
 
@@ -22,7 +22,7 @@ Statamic also has an updater in the Control Panel. When updates are available, u
     <img src="/assets/img/screenshots/cp-update-available.png" width="208" height="126">
 </div>
 
-## Manual Updates {#manual-updates}
+## DIY Manual Updates {#manual-updates}
 
 Manually updating involves the follow steps:
 
