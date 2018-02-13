@@ -43,7 +43,7 @@ Mounted Collections show up in the Page Tree of the Control Panel as an easy way
 If you'd like your Entries to inherit some default data, such as a default template, fieldset, or list of taxonomies, you can add that data to the Collections `folder.yaml` file. Each entry can **override** this data if you desire. Anything goes.
 
 ``` .language-yaml
-# /site/collections/blog/folder.yaml
+# /site/content/collections/blog/folder.yaml
 
 template: post
 show_comments: false
