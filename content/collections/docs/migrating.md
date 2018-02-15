@@ -162,7 +162,7 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 
 [addons]: /addons
 [assets]: /assets
-[collection]: /content-types#collections
+[collection]: /collections
 [content-types-guide]: /content-types
 [email]: mailto:gentlemen@statamic.com
 [leaflet]: http://leafletjs.com/
