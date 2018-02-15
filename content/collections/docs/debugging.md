@@ -213,12 +213,11 @@ There are a few utility modifiers that let you debug data without the need for t
 - [dump][dump]
 - [console_log][console_log]
 - [to_json][to_json]
-- [debug][debug] (okay we fibbed, this one _does_ use the Debug Bar)
 
 
 [tags]: /tags
 [carbon]: http://carbon.nesbot.com/
-[dump]: /modifiers#dump
+[dump]: /modifiers/dump
 [console_log]: /modifiers#console_log
 [debug]: /modifiers#debug
 [to_json]: /modifiers#to_json
