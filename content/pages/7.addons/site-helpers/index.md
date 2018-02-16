@@ -124,7 +124,7 @@ Filters inside a site helper work almost identically to how [Filters](/addons/cl
 
 ## Controllers {#controllers}
 
-You may have multiple controller classes, which can be used for the [Controller Routes](/docs/routing#controllers) feature.
+You may have multiple controller classes, which can be used for the [Controller Routes](/routing#controllers) feature.
 
 ```
 <?php
