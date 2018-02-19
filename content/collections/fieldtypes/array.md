@@ -88,3 +88,4 @@ Foreach tag:
 {{ foreach:address }}
     {{ key }}: {{ value }}
 {{ /foreach:addresss }}
+```
