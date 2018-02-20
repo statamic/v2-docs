@@ -47,9 +47,4 @@ rendered in the following order, as if they were all part of a single fieldset:
 - `meta_keywords`
 - `content`
 
-## Caveats
-
-Important things to note:
-
-- The field name of the partial **does not matter**. It will be replaced by the fields in the partial without any reference.
-- If your partial contains the same field names as in another, they will be overridden. Keep them unique.
+> Important Caveat: The field name of the partial does not matter **as long as it's unique.** It will be replaced by the fields in the partial without any reference to the original name.
