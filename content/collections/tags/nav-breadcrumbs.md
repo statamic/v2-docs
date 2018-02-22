@@ -51,11 +51,11 @@ Here's an example of what breadcrumbs might look like, as well as a code example
 ![img](/assets/img/other/breadcrumbs.png) {width=450}
 
 ``` php
-{{ nav:breadcrumbs }}
 <ul class="breadcrumbs">
+    {{ nav:breadcrumbs }}
     <li{{ if is_current }} class="current"{{ /if }}>
         <a href="{{ url }}">{{ title }}</a>
     </li>
+    {{ /nav:breadcrumbs }}
 </ul>
-{{ /nav:breadcrumbs }}
 ```
