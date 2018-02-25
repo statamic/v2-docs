@@ -22,7 +22,7 @@ This happens just once an hour, when logged into the Control Panel. Changing you
 ## ...because every website needs a license. {#one-domain}
 A Statamic license entitles you to use it on _one domain_. You will need to specify the domain you plan to use from the [license area of your Statamic Account][account]. This domain will be treated as a wildcard so you can use subdomains for locales, testing, and other purposes.
 
-This also means that you can only use the Control Panel from your _default_ locale.
+This also means that you can only use the Control Panel from your _default_ domain.
 
 If you attempt to use the site from another domain you will get a notification inside the Control Panel informing you that your key is being used on more than one site and be prompted to make the necessary changes. You may [change the domain][account] associated with a license at any time.
 
