@@ -82,7 +82,7 @@ Partials can only be used at the root level (ie. not within [Grid](/fieldtypes/g
 
 It's possible to have top-level fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
 
-> Note: Conditionals work on top-level fields only, not meta fields like Replicator, Bard, and Grid.
+> **Important:** Conditionals work on top-level fields only, not meta fields (fields that include other fields) like Replicator, Bard, and Grid.
 
 A simple example might be to show a field when a toggle is set to "on".
 
@@ -125,8 +125,6 @@ fields:
 
 - The `youtube_id` field will only be displayed when the `post_type` field has `video` selected.
 - The `image` field will only be displayed when the `post_type` value is `image`.
-
-> Note: Only top level fields can be conditional. (ie. Not within Grids or Replicators)
 
 ### Not Nulls {#not-null}
 
