@@ -48,7 +48,7 @@ If you're into that though, all the better. You can probably skip over the rest 
 
 [Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.test` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
 
-> Note: Valet supports the Statamic running in web root, but not in a subdirectory.
+> Valet only supports running in web root out of the box, but if you need to run in a subdirectory you should check out the LionsMouth [Valet Driver][valet-driver]
 
 ### Mac: MAMP/MAMP Pro {#mamp}
 
@@ -226,3 +226,4 @@ If you'd like to support multiple languages, head over to [Localization][localiz
 [localization]: /localization
 [v1-upgrade]: /migrating
 [cp]: /control-panel
+[valet-driver]: https://github.com/LionsMouthDigital/Laravel-Valet-Drivers
