@@ -30,7 +30,7 @@ $ 127.0.0.1:6379>
 If Redis isn't already installed on your server, or you want to get it running locally for testing, here are a few articles that can help:
 
 - [How to Install Redis with Homebrew on OSX](https://medium.com/@djamaldg/install-use-redis-on-macos-sierra-432ab426640e)
-- [How to Install Reis on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
+- [How to Install Redis on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
 
 ## Enabling Statamic's Redis Cache driver
 
