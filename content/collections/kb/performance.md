@@ -91,3 +91,9 @@ a few hundred lines. Looking at that example, it may already become obvious how 
     </body>  
 </html>
 ```
+
+## Use Redis
+
+[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system based on [YAML](/yaml), that is held in memory. This results in very fast I/O response times and lets you scale to much larger and handle heavier traffic. It's a perfect fit for taking Statamic to the next-level.
+
+[Learn how to enable Redis](/knowledge-base/redis-cache)

@@ -7,6 +7,7 @@ related_reading:
   - 102f8c10-9120-4a6e-a630-97050b494b89
   - 0b47d058-a8cc-41ec-9938-b9ef68c03d8d
   - e31e44d1-a82d-438d-9a8d-5a22fe4b76e3
+  - 302be45f-bd9d-4a26-b836-d0f5c84b4773
 id: ec91d09e-c5a4-447e-b5a2-fd6ee2d7f89a
 ---
 ## What is Redis?
