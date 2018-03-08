@@ -1,15 +1,16 @@
 ---
 title: Caching with Redis
+overview: If you find yourself in a situation with a huge site, small amount of memory, and static caching isn’t an option, using a Redis cache may be a great way to increase site performance.
 kb_categories:
   - Tips, Tricks, and How-Tos
 related_reading:
   - 102f8c10-9120-4a6e-a630-97050b494b89
   - 0b47d058-a8cc-41ec-9938-b9ef68c03d8d
+  - e31e44d1-a82d-438d-9a8d-5a22fe4b76e3
 id: ec91d09e-c5a4-447e-b5a2-fd6ee2d7f89a
 ---
-If you find yourself in a situation with a huge site, small amount of memory, and static caching isn't an option, using a Redis cache may be a great way to increase site performance.
-
-[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system, that is held in memory with very fast IO capabilities. It's a perfect choice for Statamic sites.
+## What is Redis?
+[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system based on [YAML](/yaml), that is held in memory with very fast IO capabilities. It's a perfect choice for Statamic sites.
 
 If you're not sure if you have Redis installed, you can run the following command from the command line.
 
