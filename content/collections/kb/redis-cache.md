@@ -10,7 +10,7 @@ related_reading:
 id: ec91d09e-c5a4-447e-b5a2-fd6ee2d7f89a
 ---
 ## What is Redis?
-[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system based on [YAML](/yaml), that is held in memory with very fast IO capabilities. It's a perfect choice for Statamic sites.
+[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system based on [YAML](/yaml), that is held in memory. This results in very fast I/O response times and lets you scale to much larger and handle heavier traffic. It's a perfect fit for taking Statamic to the next-level.
 
 If you're not sure if you have Redis installed, you can run the following command from the command line.
 
