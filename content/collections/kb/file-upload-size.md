@@ -1,5 +1,5 @@
 ---
-title: Configuring File Upload Size
+title: Configuring file upload size
 kb_categories:
   - Tips, Tricks, and How-Tos
 id: 51f8e44c-7be2-4af0-9ee2-941e2267e10a

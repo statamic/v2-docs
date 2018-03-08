@@ -1,5 +1,5 @@
 ---
-title: How can I increase performance?
+title: Performance Optimizing
 kb_categories:
   - Tips, Tricks, and How-Tos
 id: 302be45f-bd9d-4a26-b836-d0f5c84b4773
@@ -9,7 +9,7 @@ id: 302be45f-bd9d-4a26-b836-d0f5c84b4773
 We're continually making updates. We rarely try to make things slower as we go, so make sure to try to keep as
 up-to-date as possible.
 
-If you aren't already on at least 2.1, get on it! We made some drastic improvements under the hood.
+If you aren't already on at least 2.5, get on it! We made some drastic improvements under the hood.
 
 ## Prevent the Stache from always updating
 
