@@ -22,7 +22,7 @@ Each addon can have their own settings file located in `site/settings/addons/add
 
 ## Environment Specific {#environment}
 
-Sometimes is beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production. Or perhaps running some analytics javascript snippet only on production.
+Sometimes it is beneficial to have different settings depending on where you are running the site. For instance, enabling debug mode when in development, but not in production. Or perhaps running some analytics javascript snippet only on production.
 
 You can do this by overriding settings based on the environment you are serving the site.
 
