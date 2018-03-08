@@ -28,6 +28,33 @@ options:
     description: |
       _Experimental_. Enabling this option will allow you to author (and save) Markdown. The toolbar, toggle source button, and keyboard shortcuts will be disabled.
   -
+    name: spellcheck
+    type: boolean *true*
+    description: |
+      Enable contentEditable's automatic spellcheck.
+  -
+    name: target_blank
+    type: boolean *false*
+    description: |
+      Automatically add `target="_blank"` on links.
+  -
+    name: link_validation
+    type: boolean *false*
+    description: |
+      Check for common URL protocols on links.
+  -
+    name: paste
+    type: "yaml*"
+    description: |
+      Configure paste behavior. Use the [MediumEditor docs](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md#paste-options) as a reference.
+
+      **Default:**
+
+      ```.language-yaml
+      forcePlainText: false
+      cleanPastedHTML: true
+      ```
+  -
     name: container
     type: string
     description: >

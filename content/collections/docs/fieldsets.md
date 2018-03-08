@@ -80,9 +80,11 @@ Partials can only be used at the root level (ie. not within [Grid](/fieldtypes/g
 
 ## Conditional Fields {#conditional-fields}
 
-It's possible to have some fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
+It's possible to have top-level fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
 
-The most basic example would be to show a field with a toggle.
+> **Important:** Conditionals work on top-level fields only, not meta fields (fields that include other fields) like Replicator, Bard, and Grid.
+
+A simple example might be to show a field when a toggle is set to "on".
 
 ``` .language-yaml
 title: Blog Post
@@ -98,7 +100,7 @@ fields:
 
 If you don't need to toggle it but instead "just show" the author field, you may be interested in the [Revealer fieldtype](/fieldtypes/revealer).
 
-Here's another basic example using a select field:
+Here's another example using a select field:
 
 ``` .language-yaml
 title: Blog Post
@@ -123,8 +125,6 @@ fields:
 
 - The `youtube_id` field will only be displayed when the `post_type` field has `video` selected.
 - The `image` field will only be displayed when the `post_type` value is `image`.
-
-> Note: Only top level fields can be conditional. (ie. Not within Grids or Replicators)
 
 ### Not Nulls {#not-null}
 

@@ -46,9 +46,9 @@ If you're into that though, all the better. You can probably skip over the rest 
 
 <h3 id="valet">Mac: Laravel Valet <span class="bg-pink py-px px-1 rounded text-sm uppercase text-white">Our Favorite!</span></h3>
 
-[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.dev` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
+[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.test` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
 
-> Note: Valet supports the Statamic running in web root, but not in a subdirectory.
+> Valet only supports running in web root out of the box, but if you need to run in a subdirectory you should check out the LionsMouth [Valet Driver][valet-driver]
 
 ### Mac: MAMP/MAMP Pro {#mamp}
 
@@ -192,7 +192,7 @@ Technically there is no "install" process for Statamic, but we have a little too
 If you don't want to (or can't for some reason) use the GUI installer, here's what to do yourself:
 
 - [Create an admin user][create-user]
-- Log into the Control Panel at `yoursite.dev/cp`
+- Log into the Control Panel at `{yoursite}.{tld}/cp`
 - Visit your System settings (/cp/settings/system) and set/confirm your basic site settings
 
 ### There is no step 5. {#no-step-5}
@@ -226,3 +226,4 @@ If you'd like to support multiple languages, head over to [Localization][localiz
 [localization]: /localization
 [v1-upgrade]: /migrating
 [cp]: /control-panel
+[valet-driver]: https://github.com/LionsMouthDigital/Laravel-Valet-Drivers

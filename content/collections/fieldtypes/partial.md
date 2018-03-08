@@ -1,6 +1,6 @@
 ---
 title: Partial
-overview: Nest other fieldsets inside a fieldset.
+overview: Import fields from another fieldset.
 options:
   -
     name: fieldset
@@ -10,11 +10,9 @@ id: 2c61bce9-6671-4d54-bfde-6d02afc8f670
 ---
 ## Usage
 
-The purpose of this fieldtype is to allow you to create fieldset "partials" that you can include within a larger
-fieldset. This is handy when you want to reuse common fields throughout a number of other fieldsets.
+The Partial fieldset technically _isn't_ a Fieldset. It's a mechanism that allows you to import the fields from another Fieldset. This is handy when you want to reuse common fields throughout a number of other fieldsets, like a pile of metadata fields.
 
-A popular example is if you have a `blog_post.yaml`, a `page.yaml`, and you wanted to include some SEO meta fields
-in both of those. You could create a `seo.yaml`, and then reference that from within the other fieldsets.
+> You cannot use conditional logic on Fieldset Partials. They are imported and resolved before the logic is parsed. You can, however, add conditions on the contained fields themselves.
 
 ## Example
 
@@ -41,7 +39,7 @@ fields:
     type: text
 ```
 
-When using the `blog_post` fieldset on the publish page, the fields from the partial will be brought inline and 
+When using the `blog_post` fieldset on the publish page, the fields from the partial will be brought inline and
 rendered in the following order, as if they were all part of a single fieldset:
 
 - `title`
@@ -49,10 +47,4 @@ rendered in the following order, as if they were all part of a single fieldset:
 - `meta_keywords`
 - `content`
 
-## Caveats
-
-There are a couple of things worth noting:
-
-- The field name of the partial doesn't matter. It'll be replaced by the fields in the partial.
-- If your partial contains the same field names as in another, it will be overridden. It might be a good idea to
-  keep them unique.
+> **Important Caveat:** The field name of the partial does not matter _**as long as it's unique.**_ It will be replaced by the fields in the partial without any reference to the original name.

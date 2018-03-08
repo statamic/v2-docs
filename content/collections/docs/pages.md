@@ -13,11 +13,11 @@ id: eca58f56-9d97-40f8-9df0-b61b92e29722
 
 In the Control Panel, pages are represented by a navigation tree. They can be dragged around and reordered, which will be reflected in the URL structures of your site as well as your nav itself (if you're using the [Nav Tag][nav-tag]).
 
-![Control Panel Page Tree](/assets/img/screenshots/cp-page-tree.png)
+![Control Panel Page Tree](/assets/img/screenshots/cp-page-tree.jpg)
 
 Page files themselves are kept in `site/content/pages` and each consists of a folder and an `index.md` file.
 
-Their **order** is determined by the `order key` (a numbrer followed by a period) before the rest of the filename. The order key is stripped out of the URL automatically. You can set these order keys yourself on the file level, or order them via drag-and-drop in the Control Panel. The choice is yours, but the Control Panel is probably faster and simpler.
+Their **order** is determined by the `order key` (a number followed by a period) before the rest of the filename. The order key is stripped out of the URL automatically. You can set these order keys yourself on the file level, or order them via drag-and-drop in the Control Panel. The choice is yours, but the Control Panel is probably faster and simpler.
 
 Let's look at some examples.
 

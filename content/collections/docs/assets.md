@@ -168,7 +168,7 @@ However, you can't iterate over `top_secret_stuff` directly since it doesn't con
 {{ /top_secret_stuff }}
 ```
 
-Private assets may also have [their own data](#additional-data) which you can access using the [Assets tag][assets-tag] as mentioned earlier.
+Private assets may also have [their own data](#custom-data) which you can access using the [Assets tag][assets-tag] as mentioned earlier.
 
 
 ## Image Manipulation {#image-manipulation}

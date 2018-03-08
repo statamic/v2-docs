@@ -10,7 +10,7 @@ parameters:
     name: taxonomy
     type: string
     description: |
-      When referencing a list of term values, this is the taxonomy that you'd like to pull them from. 
+      When referencing a list of term values, this is the taxonomy that you'd like to pull them from.
       If you have a list of term IDs, this parameter is not necessary. [More details](/taxonomies#without-taxonomizing)
   -
     name: supplement_taxonomies
@@ -20,6 +20,7 @@ parameters:
       This has some performance overhead, so you may disable this for a speed boost if taxonomies aren't necessary.
 parameters_content: |
   The parameters are inherited from the [collection](/tags/collection) tag. Everything available there is available here.
+video: https://youtu.be/TkxvBIGzUr8
 id: dd9513b4-4cbb-4481-bf72-eb076e053b04
 ---
 

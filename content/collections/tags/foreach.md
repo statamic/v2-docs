@@ -1,60 +1,58 @@
 ---
 title: Foreach
-description: Iterate over an array with key/value pairs.
-overview: Iterate over an array with key/value pairs.
+parse_content: false
+overview: >
+  An array of named keys and values requires knowing those keys in order to access the data. This tag enables you to access them abstractly and save the day.
+description: Loop through the items of a named key/value array
 parameters:
-  - 
+  -
     name: as
-    type: 'string'
-    description: Defines the key/value variable names. Defaults to `key|value`.
-variables:
-  - 
-    name: key
     type: string
-    description: The key for each item in the array. The variable name can be changed from `key` to something else with the `as` parameter.
-  - 
-    name: value
-    type: mixed
-    description: The value for each item in the array. The variable name can be changed from `value` to something else with the `as` parameter.
-id: 4e5d8156-433a-48ce-985c-456634527a37
+    description: |
+      You can rename the `key|value` variables like so:
+      `as="song|rating"`
+id: 34b03d03-a113-467f-a1c9-65bc6b446220
 ---
-This tag is designed to loop over the key/value pairs in a simple named list.
+## Usage
 
-For example, you have a list of cooking temperatures, which you've defined on the fly with the [Array Fieldtype](/fieldtypes/array).
+Let's assume we have a bit of data stored in a nice and neat named array, perhaps created by the [Array fieldtype](/fieldtypes/array).
 
-``` .language-yaml
-cooking_temps:
-  Chicken: 165
-  Beef: 145
+Using the `foreach` tag you can pass the variable name into the second part of the tag call and loop through the data using `{{ key }}` and `{{ value }}`.
+
+```.language-yaml
+company_info:
+  Address 1: 123 Main Street
+  Address 2: Suite 404
+  City: Saratoga Springs
+  State: New York
+  Zip Code: 12866
+
+song_reviews:
+  Never Gonna Give You Up: 5/5
+  My Heart Will Go On: 3/5
 ```
 
-You can loop over them like this:
+```.language-template
+{{ foreach:company_info }}
+  {{ key }}: {{ value }}<br>
+{{ /foreach:company_info }}
 
-```
-{{ foreach:cooking_temps }}
-  {{ key }} should be cooked at {{ value }}°F
-{{ /foreach:cooking_temps }}
-```
-
-You may also use the `as` parameter to define the names of the variables. This may help make your templates more understandable.
-
-```
-{{ foreach:cooking_temps as="food|temperature" }}
-  {{ food }} should be cooked at {{ temperature }}°F
-{{ /foreach:cooking_temps }}
+<ul>
+  {{ foreach:song_reviews as="song|rating" }}
+    <li>{{ song }}: {{ rating }}</li>
+  {{ /foreach:song_reviews }}
+</ul>
 ```
 
-Or, you may just specify the value's variable name. The key will remain as `key`.
+```.language-output
+Address 1: 123 Main Street
+Address 2: Suite 404
+City: Saratoga Springs
+State: New York
+Zip Code: 12866
 
-```
-{{ foreach:cooking_temps as="temperature" }}
-  {{ key }} should be cooked at {{ temperature }}°F
-{{ /foreach:cooking_temps }}
+<li>Never Gonna Give You Up: 5/5</li>
+<li>My Heart Will Go On: 3/5</li>
 ```
 
-All of the above examples would render:
-
-``` .language-output
-Chicken should be cooked at 165°F
-Beef should be cooked at 145°F
-```
+> **Note:** PHP reserves the word `foreach`, so this tag is _technically_ an alias of `iterate`. If you're spelunking through the source code, that's where you'll find it.

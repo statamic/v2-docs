@@ -68,7 +68,7 @@ address:
 
 ## Templating {#templating}
 
-Since the data is saved as a simple key/value pair, you may use basic array access. Either as a tag pair:
+Since the data is saved as a simple key/value pair, you may use basic array access or the [Foreach](/tags/foreach) tag for output.
 
 ```
 {{ address }}
@@ -76,8 +76,16 @@ Since the data is saved as a simple key/value pair, you may use basic array acce
 {{ /address }}
 ```
 
-or nested variables:
+Nested variables:
 
 ```
 {{ address:street }} {{ address:city }} {{ address:country }}
+```
+
+Foreach tag:
+
+```
+{{ foreach:address }}
+    {{ key }}: {{ value }}
+{{ /foreach:addresss }}
 ```

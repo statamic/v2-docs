@@ -25,6 +25,7 @@ options:
     name: mode
     type: string *tags*
     description: "Available UI modes are `panes` and `tags`."
+video: https://youtu.be/TkxvBIGzUr8
 ---
 ## Relationship Types {#types}
 

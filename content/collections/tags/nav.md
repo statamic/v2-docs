@@ -18,6 +18,10 @@ parameters:
       levels to traverse, letting you build a
       multi-level nav.
   -
+    name: limit
+    type: integer
+    description: Limit the total items returned.
+  -
     name: show_unpublished
     type: 'boolean *false*'
     description: "Unpublished content is, by it's very nature, unpublished. That is, unless you show it by turning on this parameter."
