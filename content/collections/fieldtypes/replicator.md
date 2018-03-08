@@ -92,7 +92,7 @@ Use the tag pair syntax with an `if/else` conditions to style each set according
 
   {{ elseif type == "quote" }}
 
-    <setquote>{{ quote }}</setquote>
+    <blockquote>{{ text }}</blockquote>
     <p>— {{ cite }}</p>
 
   {{ elseif type == "image" }}
