@@ -25,6 +25,12 @@ options:
     description: >
       If set to `true`, navigation within the browser dialog will be disabled, and you
       will be restricted to the container and folder specified.
+  -
+    name: validate
+    type: string
+    description: >
+      A pipe delimited string of [validation rules](http://laravel.com/docs/5.1/validation#available-validation-rules), but you may also an `ext` rule to restrict extensions.
+      For example: `validate: "ext:jpg,gif"`
 
 id: d0c65546-74f1-4a15-89d5-1562a95ee2c6
 ---
