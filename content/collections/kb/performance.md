@@ -1,5 +1,5 @@
 ---
-title: How can I increase performance?
+title: Performance Optimizing
 kb_categories:
   - Tips, Tricks, and How-Tos
 id: 302be45f-bd9d-4a26-b836-d0f5c84b4773
@@ -9,7 +9,7 @@ id: 302be45f-bd9d-4a26-b836-d0f5c84b4773
 We're continually making updates. We rarely try to make things slower as we go, so make sure to try to keep as
 up-to-date as possible.
 
-If you aren't already on at least 2.1, get on it! We made some drastic improvements under the hood.
+If you aren't already on at least 2.5, get on it! We made some drastic improvements under the hood.
 
 ## Prevent the Stache from always updating
 
@@ -91,3 +91,9 @@ a few hundred lines. Looking at that example, it may already become obvious how 
     </body>  
 </html>
 ```
+
+## Use Redis
+
+[Redis](https://redis.io/) is a NoSQL key/value store, much like our flat file system based on [YAML](/yaml), that is held in memory. This results in very fast I/O response times and lets you scale to much larger and handle heavier traffic. It's a perfect fit for taking Statamic to the next-level.
+
+[Learn how to enable Redis](/knowledge-base/redis-cache)
