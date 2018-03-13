@@ -76,8 +76,6 @@ Note that not _every_ validation rule would be usable in Statamic. For instance,
 
 It's fairly common to want to repeat certain fields across multiple fieldsets. In this case, you may use the [Partial fieldtype](/fieldtypes/partial) to include another fieldset. Any of the partial fieldset's fields will be included where you specify.
 
-Partials can only be used at the root level (ie. not within [Grid](/fieldtypes/grid) or [Replicator](/fieldtypes/replicator) fields).
-
 ## Conditional Fields {#conditional-fields}
 
 It's possible to have top-level fields be displayed only under certain conditions. You may specify various rules under either the `show_when` or `hide_when` keys.
