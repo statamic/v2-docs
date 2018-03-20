@@ -6,9 +6,9 @@ kb_categories:
   - Tips, Tricks, and How-Tos
 ---
 ## Filesystems?
-Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem](http://flysystem.thephpleague.com/). By breaking the application structure into siloed locations, each with it's own filesystem, we gain the ability to physically put these files in more locations (Amazon S3 for example) than a single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
+Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem](http://flysystem.thephpleague.com/). By breaking the application structure into siloed locations, each with its own filesystem, we gain the ability to physically put these files in more locations (Amazon S3 for example) than a single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
 
-Statamic has 5 core filesystems, each with it's own 'root':
+Statamic has 5 core filesystems, each with its own 'root':
 
 - Server
 - Content
@@ -37,7 +37,7 @@ Here's a simplified version of what you see in a freshly unzipped Statamic insta
 ### Content and Storage
 The content and storage filesystems' roots will be `site/content` and `site/storage`, respectively.
 
-A common use case for moving something outside of the default webroot is to have a publicly accessible repo for _just_ content, keeping the rest of the site private. In fact, these docs do that very thing.
+A common use case for moving something outside of the default webroot is to have a publicly-accessible repo for _just_ content, keeping the rest of the site private. In fact, these docs do that very thing.
 
 ### Users
 The users filesystem's root will be `site/users`.
@@ -47,13 +47,13 @@ Since you may potentially have many users, or wish the keep your celebrity gossi
 ### Themes
 The themes filesystem's root will be `site/themes`.
 
-The theme folder needs to be publicly accessible, so we've added a `url` value here too. This will let Statamic know
+The themes folder needs to be publicly accessible, so we've added a `url` value here too. This will let Statamic know
 how to access that folder from the browser. We'll use that for links to stylesheets, etc.
 
 ### Asset containers
-Each asset container gets their own filesystem. Now you can put them on S3, for example.
+Each asset container gets its own filesystem. Now you can put them on S3, for example.
 
-The sample asset container included with Statamic will have it's filesystem root set to `assets`.
+The sample asset container included with Statamic will have its filesystem root set to `assets`.
 
 ### Server
 The server filesystem is used for finding any files that aren't moveable, those that need to always be on your server for the application to function. We'll use this filesystem for accessing settings, application files, and whatever else we didn't feel like typing out here because it doesn't and shouldn't matter to you.
@@ -97,7 +97,7 @@ To relocate a filesystem, simply change the `root` variable to one of the follow
 
 ## Accessing files
 
-To manipulate each filesystem, we'll use the `Statamic\API\File` or `Statamic\API\Folder` classes and specify a
+To manipulate each filesystem, we'll use the `Statamic\API\File` or `Statamic\API\Folder` class and specify a
 `disk` depending on which one we want to access. If a disk isn't specified, the main filesystem will be used.
 
 When passing paths into methods, you'll want to treat them as relative to the filesystem you're using.
