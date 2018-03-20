@@ -9,7 +9,7 @@ Statamic comes bundled with everything in the root folder, intended to be placed
 
 While things like `.htaccess` and `nginx.conf` files can ensure important files aren't accessible, it's always possible
 that those things are forgotten or misconfigured. Taking the extra step to place the folders out of reach entirely
-will give you that additional piece of mind.
+will give you that additional peace of mind.
 
 **tl;dr** [Here's a summary of the steps](#summary).
 
