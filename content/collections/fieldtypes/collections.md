@@ -13,7 +13,17 @@ image: /assets/fieldtypes/collections.png
 video: https://youtu.be/TkxvBIGzUr8
 id: 44c3da60-ef47-408e-afc4-a33026c86f5d
 ---
-## Data Structure {#data-structure}
+## Usage
+
+This fieldtype is used to view and select from a list of Collections.
+
+```.language-yaml
+fields:
+  my_collections_field:
+    type: collections
+```
+
+## Data Structure
 
 The Collections fieldtype is a [Relate fieldtype](/fieldtypes/relate), and will save the collections as their handles (the folder name).
 

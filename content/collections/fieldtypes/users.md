@@ -17,7 +17,18 @@ options:
     description: >
       The maximum number of users than can be selected. By default (blank) there is no limit. Setting to `1` will save the value as a `string` instead of an `array` and will switch to a select dropdown UI.
 ---
-## Data Structure {#data-structure}
+## Usage
+
+This fieldtype is used to view a list of Users, generally to establish who authored a given entry or page. Setting the default to `current` will use the currently logged in User.
+
+```.language-yaml
+fields:
+  author:
+    display: Author
+    type: users
+```
+
+## Data Structure
 
 The Users fieldtype is a [Relate fieldtype](/fieldtypes/relate), which means the users will be saved as IDs.
 
@@ -27,7 +38,7 @@ jedis:
   - 134jk1h78dfas
 ```
 
-## Templating {#templating}
+## Templating
 
 Use the [Relate tag](/tags/relate) to loop through the IDs and fetch the user data.
 

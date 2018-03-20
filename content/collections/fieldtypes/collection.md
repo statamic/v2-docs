@@ -15,7 +15,19 @@ options:
       entries from.
 id: 0e7eb069-dc0c-4dfd-9230-67ca5d215395
 ---
-## Data Structure {#data-structure}
+## Usage
+
+This fieldtype is used to view a list of Entries from one or more Collections, much like a "Related Articles" use case.
+
+```.language-yaml
+fields:
+  my_collection_field:
+    display: Related Articles
+    type: collection
+    collection: blog
+```
+
+## Data Structure
 
 The Collections fieldtype is a [Relate fieldtype](/fieldtypes/relate), which means the Entries will be saved as IDs.
 

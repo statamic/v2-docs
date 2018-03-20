@@ -15,9 +15,20 @@ extends: 9dd58c40-6e33-49c8-83fa-61a69f6371be
 video: https://youtu.be/TkxvBIGzUr8
 id: db75755f-f1b8-4281-8995-2723dd92d967
 ---
-## Data Structure {#data-structure}
+## Usage
 
-The Pages fieldtype is a [Relate fieldtype](/fieldtypes/relate), which means the Pages will be saved as IDs.
+This fieldtype is used to view a list of Pages and select one or more of them. You can choose a parent to start from, listing only its child pages. You can also control the depth it will include in your list (e.g. subpage, sub-subpages, etc).
+
+```.language-yaml
+fields:
+  my_pages_field:
+    display: Link to Page
+    type: pages
+```
+
+## Data Structure
+
+The Pages fieldtype is a [Relate fieldtype](/fieldtypes/relate), which means the data will be saved as content IDs.
 
 ``` .language-yaml
 pages:
