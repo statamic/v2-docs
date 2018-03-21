@@ -31,7 +31,7 @@ php please make:asset-container
 
 ## Managing Assets {#managing-assets}
 
-Any files placed within an container's directory will be recognized and treated as assets. Subfolders are supported. Organize however you'd like.
+Any files placed within a container's directory will be recognized and treated as assets. Subfolders are supported. Organize however you'd like.
 
 You can reference assets within your content by using its URL. For example:
 
