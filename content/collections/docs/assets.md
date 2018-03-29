@@ -194,6 +194,12 @@ The appropriate way to generate these URLs in your templates is by using the [Gl
          width="100" height="100" }}
 ```
 
+Or if you have a variable that references an image (let's call it `image_var`), you can simplify your tag like this:
+
+```
+{{ glide:image_var width="100" height="100" }}
+```
+
 The Glide tag can also accept asset IDs for private assets, and even external URLs. It's quite handy!  
 Visit the [Glide Tag's docs][glide-tag] for more details.
 
