@@ -157,9 +157,20 @@ Here we'll send two emails for every submission of this form. One will go to the
 The first one uses a Statamic template, the other gets an "automagic" email. The automagic email will be a simple
 list of all the fields and values in the submission.
 
-### Setting the "Reply To" {#setting-the-reply-to}
+### Setting the Recipient Dynamically {#setting-recipient-dynamically}
 
-If you want to set the `reply_to` to be the user submitting the form, you can configure that quite simply. Assuming you have a form input with `name="email"`:
+You can set the recipient to an address submited in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
+
+``` .language-yaml
+email:
+  -
+    to: "{{ email }}"
+    # other settings here
+```
+
+### Setting the "Reply To" Dynamically {#setting-reply-to-dynamically}
+
+You can set the "reply to" to an address submited in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
 
 ``` .language-yaml
 email:
