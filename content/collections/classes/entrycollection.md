@@ -66,5 +66,5 @@ $collection->removeAfter('+1 week')->all(); // [$before1, $before2]
 ```
 
 
-[contentcollection]: /addons/classes/contentcollection
-[datacollection]: /addons/classes/datacollection
+[contentcollection]: /addons/api/contentcollection
+[datacollection]: /addons/api/datacollection

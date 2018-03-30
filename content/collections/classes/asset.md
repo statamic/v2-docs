@@ -3,7 +3,7 @@ class: Statamic\Assets\Asset
 title: Asset
 id: 2ad8dfad-17d0-46b8-8356-87f14f9081f6
 ---
-Inheritance: [Data](/addons/classes/data)
+Inheritance: [Data](/addons/api/data)
 
 ## driver
 

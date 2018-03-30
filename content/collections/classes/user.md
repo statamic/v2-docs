@@ -3,7 +3,7 @@ class: Statamic\Data\Users\User
 title: User
 id: 57156605-8761-42f3-8a7f-97b61cd70441
 ---
-Inheritance: [Data](/addons/classes/data)
+Inheritance: [Data](/addons/api/data)
 
 ## username
 
