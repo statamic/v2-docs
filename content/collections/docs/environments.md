@@ -56,7 +56,7 @@ When interpolating, make sure to wrap your value in quotes.
 
 ### Option 2: Environment files {#option-environment-files}
 
-The second option is to leverage an environment system settings file, located in `site/settings/environments/`. Each `yaml` file here becomes an environment name, and any data defined here is added to the [cascade][/cascade] when running in that specific environment.
+The second option is to leverage an environment system settings file, located in `site/settings/environments/`. Each `yaml` file here becomes an environment name, and any data defined here is added to the [cascade](/cascade) when running in that specific environment.
 
 For instance:
 
