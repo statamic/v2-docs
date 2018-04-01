@@ -174,7 +174,7 @@ With over [130 modifiers][modifiers] the number of possibilities are too hard to
 Let's elaborate on the pigeon example and sort the list by experience before limiting it.
 
 ```
-{{ pigeons sort="missions" limit="2" }}
+{{ pigeons sort="missions:desc" limit="2" }}
   {{ name }} has {{ missions }} successful carries.
 {{ /pigeons }}
 ```
