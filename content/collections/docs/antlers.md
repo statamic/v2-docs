@@ -78,7 +78,7 @@ Love,
 Benedict
 ```
 
-If you’ve been following along you may have noticed Benedict’s classic blunder. He forget to set a name for his recipient. Later we’ll suggest some ways to make his template a little smarter and establish some fallbacks, but for now? Mission accomplished with only one minor issue, an extraneous space.
+If you’ve been following along you may have noticed Benedict’s classic blunder. He forgot to set a name for his recipient. Later we’ll suggest some ways to make his template a little smarter and establish some fallbacks, but for now? Mission accomplished with only one minor issue, an extraneous space.
 
 
 ### Multidimensional Arrays {#multidimensional-arrays}
