@@ -12,7 +12,7 @@ quote: You can't wait for inspiration. *You have to go after it with a club.*
 ```
 
 ```
-{{ quote | markdown }}
+{{ quote | textile }}
 ```
 
 ```.language-output
