@@ -118,14 +118,14 @@ When parsed, the data will be converted into typical indexed arrays:
 
 ```language-php
 $shopping_list = [
-    [0] => "sunglasses",
-    [1] => "sandals",
-    [2] => "spinning beach ball"
+    0 => "sunglasses",
+    1 => "sandals",
+    2 => "spinning beach ball"
 ];
 
 $layaway = [
-    [0] => "aloe vera",
-    [1] => "winter coat"
+    0 => "aloe vera",
+    1 => "winter coat"
 ];
 ```
 
@@ -139,8 +139,8 @@ antisocial:
 
 ```language-php
 $antisocial = [
-    ["facebook"] => "http://facebook.com/statamic",
-    ["twitter"] => "http://twitter.com/statamic"
+    "facebook" => "http://facebook.com/statamic",
+    "twitter" => "http://twitter.com/statamic"
 ];
 ```
 
@@ -179,13 +179,13 @@ Look at how pretty that data is.
 
 ```language-php
 $students = [
-    [0] => [
-        ["name"] => "Abed Nadir",
-        ["school"] => "Greendale"
+    0 => [
+        "name" => "Abed Nadir",
+        "school" => "Greendale"
     ],
-    [1] => [
-        ["name"] => "Troy Barnes",
-        ["school"] => "Greendale"
+    1 => [
+        "name" => "Troy Barnes",
+        "school" => "Greendale"
     ]
 ];
 ```
