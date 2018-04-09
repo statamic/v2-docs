@@ -22,7 +22,7 @@ Any additional parameters you specify in the widget config will be available as 
 ``` .language-yaml
 widgets:
   -
-    type: widget
+    type: template
     template: bacon
     cooking_method: fried
 ```
