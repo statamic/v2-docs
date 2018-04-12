@@ -46,7 +46,12 @@ variables:
   -
     name: url
     type: string
-    description: "The URL to the asset."
+    description: "The URL of the asset, relative to webroot."
+
+  -
+    name: permalink
+    type: string
+    description: "The absolute URL of the asset, including domain."
   -
     name: title
     type: string
