@@ -47,7 +47,7 @@ If you've defined a container level fieldset, you may still override it on the c
 
 ### Naming fields {#naming}
 
-You can name your fields any way you choose, but each field name needs to be unique. You cannot use hyphens, but underscores are okay.
+You can name your fields any way you choose, but each field name needs to be unique. You cannot use hyphens, but underscores are okay. Also, note that `content` as a name is reserved for markdowns only.
 
 ### Required field settings {#required-settings}
 
