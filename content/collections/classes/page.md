@@ -3,7 +3,7 @@ class: Statamic\Data\Pages\Page
 title: Page
 id: 41d42ed3-628a-4f90-a7ef-e1b81e970808
 ---
-Inheritance: [Content](/addons/classes/content) > [Data](/addons/classes/data)
+Inheritance: [Content](/addons/api/content) > [Data](/addons/api/data)
 
 ## hasEntries
 

@@ -3,7 +3,7 @@ title: PageFactory
 class: Statamic\Data\Pages\PageFactory
 id: d64d4654-939e-47f4-90a1-b44a4978f0aa
 ---
-Inheritance: [ContentFactory](/addons/classes/contentfactory)
+Inheritance: [ContentFactory](/addons/api/contentfactory)
 
 ## Usage
 

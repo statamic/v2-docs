@@ -3,7 +3,7 @@ class: Statamic\Data\Content\Content
 title: Content
 id: b8e862ac-f057-4a3c-9e8f-f2e13029c789
 ---
-Inheritance: [Data](/addons/classes/data)
+Inheritance: [Data](/addons/api/data)
 
 The `Content` class is an abstract class that encompasses the 4 content types that are meant to be published and/or viewed on the front-end of the website. These are `Page`, `Entry`, `Term`, and `GlobalSet`.
 

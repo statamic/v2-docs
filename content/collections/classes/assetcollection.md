@@ -31,5 +31,5 @@ This is just like a [DataCollection][datacollection]'s `toArray` method, except 
 files, they will be filtered out from the array.
 
 
-[contentcollection]: /addons/classes/contentcollection
-[datacollection]: /addons/classes/datacollection
+[contentcollection]: /addons/api/contentcollection
+[datacollection]: /addons/api/datacollection

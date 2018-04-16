@@ -3,7 +3,7 @@ class: Statamic\Data\Taxonomies\Term
 title: Term
 id: 1ec6a8eb-3e90-4302-8cc2-5048dd663e6d
 ---
-Inheritance: [Content](/addons/classes/content) > [Data](/addons/classes/data)
+Inheritance: [Content](/addons/api/content) > [Data](/addons/api/data)
 
 ## taxonomy
 
