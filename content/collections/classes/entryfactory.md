@@ -3,7 +3,7 @@ title: EntryFactory
 class: Statamic\Data\Entries\EntryFactory
 id: bd8de4ec-bbf5-4095-8673-8d9343ee67ae
 ---
-Inheritance: [ContentFactory](/addons/classes/contentfactory)
+Inheritance: [ContentFactory](/addons/api/contentfactory)
 
 ## Usage
 

@@ -105,4 +105,4 @@ $collection->filterByTaxonomy(123)->all(); // [$entry1]
 
 
 
-[datacollection]: /addons/classes/datacollection
+[datacollection]: /addons/api/datacollection

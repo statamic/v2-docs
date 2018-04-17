@@ -3,7 +3,7 @@ class: Statamic\Data\Entries\Entry
 title: Entry
 id: ed652d64-282d-40b7-9443-4ae72f8289b8
 ---
-Inheritance: [Content](/addons/classes/content) > [Data](/addons/classes/data)
+Inheritance: [Content](/addons/api/content) > [Data](/addons/api/data)
 
 ## collection
 

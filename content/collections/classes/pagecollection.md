@@ -24,5 +24,5 @@ $collection = collect_pages([1, 2, 3]);
 This class currently has no additional methods.
 
 
-[contentcollection]: /addons/classes/contentcollection
-[datacollection]: /addons/classes/datacollection
+[contentcollection]: /addons/api/contentcollection
+[datacollection]: /addons/api/datacollection
