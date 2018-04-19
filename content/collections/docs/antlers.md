@@ -221,7 +221,7 @@ You can actually use Array style on strings, but String Style on arrays is reall
 
 If this, then that. Do this unless something else. _If chicken wings then party_. Statamic has a full set of conditional operators to let you build as much logic as you need into your templates.
 
-Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They serve the same purpose but are logical mirrors of each other. Where `if` only renders when a condition matches, `unless` renders _unless_ it matches. Use whichever makes your templates easiest to read.
+Conditions come in two basic flavors, `if/else` and `unless/else`. They serve the same purpose but are logical mirrors of each other. Where `if` only renders when a condition matches, `unless` renders _unless_ it matches. Use whichever makes your templates easiest to read.
 
 ```
 {{ if }} {{ /if }}
@@ -230,7 +230,7 @@ Conditions come in two basic flavors, `if/else` and `unless/unlesselse`. They se
 {{ if }} {{ elseif }} {{ else }} {{ /if }}
 
 {{ unless }} {{ /unless }}
-{{ unless }} {{ unlesselse }} {{ /unless }}
+{{ unless }} {{ else }} {{ /unless }}
 ```
 
 Conditions are converted to, and therefore behave just like, PHP expressions. You can use any of PHP’s [comparison][comparison] and [logical][logical] operators.
