@@ -108,7 +108,7 @@ If you are using the Algolia driver we recommend using a Javascript implementati
 
 Here's a couple of links to get you started:
 
-- [Free Algolia Signup](https://www.algolia.com/referrals/36eaab9b/join)
+- [Free Algolia Signup](https://www.algolia.com/)
 - [Algolia JavaScript docs](https://www.algolia.com/doc/javascript)
 - [Algolia demos](https://www.algolia.com/demos)
 
