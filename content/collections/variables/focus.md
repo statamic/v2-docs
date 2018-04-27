@@ -3,7 +3,7 @@ types:
   - asset
 id: d61d8f8c-4e7e-4933-8f34-0cdba2a3ee82
 ---
-The focal point of the asset, if one has been set.
+The focal point of the asset, defaulting to center (`50-50`).
 
 ```
 {{ focus }}
