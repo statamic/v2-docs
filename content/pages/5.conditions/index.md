@@ -45,6 +45,22 @@ details:
     type: string
     description: Checks if a field doesn't end with a given string.
   -
+    name: greater_than|gt
+    type: mixed
+    description: Checks if a field is greater than a value.
+  -
+    name: less_than|lt
+    type: mixed
+    description: Checks if a field is less than a value.
+  -
+    name: greater_than_or_equal_to|gte
+    type: mixed
+    description: Checks if a field is greater than or equal to a value.
+  -
+    name: less_than_or_equal_to|lte
+    type: mixed
+    description: Checks if a field is less than or equal to a value.
+  -
     name: matches|match|regex
     type: regex
     description: Checks if a field matches a given regular expression.
