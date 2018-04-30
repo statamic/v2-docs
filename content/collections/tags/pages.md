@@ -33,6 +33,11 @@ parameters:
     type: integer *1*
     description: How deep to traverse the hierarchy to find child pages.
   -
+    name: filter
+    type: wizardry
+    description: >
+      Filter pages using a special conditions syntax, the same as the [Collections tag](/tags/collection). View the [available conditions](/conditions).
+  -
     name: supplement_taxonomies
     type: boolean *true*
     description: >
