@@ -72,6 +72,71 @@ This would make the field required, ensure only alpha-numeric characters and das
 
 Note that not _every_ validation rule would be usable in Statamic. For instance, the database rules (exists, unique, etc) would not apply since we do not use a database.
 
+## Sections [Since 2.9.0] {#sections}
+
+You may organize your fields into sections, which will be displayed as tabs on the publish page.
+
+Instead of having a top level `fields` key as explained above, you should have a top level `sections` key, and each one will have its own `fields`. For example:
+
+``` .language-yaml
+title: My Fieldset
+sections:
+  main:
+    display: Main
+    fields:
+      field_1:
+        type: text
+      etc:
+        ...
+  another:
+    display: Another
+    fields:
+      field_3:
+        ...
+```
+
+### Sidebar section
+
+By naming one of your sections `sidebar`, it will be treated as one (when your browser is wide enough).
+When your browser is no wide enough to display the sidebar, it will just become another tab. You are free to rename your sidebar section by customizing the `display` key.
+
+``` .language-yaml
+sections:
+  main:
+    fields: ...
+  sidebar:
+    display: Meta Fields
+    fields: ...
+```
+
+Without a sidebar, the other sections will become full width. You may prefer it this way!
+
+### Meta Fields
+
+There are some special meta fields that may be automatically be added to your fieldset if you havent explicitly defined them.
+
+- If you haven't defined a `title` field, one will be added to the top of your first section.
+- A `slug` field will be added to the sidebar for almost all publishable content.
+- A `date` field will be added to the sidebar if you are editing a date-based collection.
+- When editing an entry, [a field for every taxonomy](/taxonomies) will be added to the sidebar.
+
+You are free to add these fields to any section.
+
+``` .language-yaml
+sections:
+  main:
+    fields:
+      title:
+        display: Post Title
+      slug:
+        display: Post Slug
+      date:
+        display: Publish Date
+      categories:
+        type: taxonomy
+        taxonomy: categories
+```
+
 ## Reusing fields across fieldsets {#partials}
 
 It's fairly common to want to repeat certain fields across multiple fieldsets. In this case, you may use the [Partial fieldtype](/fieldtypes/partial) to include another fieldset. Any of the partial fieldset's fields will be included where you specify.
