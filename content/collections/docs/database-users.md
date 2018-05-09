@@ -14,12 +14,6 @@ You may choose to store users in a traditional database using the [Eloquent](#el
 
 ### Installation {#eloquent-installation}
 
-Enable the driver in your `site/settings/users.yaml` file:
-
-``` .language-yaml
-driver: eloquent
-```
-
 In your `.env` file, add the following variables and customize as necessary:
 
 ```
@@ -44,6 +38,12 @@ Make sure the database you specified in your `.env` file exists and run the migr
 
 ```
 php please migrate
+```
+
+Finally, enable the driver in your `site/settings/users.yaml` file:
+
+``` .language-yaml
+driver: eloquent
 ```
 
 ### OAuth {#eloquent-oauth}
