@@ -277,41 +277,26 @@ You will still need to add `show="all"` when using the [Taxonomy tags][taxonomy-
 
 By default, a field for each taxonomy will be displayed in the sidebar of the entry publish page.
 
-You can customize what's displayed by adding a `taxonomies` key to your fieldset. For example:
+You can disable this by adding `taxonomies: false` to your fieldset:
 
 ``` .language-yaml
 title: Post
 fields: [...]
-taxonomies: [...]
-```
-
-To show _no_ taxonomy fields, set it to `false`:
-
-``` .language-yaml
 taxonomies: false
 ```
 
-To define which taxonomies should be displayed, without any additional configuration, supply a list of taxonomy handles:
+If you would like certain taxonomies to be displayed, simply add as many `taxonomy` fields that you need, wherever you want.
+Be sure to name your field **exactly** the same name as the taxonomy, [as explained above](#taxonomizing).
 
 ``` .language-yaml
-taxonomies:
-  - tags
-  - categories
+fields:
+  categories:
+    type: taxonomy
+    taxonomy: categories
 ```
 
-You can customize them just like any other field:
-
-``` .language-yaml
-taxonomies:
-  tags:
-    max_items: 1
-  categories: true  # no configuration needed, but still want it shown
-```
-
-Note:
-
-- If you customize one field, you **must** at the very least specify `true` for the others.
-- Specifying `type: taxonomy` is not required.
+If you leave the automatic-appending option on (by not adding `taxonomies: false`) then Statamic will notice that you've added a 
+taxonomy field, and prevent it from being automatically re-appended in the sidebar.
 
 
 ## Using terms without taxonomizing {#without-taxonomizing}
