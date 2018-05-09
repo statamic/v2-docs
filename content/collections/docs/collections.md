@@ -38,6 +38,8 @@ Mounted Collections show up in the Page Tree of the Control Panel as an easy way
 
 ![Control Panel Collection](/assets/img/screenshots/cp-collection.png)
 
+> You may customize the columns in this listing. [Find out how](/control-panel#customizing-listing-columns)
+
 ## Collection-Level Defaults
 
 If you'd like your Entries to inherit some default data, such as a default template, fieldset, or list of taxonomies, you can add that data to the Collections `folder.yaml` file. Each entry can **override** this data if you desire. Anything goes.

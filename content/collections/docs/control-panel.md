@@ -78,3 +78,37 @@ Statamic will automatically load `site/helpers/cp/override.css` if it exists. Yo
 ## Adding custom JavaScript {#adding-custom-javascript}
 
 Statamic will automatically load `site/helpers/cp/scripts.js` if it exists. This could be a good place to add things like custom field conditions.
+
+## Customizing Listing Columns
+
+By default when listing entries and taxonomy terms, Statamic will give you a set of sensible default columns like title, slug, and date.
+You are free to customize these.
+
+![Control Panel Collection](/assets/img/screenshots/cp-collection.png)
+
+You may add a `columns` array to a collection's `folder.yaml` or a taxonomy's `taxonomyname.yaml` file. This array may contain a list of fields to display:
+
+``` .language-yaml
+columns:
+  - title
+  - slug
+```
+
+You may also use a nested array to have finer-grained control over each column.
+
+``` .language-yaml
+columns:
+  - title
+  - value: slug         # The field name used for the values. The only required key.
+    extra: true         # Extra fields will become hidden on mobile to save space.
+    width: 25           # The width, as a percent.
+    header: "The Slug"  # The header text if the field name isn't quite what you need.
+```
+
+Finally, you may use a dot-notated field to display a value through a relationship. For example, if you have a `related_post` field, it would normally just show the ID. You can use `related_post.title` to show the `title` of the related post.
+
+``` .language-yaml
+columns:
+  - title
+  - related_post.title
+```
