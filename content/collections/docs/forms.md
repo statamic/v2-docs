@@ -159,7 +159,7 @@ list of all the fields and values in the submission.
 
 ### Setting the Recipient Dynamically {#setting-recipient-dynamically}
 
-You can set the recipient to an address submited in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
+You can set the recipient to an address submitted in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
 
 ``` .language-yaml
 email:
