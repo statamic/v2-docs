@@ -110,7 +110,7 @@ Addons are structured pretty differently in v2. Chances are [porting one][addons
 
 ### The Control Panel {#control-panel}
 
-The [Control Panel](control-panel) is now accessible at `/cp` instead of `admin.php`. If youwan to rename it, you can do so in your `index.php` file.
+The [Control Panel](control-panel) is now accessible at `/cp` instead of `admin.php`. If you want to rename it, you can do so in your `index.php` file.
 
 
 ## New Defaults {#new-defaults}
