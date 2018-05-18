@@ -105,10 +105,19 @@ columns:
     header: "The Slug"  # The header text if the field name isn't quite what you need.
 ```
 
-Finally, you may use a dot-notated field to display a value through a relationship. For example, if you have a `related_post` field, it would normally just show the ID. You can use `related_post.title` to show the `title` of the related post.
+You may use a dot-notated field to display a value through a relationship. For example, if you have a `related_post` field, it would normally just show the ID. You can use `related_post.title` to show the `title` of the related post.
 
 ``` .language-yaml
 columns:
   - title
   - related_post.title
+```
+
+Finally, you may display thumbnails for asset fields. Do this in the same way as a relationship. You may specify a display field as well as a fallback field.
+
+``` .language-yaml
+columns:
+  - hero_image.alt           # Show the alt text, and fall back to the URL by default.
+  - hero_image.alt.filename  # Show the alt text, and fall back to the filename.
+  - hero_image.null          # Show no label. Just the image.
 ```
