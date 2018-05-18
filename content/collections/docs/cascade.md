@@ -32,13 +32,11 @@ the parent. For example, the entries (red) display their titles using `{{ title 
 `{{ title }}` would output `Speeder Bikes, Wookies, and Ewoks`, where outside that loop, `{{ title }}` would output
 `My First Day`.
 
-## Fighting the Cascade {#fighting-the-cascade}
+## Bypassing the Cascade {#bypassing-the-cascade}
 
-More often than not, the Cascade is a wonderful thing. However, sometimes it hinders us.
+The Cascade can be a wonderfully useful thing, until you'd rather go around it. For example, when dealing with "missing" fields inside loops.
 
-The most classic example is dealing with missing fields when inside a loop.
-
-In our example, the `page` contains a `tags` field for showing taxonomy terms. If we were to try to use the `tags` field
+In this example, the `page` contains a `tags` field for showing taxonomy terms. If we were to try to use the `tags` field
 in the collection loop (red), and one of the entries didn't have a `tags` field, it would actually use the `tags` from
 the `page` scope.
 
@@ -53,7 +51,7 @@ explicitly "scope" the variables.
 {{ /collection:blog }}
 ```
 
-The other popular example of fighting against the cascade is when you _want_ to access a parent variable. For example,
+The other popular example of bypassing the cascade is when you _want_ to access a parent variable. For example,
 when you're in a collection loop and you'd like to get a value in the `page` scope.
 
 Well, variables in the `page` scope _are_ actually aliased into the `page` variable. So at any point, you can access
