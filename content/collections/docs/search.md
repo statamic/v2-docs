@@ -59,7 +59,7 @@ like field weighting, typo tolerance, etc – we recommend using the Algolia dri
 
 ### Algolia {#algolia-driver}
 
-[Algolia](https://www.algolia.com/referrals/36eaab9b/join) is a popular search service. It is lightning fast and highly customizable.
+[Algolia](https://www.algolia.com) is a popular search service. It is lightning fast and highly customizable.
 
 To enable the Algolia driver (first make sure you have an account) head to the `Settings > Search` page, select `algolia`, and enter your API credentials.
 
