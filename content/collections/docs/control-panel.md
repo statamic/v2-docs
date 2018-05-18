@@ -103,6 +103,7 @@ columns:
     extra: true         # Extra fields will become hidden on mobile to save space.
     width: 25           # The width, as a percent.
     header: "The Slug"  # The header text if the field name isn't quite what you need.
+    link: true          # Whether the text should link to the item.
 ```
 
 You may use a dot-notated field to display a value through a relationship. For example, if you have a `related_post` field, it would normally just show the ID. You can use `related_post.title` to show the `title` of the related post.
