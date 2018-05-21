@@ -168,7 +168,7 @@ The Blade view should place the JSON encoded data in the `Statamic.Publish.conte
              content-type="entry"
              submit-url="{{ $submitUrl }}"
              id="{{ $id }}"
-             :extra='{"collection": "blog"}'
+             extra='{"collection": "blog"}'
              :remove-title="true"
     ></publish>
 
