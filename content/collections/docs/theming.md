@@ -301,7 +301,7 @@ Here are a few good ideas to consider when building a theme, some of them a summ
 - When sharing, distributing, or selling a theme, feel free to include a directory for `site/content` showing sample posts and pages that use your theme’s templates, etc.
 
 
-[blade]: http://laravel.com/reference/blade
+[blade]: https://laravel.com/docs/5.1/blade
 [assets]: /assets
 [templating]: /antlers
 [partials]: /tags/partial

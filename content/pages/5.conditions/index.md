@@ -64,6 +64,12 @@ details:
     name: matches|match|regex
     type: regex
     description: Checks if a field matches a given regular expression.
+  -
+    name: boolean modifiers
+    type: string
+    description: |
+      Any [modifiers](/docs/modifiers) that return booleans may be used (eg. `is_past`, `is_future`, etc) [More details][link]
+      [link]: #boolean-modifiers
 ---
 ## Usage {#usage}
 
@@ -143,5 +149,16 @@ If you want narrow your results further you can repeat conditions as many times 
     {{ title }}
 {{ /collection:drinks }}
 ```
+
+## Boolean Modifiers {#boolean-modifiers}
+
+In addition to the list of conditions below, you are free to use any [modifiers](/docs/modifiers) that return booleans (for example, `is_past` or `is_future`).
+
+Similar to the native boolean conditions, you can use these modifiers as conditions by passing in a value of `true`.
+
+```
+{{ collection:events event_date:is_future="true" }}
+```
+
 
 ## Conditions List {#conditions}

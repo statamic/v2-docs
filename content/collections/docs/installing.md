@@ -8,7 +8,9 @@ id: a7668389-57ab-47aa-b26f-6d2299b5b534
 
 Are you a visual learner? Watch how to install Statamic.
 
+<div class="video-embed">
 <iframe src="https://player.vimeo.com/video/165632057?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 
 ## Requirements {#requirements}
