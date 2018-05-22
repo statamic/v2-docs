@@ -37,7 +37,7 @@ The translation files for English are included, and are located in `statamic/res
 
 By default, the Statamic Control Panel will be displayed in your default locale's language.
 
-The default locale is the first one listed in your `locales` list in your System settings, which should also match the `$locale` setting in your `index.php` file.
+The default locale is the first one listed in your `locales` list in your System settings, which should also match the `$locale` setting in your `index.php` file (and `please` file).
 
 ```language-yaml
 # system.yaml
@@ -49,7 +49,7 @@ locales:
 ```
 
 ```language-php
-// index.php
+// index.php and please
 $locale = 'en';
 ```
 
