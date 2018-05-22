@@ -63,8 +63,6 @@ Lastly, the locale. This should correspond with the locale you will be adding to
 $locale = 'fr';
 ```
 
-> If you are changing the default locale away from `en`, you should also change `$locale` in your `please` file.
-
 ### Nginx {#nginx}
 
 If you're using Nginx, you'll want to slap one of these bad boys in for each locale.
@@ -103,6 +101,8 @@ locales:
     name: French
     url: http://example.com/fr/
 ```
+
+> If you are changing the default locale away from `en`, you should also change `$locale` in your `please` file.
 
 ## Localizing your content {#localizing-content}
 
