@@ -68,7 +68,7 @@ details:
     name: boolean modifiers
     type: string
     description: |
-      Any [modifiers](/docs/modifiers) that return booleans may be used (eg. `is_past`, `is_future`, etc) [More details][link]
+      Any [modifiers](/modifiers) that return booleans may be used (eg. `is_past`, `is_future`, etc) [More details][link]
       [link]: #boolean-modifiers
 ---
 ## Usage {#usage}
