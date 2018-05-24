@@ -165,7 +165,7 @@ public function handle(Submission $submission)
     return [
         'submission' => $submission,
         'errors' => []
-    ]
+    ];
 }
 ```
 
