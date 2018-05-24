@@ -16,7 +16,7 @@ stats:
 ```
 
 ```
-{{ string | to_json }}
+{{ stats | to_json }}
 ```
 
 ```.language-output
