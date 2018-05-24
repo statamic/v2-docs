@@ -152,7 +152,7 @@ If you want narrow your results further you can repeat conditions as many times 
 
 ## Boolean Modifiers {#boolean-modifiers}
 
-In addition to the list of conditions below, you are free to use any [modifiers](/docs/modifiers) that return booleans (for example, `is_past` or `is_future`).
+In addition to the list of conditions below, you are free to use any [modifiers](/modifiers) that return booleans (for example, `is_past` or `is_future`).
 
 Similar to the native boolean conditions, you can use these modifiers as conditions by passing in a value of `true`.
 
