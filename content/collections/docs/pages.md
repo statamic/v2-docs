@@ -3,6 +3,7 @@ title: Pages
 overview: >
   Pages have the ability to create URLs based on how they are arranged in your folder tree. They are generally used to create the main sections and stand-alone pages in your site.
 related_reading:
+  - ed746608-87f9-448f-bf57-051da132fef7
   - 9e4bd6e1-0b91-42bc-92df-610ec6dbf3f4
   - 4da38f4b-0154-42ec-873e-35a5bfbafc79
   - 767fe16a-406f-450b-840b-a7c34ebba465
