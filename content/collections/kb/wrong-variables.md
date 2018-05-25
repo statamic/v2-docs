@@ -74,7 +74,7 @@ without needing a special tag to retrieve them. In this case, we don't want that
 
 ## Then how?
 
-The solution is to [fight the cascade](/knowledge-base/cascade#fighting-the-cascade) by specifying a scope.
+The solution is to [bypass the cascade](/cascade#bypassing-the-cascade) by specifying a scope.
 
 ```
 <h1>{{ title }}</h1>
