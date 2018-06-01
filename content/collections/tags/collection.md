@@ -7,7 +7,11 @@ parameters:
   -
     name: from|folder|use
     type: string|array
-    description: 'The name of the collection(s). Pipe separate names to fetch entries from multiple collections.'
+    description: 'The name of the collection(s). Pipe separate names to fetch entries from multiple collections. You may use `*` to get entries from all collections.'
+  -
+    name: not_from|not_folder|dont_use
+    type: string|array
+    description: 'When getting all collections with `*`, this parameter can accept a pipe delimited list of collections to exclude.'
   -
     name: collection
     type: tag part
@@ -158,6 +162,14 @@ If you'd like to fetch entries from multiple collections, you can only do that i
 
 ```
 {{ collection from="blog|events" }}
+    {{ title }}
+{{ /collection }}
+```
+
+To get entries from all collections, use `*`. You may also exclude collections when doing this.
+
+```
+{{ collection from="*" not_from="blog|events" }}
     {{ title }}
 {{ /collection }}
 ```
