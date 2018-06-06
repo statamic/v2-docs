@@ -77,6 +77,11 @@ shape:
 
 filters:
   -
+    name: bg
+    type: string
+    description: >
+      Sets a background color for transparent images.
+  -
     name: blur
     type: integer
     description: >
