@@ -40,6 +40,12 @@ Modify the migration file as necessary:
   - You may [optionally](#eloquent-oauth) separate the `name` column into `first_name` and `last_name` columns.
   - If you don't plan to use OAuth, you can remove the references in the `up`/`down` methods.
 
+Modify your `site/settings/fieldsets/user.yaml` fieldset as necessary:
+
+  - Ensure you have the correct name `name` (or `first_name` and `last_name`) field(s) to match your migration.
+  - Remove the `content` biography field, unless you've specified a matching column in your migration.
+  - etc.
+
 Make sure the database you specified in your `.env` file exists and run the migration:
 
 ```
