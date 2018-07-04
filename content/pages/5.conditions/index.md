@@ -72,7 +72,7 @@ details:
       [link]: #boolean-modifiers
 ---
 
-> Looking to use regular `if` conditions? You're probably going to want [Conditional Logic in Antlers Templates](https://docs.statamic.com/antlers#conditional-logic)
+> Looking to use regular "if / else" conditions? You're probably going to want [Conditional Logic in Antlers Templates](https://docs.statamic.com/antlers#conditional-logic)
 
 ## Usage {#usage}
 
