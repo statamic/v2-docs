@@ -46,7 +46,7 @@ Most important of all, be consistent. We recommend keeping all of your variable 
 
 The most basic tag type is the variable. A `{{ random }}` tag in a basic template will try to find the `random` key in your current context and display its value. If there is no `random` key, the parent contexts will be checked recursively. If the top context is reached and the key is still not found, Statamic will check to see if it’s a [Tag](#tags). If no Tag is found, the variable is set to `null` and nothing is rendered.
 
-Variables can be strings or arrays/lists of data. Rendering these array variables is accomplished using a tag pair. Tag pairs are are a set of tags that work together in unison: An opening tag and a closing tag. Much like HTML tags.
+Variables can be strings or arrays/lists of data. Rendering these array variables is accomplished using a tag pair. Tag pairs are a set of tags that work together in unison: An opening tag and a closing tag. Much like HTML tags.
 
 As there are several types of arrays and YAML list formats, there are also several ways to render the variables between the tag pairs. Let's cover all of the above.
 

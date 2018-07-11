@@ -27,6 +27,18 @@ searchable:
 
 This setting only applies to the `default` index.
 
+## The Search Form {#search-form}
+
+There’s no special search form tag that you need to use. Simply create a form that performs a GET request to where your results will be listed.
+
+```
+<form action="/search-results" method="GET">
+  <input type="text" name="q" />
+  <button>Search</button>
+</form>
+```
+Assuming that the `{{ search:results }}` tag is on `/search-results`, and that you searched for `majestic stags`, submitting this form will take you to `/search-results?q=majestic+stags`.
+
 ## The Search Tag {#search-tag}
 
 Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page][search_tag] for more details, but it works like this:
