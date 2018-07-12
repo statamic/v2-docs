@@ -50,6 +50,10 @@ options:
     name: placeholder
     type: string
     description: The placeholder text to be shown in the field for fieldtypes that support it. (eg. text and textarea)
+  -
+    name: classes
+    type: string
+    description: CSS class names that you want applied to the field wrapper.
 
 ---
 ## Default Settings {#default-settings}
