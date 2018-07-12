@@ -56,6 +56,8 @@ The class should extend the `Statamic\Addons\Suggest\Modes\AbstractMode` class, 
 
 The `suggestions` method needs to return a multidimensional array. As you can see, each suggestion should have a `value` which will be saved, and the `text` that will be displayed. You can create this array however you want. Here we've just hardcoded it, but you could perform third party API calls, retrieve content, whatever!
 
+You can create optgroups by adding a third `optgroup` string to each item in the array.
+
 ## I don't want it to look like the Suggest field
 
 Well, that's a different story. It'll be up to you implement the JS/Vue component.
