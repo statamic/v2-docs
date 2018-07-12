@@ -164,7 +164,8 @@ The Blade view should place the JSON encoded data in the `Statamic.Publish.conte
 
     <publish title="{{ $id ? $data['title'] : 'New entry' }}"
              :is-new="{{ bool_str($id === null) }}"
-             fieldset-name="post"
+             fieldset-name="post" <!-- use either fieldset-name or fieldset props. not both -->
+             fieldset="{{ $fieldset->toPublishArray() }}"
              content-type="entry"
              submit-url="{{ $submitUrl }}"
              id="{{ $id }}"
@@ -179,7 +180,8 @@ The Blade view should place the JSON encoded data in the `Statamic.Publish.conte
 |------|-------------|
 | `title` | The heading of the form. This is typically the entry's title, or "New Blog Post". |
 | `is-new` | A boolean that controls a couple of feature such as whether slugs should be auto-generated. |
-| `fieldset-name` | The name of the fieldset to be rendered. |
+| `fieldset-name` | The name of the fieldset to be rendered. If specified, an AJAX request will be made to get the fieldset. Alternatively, use the `fieldset` prop. |
+| `fieldset` | An array representation of the fieldset. Use `$fieldset->toPublishArray()`. This will prevent an AJAX request. Alternatively, use the `fieldset-name` prop. |
 | `content-type` | Generally an `entry` or `page`. If you choose `entry`, you can pass `extra.collection` to make it editable based whether the user can edit that collection.  If you choose `page` it'll be editable if they can edit pages. You may omit this prop. |
 | `submit-url` | Where the form will be submitted. You should point it at one of your controller routes. |
 | `id` | The ID of the item. It'll get posted at submission. |
