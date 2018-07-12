@@ -46,6 +46,10 @@ options:
     description: |
       When set to `false`, this field will not be displayed in the preview text for a collapsed [Replicator][replicator] set.
       [replicator]: /fieldtypes/replicator
+  -
+    name: placeholder
+    type: string
+    description: The placeholder text to be shown in the field for fieldtypes that support it. (eg. text and textarea)
 
 ---
 ## Default Settings {#default-settings}
