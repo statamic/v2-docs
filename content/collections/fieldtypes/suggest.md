@@ -10,6 +10,11 @@ options:
     description: >
       The method of retrieving the suggestions. Only required when using a third party suggest mode.
   -
+    name: options
+    type: array *if not defined by third party mode*
+    description: >
+      The array of options for the user to select from
+  -
     name: max_items
     type: integer
     description: >
