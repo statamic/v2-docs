@@ -140,7 +140,7 @@ It's possible to use recursive tags for semi-automatically creating deeply-neste
 <ul>
    {{ nav from="/{segment_1}" max_depth="2" }}
       <li>
-         <a href="{{ url }}"{{ if is_current || is_parent }} class="on"{{ /if }}>{{ title }}</a>
+         <a href="{{ url }}"{{ if is_current || is_parent }} class="active"{{ /if }}>{{ title }}</a>
          {{ if is_current || is_parent }}
             {{ if children }}
                <ul>{{ *recursive children* }}</ul>
