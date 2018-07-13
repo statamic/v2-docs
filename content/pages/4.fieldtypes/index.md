@@ -25,7 +25,7 @@ options:
   -
     name: validate
     type: string
-    description: 'A pipe delimited string of [validation rules](http://laravel.com/docs/5.1/validation#available-validation-rules)'
+    description: 'A pipe delimited string of [validation rules](http://laravel.com/docs/5.1/validation#available-validation-rules)*'
   -
     name: bold
     type: boolean *false*
@@ -34,12 +34,12 @@ options:
     name: show_when
     type: string|array
     description: |
-      The conditions under which this field should be displayed. You can do things like "show this field when this other field has this value".  
+      The conditions under which this field should be displayed. You can do things like "show this field when this other field has this value"*.  
       [Learn how to configure conditional fields](/fieldsets#conditional-fields)
   -
     name: hide_when
     type: string|array
-    description: The same as `show_when`, but with the logic inverted.
+    description: 'The same as `show_when`, but with the logic inverted*.'
   -
     name: replicator_preview
     type: boolean *true*
@@ -51,3 +51,5 @@ options:
 ## Default Settings {#default-settings}
 
 Most fieldtypes share a common set of default settings, like validation, display text, instructions, and so on. You'll see this list referenced throughout the docs.
+
+* Not available on fields inside a bard, replicator or grid field.
