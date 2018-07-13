@@ -68,6 +68,12 @@ For example, assuming there's an addon named `Foo`:
 
 If you're familiar with Laravel, this can be thought of as similar to `Route::controller()`.
 
+Any additional URL segments present get passed in as parameters. So for example: 
+
+- GET request to `/!/Foo/display/people/123` will call `FooController@getDisplay` with arguments `people` and `123`.
+
+If, for example, the method declares only one parameter, the `123` will simply be ignored.
+
 Note that the `/!/` in the URL is customizable, so when outputting form actions, you can use the [$this->actionUrl()](/addons/helpers#actionUrl) helper.
 
 ### Control Panel {#control-panel}
