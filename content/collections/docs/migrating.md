@@ -138,7 +138,7 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 ### Relationships {#relationships}
 
 - All content gets a unique id: `id`. If you manually create a file, one will get added for you automatically. These ids let you create unbreakable relationships between various bits of data. It's neat. Also, don't remove them from your files.
-- The new [Relate Fieldtypes][relate-fieldtypes] replaces Suggest and provides an all-in-one relationship management interface, pairing nicely with the [Relate Tag][relate-tag] and `| get` Modifiers.
+- The new [Relate Fieldtype][relate-fieldtype] replaces Suggest and provides an all-in-one relationship management interface, pairing nicely with the [Relate Tag][relate-tag] and [`| get` Modifier][get-modifier].
 
 ### Users {#users}
 
@@ -170,6 +170,7 @@ There are ways of doing things in v2 that are streets ahead of v1. You aren't by
 [permissions]: /permissions
 [relate-fieldtype]: /fieldtypes/relate
 [relate-tag]: /tags/relate
+[get-modifier]: /modifiers/get
 [routes]: /routing#collection-routes
 [semver]: http://semver.org
 [template-language-guide]: /antlers
