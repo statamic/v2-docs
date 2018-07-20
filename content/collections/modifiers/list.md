@@ -2,7 +2,7 @@
 types:
   - array
   - markup
-id: eed4c5bc-0923-4f54-ad37-ca9a3384e1e0
+id: d8a8568c-bb93-4e84-8d30-e527b3b02876
 ---
 Turn a simple array into a comma delimited list with no comma after the last item.
 
