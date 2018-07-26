@@ -89,4 +89,4 @@ Rating: {{ rating }}
 Here we scoped the variables in the loop under `post`. Now since we are accessing the variables specifically in the `post`
 array, the cascade won't affect it.
 
-[cascade]: /knowledge-base/cascade
+[cascade]: /cascade
