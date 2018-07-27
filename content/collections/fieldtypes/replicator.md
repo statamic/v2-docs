@@ -126,3 +126,21 @@ and the set partial may look something like:
 
 <img src="{{ image }}" alt="{{ caption }}" >
 ```
+
+### Replicator and The Cascade
+
+With a Replicator, you can of course create multiple instances of a Set on a single page. In this case, you may encounter some unexpected output due to [The Cascade](/cascade) when one instance of a Set omits data that a previous instance included.
+
+The best way around this is to use partials with an explicit parameter that contains only the values for the current Replicator item in the loop:
+
+```
+{{ my_replicator_field }}
+  {{ partial src="sets/{type}" :vars="my_replicator_field:{key}" }}
+{{ /my_replicator_field }}
+```
+
+Then in your partial prepend all variable names with the parameter name and a colon, in this case `vars:`:
+
+```
+<img src="{{ vars:image }}" alt="{{ vars:caption }}" >
+```
