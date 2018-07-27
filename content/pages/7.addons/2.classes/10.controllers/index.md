@@ -126,3 +126,12 @@ routes:
 Note: If you want a settings page, you do _not_ need to create a route. A `/cp/addons/addon-name/settings` route
 will be available to you automatically. To avoid conflicts you should not create a route named `settings`.
 [See how to create a settings page](/addons/classes/settings).
+
+Note 2: If you want to use your addon in the control panel you need to set up your routes.yaml as such:
+```
+routes:
+  # Dashboard
+  /route-name:
+    uses: methodName
+    as: route-name
+```
