@@ -71,6 +71,8 @@ field_name:
 
 This will correspond to the `Statamic\Addons\YourAddon\SecondaryFieldtype` or `Statamic\Addons\YourAddon\Fieldtypes\SecondaryFieldtype` class.
 
+> **Note**: In your `fieldtype.js` file, secondary components follow this naming convention: `your_addon-secondary-fieldtype`.
+
 
 ## Generating a Fieldtype {#generating}
 
