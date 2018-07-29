@@ -50,7 +50,7 @@ Throughout this documentation you will find the names of email templates used fo
 
 ```
 <!-- password_reset.html -->
-/site/themes/redwood/templates/auth/password-reset.html
+/site/themes/redwood/templates/email/password-reset.html
 ```
 
 ### HTML and Text versions {#html-and-text-versions}
