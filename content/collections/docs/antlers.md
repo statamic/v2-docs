@@ -399,7 +399,8 @@ Alternatively, you can prefix the parameter with a `:` and it'll look for the va
 
 ## Resources {#resources}
 
-If you use [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) as a code editor, you can use the [Antlers Syntax Package](https://github.com/addisonhall/antlers-statamic-sublime-syntax) to enable code highlighting. It's lovely!
+If you use [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) as a code editor, you can use the [Antlers Syntax Package](https://github.com/addisonhall/antlers-statamic-sublime-syntax) to enable code highlighting. It's lovely! Even [VS Code](https://code.visualstudio.com/) has support with [Statamic Antlers Templates
+](https://marketplace.visualstudio.com/items?itemName=ahdesign.language-antlers).
 
 [guide-yaml]: /yaml
 [comparison]: http://php.net/manual/en/language.operators.comparison.php
