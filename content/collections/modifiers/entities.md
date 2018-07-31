@@ -18,4 +18,4 @@ string: "The 'bacon' is <b>crispy</b>";
 The &#039;bacon&#039; is &lt;b&gt;crispy&lt;/b&gt;
 ```
 
-[decode]: http://php.net/manual/en/function.htmlentities.php
+[entities]: http://php.net/manual/en/function.htmlentities.php
