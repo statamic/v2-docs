@@ -27,3 +27,19 @@ title: Actually i don't know what we're talking about.
 ```.language-output
 I Don't Know What We're Talking&nbsp;About
 ```
+
+When passing multiple parameters to a modifier, you'll need to pop down into a simple list:
+
+```.language-yaml
+# /site/theme/<your_theme>/settings/macros.yaml
+excerpt:
+  safe_truncate: 
+    - 175
+    - ...
+```
+
+This is equivalent to:
+
+```
+{{ content | safe_truncate:175:... }}
+```
