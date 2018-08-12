@@ -11,7 +11,7 @@ string: I just want & need $pecial characters!
 ```
 
 ```
-{{ sting | urlencode }}
+{{ string | urlencode }}
 ```
 
 ```.language-output
