@@ -4,7 +4,7 @@ types:
 id: 40578328-3288-4c54-a475-8afad19a37e6
 parse_content: true
 ---
-Returns a date different in a nice, human readable, string format. This modifier will add a phrase after the difference value relative to the current date and the passed in date.
+Returns a date difference in a nice, human readable, string format. This modifier will add a phrase after the difference value relative to the current date and the passed in date.
 
 You can turn off the extra words "ago", "until", and so on by passing `false` as a parameter
 
