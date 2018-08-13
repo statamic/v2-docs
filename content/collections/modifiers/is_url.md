@@ -8,7 +8,7 @@ Returns `true` if a string is a valid URL.
 
 ```.language-yaml
 a_url: http://google.com/
-not_an_email: waffles
+not_a_url: waffles
 ```
 
 ```
