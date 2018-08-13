@@ -14,11 +14,11 @@ Pretend there are lots of words here...
 ```
 
 ```
-<h1>A long post</h1>
-<p class="time">{{ content | read_time:180 }} min</p>
+<h1>{{ title }}</h1>
+<p>{{ content | read_time:180 }} min</p>
 ```
 
 ```.language-output
 <h1>A long post</h1>
-<p class="time">10 min</p>
+<p>10 min</p>
 ```
