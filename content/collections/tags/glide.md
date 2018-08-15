@@ -68,7 +68,7 @@ shape:
     name: quality
     type: integer *90*
     description: >
-      Defines the quality of the image. Use values between `0` and `100`. Only relevant if the format is `jpg`.
+      Defines the quality of the image. Use values between `0` and `100`. Only relevant if the format is `jpg` or `pjpg`.
   -
     name: format
     type: string *jpg*
