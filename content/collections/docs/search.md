@@ -39,6 +39,16 @@ There’s no special search form tag that you need to use. Simply create a form 
 ```
 Assuming that the `{{ search:results }}` tag is on `/search-results`, and that you searched for `majestic stags`, submitting this form will take you to `/search-results?q=majestic+stags`.
 
+
+## Add your template in Routes.yaml
+Statamic needs to know which page to display the search results when a query is submitted. In the `routes.yaml` file found in `site > settings > routes.yaml` and reference the `template` by adding the following: 
+
+```
+routes:
+  /search-results:
+    template: search-results
+```
+
 ## The Search Tag {#search-tag}
 
 Statamic has a Search results tag that will allow you to retrieve content based on a search query. Head over to the [Search tag page][search_tag] for more details, but it works like this:
@@ -48,6 +58,7 @@ Statamic has a Search results tag that will allow you to retrieve content based 
 	<a href="{{ url }}">{{ title }}</a>
 {{ /search:results }}
 ```
+
 
 ## Drivers {#drivers}
 
