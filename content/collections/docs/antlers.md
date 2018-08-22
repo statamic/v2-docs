@@ -397,6 +397,26 @@ Alternatively, you can prefix the parameter with a `:` and it'll look for the va
 {{ nav :from="segment_1" }}
 ```
 
+### Modifiers Inside Parameters {#mods-in-params}
+
+Using a variable indside of a Tag is nice; using a variable with a modifier inside of a Tag is better. And it works exactly as you'd expect...with one small caveat: When using a modifier inside of a Tag, _no whitespace is allowed between variables, pipes, and modifiers_.
+
+In other words:
+
+```
+{{ partial:hero image="{ featured_image|url }" }}
+```
+
+...Is fine and dandy. But this:
+
+```
+{{ partial:hero image="{ featured_image | url }" }}
+```
+
+...Will pass the string `{ featured_image | url }` to your partial instead of the url of your image. Much less dandy. Not fine at all.
+
+So remeber to always snug things up next to each other inside your single tag braces.
+
 ## Resources {#resources}
 
 If you use [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/) as a code editor, you can use the [Antlers Syntax Package](https://github.com/addisonhall/antlers-statamic-sublime-syntax) to enable code highlighting. It's lovely! Even [VS Code](https://code.visualstudio.com/) has support with [Statamic Antlers Templates
