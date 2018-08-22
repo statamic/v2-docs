@@ -415,7 +415,7 @@ In other words:
 
 ...Will pass the string `{ featured_image | url }` to your partial instead of the url of your image. Much less dandy. Not fine at all.
 
-So remeber to always snug things up next to each other inside your single tag braces.
+So remember to always snug things up next to each other inside your single tag braces.
 
 ## Resources {#resources}
 
