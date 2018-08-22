@@ -399,7 +399,7 @@ Alternatively, you can prefix the parameter with a `:` and it'll look for the va
 
 ### Modifiers Inside Parameters {#mods-in-params}
 
-Using a variable indside of a Tag is nice; using a variable with a modifier inside of a Tag is better. And it works exactly as you'd expect...with one small caveat: When using a modifier inside of a Tag, _no whitespace is allowed between variables, pipes, and modifiers_.
+Using a variable inside of a Tag is nice; using a variable with a modifier inside of a Tag is better. And it works exactly as you'd expect...with one small caveat: When using a modifier inside of a Tag, _no whitespace is allowed between variables, pipes, and modifiers_.
 
 In other words:
 
