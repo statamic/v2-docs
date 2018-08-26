@@ -51,7 +51,7 @@ The relative path to the `statamic` folder needs to be updated to reflect the ne
 $statamic = '../statamic';
 ```
 
-The site root should should also be updated. Since we're running in a subfolder, you should set this appropriately. (Take note of the trailing and leading slashes.)
+The site root should also be updated. Since we're running in a subfolder, you should set this appropriately. (Take note of the trailing and leading slashes.)
 
 ``` .language-php
 $site_root = '/fr/';
