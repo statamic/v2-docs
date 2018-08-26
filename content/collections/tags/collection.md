@@ -450,5 +450,39 @@ You can also add your scope down into your [alias](#alias) loop. Yep, we thought
 
 Combining both an Alias and a Scope on a Collection Tag doesn't make a whole lot of sense. You shouldn't do that.
 
+## Nested collection loops {#nesting}
+
+If you loop through a collection and for each item loop through another related collection, note that the Antlers parser can't handle that. There is no error message, but PHP hangs. 
+
+Not working: 
+```
+{{ collection from="blog" }}
+  <p>
+    {{ collection from="stuff" }}
+      <span>{{ title }}</span>
+    {{ /collection }}
+  </p>
+{{ /collection }}
+```
+Works:
+```
+{{ collection:blog }}
+  <p>
+    {{ collection from="stuff" }}
+      <span>{{ title }}</span>
+    {{ /collection }}
+  </p>
+{{ /collection:blog }}
+```
+Works:
+```
+{{ collection from="blog|events" }}
+  <p>
+    {{ partial:stuff_blog }} {{# contains the inner loop code #}}
+  </p>
+{{ /collection }}
+```
+
+
 [conditions]: /conditions
 [custom_filters]: /addons/classes/filters
