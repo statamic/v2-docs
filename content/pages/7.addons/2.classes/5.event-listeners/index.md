@@ -25,7 +25,7 @@ Perhaps you'd like to send a tweet after an entry has been published in the Cont
 
 namespace Statamic\Addons\Tweeter;
 
-use Statamic\Extend\Listener
+use Statamic\Extend\Listener;
 
 class TweeterListener extends Listener
 {
