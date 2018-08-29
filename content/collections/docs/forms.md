@@ -224,7 +224,7 @@ First, You can create separate fields for each upload. This is useful if each ha
 Or, you can enable multiple files on one field, by setting type with the plural form of the type option, `files` or `assets`, and indicating an array in your input by adding a set of square brackets to the `name` attribute.
 
 ```
-<input type="file" name="many[]" />
+<input type="file" name="many[]" multiple />
 ```
 
 ``` .language-yaml
