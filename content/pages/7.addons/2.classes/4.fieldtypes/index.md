@@ -62,16 +62,16 @@ field_name:
 
 This will correspond to the `Statamic\Addons\YourAddon\YourAddonFieldtype` or `Statamic\Addons\YourAddon\Fieldtypes\YourAddonFieldtype` class.
 
-Secondary fieldtypes will be use the name of the addon and the secondary name, delimited by a dot.
+Secondary fieldtypes will use the name of the addon and the secondary name, delimited by a dot.
 
 ``` .lang-yaml
 field_name:
-  type: your_addon.secondary
+  type: your_addon.my_secondary
 ```
 
-This will correspond to the `Statamic\Addons\YourAddon\SecondaryFieldtype` or `Statamic\Addons\YourAddon\Fieldtypes\SecondaryFieldtype` class.
+This will correspond to the `Statamic\Addons\YourAddon\MySecondaryFieldtype` or `Statamic\Addons\YourAddon\Fieldtypes\MySecondaryFieldtype` class.
 
-> **Note**: In your `fieldtype.js` file, secondary components follow this naming convention: `your_addon-secondary-fieldtype`.
+> **Note**: In your `fieldtype.js` file, secondary components follow this naming convention: `your_addon-my_secondary-fieldtype`.
 
 
 ## Generating a Fieldtype {#generating}
