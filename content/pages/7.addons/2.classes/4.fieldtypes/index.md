@@ -312,4 +312,4 @@ The `autoSlug` method takes 2 arguments:
 
 
 [vue]: http://vuejs.org
-[vue-component]: http://vuejs.org/guide/components.html
+[vue-component]: https://v1.vuejs.org/guide/components.html
