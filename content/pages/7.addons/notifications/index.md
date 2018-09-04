@@ -1,12 +1,14 @@
 ---
 title: Flash Notifications
 overview: >
-  Trigger notifications via Javascript.
+  How to trigger flash notifications and messages.
 id: b84507d3-ffc5-4443-862b-1d4888ae2025
 ---
+## Via JavaScript
+
 Within your Control Panel Vue components, you may trigger any number of flash notifications at any point.
 
-## Success
+### Success
 
 Trigger a success notification.
 
@@ -14,7 +16,7 @@ Trigger a success notification.
 this.$notify.success('Thing updated!');
 ```
 
-## Error
+### Error
 
 Trigger an error notification.
 
@@ -22,11 +24,11 @@ Trigger an error notification.
 this.$notify.error('Oh no! That thing failed.');
 ```
 
-## Options
+### Options
 
 Both the `success` and `error` methods accept an object as the second argument containing options.
 
-### Non-dismissible
+#### Non-dismissible
 
 This will remove the close button.
 
@@ -34,10 +36,28 @@ This will remove the close button.
 this.$notify.error('Oops, please check the values.', { dismissible: false });
 ```
 
-### Timeout
+#### Timeout
 
 This will automatically close the notification after the specified milliseconds.
 
 ``` .language-js
 this.$notify.success('Updated the thing.', { timeout: 2000 });
+```
+
+## Via PHP with Laravel
+By returning a controller response with `$success` or `$errors` variables, you can display success error and messages, respectively.
+
+### Success
+Trigger a success notification.
+```.language-php
+return view()
+        ->withSuccess('The thing did the thing it was supposed to, hurray!');
+```
+
+### Error
+Show persistant error messages.
+```.language-php
+ return redirect()
+         ->back()
+         ->withErrors(['Oh no it did not do the thing!']);
 ```
