@@ -134,6 +134,12 @@ By default, static caching will _ignore_ any query strings in the URL. For examp
 will result in the same page being shown. This is useful for preventing the cache being broken by someone appending
 `?whatever` to the URL. However, it will break any functionality that relies on query strings, like pagination.
 
+If you require to cache pages with query strings, you may do so in `site/settings/caching.yaml`
+
+```.language-yaml
+static_caching_ignore_query_strings: false
+```
+
 ### Excluding pages {#excluding-pages}
 
 You may add a list of URLs you wish to exclude from being cached. You may want to exclude pages that need to always be dynamic, such
