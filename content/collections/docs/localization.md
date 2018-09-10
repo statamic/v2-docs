@@ -77,6 +77,8 @@ location /fr/ {
 }
 ```
 
+Laravel Valet users shouldn't need to do anything to their nginx config. If you are using a non-standard subdirectory, see the [troubleshooting section](#laravel-valet) below.
+
 ## Adding Locales to Settings {#locales}
 
 Next, Statamic will need to know we intend to localize our content.
@@ -257,8 +259,26 @@ into languages other than what your site uses.
 
 Read about it on the [Control Panel](/control-panel#translating) page.
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting .mb-3}
 
-**I added a localized file but I get an error telling me the ID already exists.**
+### I added a localized file but I get an error telling me the ID already exists.
 
 This will happen if you haven't added your additional locale to your `system.yaml` file.
+
+### My subdirectory shows a 404 when using Laravel Valet. {#laravel-valet}
+
+The Statamic driver included with Valet [supports ISO3166 alpha-2 codes as subdirectories](https://github.com/laravel/valet/blob/master/cli/drivers/StatamicValetDriver.php#L116-L129).
+If you need something not supported, you will have to create a custom local driver.
+
+Create a `LocalValetDriver.php` in your project root with the following:
+
+``` .language-php
+<?php
+class LocalValetDriver extends StatamicValetDriver
+{
+    public function getLocales()
+    {
+        return ['one', 'two', 'etc']; // ...where these are the subdirectories you need.
+    }
+}
+```
