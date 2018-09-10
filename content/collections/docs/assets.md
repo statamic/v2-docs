@@ -149,7 +149,7 @@ Note: If you don't need any additional asset data, you need nothing more than th
 
 Sometimes it's handy to store assets that shouldn't be freely accessible through the browser.
 
-This means you should put the container somewhere above the webroot, which in turn means that it doesn't have a URL, nor will any of its assets.
+This means you should <span class="highlight">put the container somewhere above the webroot</span>, which in turn means that it doesn't have a URL, nor will any of its assets.
 
 You can reference and access private assets with a few extra steps.
 
