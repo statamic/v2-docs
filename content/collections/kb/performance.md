@@ -31,7 +31,7 @@ in production.
 
 ## Disable Search Auto-indexing
 
-This setting is actually already disabled by default, although some might find it and think its an awesome thing so
+This setting is actually already disabled by default, although some might find it and think it's an awesome thing so
 they enable it!
 
 Just be aware that automatically indexing can eat up some performance whenever it has to do its thing. It may also
@@ -54,7 +54,7 @@ It's better to have many assets spread across multiple folders instead of all yo
 ## Smaller templates
 
 A large template (or partial, or layout) can affect performance negatively simply because Statamic will use more memory
-to parser a longer string. You can cater to this by splitting your templates up into partials.
+to parse a longer string. You can cater to this by splitting your templates up into partials.
 
 Take this example:
 
