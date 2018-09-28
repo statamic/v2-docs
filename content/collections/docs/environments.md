@@ -18,7 +18,7 @@ DELICIOUSNESS=bacon
 
 You should _not_ commit your `.env` file to version control. It may contain confidential information (such as API keys), and each developer and/or server may require a different configuration setting.
 
-If you are working on a team, you may wish to continue including a `env.example` file filled with placeholder values. This is common best practice, alloweding other developers to get up and running quickly.
+If you are working on a team, you may wish to continue including a `env.example` file filled with placeholder values. This is common best practice, allowing other developers to get up and running quickly.
 
 ## Defining Environments {#defining-environments}
 
