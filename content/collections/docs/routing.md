@@ -6,7 +6,7 @@ overview: |
 video: https://youtu.be/_to78g1XvJ8
 ---
 
-All of Statamic's routes are defined in `site/settings/routes.yaml` (also accessible in the Control Panel `Settings » Routes` area). We support Five different types of routes.
+All of Statamic's routes are defined in `site/settings/routes.yaml` (also accessible in the Control Panel `Settings » Routes` area). We support five different types of routes.
 
 ## Template Routes {#template-routes}
 
