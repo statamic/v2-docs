@@ -129,8 +129,7 @@ variables:
     type: wizardry
     description: >
       Recursively output the entire contents
-      of the `nav` tag pair. More information
-      about this is below.
+      of the `nav` tag pair.
 ---
 ## Recursion {#recursion}
 
