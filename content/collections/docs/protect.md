@@ -1,6 +1,6 @@
 ---
 title: Protecting Content
-overview: Control who can or cant see each page of content. Or, even protect your whole site in one fell swoop.
+overview: Control who can or can't see each page of content. Or, even protect your whole site in one fell swoop.
 id: 87f7d503-1bbb-4cd4-95b6-073724739339
 ---
 
