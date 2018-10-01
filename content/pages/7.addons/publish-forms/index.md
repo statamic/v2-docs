@@ -11,7 +11,7 @@ overview: >
 The Publish component takes some data, pre-processes it through a fieldset, renders it within the appropriate fieldtypes, and post-processes it upon submission.
 
 Typically, the data comes from within Statamic - for example a page may be stored in `site/content/pages`.
-However, in your addon, you may want to edit data coming directly from an external source. That can anything you want: a database, an API, etc.
+However, in your addon, you may want to edit data coming directly from an external source. That can be anything you want: a database, an API, etc.
 
 The flow is essentially this:
 
