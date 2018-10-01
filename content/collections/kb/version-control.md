@@ -10,7 +10,7 @@ If you're used to using a Git workflow for your projects, you probably already h
 
 ## Dealing with changes on production
 
-The area most people need a few creative ideas around is how to keep changes in production in sync with the repo. Here are a few solutons we've used in the past, present, and future.
+The area most people need a few creative ideas around is how to keep changes in production in sync with the repo. Here are a few solutions we've used in the past, present, and future.
 
 ### The old "SSH and commit" trick
 
@@ -36,7 +36,7 @@ See how creative you can be when you remove the DB?
 
 ### Don't makes changes in production
 
-Sure it seems obvious, but we don't mind being thorough. You don't always _have_ to force your clients or content managers make changes in production. You could stand up a staging server (our [license agreement](https://statamic.com/license) allows for this, no second license needed!) so you could preview changes before they go live with the help of a developer, or someone who knows the basics of git.
+Sure it seems obvious, but we don't mind being thorough. You don't always _have_ to force your clients or content managers make changes in production. You could stand up a staging server (our [license agreement](https://statamic.com/license) allows for this, no second license needed!) so you could preview changes before they go live with the help of a developer, or someone who knows the basics of Git.
 
 ### Don't version control your content
 
