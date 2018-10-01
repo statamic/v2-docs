@@ -126,6 +126,11 @@ variables:
     description: >
       The number/index of current iteration in the loop, starting from 0
   -
+    name: order
+    type: integer
+    description: >
+      The number/index of the item relative to the collection, not affected by any sort/filter parameters on the tag. Note: this is only available on collections where the order is set to number.
+  -
     name: no_results
     type: boolean
     description: Returns true if there are no results.
