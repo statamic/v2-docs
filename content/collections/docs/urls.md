@@ -1,6 +1,6 @@
 ---
 title: How URLs Work
-overview: "Let's not get too technical, there are plenty of other sites dedicated to HTTP requests. Here we're going to explain the the <span class="highlight">two primary methods</span> Statamic uses to establish URLs: **Pages and Routes.**"
+overview: "Let's not get too technical, there are plenty of other sites dedicated to HTTP requests. Here we're going to explain the <span class="highlight">two primary methods</span> Statamic uses to establish URLs: **Pages and Routes.**"
 id: 439b2338-4dba-498f-bbd9-7cb6435807fe
 ---
 ## Pages {#pages}
