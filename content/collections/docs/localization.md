@@ -130,6 +130,10 @@ site/content/
 |   |   |-- fr.index.md
 |   |   `-- de.index.md
 |   `-- index.md
+|-- globals/
+|   |-- fr/
+|   |   `-- global.yaml
+|   `-- global.yaml
 |-- collections/
 |   `-- blog/
 |       |-- fr/
@@ -146,9 +150,11 @@ site/content/
         `-- news.md
 ```
 
+For all content, the additional locale must have an `id` identical to the default locale.
+
 In Pages, each folder represents a page. The default locale is simply named `index.md`. Any additional locales are named with their locale prefix. eg `fr.index.md`.
 
-In both Collections and Taxonomies, the localized entries/terms are all stored in subfolders with identical filenames to the default locale. eg. `categories/news.md` and `categories/fr/news.md`.
+In Collections, Taxonomies, and Globals, the localized content are all stored in subfolders with identical filenames to the default locale. eg. `categories/news.md` and `categories/fr/news.md`.
 
 For pages, entries, and taxonomy terms: slugs may be localized by adding a `slug` field to the front-matter. The filenames shouldn't change. They should also all have `id` fields that match their default counterparts.
 
