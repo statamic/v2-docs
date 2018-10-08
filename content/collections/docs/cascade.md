@@ -22,7 +22,7 @@ like the `{{ get_content }}` tag to retrieve the data manually.
 
 This is also the first time you may see the cascade at work. Let's say there's a global variable named `overview`.
 If your entry also contains an `overview` variable, the global will be overridden. Depending on the situation,
-this could be beneficial or frustrating. [We'll learn how to combat this later](#fighting-the-cascade).
+this could be beneficial or frustrating. [We'll learn how to combat this later](#bypassing-the-cascade).
 
 Moving further inwards, we have two Tags being used. A Relate tag for taxonomy terms (the terms being represented by
 purple outlines), and a Collection tag (entries in red).
