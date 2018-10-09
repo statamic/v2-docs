@@ -269,7 +269,7 @@ There are a number of different ways to use this parameter. They are explained i
 
 Doing something complicated? You can reference a [custom filter][custom_filters] which can do the heavy lifting from outside of the template.
 
-For example, want to filter drink entries by whether or not its one of the user's favorites?
+For example, want to filter drink entries by whether or not it's one of the user's favorites?
 
 ```
 {{ collection:drinks filter="users_favorite" }}
