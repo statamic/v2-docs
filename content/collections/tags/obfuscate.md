@@ -18,3 +18,7 @@ description: Obfuscate content (usually email addresses) to prevent screenscrapi
 # output appears as heisenberg@example.com
 he&#x69;se&#x6e;&#x62;&#x65;&#114;&#103;@&#101;&#120;a&#109;&#x70;&#x6c;&#x65;&#x2e;c&#x6f;&#109;
 ```
+
+### Tip:
+
+If you have chosen to use EMail addresses for logging in users (which means `{{ username }}` is a member's  email address), and you want to create a `mailto:` link, you need to use obfuscate's modifier form, as in:  `<a href="mailto:%22{{ first_name }}%20{{ last_name }}%22%20%3C{{ username | obfuscate }}%3E" >`. 
