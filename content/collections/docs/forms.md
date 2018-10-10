@@ -170,7 +170,7 @@ email:
 
 ### Setting the "Reply To" Dynamically {#setting-reply-to-dynamically}
 
-You can set the "reply to" to an address submited in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
+You can set the "reply to" to an address submitted in the form by using the variable in your config block. Assuming you have a form input with `name="email"`:
 
 ``` .language-yaml
 email:
