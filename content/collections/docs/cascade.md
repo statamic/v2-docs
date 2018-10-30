@@ -69,17 +69,10 @@ Here we have a page where the title is where we went on vacation last summer. `I
 gallery entries where the location is in Italy. Within each image we want the alt tag to say what happened and where.
 The gallery entry might have its own `title` of the event (`Visiting the Colosseum`) and then append `in Italy`.
 
+## Page Scope {#page-scope}
+
+To give you more control over the scope of your data, each URLs variables are aliased into the `page` scope. This means that you can access your page's title with `{{ page:title }}` _and_ `{{ title }}`, if it hasn't be overridden in the local scope with another tag.
 
 ## Reserved variables {#reserved}
 
-To help in wrangling the cascade, we've aliased variables into other places. The main example is the `page` array. If
-you were to create a variable named `page`, that would override the `page` scope. Don't do that.
-
-Here's a list of words we recommend that you don't use as field/variable names.
-
-- `page`
-- `global`
-- `globals`
-- `template`
-- `slug`
-- `settings`
+You should always avoid overriding any of the Statamic-provided content variables. View the [full list of system variables](/variables).
