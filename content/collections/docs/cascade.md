@@ -77,5 +77,9 @@ you were to create a variable named `page`, that would override the `page` scope
 
 Here's a list of words we recommend that you don't use as field/variable names.
 
-- page
-- global / globals
+- `page`
+- `global`
+- `globals`
+- `template`
+- `slug`
+- `settings`
