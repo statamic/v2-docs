@@ -20,3 +20,7 @@ Globals are designed for reusable content, such as:
 You can create multiple Globals sets in `site/content/globals`, or `Configure » Content » Globals` in the control panel.
 
 Variables set inside your default set (`global.yaml`) will simply be available in all your templates by their variable name. Each set/file becomes its own scope, allowing you to group your Globals together logically. For example, all of the variables inside a `footer.yaml` file will be accessed through `{{ footer:var_name }}`.
+
+## Managing Globals
+
+Each Global set will need its own [Fieldset](/fieldsets) to define what fieldtypes you want to use to edit the data.
