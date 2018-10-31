@@ -7,9 +7,9 @@ id: 75145be0-966f-490e-af3d-ed122eb6445b
 ---
 Check if a value contains another value. Supports both strings and arrays.
 
-Returns `true` if a match is found, otherwise `false`. 
+Returns `true` if a match is found, otherwise `false`.
 
-The first parameter is the "needle" to find in the "haystack". It will read from the context if there is a matching 
+The first parameter is the "needle" to find in the "haystack". It will read from the context if there is a matching
 variable, otherwise it will use the parameter as the value.
 
 ### Strings
@@ -37,7 +37,7 @@ false  (there's a field named "noun", and it got the value which was "carrot")
 ```
 
 ### Arrays
-
+You can set strict type checking by setting the second parameter to `true`.
 ``` .language-yaml
 foods:
   - bacon
@@ -55,7 +55,7 @@ gross: broccoli
 ```
 
 ``` .language-output
-true   (there's no field named "bacon", so it searched for literally "bacon") 
+true   (there's no field named "bacon", so it searched for literally "bacon")
 true   (there's a field named "delicious", and it got the value which was "bacon")
 false  (there's a field named "gross", and it got the value which was "broccoli")
 true   (there's no field named "vegan bacon strips", so it searched for literally "vegan bacon strips")
