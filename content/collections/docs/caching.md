@@ -66,7 +66,8 @@ There are times when you may want to simply cache a _section_ of a template to g
 
 ### Can I turn it off? {#frag-off}
 
-Nope, just don't use it if you don't want it.
+If you want to disable all your cache tags, you can set `cache_tags_enabled: false` in `site/settings/caching.yaml`.
+This could be useful during development or for debugging.
 
 ### How is it invalidated? {#frag-invalidation}
 
