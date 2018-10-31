@@ -56,7 +56,7 @@ Refresh the page. It's gone. And maybe even back again, who knows? We can't tell
 There are times when you may want to simply cache a _section_ of a template to gain some performance. That's what the [Cache Tag][cache-tag] is for. Wrap your markup in `{{ cache }}` tags and you're off on your way to a snappier, zippier, peppier site.
 
 ```
-{{ cache }}
+{{ cache for="1 hour" }}
   <!-- SO MUCH STUFF HAPPENING HERE DONKEY!
   ...
   1,000 lines later...
@@ -70,7 +70,8 @@ Nope, just don't use it if you don't want it.
 
 ### How is it invalidated? {#frag-invalidation}
 
-Aw man, we were hoping you wouldn't ask that. We'll have a smart or automatic method soon, but for now you could change the markup a little bit (which creates a new cache hash) or manually wipe the System cache.
+If you specify the cache length, it'll invalidate itself after that length of time.
+Leave it off, and it'll remain cached until you manually clear your cache or change the template between the tags.
 
 ## Static Caching {#static-page}
 
