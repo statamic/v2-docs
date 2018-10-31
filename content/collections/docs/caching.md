@@ -33,7 +33,7 @@ The system cache is used by Statamic and addons to store data for defined length
 
 Each item in the system cache invalidates itself over time. Some features, like the Search Index Throttle, can have configured lengths of time, and others pre-set. It's highly unlikely you'll have to deal with this directly unless you're building addons.
 
-If you find the need to invalidate this cache for some reason, you can wipe the contents of the `local/storage/framework/cache` folder. It will rebuild itself as needed.
+If you find the need to invalidate this cache for some reason, you can wipe the contents of the `local/storage/framework/cache` folder or run `php please clear:cache`. It will rebuild itself as needed.
 
 ### Can I turn it off?
 
