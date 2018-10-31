@@ -372,6 +372,21 @@ home of the @{{ fast_food_chain_specialty_item }},
 can I take your order?
 ```
 
+In certain cases you may need to reach for the `noparse` modifier instead.
+
+Content:
+```
+text: |
+  Welcome to {{ fast_food_chain }},
+  home of the {{ fast_food_chain_specialty_item }},
+  can I take your order?
+```
+
+Template:
+```
+{{ text | noparse }}
+```
+
 ## Tags {#tags}
 
 Tags (as a proper noun) are tags that _do stuff_. Depending on the Tag, that can mean different things. Here's a few examples:
