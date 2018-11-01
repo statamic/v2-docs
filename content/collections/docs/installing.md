@@ -160,15 +160,13 @@ Like most (if not all) PHP applications, all page requests are run through a sin
 
 Technically this means all your URLs are actually `/index.php/about` but they will get rewritten to `/about`. It's better for SEO, and the `index.php` just looks silly, so you should remove it.
 
-_Note: Out of the box, Statamic will assume you will be using URL rewrites. If you notice only your home page working, it's usually because URL rewrites aren't configured. Either set them up, or read how to disable them at the end of this section._
-
-Most decent servers will support URL rewriting in some way. Choose your method below:
+> Note: Statamic's default configuration assumes URL rewrites are enabled. If you notice that images and/or subpages aren't loading, it's probably because your server environment does not have URL rewrites configured. On Apache, you'll need to [enable htaccess](https://www.digitalocean.com/community/tutorials/how-to-use-the-htaccess-file), and on nginx you'll need to set up `try_files` rules.
 
 #### Apache {#apache}
 
 Make sure you have `mod_rewrite` enabled and rename the `sample.htaccess` file to `.htaccess`, taking special care to ensure that it's in the same directory as your `index.php` file. They're best friends, don't separate them.
 
-If this doesn't work, you're most likely someone who doesn't follow defaults and runs your own flavor of configuration. Google is your friend. If you're _really_ stuck, we'll do our best to [help you](https://statamic.com/support).
+If this doesn't work, you'll need to tell Apache to activate/respect your `.htaccess` file. [Here's an article](https://www.digitalocean.com/community/tutorials/how-to-use-the-htaccess-file) on how to do it.
 
 #### Nginx {#nginx}
 
