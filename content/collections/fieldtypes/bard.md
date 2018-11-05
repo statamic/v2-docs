@@ -14,12 +14,14 @@ options:
   -
     name: sets
     type: array
-    description: An array containing sets of fields.
+    description: An array containing sets of fields. If you don't provide any sets, Bard will act like a basic text editor and just save a string.
   -
     name: buttons
     type: array
     description: |
-      An array of buttons that should appear in the toolbar. You can choose from `bold`, `italic`, `anchor`, `h1` through `h6`, `quote`, `assets`, or really just any of the [built-in Medium Editor buttons](https://github.com/yabwe/medium-editor#all-buttons), as well as any [custom buttons][custom]. By default, a sensible set of buttons will be used.
+      An array of buttons that should appear in the toolbar. 
+      You can choose from `h2` through `h6`, `bold`, `italic`, `underline`, `strikethrough`, `removeformat`, `unorderedlist`, `orderedlist`, `quote`, `superscript`, `subscript`, `anchor`, and `code`.
+      By default, a sensible set of buttons will be used.
 
       [custom]: #custom-buttons
   -
@@ -36,24 +38,22 @@ options:
     name: target_blank
     type: boolean *false*
     description: |
-      Automatically add `target="_blank"` on links.
+      Automatically add `target="_blank"` on links by default. You'll be able to override this per-link.
   -
-    name: link_validation
+    name: link_noopener
     type: boolean *false*
     description: |
-      Check for common URL protocols on links.
+      Set `rel="noopener"` on all created links.
   -
-    name: paste
-    type: "yaml*"
+    name: link_noreferrer
+    type: boolean *false*
     description: |
-      Configure paste behavior. Use the [MediumEditor docs](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md#paste-options) as a reference.
-
-      **Default:**
-
-      ```.language-yaml
-      forcePlainText: false
-      cleanPastedHTML: true
-      ```
+      Set `rel="noreferrer"` on all created links.
+  -
+    name: semantic_elements
+    type: boolean *false*
+    description: |
+      Replace unsemantic `<b>` and `<i>` tags with `<strong>` and `<em>` tags.
   -
     name: container
     type: string
