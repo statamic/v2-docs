@@ -10,7 +10,7 @@ In most "traditional" applications (namely those involving a relational database
 
 ## The Stache Datastore {#stache}
 
-If Statamic were to search through and read all of your content and settings files every single request, you would probably rage quit the internet or (╯°□°）╯︵ ┻━┻), unless your site was very small.
+If Statamic were to search through and read all of your content and settings files every single request, you would probably rage quit the internet or <nobr>(╯°□°）╯︵ ┻━┻)</nobr>, unless your site was very small.
 
 Statamic watches for changes to your content and settings and compiles a number of [ephemeral][ephemeral] data structures that are used to power your website not unlike an API. It is this Stache that allows fast content querying, relationships, routing, search indexing, URL traversing, and really everything else that makes Statamic useful. Think of your content as the permanence layer. As long as it exists, the Stache can always be rebuilt.
 
