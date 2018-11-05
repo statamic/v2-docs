@@ -156,50 +156,86 @@ partials/
 |   |-- video.html
 ```
 
+## Extending Bard [Since 2.11.0] {#extending-bard}
+
+Bard is powered by [Scribe](https://github.com/guardian/scribe). You are free to extend Bard or the underlying Scribe instances by adding your own plugins. You can do this by pushing a Scribe plugin function into the plugins array:
+
+``` .language-js
+Statamic.bard.plugins.push(myPlugin); // where `myPlugin` is a Scribe plugin function.
+```
+
+Here's an example of a plugin that converts the selected text into uppercase:
+
+``` .language-js
+const uppercasePlugin = function () {
+    return function (scribe) {
+        var command = new scribe.api.Command('uppercase');
+
+        scribe.commands.uppercase = command;
+
+        command.execute = function () {
+            scribe.transactionManager.run(() => {
+                const sel = new scribe.api.Selection();
+                const range = sel.range;
+                sel.placeMarkers();
+                const contents = range.extractContents();
+                contents.childNodes.forEach(node => node.textContent = node.textContent.toUpperCase());
+                range.insertNode(contents);
+                sel.selection.removeAllRanges();
+                sel.selection.addRange(range);
+                sel.removeMarkers();
+            });
+        };
+
+        command.queryEnabled = function () {
+            return true;
+        };
+    };
+};
+
+Statamic.bard.plugins.push(uppercasePlugin);
+```
+
+
 ## Custom Buttons {#custom-buttons}
 
-You can create custom buttons by creating a [MediumEditor button extension](https://github.com/yabwe/medium-editor/blob/master/src/js/extensions/WALKTHROUGH-BUTTON.md).
-You can load the Javascript either through an addon's `scripts.js`, or by your own `site/helpers/cp/scripts.js`.
+A custom button can be created with a Scribe plugin as described above, combined with a button handler.
 
-Here's an example of a button that prompts you for a link:
+The handler should be a function that expects an array of buttons coming from a Bard field's config. You should 
+modify this array to include your button. 
+
+Here's an example of just pushing a new button on the end.
+
+``` .language-js
+const handler = function (buttons) {
+    buttons.push({
+      text: 'Uppercase', // Tooltip text when you hover the button
+      command: 'uppercase', // The command you defined in your Scribe plugin
+      html: '<span>aA</span>', // Either the html contents of the button...
+      // icon: 'header', // ...or you can specify a font awesome icon name.
+    });
+};
+Statamic.bard.buttons.push(handler);
+```
+
+Here's an example of finding where the config defined `uppercase` and inserting the button there.
 
 ``` .language-yaml
-fields:
-  story:
-    type: bard
-    buttons:
-      - bold
-      - askForLink # corresponds to the "name" of the extension
+my_bard_field:
+  type: bard
+  buttons:
+    - bold
+    - uppercase  # button will be inserted here
+    - italic
 ```
 
 ``` .language-js
-var AskForLinkButton = MediumEditor.extensions.button.extend({
-    // Should match what you add to the Statamic object below, and the button name.
-    name: 'askForLink',
+const handler = function (buttons) {
+    let i = buttons.indexOf('uppercase');
+    buttons.splice(i, 1, { text: 'Uppercase', command: 'uppercase', html: 'aA' });
+};
 
-    tagNames: ['a'],
-    contentDefault: '<span class="icon icon-bug"></span>',
-    aria: 'Ask For Link',
-
-    handleClick: function () {
-        const href = this.getHref();
-        if (!href) return;
-
-        const selection = this.base.options.contentWindow.getSelection().toString().trim();
-        const html = `<a href="${href}">${selection}</a>`;
-        this.base.pasteHTML(html);
-
-        this.base.checkContentChanged();
-    },
-
-    getHref: function () {
-        // Get the href from a modal, etc.
-        return prompt('Enter the link?');
-    }
-});
-
-// Add it to the Statamic object.
-Statamic.MediumEditorExtensions.askForLink = AskForLinkButton;
+Statamic.bard.buttons.push(handler);
 ```
 
 [replicator]: /fieldtypes/replicator
