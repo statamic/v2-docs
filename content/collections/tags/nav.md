@@ -47,6 +47,13 @@ parameters:
       in the tree, opting to start the crumbs
       from the first level nav item.
   -
+    name: include_root
+    type: 'boolean *false*'
+    description: >
+      You can choose to turn off the root page (whatever you've provided to the `from` parameter)
+      in the tree, opting to start the crumbs from the first level nav item. (When from is the root, this is
+      the same as the `include_home` parameter)
+  -
     name: exclude
     type: 'string|array'
     description: >
