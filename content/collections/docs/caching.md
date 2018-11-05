@@ -132,9 +132,16 @@ IIS:
 
 ### Query strings {#query-strings}
 
-By default, static caching will _ignore_ any query strings in the URL. For example, visiting `/about` and `/about?something`
-will result in the same page being shown. This is useful for preventing the cache being broken by someone appending
-`?whatever` to the URL. However, it will break any functionality that relies on query strings, like pagination.
+By default, static caching will _include_ any query strings in the URL. For example, visiting `/about` and `/about?something`
+will result in two different pages. This is useful for being able to cache query string dependent pages, like paginated sections. However, it would also cause the cache being broken by someone appending `?whatever` to the URL. 
+
+To disable pagination, set `static_caching_ignore_query_strings: true`. If you're using full measure static caching, you will need to adjust your rewrite rules to ignore the query.
+
+For example:
+
+- Remove `%{QUERY_STRING}` from htaccess if using Apache
+- Remove `${args}` from your config if using NGINX
+- Remove `{QUERY_STRING}` from web.config if using IIS
 
 ### Excluding pages {#excluding-pages}
 
