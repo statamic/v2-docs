@@ -20,11 +20,11 @@ Statamic will ping The Outpost (our wilderness-branded web service) on a regular
 This happens just once an hour, when logged into the Control Panel. Changing your license key setting will trigger an immediate ping to the The Outpost. Tampering with outgoing API call will cause Statamic to consider your license invalid. We might also send our Flying Enforcer Monkeys™ to your office to throw unmentionable things at you. We might not. But we might.
 
 ## ...because every website needs a license. {#one-domain}
-A Statamic license entitles you to use it on _one domain_. You will need to specify the domain you plan to use from the [license area of your Statamic Account][account]. This domain will be treated as a wildcard so you can use subdomains for locales, testing, and other purposes.
+A Statamic license entitles you to use it on _one domain_. You will need to specify the domain you plan to use from the [license area of your Statamic Account][https://statamic.com/account/licenses]. This domain will be treated as a wildcard so you can use subdomains for locales, testing, and other purposes.
 
 This also means that you can only use the Control Panel from your _default_ locale.
 
-If you attempt to use the site from another domain you will get a notification inside the Control Panel informing you that your key is being used on more than one site and be prompted to make the necessary changes. You may [change the domain][account] associated with a license at any time.
+If you attempt to use the site from another domain you will get a notification inside the Control Panel informing you that your key is being used on more than one site and be prompted to make the necessary changes. You may [change the domain][https://docs.statamic.com/licensing] associated with a license at any time.
 
 ## What is a public domain? {#public-domain}
 
