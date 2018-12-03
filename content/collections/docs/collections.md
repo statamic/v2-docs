@@ -18,6 +18,8 @@ You can create as many collections as you'd like, each with its own default grou
 
 By their very nature, Collections don't determine their own full URLs. To do so would limit their flexibility. Instead, you can "mount" a collection onto any page (or pages) and then write a route to determine their URL structure. This opens many, many, many possibilities. That's three (3) manys, in case you were counting.
 
+It's really easy to mount a collection to a page, simply click the 3 dots to the right of the page name, when in the index view of pages, and mount a selected collection. Or if you want to add it to the `site/content/pages/news/index.md` file (if mounting the news collection for example), specify it there with `mount: news`.
+
 Collections are kept in `site/content/collections`, each in their own subfolder, and contain a flat list of Entries in a YAML Front-Loaded format (there's that term again).
 
 ## Example
