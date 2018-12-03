@@ -46,4 +46,4 @@ You can comma delimit domains in your licenses page, like so: `mysite.com, mysta
 
 [trial-mode]: /knowledge-base/trial-mode
 [terms]: https://statamic.com/terms
-[account]: https://account.statamic.com/licenses
+[account]: https://statamic.com/account/licenses
