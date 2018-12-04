@@ -38,6 +38,7 @@ For each locale, you should copy the `index.php` (and `.htaccess` if using Apach
 |-- de/
 |   |-- index.php
 |   `-- .htaccess
+
 |-- index.php
 |-- .htaccess
 |-- ...etc...
