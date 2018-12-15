@@ -16,7 +16,7 @@ parameters:
     description: Specify the slug to filter users by a single role.
 id: c3e6df36-d705-4293-a5d8-40d27a06a18c
 ---
-This tag has the same functionality as the [collection](collection) tag, with some differences.
+This tag has the same functionality as the [collection](collection) tag, including the ability to use [scoping](collection#scope). It does have some differences, though.
 
 The first big and obvious difference, is that the collection you're working with is all of your users.
 
