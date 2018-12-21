@@ -18,12 +18,12 @@ Odd/even table row classes for zebra striping.
 
 ```
 <table>
-  {{ entries:shows }}
+  {{ collection:shows }}
     <tr class="{{ switch between='odd|even' }}">
       <th>{{ title }}</th>
       <td>{{ rating }}</td>
     <tr>
-  {{ /entries:shows }}
+  {{ /collection:shows }}
 </table>
 ```
 
