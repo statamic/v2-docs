@@ -23,7 +23,7 @@ Odd/even table row classes for zebra striping.
       <th>{{ title }}</th>
       <td>{{ rating }}</td>
     <tr>
-  {{ /entries:shows }}
+  {{ /collection:shows }}
 </table>
 ```
 
