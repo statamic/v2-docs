@@ -6,7 +6,7 @@ kb_categories:
   - Tips, Tricks, and How-Tos
 ---
 ## Filesystems?
-Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem](http://flysystem.thephpleague.com/). By breaking the application structure into siloed locations, each with its own filesystem, we gain the ability to physically put these files in more locations (Amazon S3 for example) than a single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
+Yes. Plural. Statamic has several self-contained filesystems powered by [Flysystem](http://flysystem.thephpleague.com/). By breaking the application structure into siloed locations, each with its own filesystem, we gain the ability to physically put these files in more locations on your disk than the single web directory. What you do with that ability is up to you. We feel compelled to tell you there's nothing wrong with defaults. Don't succumb to complex configuration simply to step up your Tinder game. It probably won't impress anybody.
 
 Statamic has 5 core filesystems, each with its own 'root':
 
