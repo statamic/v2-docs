@@ -113,7 +113,7 @@ Without a sidebar, the other sections will become full width. You may prefer it 
 
 ### Meta Fields
 
-There are some special meta fields that may be automatically be added to your fieldset if you havent explicitly defined them.
+There are some special meta fields that may be automatically be added to your fieldset if you haven't explicitly defined them.
 
 - If you haven't defined a `title` field, one will be added to the top of your first section.
 - A `slug` field will be added to the sidebar for almost all publishable content.
