@@ -225,6 +225,8 @@ image_manipulation_presets:
 
 Whenever you upload a new image asset through the control panel, all of that image's presets will be created _automatically_.
 
+You can disable this by adding `image_manipulation_presets_generate_on_upload: false`.
+
 Note: if you are looking to use the `fit: crop_focal` feature with presets, don't include a fit parameter in the preset definition, but rather ensure the _Automatic image crop_ setting is turned on in the _Assets_ settings page in the CP and Statamic will automatically use any focal points defined for your images.
 
 To pre-generate the presets for existing assets, you can run the CLI command `php please assets:generate-presets`. (This will also generate some built-in presets used by the Control Panel)
