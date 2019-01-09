@@ -20,7 +20,7 @@ Statamic has a few server requirements. Not all servers are created equal and no
 ### Server Requirements {#server-requirements}
 
 - A web server: Apache, Nginx, or IIS
-- PHP >= 5.5.9
+- PHP >= 5.5.9 and < 7.3
 - URL Rewriting enabled (mod_rewrite, try_files, etc)
 
 ### Required PHP Extensions {#required-php-extensions}
