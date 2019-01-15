@@ -29,7 +29,13 @@ An additional piece of the puzzle is that *some* of the commits/pushes will prob
   
   [Installing Redis on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
   
-  *Note that you may ALSO need to sort out a way to run the queue listener `php please queue:listen`, in the background, as a daemon or somesuch thing (so quoth the coding gods), in order for Spock to continue properly enqueueing its commands, without needing to keep the queue listener open in a terminal window — again, details about how to achieve this will likely differ based on your server environment.*
+  **Note that you may ALSO need to sort out a way to run the queue listener `php please queue:listen`, in the background, as a daemon or somesuch thing (so quoth the coding gods), in order for Spock to continue properly enqueueing its commands, without needing to keep the queue listener open in a terminal window — again, details about how to achieve this will likely differ based on your server environment.**
+
+  One way to do this (if your environment supports it) is to install and configure [Supervisor](http://supervisord.org/) on your server to run the `php please queue:listen` process for you — and keep it running/relaunch it if the process gets terminated, server gets rebooted, etcetera. From the *Supervisor* website:
+
+      Supervisor is a client/server system that allows its users to monitor and control a number of processes on UNIX-like operating systems [...] it is meant to be used to control processes related to a project or a customer, and is meant to start like any other program at boot time.
+
+  The [program:x](http://supervisord.org/configuration.html#program-x-section-values) section in the documentation is of particular relevance in setting *Supervisor* up to run `php please queue:listen` for you in a daemonized capacity. 
  
  - **Wait for newer versions of Statamic that have *Advanced Alien Technology*™**
    It seems that in the future (near or far currently unknown), the event(s) fired by Statamic when a collection is re-ordered/saved may be improved, in order to consolidate all of the changes made into a single event (thus causing Spock to only execute a single commit and/or push). Which should, in-turn, reduce the time spent by the system executing those processes, and make the re-order/save experience a lot snappier in this situation. 
