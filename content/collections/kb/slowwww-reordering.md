@@ -18,7 +18,7 @@ An additional piece of the puzzle is that *some* of the commits/pushes will prob
 - **Disable Spock's Automatic `git push`**  
   If Spock isn't attempting to `git push` each commit it makes, in sequence, this problem seems to be eliminated — or at least the execution time required for all of the commits is far less than if each of them is also being pushed, in sequence, one at a time. With this solution/workaround, you'll need to remember to `git push` manually at the end of your content editing/managing session in order to propagate your automagically-Spock-committed changes back to your repo.
 
-- **Install and enable Redis queuing**  
+- **Install and enable Redis queueing**  
   In Spock v2.2.0, the ability to have Spock queue its commands was added. You can take advantage of this to allow Spock to apply its Vulcan logic to your files in the background, while your Control Panel stays snappy for you (and the site's other users). You'll need to have Redis installed and configured on the server in question, and your Statamic `.env` file will need to be modified to identify Redis as the queue driver. Please see the [Spock docs](https://statamic.com/marketplace/addons/spock/docs#queueing-commands) for configuration information.
   
   Installing and configuring Redis on your server is going to differ depending on the server configuration. Here are some links to a few of the more common server/OS scenarios:
