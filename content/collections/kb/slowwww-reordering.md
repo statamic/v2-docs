@@ -24,7 +24,9 @@ An additional piece of the puzzle is that *some* of the commits/pushes will prob
   Installing and configuring Redis on your server is going to differ depending on the server configuration. Here are some links to a few of the more common server/OS scenarios:
   
   [Installing Redis on OS X](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298)
+  
   [Installing Redis on Ubuntu 14.04](https://hostpresto.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-14-04/)
+  
   [Installing Redis on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
  
  - **Wait for newer versions of Statamic that have *Advanced Alien Technology*™**
