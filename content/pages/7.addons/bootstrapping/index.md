@@ -23,7 +23,7 @@ or when running the update command.
 - Your addon does **not** need to be registered on Packagist. 
 - There's no need to bundle a `vendor` folder with your addon.
 
-To install the depdencies, run the following command:
+To install the dependencies, run the following command:
 
 ```
 php please update:addons
