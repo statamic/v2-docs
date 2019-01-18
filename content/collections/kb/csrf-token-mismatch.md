@@ -18,3 +18,8 @@ Some potential solutions to this:
 - Change the session driver to something persistent across servers by changing `SESSION_DRIVER` in your `.env` file. Perhaps `memcached` or `redis`.
 - Disable CSRF verification by adding `*` to the `csrf_exclude` array in `site/settings/system.yaml`. For obvious reasons, this may be a bad idea.
 - Consider if a load balancer is really necessary for your site.
+
+
+## TokenMismatchException in the Control Panel
+
+If AJAX scripts are not loading in the Control Panel (i.e. Suggestion boxes, any time you try and save data), this could be down to a `TokenMismatchException` - you can check this by firing up Inspector and checking the Resources tab. If you have changed your `APP_KEY` (i.e. if you've updated to a new Statamic website) then this could cause a `TokenMismatchException`, try clearing your browser's cookies.
