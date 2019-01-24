@@ -235,6 +235,31 @@ methods: {
 }
 ```
 
+### Manually Saving Data
+Whenever your vuejs template is a little more complex and you can not simply bind `v-model` to `data`, you need to assign key / value pairs to the `data` object manually.
+Once you're done processing / computing or otherwise working with the data in your vue fieldtype, you can prepare it to be saved like this:
+``` .language-javascript
+methods: {
+        someFinalMethod: function(title) {
+            let this = that;
+            
+            that.data = {
+              collection: title,
+              books: ['Harry Potter', 'Steven Kings Pet Cemetary']
+            }
+        }
+    }, 
+```
+
+The fields `collection` & `books` would automatically save, whenever the publishing form is submitted. The resulting YAML would look like this:
+``` .language-yaml
+fieldname:
+  collection: My personal favorites
+  books:
+    - 'Harry Potter'
+    - 'Steven Kings Pet Cemetary'
+```
+
 
 ## The PHP Side {#php}
 
