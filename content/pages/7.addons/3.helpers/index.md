@@ -139,6 +139,9 @@ Checks if a cookie named `$key` exists.
 
 Storage will save files under `site/storage`. Using these helpers, data will automatically be saved into your addon's subfolder, eg. `site/storage/addons/MyAddon/$key`.
 
+### storage->put($key, $data) {#storage-put}
+Saves mixed Data to storage under `$key`.
+
 ### storage->putYAML($key, $data) {#storage-put-yaml}
 Saves an array to storage under `$key`, as a `.yaml` file.
 
@@ -159,3 +162,9 @@ Returns the array stored as a serialized string saved under `$key.php`, or `$def
 
 ### storage->getJSON($key, $default = null) {#storage-get-json}
 Returns the array stored as JSON saved under `$key.json`, or `$default` if it doesn't exist.
+
+### storage->exists($key) {#storage-exists}
+Check if data exists in storage under `$key`. Returns true/false
+
+### storage->delete($key) {#storage-delete}
+Delete a file under `$key` from storage.
