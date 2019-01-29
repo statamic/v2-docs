@@ -26,7 +26,7 @@ template: foo
 your-theme/
 `-- templates/
     |-- foo.html
-    `-- foo.blade.html
+    `-- foo.blade.php
 ```
 
 There are two `foo` templates. Which one should be used? Don't make this mistake.
