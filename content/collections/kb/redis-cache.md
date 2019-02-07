@@ -48,6 +48,14 @@ REDIS_PORT=6379
 REDIS_DATABASE=0
 ```
 
+You can also set a prefix by adding:
+
+```.language-env
+CACHE_KEY_PREFIX=my_awesome_site
+```
+
+This is vital if you are running more than one site on a server.
+
 ## How to confirm Redis is actually working
 
 Run the `monitor` command and visit a page of the site in your browser. If it's working you'll see a number of events trigger as Redis does its thing.
