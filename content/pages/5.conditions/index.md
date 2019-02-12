@@ -11,7 +11,7 @@ details:
   -
     name: not|isnt|aint
     type: mixed
-    description: Checks if a field is not equal to a value. Appending `_strict` will use a `===` for comparison. eg. `foo:isnt_strict="bar"`
+    description: Checks if a field is not equal to a value. Appending `_strict` will use a `!==` for comparison. eg. `foo:isnt_strict="bar"`
   -
     name: exists|isset
     type: bool
