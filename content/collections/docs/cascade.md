@@ -76,3 +76,7 @@ To give you more control over the scope of your data, each URLs variables are al
 ## Reserved variables {#reserved}
 
 You should always avoid overriding any of the Statamic-provided content variables. View the [full list of system variables](/variables).
+
+`content` is also a reserved name and shouldn't be used as field name, for fields that aren't strings.
+Read more: https://docs.statamic.com/knowledge-base/yaml-error
+
