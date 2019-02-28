@@ -19,7 +19,7 @@ If you don't want to use your default layout view (for example if you want to re
 ## Setting Page Variables
 
 The easiest way to set page variables on error templates would be by adding a block of [YAML Front Matter](/yaml) to the top of the template.
-
+ 
 ```
 ---
 title: 404 Ruh Roh
@@ -30,3 +30,7 @@ title: 404 Ruh Roh
 ```
 
 [^1]: This can be adjusted by editing the `error_template_folder` variable in your `theming` settings. For example, set it to `/` if you want your error templates in your root template folder.
+
+## Templating a 500 error
+
+If you want to hide site visitors from seeing a potential 500 error on the front-end of your site, or show them a nicer error screen, then you can do so by creating a `500.blade.php` file inside `templates/errors`. *Note:* You must have Debug mode turned off in order for this template to show.
