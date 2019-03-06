@@ -223,3 +223,7 @@ image_manipulation_cached_path: img
 # The URL to the folder
 image_manipulation_route: img
 ```
+
+## Using Glide with Locales {#glide-and-locales}
+
+When using Glide with multiple locales, the generated image path will include the proper `site_root` as dictated by the locale, but the actual asset will be stored wherever you have set the `image_manipulation_cached_path`. To serve these assets when on a localized version, you'll need to create a symlink from your `/$locale/image_manipulation_cached_path` to `image_manipulation_cached_path`. 
