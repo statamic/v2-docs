@@ -84,7 +84,7 @@ We've organized Statamic into different filesystems to make file management a br
 Within that article, it explains how to adjust the locations of your folders. In short, you'll want to adjust the
 `root` and `url` values for each `filesystem` in `site/settings/system.yaml` to correspond with their new locations.
 
-You'll also want to update your asset container `path` and `url` values, which can be done in `site/storage/[container-id]/container.yaml`.
+You'll also want to update your asset container `path` and `url` values, which can be done in `site/content/assets/[container-name].yaml`.
 
 ## Summary {#summary}
 
@@ -92,6 +92,6 @@ You'll also want to update your asset container `path` and `url` values, which c
 2. Ensure web accessible files are left in the webroot. (`assets`, `site/themes`, `index.php`, etc.)
 3. Adjust the `$statamic` path variable in `index.php`.
 4. Adjust [filesystem references][filesystems].
-5. Adjust the asset container's path in `container.yaml`.
+5. Adjust the asset container's path.
 
 [filesystems]: /knowledge-base/filesystems
