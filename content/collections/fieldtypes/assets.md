@@ -18,7 +18,7 @@ options:
   -
     name: max_files
     type: int
-    description: The maximum number of allowed files. If left blank, there will be no limit.
+    description: The maximum number of allowed files. If left blank, there will be no limit. If set to 1, the asset will be saved as a string instead of an array
   -
     name: restrict
     type: bool
