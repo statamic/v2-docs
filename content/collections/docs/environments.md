@@ -22,7 +22,18 @@ If you are working on a team, you may wish to continue including a `env.example`
 
 ## Defining Environments {#defining-environments}
 
-Statamic runs in the `production` environment by default, unless otherwise specified. To specify a another environment, add `APP_ENV=foo` to your `.env` file, where `foo` is the name of your environment.
+To specify which environment your site is running in, add an `APP_ENV` to your `.env`:
+
+```
+APP_ENV=dev
+```
+
+If an `APP_ENV` has not been defined, Statamic will assume the site is running in `production`.
+You may customize the default environment by overriding it in your `index.php`.
+
+``` .lang-php
+$environment = 'dev';
+```
 
 ## Environment Settings {#environment-settings}
 
