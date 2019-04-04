@@ -54,6 +54,9 @@ fields:
               left: Left Align
               right: Right Align
 ```
+## Fieldtypes
+
+You can use any fieldtypes inside your Replicator sets. Make sure to compare the experience with the other meta-fields: [Grid](/fieldtypes/grid) and [Bard](/fieldtypes/bard).
 
 ## Data Structure {#data-structure}
 
