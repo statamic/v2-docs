@@ -104,6 +104,10 @@ bard_field:
     caption: "I want this mounted above my fireplace."
 ```
 
+## Fieldtypes
+
+You can use any fieldtypes inside your Bard sets. Make sure to compare the experience with the other meta-fields: [Grid](/fieldtypes/grid) and [Replicator](/fieldtypes/replicator). You can even use Grids and Replicators inside your Bard sets. Just remember that because you can doesn't mean you should. Your UI experience can vary greatly.
+
 ### Text-only Mode
 
 If you don't configure any additional sets the field data will be saved as a string.
