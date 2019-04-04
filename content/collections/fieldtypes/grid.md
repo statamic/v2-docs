@@ -2,7 +2,7 @@
 title: Grid
 description: Manage columns of dynamic rows of data that can contain any other fieldtypes.
 overview: >
-  The grid fieldtype is a _meta_ fieldtype, a fieldtype that serves as a container for more fieldtypes. Think of Grid as a spreadsheet, where each column contains any fieldtype, _including another Grid_. We lovingly refer to these as Inception Grids.
+  The grid fieldtype is a _meta_ fieldtype, a fieldtype that serves as a container for more fieldtypes. Any fieldtypes. Think of Grid as a spreadsheet, where each column contains any fieldtype, _including another Grid_. We lovingly refer to these as Inception Grids.
 
   Let's go deeper.
 
@@ -35,6 +35,10 @@ options:
     description: "The `Add Row` button's label."
 id: fa6d2032-0e42-4ea5-b20c-4226941bf0da
 ---
+## Fieldtypes
+
+You can use any fieldtypes inside a Grid. Just remember that because you can't doesn't mean you should. Your UI experience will vary greatly. Make sure to compare the experience with the other meta-fields: [Replicator](/fieldtypes/replicator) and [Bard](/fieldtypes/bard).
+
 ## Data Structure {#data-structure}
 
 The Grid field creates a YAML collection (associative array).
