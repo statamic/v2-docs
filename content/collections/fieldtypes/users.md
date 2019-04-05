@@ -20,7 +20,7 @@ options:
     name: label
     type: string
     description: >
-      How the values should appear. You may use variables within the string, eg. "{{ first_name }} ({{ last_name }})"
+      How the values should appear. You may use variables within the string, eg. "{{ first_name }} {{ last_name }}"
 ---
 ## Usage
 
