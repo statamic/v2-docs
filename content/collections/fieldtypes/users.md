@@ -16,6 +16,11 @@ options:
     type: integer
     description: >
       The maximum number of users than can be selected. By default (blank) there is no limit. Setting to `1` will save the value as a `string` instead of an `array` and will switch to a select dropdown UI.
+  - 
+    name: label
+    type: string
+    description: >
+      How the values should appear. You may use variables within the string, eg. "{{ first_name }} ({{ last_name }})"
 ---
 ## Usage
 
