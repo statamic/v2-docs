@@ -55,7 +55,7 @@ What often can happen is when Statamic requests `SomeClass.php`, a Mac will try 
 
 Most addons are considered "installed" simply by the presence of their files being in the proper location of your site.
 
-However, if your addon has [Composer dependencies](/addons/bootstrapping#composer) it won't be treated as "installed" until the depedencies have been installed too. You can do this by running the following command:
+However, if your addon has [Composer dependencies](/addons/bootstrapping#composer) it won't be treated as "installed" until the dependencies have been installed too. You can do this by running the following command:
 
 ``` .lang-bash
 php please update:addons
