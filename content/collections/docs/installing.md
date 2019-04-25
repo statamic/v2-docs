@@ -48,7 +48,7 @@ If you're into that though, all the better. You can probably skip over the rest 
 
 <h3 id="valet">Mac: Laravel Valet <span class="bg-pink py-px px-1 rounded text-sm uppercase text-white">Our Favorite!</span></h3>
 
-[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.test` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant.
+[Laravel Valet][valet] is a development environment for Mac minimalists. No Vagrant, No Apache, No Nginx, No need to manually edit hosts file. It simply maps all the subdirectories in a "web" directory (such as `~/Sites`) to `.test` or `.localhost` domains. You can even share your sites publicly using local tunnels with a single command. We use it ourselves and it's brilliant. It is also [available for Linux](https://cpriego.github.io/valet-linux/)
 
 > Valet only supports running in web root out of the box, but if you need to run in a subdirectory you should check out the LionsMouth [Valet Driver][valet-driver]
 
