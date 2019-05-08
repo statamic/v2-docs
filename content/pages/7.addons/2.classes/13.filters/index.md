@@ -33,9 +33,9 @@ use Statamic\Extend\Filter;
 
 class WordFilter extends Filter
 {
-    public function filter()
+    public function filter($collection)
     {
-        return $this->collection->filter(function ($entry) {
+        return $collection->filter(function ($entry) {
             return str_contains($entry->get('title'), 'bacon');
         });
     }
@@ -45,6 +45,7 @@ class WordFilter extends Filter
 A few things to note:
 
 - Your class' `filter` method should return a `Collection`. This is what gets sent back to your tag.
+- Although `Statamic\Extend\Filter` gives you a `$this->collection` to play with—and you may seem examples kicking around that do things that way—the use of this property was deprecated in 2.6. Instead, you should use the argument passed to the `filter()` method ("`$collection`" in the example ablove).
 - Within the collection, you will get an instance of the data object. In this example we're looping through entries, so we get an `Entry` object.
 - You aren't restricted to using `->filter()` on the collection. Feel free to manipulate the collection however you wish using the [methods listed on the Laravel docs][collection_methods].
 
@@ -65,9 +66,9 @@ Looking back at the example above, let's say you don't want to assume the word i
 ``` .language-php
 class WordFilter extends Filter
 {
-    public function filter()
+    public function filter($collection)
     {
-        return $this->collection->filter(function ($entry) {
+        return $collection->filter(function ($entry) {
             return str_contains(
                 $entry->get('title'),
                 $this->get('word', 'bacon')
