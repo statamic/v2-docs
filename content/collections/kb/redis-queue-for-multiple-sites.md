@@ -6,6 +6,7 @@ kb_categories:
 related_reading:
   - 302be45f-bd9d-4a26-b836-d0f5c84b4773
   - ec91d09e-c5a4-447e-b5a2-fd6ee2d7f89a
+id: 03924f80-71cf-11e9-b475-0800200c9a66
 ---
 ## Enable Redis queue
 You can enable a Redis queue for your website by setting the following in your `.env` file:
