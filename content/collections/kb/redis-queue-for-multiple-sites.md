@@ -1,6 +1,6 @@
 ---
 title: Using a Redis queue for multiple sites on one server
-overview: You can run a Redis queue to optimize performance in the Control Panel when using Spock. With a Redis Queue you can also push other tasks, like generating assets, into the background. You might run into trouble when you run multiple Statamic sites with a Redis queue on one server.
+overview: You can run a Redis queue to optimize performance in the Control Panel when using Spock. With a Redis Queue you can also push other tasks, like generating assets, into the background. This article explains how you can make a Redis queue work for multiple Statamic sites on one server.
 kb_categories:
   - Tips, Tricks, and How-Tos
 related_reading:
@@ -14,7 +14,7 @@ You can enable a Redis queue for your website by setting the following in your `
 QUEUE_DRIVER=redis
 ```
 
-For each site on your server, you want Redis to use it's own database or Redis won't function properly. To do this add the following to your `.env` file and increase the number for each site you're running:
+For each site on your server, you want Redis to use it's own database or you'll run into troubles. You can do this by adding the following to your `.env` fil. Make sure you increase the database number for each site you're running:
 
 ```.language-env
 REDIS_DATABASE=0
@@ -24,7 +24,7 @@ By default you have 16 Redis databases at hand.
 
 ## Run a queue worker for each site
 
-You need to run `php please queue:listen` for each site to activate the queue. If you use Forge you can set a daemon for each site. You can do this in the Daemon tab on the Server Details. Use the following configuration:
+You need to run `php please queue:listen` for each site to activate the queue. If you use Forge you can easily configure a daemon for each of your sites. Configure this in the Daemon tab on the Server Details of your server on Forge. Use the following configuration:
 
 ```
 Command: php please queue:listen
@@ -32,4 +32,4 @@ User: forge
 Directory: /home/forge/YOUR_SITE_NAME/
 ```
 
-This makes sure the queue automatically starts after a reboot, failure or a deploy. 
+This makes sure the queue automatically starts after a reboot, failure or a deploy. Happy queueing!
