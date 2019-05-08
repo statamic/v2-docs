@@ -14,7 +14,7 @@ You can enable a Redis queue for your website by setting the following in your `
 QUEUE_DRIVER=redis
 ```
 
-For each site on your server you want Redis to use it's own database or Redis won't function properly. To do this add the following to your `.env` file and increase the number for each site you're running:
+For each site on your server, you want Redis to use it's own database or Redis won't function properly. To do this add the following to your `.env` file and increase the number for each site you're running:
 
 ```.language-env
 REDIS_DATABASE=0
@@ -24,10 +24,12 @@ By default you have 16 Redis databases at hand.
 
 ## Run a queue worker for each site
 
-You need to run `php please queue:listen` for each site active the queue. If you use Forge you can set a daemon for each site. You can do this in the Daemon tab on the Server Details. Use the following configuration:
+You need to run `php please queue:listen` for each site to activate the queue. If you use Forge you can set a daemon for each site. You can do this in the Daemon tab on the Server Details. Use the following configuration:
 
 ```
 Command: php please queue:listen
 User: forge
 Directory: /home/forge/YOUR_SITE_NAME/
 ```
+
+This makes sure the queue automatically starts after a reboot, failure or a deploy. 
