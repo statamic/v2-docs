@@ -15,7 +15,7 @@ You can enable a Redis queue for your website by setting the following in your `
 QUEUE_DRIVER=redis
 ```
 
-For each site on your server, you want Redis to use it's own database, or you'll run into troubles. You can do this by adding the following to your `.env` fil. Make sure you increase the database number for each site you're running:
+For each site on your server, you want Redis to use it's own database, or you'll run into troubles. You can do this by adding the following to your `.env` file. Make sure you increase the database number for each site you're running:
 
 ```.language-env
 REDIS_DATABASE=0
