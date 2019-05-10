@@ -40,7 +40,7 @@ In your `.env` file set the following:
 CACHE_DRIVER=redis
 ```
 
-That's it. If you need to change the host, port, or database (not common), you have access to the following options as well, shown with their defaults.
+That's it. If you need to change the host, port, or database (not common, but useful if you have multiple sites on the same server that should not share a cache), you have access to the following options as well, shown with their defaults.
 
 ```.language-env
 REDIS_HOST=127.0.0.1
