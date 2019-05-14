@@ -20,7 +20,7 @@ Finally, if you require a provider that isn't on that list, you may write your o
 
 Install the OAuth Bridge addon files. You can find them below.
 
-If using any third party providers from [SocialiteProviders](http://socialiteproviders.github.io), add their composer package to the `require` array in OAuthBridge's `composer.json` file. These are normally in the format `"socialiteproviders/dropbox": "^2.0"`. Then run `php please addons:refresh` to install it.
+If using any third party providers from [SocialiteProviders](http://socialiteproviders.github.io), add their composer package to the `require` array in OAuthBridge's `composer.json` file. These are normally in the format `"socialiteproviders/dropbox": "^2.0"`. Then run `php please update:addons` to install it.
 
 Add the providers to the `OAuthBridgeServiceProvider`'s `$oauth_providers` array with the name of the provider as the key, and the event listener as the value. If you are using a provider that comes with Socialite (Facebook, Twitter, Google, LinkedIn, GitHub and Bitbucket), the listener can be `null`.
 
