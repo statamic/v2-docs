@@ -244,10 +244,6 @@ static_caching_file_path:
   fr: fr/static
 ```
 
-## Static Site Generation {#static-generator}
-
-En route from Far Far Away Land. Stay tuned!
-
 
 [ephemeral]: https://en.wiktionary.org/wiki/ephemeral
 [laravel-cache]: http://laravel.com/docs/5.1/cache
