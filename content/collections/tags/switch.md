@@ -10,6 +10,11 @@ parameters:
     description: >
       A set of values to iterate over, using a
       pipe-separated string.
+  -
+    name: custom
+    type: string
+    description: >
+      Define a custom parameter to reset the switch. For example: section='unique'.
 id: 8b558556-a08b-4134-b77d-102b4fb34060
 ---
 ## Examples {#examples}
