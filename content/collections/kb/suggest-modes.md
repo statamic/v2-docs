@@ -70,5 +70,5 @@ You can check out the Relate fieldtype Vue component[^2] for inspiration. That's
 
 [^1]: Located at `statamic/resources/js/components/fieldtypes/users/users.js`
 [^2]: Located at `statamic/resources/js/components/fieldtypes/relate/relate.js`
-[^3]: Located at `statamic/bundles/Suggest/SuggetsController.php@suggestions`
+[^3]: Located at `statamic/bundles/Suggest/SuggestController.php@suggestions`
 [^4]: Located at `statamic/bundles/Suggest/Modes/UsersMode.php`
