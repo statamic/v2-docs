@@ -143,6 +143,12 @@ For example:
 - Remove `${args}` from your config if using NGINX
 - Remove `{QUERY_STRING}` from web.config if using IIS
 
+If you require to cache pages with query strings, you may do so in `site/settings/caching.yaml`
+
+```.language-yaml
+static_caching_ignore_query_strings: false
+```
+
 ### Excluding pages {#excluding-pages}
 
 You may add a list of URLs you wish to exclude from being cached. You may want to exclude pages that need to always be dynamic, such
