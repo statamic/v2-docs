@@ -286,6 +286,7 @@ bucket:  # The bucket name
 region:  # The region code (eg. us-west-1)
 path:    # A subfolder of the bucket, if you'd like
 cache:   # A cache time in seconds. More info below.
+url:     # URL prefix
 ```
 
 The region codes can be tough to remember. [Here’s a list of them.](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
