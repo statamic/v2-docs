@@ -68,6 +68,8 @@ submitting, where the `success` condition will kick in and they will be shown a 
 {{ /user:reset_password_form }}
 ```
 
-Visiting the URL containing this form directly will result in triggering the `url_invalid`
-conditional. The URL needs to have the appropriate `user` and `code` query parameters.
-These can be created using a `user:forgot_password_form`.
+Visiting the URL containing this form _directly_ will set a `url_invalid` invalid variable you can use to check if they've actually come from the form in their previous request.
+
+This URL needs to have the appropriate `user` and `code` query parameters (e.g. /some/url?user=username&code="abc123"`
+
+These can be created automatically using a `user:forgot_password_form`.
