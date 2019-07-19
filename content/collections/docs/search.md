@@ -9,15 +9,15 @@ overview: >
 
 Statamic's search engine is preconfigured to Just Work™ right out of the box. All you need to do is kick off the first pass of the indexer. Which leads us to our logical first section...
 
-## Indexing {#indexing}
+## Indexes
 
-Statamic builds indexes of your content to provide lickity-split search results. If you don't know what indexes are, that's okay. It doesn't really matter.
+Statamic builds indexes of your content to provide fast, relevant search results.
 
-To kick off the indexer you can run `php please search:update` in your terminal, visit `/cp/search/update`, or simply perform a search _in the control panel_. Also, in the Control Panel you will find settings to enable automatic indexing of content. Every time a change to content is detected, that update is pushed into the index.
+The default index contains all collections and taxonomies and only searches the title field of each.
 
-### What fields are indexed {#searchable-fields}
+### Customizing the index
 
-By default, just the `title` is indexed. If you'd like to customize this, you may edit the `searchable` array in `site/settings/search.yaml`.
+You can customize which fields are indexed with the `searchable` array in `site/settings/search.yaml`.
 
 ``` .lang-yaml
 searchable:
@@ -26,6 +26,32 @@ searchable:
 ```
 
 This setting only applies to the `default` index.
+
+### Creating additional indexes
+
+Each collection can have its own index. Set a `searchable` array in the collection's `folder.yaml` with a list of the fields that should be indexed.
+
+For example, in `site/content/collections/blog/folder.yaml`:
+
+``` .lang-yaml
+searchable:
+  - title
+  - subtitle
+  - content
+```
+
+Then run the following command to create the index:
+
+``` .lang-bash
+php please search:update collections/blog
+```
+
+### Running and updating the indexes
+
+The indexing process can be intensive and needs to be run manually to get it started. You can run the indexer with the command `php please search:update` in your terminal, by visiting `/cp/search/update`, or simply perform a search _in the control panel_.
+
+The Control Panel also has a setting to enable **automatic indexing** when content changes are detected.
+
 
 ## The Search Form {#search-form}
 
@@ -81,29 +107,6 @@ Or, you may add the following to your `search.yaml`:
 driver: algolia
 algolia_app_id: your-app-id
 algolia_api_key: your-admin-api-key
-```
-
-## Searching Collections {#collection-indexes}
-
-By default, all content will go into a default master index.
-
-To give a collection its own index, add a `searchable` array into the collection's `folder.yaml` with a list of the fields that should be indexed.
-
-For example, in `site/content/collections/blog/folder.yaml`:
-
-``` .lang-yaml
-searchable:
-  - title
-  - subtitle
-  - content
-```
-
-This tells Statamic that only those 3 fields should be indexed, and will result in a leaner index with faster searches.
-
-Then, to create the index, run the following command:
-
-``` .lang-bash
-php please search:update collections/blog
 ```
 
 
