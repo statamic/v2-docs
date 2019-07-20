@@ -21,6 +21,6 @@ order_of_ceremony:
 ```
 
 ```.language-output
-diapers
+diaper
 party, eat, service, photos
 ```
