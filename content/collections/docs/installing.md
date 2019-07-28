@@ -232,4 +232,4 @@ If you'd like to support multiple languages, head over to [Localization][localiz
 
 If you have used Statamic before and know what you're doing, you can choose to clear the default content, storage, settings, theme, assets, and/or users.
 
-Run `php please clear:site` inside your Statamic directory to initiate the clear process. You will be prompted to choose which data you would like to clear.
+Run `php please clear:site` inside your Statamic directory to initiate the clear process. You will be prompted to choose which data you would like to clear. If you want to delete everything and start fresh, it's also possible to skip the prompts and wipe everything using `php please clear:site --force`.
