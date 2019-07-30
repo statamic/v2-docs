@@ -17,7 +17,7 @@ GlobalSet::all(); // Returns GlobalCollection
 GlobalSet::find($id); // Returns GlobalSet
 ```
 
-## Get a global by handle (aka: slug).
+## Get a global by handle.
 
 ``` php
 GlobalSet::whereHandle($handle); // Returns GlobalSet
