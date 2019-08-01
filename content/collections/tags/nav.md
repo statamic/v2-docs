@@ -161,6 +161,23 @@ The `{{ *recursive children* }}` tag will repeat the contents of the entire `{{ 
 
 It’s an admittedly weird concept, and might take some fiddling with to truly understand, but is very powerful when fully understood. Take the time. Learn to wield it. A powerful Jedi will you be.
 
+## Children {#children}
+
+If you want to take more control over your child menu, you can just loop through the `children` array within your menu, instead of repeating the contents of the child elements with `{{ *recursive children* }}`.
+
+```
+{{ if is_current || is_parent }}
+  {{ if children }}
+     <ul>
+      {{ children }}
+        <li><a href="{{ url }}">{{ title }}</li>
+      {{ /children }}
+     </ul>
+  {{ /if }}
+{{ /if }}
+```
+
+
 ## Hidden Pages {#hidden-pages}
 
 A common use-case for navigation is to make some pages "hidden", which means to hide them from the nav, but keep them
