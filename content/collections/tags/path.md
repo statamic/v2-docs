@@ -60,3 +60,11 @@ Assuming site root is `http://example.com/`:
 http://example.com/contact
 http://example.com/contact
 ```
+
+### Localization with different slugs {#localization_diff_slugs}
+
+If you have two different slugs for your local content (like /en/features and /de/funktionen), you need to reference the ID (found in the corresponding yaml file) instead of the slug.
+
+```
+{{ path src="72c016c6-cc0a-4928-b53b-3275f3f6da0a" }}
+```
