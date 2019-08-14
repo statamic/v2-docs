@@ -45,8 +45,10 @@ That's it. If you need to change the host, port, or database (not common, but us
 ```.language-env
 REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
-REDIS_DATABASE=0
+REDIS_DATABASE="0"
 ```
+
+_Note: It's crucial that you wrap the 0 value of `REDIS_DATABASE` with quotes, otherwise it will evaluate it incorrectly, and result in an the error `\`SELECT\` failed: ERR invalid DB index BUG db is db0`._
 
 You can also set a prefix by adding:
 
