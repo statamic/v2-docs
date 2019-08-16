@@ -39,6 +39,10 @@ Emits an event, namespaced by your addon. `$payload` is available to listeners a
 
 For example, `$this->emitEvent('hello')` would emit `MyAddon.hello`.
 
+Also note that $payload is string only, if you pass in an array it will simply take the first item's value.
+
+For example, `$this->emitEvent('hello', ["first" => "mmmm", "second" => "bacon"] )` would emit `MyAddon.hello` with a payload of `"mmmm"`.
+
 ### eventUrl($url) {#event-url}
 Exactly the same as `actionUrl`. Kept around for backwards compatibility.
 
