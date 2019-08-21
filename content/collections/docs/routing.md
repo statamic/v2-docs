@@ -167,7 +167,7 @@ Statamic supports 2 methods of redirecting routes. "Vanity" (ie. not permanent) 
 
 ### Vanity URLs {#vanity-urls}
 
-A Vanity URL is a dummy, easy to remember URL that redirects you to a permanent URL. A perfect use case would be to create a `example.com/promo` URL that redirects you to `example.com/blog/2016/09-this-months-promo`. You can change this redirect to any URL, any time, and never have to update your marketing material, ad buy, ad so on.
+A Vanity URL is a dummy, easy to remember URL that redirects you to a permanent URL. A perfect use case would be to create a `example.com/promo` URL that redirects you to `example.com/blog/2016/09-this-months-promo`. You can change this redirect to any URL, any time, and never have to update your marketing material, ad buy, and so on.
 
 ``` .language-yaml
 vanity:
