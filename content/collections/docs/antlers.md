@@ -203,7 +203,7 @@ This style is used for string variables and when writing [conditions](#condition
 Modifiers on array variables are formatted like "parameters". You can't use them in conditions when you format them this way. Parameters are separated with pipes instead of colons with this format.
 
 ```
-{{ array_variable modifier="param1|param2"}}
+{{ array_variable modifier="param1|param2" }}
   // Neat stuff happening here
 {{ /array_variable }}
 ```
@@ -332,7 +332,7 @@ You can use [modifiers][modifiers] inside your conditions if you wrap them them 
 RegExes aren't for the faint of heart, but if you're capable of [writing one](https://regex101.com/) (or let's face it, copying and pasting from Stack Overflow), you can use the `~` squiggle operator to get the job done.
 
 ```
-{{ unless content ~ '/\bbest\b.+\bever/'}}
+{{ unless content ~ '/\bbest\b.+\bever/' }}
   # The hyperbole here is at least tolerable. Continue!
   {{ content }}
 {{ /unless }}
