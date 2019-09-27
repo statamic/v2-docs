@@ -73,7 +73,7 @@ shape:
     name: format
     type: string *jpg*
     description: >
-      Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg), `png` or `gif`.
+      Encodes the image to a specific format. Accepts `jpg`, `pjpg` (progressive jpeg), `png`, `gif` or `webp`.
 
 filters:
   -
