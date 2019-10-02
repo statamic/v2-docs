@@ -225,7 +225,7 @@ In the YAML file, add data like so:
 
 ``` .language-yaml
 food: bacon
-drink: whisky
+drink: whiskey
 ```
 
 Whenever referencing the Terms in your templates, now `{{ food }}` and `{{ drink }}` would output `bacon` and `whiskey` respectively.
