@@ -261,6 +261,27 @@ name of the field by adding `honeypot: something` to your formset.
 
 > We say the submission will "fail", but that's not **exactly** true. On the front end it will appear that the form was submitted successfully. However, nothing will get saved and no emails will be sent. This is the key to tricking bots into believing everything went smoothly.
 
+
+## Form Troubleshooting {#form-troubleshooting}
+
+Sometimes a user might decide to turn off cookies or do other bad things, like waiting for his CSRF token to expire before submitting a form. 
+
+This can lead to unexpected behavior: instead a happy green success message the user might see an error, explaining that his session (that he of course doesn't know of) just expired. 
+
+To prevent confused phone calls from rejected users you can disable the static caching for your sites that contain the form.
+Edit caching.yaml:
+```yaml
+static_caching_exclude:
+  # change accordingly
+  - /contact
+```
+
+Or disable CSRF like this in your system.yaml:
+```yaml
+csrf_exclude:
+  - /!/Form/create
+```
+
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
 [tags]: /tags/form
 [submissions]: /tags/form-submissions
