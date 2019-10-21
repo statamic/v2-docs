@@ -87,5 +87,5 @@ Foreach tag:
 ```
 {{ foreach:address }}
     {{ key }}: {{ value }}
-{{ /foreach:addresss }}
+{{ /foreach:address }}
 ```
