@@ -11,7 +11,7 @@ If you plan to use the Control Panel exclusively to manage content and settings 
 
 ## So, what exactly _is_ YAML? {#what-is-yaml}
 
-YAML stands for "YAML Ain't Markup Language". A classic example of the [recursive acronym][recursive-acronym]. Originally it stood for "Yet Another Markup Language" but semantically-oriented people quickly shut that down, denoting the fact that nothing was being marked up, but rather data was being structured. So on that fateful day (which was a Wednesday), YAML became self-referential. `</tangent>`.
+YAML stands for "YAML Ain't Markup Language". A classic example of the [recursive acronym][recursive-acronym]. Originally it stood for "Yet Another Markup Language" but semantically-oriented people quickly shut that down, noting the fact that nothing was being marked up, but rather data was being structured. So on that fateful day (which was a Wednesday), YAML became self-referential. `</tangent>`.
 
 YAML complies with the JSON spec, making it easy to interchange it with nearly any native data format. It consists of key and value pairs delimited by a colon+space. Always a colon followed by a space. Did you get that?
 
