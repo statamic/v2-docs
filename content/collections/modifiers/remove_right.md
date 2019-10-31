@@ -15,7 +15,7 @@ urls:
 ```
 {{ urls }}
   {{ value | remove_right:/ }}
-{{ /urls}}
+{{ /urls }}
 ```
 
 ```.language-output
