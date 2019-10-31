@@ -10,7 +10,7 @@ lyric: can't touch this
 ```
 
 ```
-{{ lyric | repeat: 3}}
+{{ lyric | repeat: 3 }}
 ```
 
 ```.language-output
