@@ -162,7 +162,7 @@ hero_image: /img/negasonic-teenage-warhead.jpg
 
 ```
 {{ assets:hero_image }}
-<img src="{{ url }}" />
+  <img src="{{ url }}" />
 {{ /assets:hero_image }}
 ```
 
@@ -180,7 +180,7 @@ hero_image: /img/quailman.jpg
 
 ```
 {{ asset:hero_image }}
-<img src="{{ url }}" />
+  <img src="{{ url }}" />
 {{ /asset:hero_image }}
 ```
 
