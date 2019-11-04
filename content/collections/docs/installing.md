@@ -183,7 +183,11 @@ If for whatever reason you can't or don't want to use URL rewriting, you can con
 - Open `index.php` and change `$rewrite_urls` to `false`.
 - Open `site/settings/system.yaml`, and add `index.php` to the `url` in the `locales` array.
 
-### Step 4: Run the Trailhead Installer {#installer}
+### Step 4: Set Server Access Permissions {#access-permissions}
+
+Next, you'll want to be sure you're using the proper access permission rules in your server config. Refer to our included sample htaccess, nginx, or web.conf files and code comments for more details.
+
+### Step 5 (optional): Run the Installer {#installer}
 
 Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, locales, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
 
@@ -195,7 +199,7 @@ If you don't want to (or can't for some reason) use the GUI installer, here's wh
 - Log into the Control Panel at `{yoursite}.{tld}/cp`
 - Visit your System settings (/cp/settings/system) and set/confirm your basic site settings
 
-### There is no step 5. {#no-step-5}
+### There is no step 6. {#no-step-6}
 
 You're probably done. Now for some things to note, and a few additional steps for running above webroot and multilingual sites.
 
