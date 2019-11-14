@@ -74,8 +74,6 @@ Any additional URL segments present get passed in as parameters. So for example:
 
 If, for example, the method declares only one parameter, the `123` will simply be ignored.
 
-Note that the `/!/` in the URL is customizable, so when outputting form actions, you can use the [$this->actionUrl()](/addons/helpers#actionUrl) helper.
-
 ### Control Panel {#control-panel}
 
 We can route to the controller action above by editing the routes array in our addon's `routes.yaml` file.
