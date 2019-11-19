@@ -170,7 +170,7 @@ If you want to take more control over your child menu, you can just loop through
   {{ if children }}
      <ul>
       {{ children }}
-        <li><a href="{{ url }}">{{ title }}</li>
+        <li><a href="{{ url }}">{{ title }}</a></li>
       {{ /children }}
      </ul>
   {{ /if }}
