@@ -98,8 +98,8 @@ You may also use a nested array to have finer-grained control over each column.
 
 ``` .language-yaml
 columns:
-  - title
-  - value: slug         # The field name used for the values. The only required key.
+  - title:
+    value: slug         # The field name used for the values. The only required key.
     extra: true         # Extra fields will become hidden on mobile to save space.
     width: 25           # The width, as a percent.
     header: "The Slug"  # The header text if the field name isn't quite what you need.
