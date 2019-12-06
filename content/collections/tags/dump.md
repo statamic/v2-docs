@@ -9,3 +9,5 @@ This tag is useful for debugging, and not much more. It will simply stop executi
 ```
 {{ dump }}
 ```
+
+You can also use the [dump modifier](/modifiers/dump) to achieve a similar effect.
