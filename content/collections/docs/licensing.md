@@ -35,7 +35,7 @@ If any of the following rules match the domain is considered **not public** (let
 - Is it a single segment? eg. `localhost`
 - Is it an IP address?
 - Does it use a port other than `80` or `443`?
-- Does it have a dev-related subdomain? eg. `test.`, `testing.`, `sandbox.`, `local.`, `stage.`, or `staging.`
+- Does it have a dev-related subdomain? eg. `test.`, `testing.`, `sandbox.`, `dev.`, `local.`, `stage.`, or `staging.`
 - Does it use a dev-related TLD? eg. `.local`, `.localhost`, `.test`, `.invalid`, `.example` or `.app`
 
 ## Special Circumstances {#special}
