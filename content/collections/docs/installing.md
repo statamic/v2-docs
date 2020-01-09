@@ -19,7 +19,7 @@ Statamic has a few server requirements. Not all servers are created equal and no
 
 ### Server Requirements {#server-requirements}
 
-- A web server: Apache, Nginx, or IIS
+- A web server: (Apache or Nginx recommended)
 - PHP >= 5.5.9
 - URL Rewriting enabled (mod_rewrite, try_files, etc)
 
@@ -122,7 +122,6 @@ webroot/
 |-- sample.gitignore
 |-- sample.nginx.conf
 |-- sample.htaccess
-|-- sample.web.config
 ```
 
 #### Running in a subdirectory {#subdir}
@@ -171,10 +170,6 @@ If this doesn't work, you'll need to tell Apache to activate/respect your `.htac
 #### Nginx {#nginx}
 
 Grab the settings from `sample.nginx.conf` and customize them as necessary. Nginx is a bit less "set it and forget it" than Apache, making further server configuration beyond the scope of this guide.
-
-#### IIS {#iis}
-
-We don't use Windows ourselves, but we've been told the included `sample.web.config` works. Do your thing.
 
 #### Disabling URL Rewrites {#disable-rewrites}
 
