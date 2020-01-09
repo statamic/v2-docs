@@ -185,7 +185,7 @@ If for whatever reason you can't or don't want to use URL rewriting, you can con
 
 ### Step 4: Set Server Access Permissions {#access-permissions}
 
-Next, you'll want to be sure you're using the proper access permission rules in your server config. Refer to our included sample htaccess, nginx, or web.conf files and code comments for more details.
+Next, you'll want to be sure you're using the proper access permission rules in your server config. Ultimately your goal is prevent access to the `statamic`, `local`, and `site` (but not `theme` subdirectory) directories. There is more than one way to do that. You can refer to our included sample htaccess or nginx files and their code comments for some common ways to do that.
 
 ### Step 5 (optional): Run the Installer {#installer}
 
