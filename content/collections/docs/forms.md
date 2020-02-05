@@ -261,6 +261,25 @@ name of the field by adding `honeypot: something` to your formset.
 
 > We say the submission will "fail", but that's not **exactly** true. On the front end it will appear that the form was submitted successfully. However, nothing will get saved and no emails will be sent. This is the key to tricking bots into believing everything went smoothly.
 
+## Using AJAX {#ajax}
+
+To submit the form with AJAX, be sure to pass all the form inputs in with the submission, as Statamic sets `_token` and `_params`, both of which are required.
+
+You'll also need to set your ajax library's `X-Requested-With` header to `XMLHttpRequest'.
+
+### Axios Example
+
+``` javascript
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+form = document.getElementById('form');
+
+// On submit...
+xios.post(form.action, new FormData(form))
+  .then(response => {
+      console.log(response.data)
+  });
+```
+
 [rules]: https://laravel.com/docs/5.1/validation#available-validation-rules
 [tags]: /tags/form
 [submissions]: /tags/form-submissions
