@@ -274,7 +274,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 form = document.getElementById('form');
 
 // On submit...
-xios.post(form.action, new FormData(form))
+axios.post(form.action, new FormData(form))
   .then(response => {
       console.log(response.data)
   });
