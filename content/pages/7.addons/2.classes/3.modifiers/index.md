@@ -20,7 +20,7 @@ Parameters are used to modify the behavior of a modifier. They could be anything
 
 ## Example Class {#example-class}
 
-Your modifier class must extend `Statamic\Extend\Modifer` and have only one method `index`.
+Your modifier class must extend `Statamic\Extend\Modifer`and have an `index` method. The `index` method is the entry point to your modifier.
 
 The name of the file and class can differ depending on your situation. See [Multiple Modifiers](#multiple) below.
 
