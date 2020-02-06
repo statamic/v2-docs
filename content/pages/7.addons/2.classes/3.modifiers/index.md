@@ -20,7 +20,7 @@ Parameters are used to modify the behavior of a modifier. They could be anything
 
 ## Example Class {#example-class}
 
-Your modifier class must extend `Statamic\Extend\Modifer`.
+Your modifier class must extend `Statamic\Extend\Modifer` and have only one method `index`.
 
 The name of the file and class can differ depending on your situation. See [Multiple Modifiers](#multiple) below.
 
@@ -67,7 +67,7 @@ site/addons/Bacon
 
 ### Primary vs. Secondary {#primary-secondary}
 
-An addon's primary modifier will use the name of the addon.  
+An addon's primary modifier will use the name of the addon.
 
 ``` .lang-template
 {{ variable | your_addon }}
@@ -111,7 +111,7 @@ The other two arguments are optional:
 ## A More Elaborate Example {#elaborate-example}
 
 Let's say we need a modifier that repeats things. Maybe even delicious things.
- 
+
 ``` .language-php
 <?php
 
