@@ -10,8 +10,19 @@ Flicking the toggle to the right sets to the value to `true`, left to `false`.
 
 ## Templating {#templating}
 
-Toggle is used for boolean logic, so you can do something like this:
+Toggle is used for boolean logic, so you can inlcude it in to your boolean logic strings:
 
+When toggle is on the left (assuming our toggle fieldset name is 'switchy_thing')
+
+``` .template
+{{ if switchy_thing:true }} Do that thing {{ /if }}
 ```
-{{ if switchy_thing }} Do that thing {{ /if }}
-```
+
+Including the both ways
+
+``` .template
+{{  if switchy_thing:true }}
+  Do that thing
+  {{ elseif }} 
+  Do the other thing
+{{ /if }}
