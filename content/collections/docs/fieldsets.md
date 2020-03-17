@@ -226,7 +226,7 @@ show_when:
   that_field: cheeseburger
 ```
 
-You can use "OR" rules by prepending fields with `or_`.
+You can use "OR" rules by prepending fields with `or_`. 
 The following says: "Show when `this_field` is `bacon` OR `that_field` is `cheeseburger`"
 
 ``` .language-yaml
@@ -235,7 +235,7 @@ show_when:
   or_that_field: cheeseburger
 ```
 
-You may specify multiple values for a single field by using an array for the value.
+You may specify multiple values for a single field by using an array for the value. 
 The following says: "Show when `this_field` is one of `bacon`, `eggs`, or `hash browns`"
 
 ``` .language-yaml
