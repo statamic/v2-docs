@@ -70,6 +70,22 @@ fields:
 
 This would make the field required, ensure only alpha-numeric characters and dashes are used, and that the text is between 5 and 10 characters long.
 
+If you using a validation rule that require a field name to be specified (like _required_if_, _same_, ...), **remember** to prepend `fields.` to the field name.
+
+For example:
+
+``` .language-yaml
+fields:
+  type:
+    options:
+      option_1: 'Option 1'
+      option_2: 'Option 2'
+    type: radio
+  something:
+    type: text
+    validate: required_if:fields.type,option_1
+```
+
 Note that not _every_ validation rule would be usable in Statamic. For instance, the database rules (exists, unique, etc) would not apply since we do not use a database.
 
 ## Sections [Since 2.9.0] {#sections}
@@ -210,7 +226,7 @@ show_when:
   that_field: cheeseburger
 ```
 
-You can use "OR" rules by prepending fields with `or_`.  
+You can use "OR" rules by prepending fields with `or_`.
 The following says: "Show when `this_field` is `bacon` OR `that_field` is `cheeseburger`"
 
 ``` .language-yaml
@@ -219,7 +235,7 @@ show_when:
   or_that_field: cheeseburger
 ```
 
-You may specify multiple values for a single field by using an array for the value.  
+You may specify multiple values for a single field by using an array for the value.
 The following says: "Show when `this_field` is one of `bacon`, `eggs`, or `hash browns`"
 
 ``` .language-yaml
