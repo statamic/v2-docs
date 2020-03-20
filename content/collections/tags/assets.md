@@ -154,7 +154,7 @@ bacon_images:
 
 ### Single Assets {#single-assets}
 
-If you have an asset field with `max_items: 1` the data will be saved as a `string`. As one cannot iterate over a string, the tag will adjust accordingly without complaining.
+If you have an asset field with `max_files: 1` the data will be saved as a `string`. As one cannot iterate over a string, the tag will adjust accordingly without complaining.
 
 ``` .language-yaml
 hero_image: /img/negasonic-teenage-warhead.jpg
