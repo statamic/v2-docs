@@ -182,11 +182,9 @@ If for whatever reason you can't or don't want to use URL rewriting, you can con
 
 Next, you'll want to be sure you're using the proper access permission rules in your server config. Ultimately your goal is prevent access to the `statamic`, `local`, and `site` (but not `theme` subdirectory) directories. There is more than one way to do that. You can refer to our included sample htaccess or nginx files and their code comments for some common ways to do that.
 
-### Step 5 (optional): Run the Installer {#installer}
+### Step 5 Run the Installer {#installer}
 
-Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, locales, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you.
-
-**Once you're done, delete `installer.php`.**
+Technically there is no "install" process for Statamic, but we have a little tool that will check your environment for all the necessary requirements, file permissions, locales, and even help you get your first User created. Head to `/installer.php` and let it take care of the rest for you, if you want.
 
 If you don't want to (or can't for some reason) use the GUI installer, here's what to do yourself:
 
@@ -194,9 +192,13 @@ If you don't want to (or can't for some reason) use the GUI installer, here's wh
 - Log into the Control Panel at `{yoursite}.{tld}/cp`
 - Visit your System settings (/cp/settings/system) and set/confirm your basic site settings
 
-### There is no step 6. {#no-step-6}
+### Step 6: delete `installer.php`
 
-You're probably done. Now for some things to note, and a few additional steps for running above webroot and multilingual sites.
+You **must** delete the installer file as it gives anyone who runs it the ability to create a super user on your site.
+
+### That's it!
+
+You're done. Now for some things to note, and a few additional steps for running above webroot and multilingual sites.
 
 #### About that License Key and Dev Mode {#dev-mode}
 
