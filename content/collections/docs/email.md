@@ -49,8 +49,8 @@ customize the design, content, and so on.
 Throughout this documentation you will find the names of email templates used for various situations. To override them, create a template of the _same filename_ in `site/themes/theme-name/templates/email`.
 
 ```
-<!-- password_reset.html -->
-/site/themes/redwood/templates/email/password-reset.html
+<!-- user-reset.html -->
+/site/themes/redwood/templates/email/user-reset.html
 ```
 
 ### HTML and Text versions {#html-and-text-versions}
