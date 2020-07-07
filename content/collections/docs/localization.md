@@ -240,7 +240,7 @@ J'adore le bacon
 There are 3 things to notice:
 
 1. The URL for the French site would use the localized slug
-2. We'll assume the `image` field didn't have `localized: true` in the fieldset.   That means it wouldn't have appeared in the publish form for the French locale. Also, since it's not defined in the French file, it falls back to the default locale's value.
+2. We'll assume the `image` field didn't have `localizable: true` in the fieldset.   That means it wouldn't have appeared in the publish form for the French locale. Also, since it's not defined in the French file, it falls back to the default locale's value.
 3. Assuming `{{ color }}` simply was left blank, or it had the same value as the default locale, it will fall back to the default locale's value.
 
 ## Subdomains {#subdomains}
