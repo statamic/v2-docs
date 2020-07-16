@@ -15,12 +15,6 @@ UserGroup::all(); // Returns \Illuminate\Support\Collection
 UserGroup::find($id); // Returns UserGroup
 ```
 
-## Check if a group exists.
-
-``` php
-UserGroup::exists($id); // Returns a boolean
-```
-
 ## Get a group by handle.
 
 ``` php
