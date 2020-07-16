@@ -126,3 +126,35 @@ Using the example above, the URLs would be `/carrot` and `/es/zanahoria`, for En
 Absolute URLs (or permalinks) include the domain. They would be `http://yoursite.com/carrot` and `http://yoursite.com/es/zanahoria`.
 
 [factories]: /addons/data-factories
+
+### Changing the routes file from addons
+all classes come from `use Statamic\API\<Class>` namespace.
+
+```
+//get the routes file
+$file = settings_path('routes.yaml');
+//parse the routes file into an object
+$allRoutes = YAML::parse(File::get($file));
+
+//do what you need to do with the routes.
+//in this example we're removing all routes which match:
+// <some route>: some_template
+$routes = $allRoutes['routes'];
+
+foreach ($routes as $key => $value) {
+  if($value === 'some_template') {
+    unset($routes[$key]);
+  }
+}
+
+$allRoutes['routes'] = $routes;
+
+// we parse the array back into yaml
+$contents = YAML::dump($allRoutes);
+// and finally save the file.
+File::put($file, $contents);
+
+// you might also want to clear cache/stache
+Cache::clear();
+Stache::clear();
+```
