@@ -10,5 +10,5 @@ The current URL.
 ```
 
 ``` .language-output
-https://docs.statamic.com/variables
+https://docs.statamic.com/variables/current_url
 ```
