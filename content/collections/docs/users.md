@@ -74,3 +74,15 @@ Users without a role, or `super` status will not have access to the Control Pane
 
 [installation]: /installing
 [permission]: /permissions
+
+## Disabling Gravatars {#disabling-gravatars}
+
+By default, Statamic displays a gravtar for the logged in user in the top right hand corner of the control panel. If the user does not have a custom gravatar, it displays the default gravtar.
+
+However, there may be times where you wish to disable this, such as if you don't want to add gravatar.com to your content security policy (CSP). Disabling gravatars will result in the initial(s) of the user's username being displayed.
+
+To disable gravatars, open `site/settings/user.yaml` and add the following:
+
+```.language-yaml
+enable_gravatar: false
+```
