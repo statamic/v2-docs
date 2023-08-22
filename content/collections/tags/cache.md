@@ -1,5 +1,6 @@
 ---
 title: Cache
+canonical_url: https://statamic.dev/tags/cache
 overview: >
   There are times when you may want to simply cache a section of a template to gain some performance. That’s what this Tag is for. Wrap your markup and you’re off on your way to a snappier, zippier, peppier site.
 parameters:

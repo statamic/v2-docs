@@ -1,5 +1,6 @@
 ---
 id: 5b748a3f-be0e-41c1-8877-73f6b7ee1d0a
+canonical_url: https://statamic.dev/tags/assets
 title: Assets
 video: https://youtu.be/FHhlvKEvgPs
 overview: >
@@ -40,8 +41,8 @@ parameters:
     name: sort
     type: string
     description: >
-      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.  
-      For example, `sort="size"` or `sort="size:asc|title:desc"` to sort by size then by title.  
+      Sort entries by field name (or `random`). You may pipe-separate multiple fields for sub-sorting and specify sort direction of each field using a colon.
+      For example, `sort="size"` or `sort="size:asc|title:desc"` to sort by size then by title.
 variables:
   -
     name: url
