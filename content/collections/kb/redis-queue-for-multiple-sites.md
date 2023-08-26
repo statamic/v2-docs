@@ -18,10 +18,10 @@ QUEUE_DRIVER=redis
 For each site on your server, you want Redis to use it's own database, or you'll run into troubles. You can do this by adding the following to your `.env` file. Make sure you increase the database number for each site you're running:
 
 ```.language-env
-REDIS_DATABASE=0
+REDIS_DATABASE=1
 ```
 
-By default you have 16 Redis databases at hand.
+By default you have 16 Redis databases at hand. By default Redis uses the first (`0`) database. No need to add that one to your `.env` file if you're only running one site on your server.
 
 ## Run a queue worker for each site
 
