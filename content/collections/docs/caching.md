@@ -112,8 +112,25 @@ RewriteRule .* static/%{REQUEST_URI}_%{QUERY_STRING}\.html [L,T=text/html]
 Nginx:
 
 ```
+# Dynamically set the try_files locations.
+# Statically cached files should only be loaded for GET requests.
+set $try_files @default;
+if ($request_method = GET) {
+    set $try_files @static;
+}
+
+# The files to try when its a potentially static cache request (ie. a GET request)
+location @static {
+    try_files /static${uri}_${query_string}.html @default;
+}
+
+# The files to try when it's not a static cache request (ie. anything other than GET)
+location @default {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+
 location / {
-  try_files /static${uri}_${args}.html $uri /index.php?$args;
+    try_files $uri $try_files; # Use the dynamically assigned locations from above.
 }
 ```
 
@@ -140,7 +157,7 @@ To disable pagination, set `static_caching_ignore_query_strings: true`. If you'r
 For example:
 
 - Remove `%{QUERY_STRING}` from htaccess if using Apache
-- Remove `${args}` from your config if using NGINX
+- Remove `${query_string}` from the @static location block if using NGINX
 - Remove `{QUERY_STRING}` from web.config if using IIS
 
 If you require to cache pages with query strings, you may do so in `site/settings/caching.yaml`
